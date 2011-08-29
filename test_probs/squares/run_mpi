@@ -1,0 +1,2 @@
+#!/bin/sh
+mpirun.mpich-shmem -np 3 ../../Source/src/mcnp5.mpi i=squares2.inp g=squares2.sat n=mpi_run

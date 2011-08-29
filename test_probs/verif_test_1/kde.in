@@ -1,0 +1,25 @@
+DAGMC input for KDE collision tally verif. problem #1: reflecting boundaries
+mode n
+C single material is water for simplicity
+C * scattering may be complicating our results
+m1 1001 2 8016 1
+C planar surface source
+C * mono-directional: x-direction
+C * mono-energetic: 1 MeV
+C * uniform distribution on -6 < (y,z) < 6
+C * start on surface 1
+sdef x=0 y=d1 z=d2 vec=1 0 0 dir=1 erg=1 surf=1
+si1 H -6 6
+sp1  0  1  
+si2 H -6 6
+sp2  0  1
+fmesh44:n geom=dag
+fc44 dagmc type=kde_coll inp=tallymesh.h5m out=kde_meshtal.vtk
+c           hx=0.644912 hy=0.481397 hz=0.483622 -dagmc $nps 10000
+c           hx=0.470394 hy=0.346725 hz=0.346604 -dagmc $nps 100000
+c           hx=0.375882 hy=0.275403 hz=0.27529 -dagmc  $nps 500000
+           hx=0.340505 hy=0.24937 hz=0.249333 -dagmc  $nps 1e6
+C
+C adjust runtime=statistics with the following
+nps 1e6
+ctme 30	

@@ -1,0 +1,5606 @@
+version: 1
+creator: callgrind-3.3.1-Debian
+pid: 21368
+cmd:  /filespace/groups/cnerg/users/sjackson/dag-mcnp5-meshtal i=ref.in
+part: 1
+
+
+desc: I1 cache: 
+desc: D1 cache: 
+desc: L2 cache: 
+
+desc: Timerange: Basic block 0 - 8803013289
+desc: Trigger: Program termination
+
+positions: line
+events: Ir
+summary: 36331706124
+
+
+ob=(14) /lib/libm-2.7.so
+fl=(5) ???
+fn=(3682) 0x0000000000028D90
+0 13290774
+
+fn=(3642) 0x0000000000011060
+0 92510389
+
+fn=(1826) lround
+0 22664751
+
+fn=(4946) sqrt
+0 1069362
+cfn=(4948) 0x0000000000014B20
+calls=356454 0 
+0 712908
+
+ob=(9) /lib/ld-2.7.so
+fl=(7) ???
+fn=(2982) _dl_runtime_resolve
+0 75
+cfn=(2984) 0x000000000000D120
+calls=6 0 
+0 9368
+0 50
+
+fn=(2996) 0x0000000000009470
+0 1493
+cfn=(3014) 0x0000000000008FF0
+calls=6 0 
+0 7360
+0 170
+
+fn=(2984)
+0 240
+cfn=(2996)
+calls=6 0 
+0 9023
+0 105
+
+fn=(3040) 0x000000000000E000
+0 147
+cfn=(3042) 0x0000000000014F90
+calls=23 0 
+0 147
+0 252
+cfn=(3042)
+calls=23 0 
+0 420
+0 147
+
+fn=(3014)
+0 2153
+cfn=(3040)
+calls=23 0 
+0 1113
+0 582
+cfn=(3072) 0x0000000000008E10
+calls=14 0 
+0 642
+0 288
+cfn=(3072)
+calls=6 0 
+0 1288
+0 1294
+
+fn=(3042)
+0 1782
+
+fn=(3072)
+0 336
+
+ob=(14)
+fl=(5)
+fn=(4946)
+0 2138724
+cfn=(3682)
+calls=356454 0 
+0 4990356
+0 1782270
+
+fn=(3640) log
+0 1778661
+cfn=(3642)
+calls=592887 0 
+0 92510389
+0 3557322
+cfn=(3682)
+calls=592887 0 
+0 8300418
+0 5335983
+
+fn=(4948)
+0 712908
+
+ob=(9)
+fl=(7)
+fn=(3072)
+0 100
+cfn=(3042)
+calls=6 0 
+0 437
+0 241
+cfn=(3042)
+calls=15 0 
+0 778
+
+ob=(14)
+fl=(5)
+fn=(3144) finite
+0 903
+
+ob=(9)
+fl=(7)
+fn=(3072)
+0 38
+
+ob=(13) /usr/lib/libstdc++.so.6.0.10
+fl=(8) ???
+fn=(3842) std::_Rb_tree_increment(std::_Rb_tree_node_base const*)
+0 3522084
+cfn=(3846) std::_Rb_tree_increment(std::_Rb_tree_node_base*)
+calls=3522084 0 
+0 59403388
+
+fn=(3736) operator delete(void*)
+0 66320556
+cob=(6) /lib/libc-2.7.so
+cfi=(2) ???
+cfn=(4) free
+calls=22106852 0 
+0 2107764204
+
+fn=(4052) std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+0 141984561
+cfn=(4108) std::_Rb_tree_rotate_left(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*&)
+calls=561928 0 
+0 9065946
+0 2058285
+cfn=(4108)
+calls=411657 0 
+0 6659769
+0 19702127
+cfn=(4104) std::_Rb_tree_rotate_right(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*&)
+calls=361481 0 
+0 5879697
+0 1642290
+cfn=(4104)
+calls=328458 0 
+0 5333648
+0 27269416
+cfn=(4104)
+calls=411657 0 
+0 6691254
+cob=(9)
+cfi=(7)
+cfn=(2982)
+calls=1 0 
+0 2760
+0 2042402
+cfn=(4108)
+calls=328458 0 
+0 5336348
+0 656916
+
+fn=(4096) std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
+0 30583139
+
+fn=(3722) operator new(unsigned long)
+0 206024922
+cob=(6)
+cfi=(2)
+cfn=(154) malloc
+calls=22891658 0 
+0 2634344326
+0 137349948
+
+fn=(4104)
+0 17904599
+
+fn=(3846)
+0 59403388
+
+fn=(4866) std::string::string(std::string const&)
+0 19
+
+fn=(4108)
+0 21062063
+
+ob=(12) /usr/lib/libgfortran.so.3.0.0
+fl=(1) ???
+fn=(4608) 0x00000000000B5200
+0 30
+cfn=(4540) 0x00000000000B4F10
+calls=5 0 
+0 500
+0 35
+cob=(6)
+cfi=(2)
+cfn=(2678) __xstat
+calls=5 0 
+0 66
+0 35
+
+fn=(368) 0x00000000000B5B40
+0 812
+cob=(6)
+cfi=(2)
+cfn=(2914) fflush
+calls=93 0 
+0 5162
+0 18
+cob=(6)
+cfi=(2)
+cfn=(2914)
+calls=9 0 
+0 348
+
+fn=(422) 0x00000000000A6190
+0 13866
+cfn=(423) 0x00000000000A6190'2
+calls=1669235 0 
+0 10507
+0 625
+cfn=(423)
+calls=2622337 0 
+0 10024
+0 8036
+
+fn=(423)
+0 18939
+cfn=(423)
+calls=155 0 
+0 76
+0 5
+cfn=(423)
+calls=157 0 
+0 80
+0 1587
+
+fn=(1398) _gfortran_transfer_integer
+0 792
+cfn=(406) 0x00000000000B19D0
+calls=98 0 
+0 21749
+0 220
+
+fn=(2906) 0x00000000000B3CF0
+0 360
+
+fn=(3198) 0x00000000000B66F0
+0 4684
+cob=(6)
+cfi=(2)
+cfn=(3214) strtol
+calls=42 0 
+0 6320
+0 623
+cob=(6)
+cfi=(2)
+cfn=(3214)
+calls=91 0 
+0 13999
+0 7779
+cfn=(1898) 0x00000000000AF3D0
+calls=133 0 
+0 10063
+0 8398
+cob=(6)
+cfi=(2)
+cfn=(566) memcpy
+calls=91 0 
+0 1607
+0 1693
+cob=(6)
+cfi=(2)
+cfn=(3164) snprintf
+calls=83 0 
+0 61934
+0 332
+cob=(6)
+cfi=(2)
+cfn=(566)
+calls=83 0 
+0 1909
+0 6218
+cob=(6)
+cfi=(2)
+cfn=(566)
+calls=103 0 
+0 1934
+0 1109
+cob=(6)
+cfi=(2)
+cfn=(1820) memset
+calls=133 0 
+0 4074
+0 2020
+
+fn=(4620) _gfortran_st_open
+0 6
+cfn=(82) 0x00000000000ACE00
+calls=1 0 
+0 6
+0 34
+cfn=(4650) 0x0000000000015920
+calls=1 0 
+0 5
+0 36
+cfn=(4654) 0x00000000000B3A20
+calls=1 0 
+0 421
+0 7
+cfn=(4694) 0x00000000000AD1E0
+calls=1 0 
+0 5790
+0 4
+cfn=(60) 0x00000000000B30E0
+calls=1 0 
+0 33
+0 8
+cfn=(4622) 0x0000000000017190
+calls=1 0 
+0 275
+0 7
+cfn=(4622)
+calls=1 0 
+0 221
+0 1
+
+fn=(4654)
+0 14
+cob=(6)
+cfi=(2)
+cfn=(108) pthread_mutex_lock
+calls=1 0 
+0 44
+0 37
+cfn=(4660) 0x00000000000B3510
+calls=1 0 
+0 270
+0 16
+cob=(6)
+cfi=(2)
+cfn=(66) pthread_mutex_unlock
+calls=1 0 
+0 29
+0 11
+
+fn=(54) 0x00000000000ACE10
+0 1638
+
+fn=(378) 0x00000000000AFAF0
+0 3650
+
+fn=(646) 0x00000000000B0EF0
+0 3138
+cfn=(378)
+calls=102206 0 
+0 500
+0 4513
+cfn=(694) 0x00000000000B31F0
+calls=1259933 0 
+0 3654
+0 936
+cfn=(2066) 0x00000000000B4BB0
+calls=72 0 
+0 6966
+0 1531
+cfn=(2944) 0x00000000000B5A40
+calls=93 0 
+0 4365
+0 178
+
+fn=(1336) _gfortran_compare_string
+0 11694
+
+fn=(1898)
+0 8940
+cfn=(2918) 0x00000000000B59C0
+calls=142 0 
+0 2346
+cfn=(1904) 0x00000000000B49C0
+calls=491 0 
+0 23640
+0 7803
+
+fn=(1904)
+0 20095
+cfn=(2112) 0x00000000000B3F40
+calls=19 0 
+0 10
+0 7
+cfn=(732) 0x00000000000B48D0
+calls=19 0 
+0 30
+0 7017
+
+fn=(3520) _gfortran_system_clock_4
+0 50
+cob=(6)
+cfi=(2)
+cfn=(2606) gettimeofday
+calls=5 0 
+0 60
+0 150
+
+fn=(4660)
+0 6
+cfn=(150) 0x0000000000016F90
+calls=1 0 
+0 96
+0 50
+cob=(6)
+cfi=(2)
+cfn=(108)
+calls=1 0 
+0 44
+0 19
+cfn=(4672) 0x00000000000B3480
+calls=1 0 
+0 49
+0 6
+
+fn=(0) 0x0000000000016F80
+0 215
+cob=(6)
+cfi=(2)
+cfn=(4)
+calls=1259954 0 
+0 23483
+
+fn=(150)
+0 614
+cob=(6)
+cfi=(2)
+cfn=(154)
+calls=1260046 0 
+0 50800
+0 1228
+
+fn=(240) 0x00000000000A6390
+0 31827
+cfn=(244) 0x00000000000A6320
+calls=5040890 0 
+0 58264
+0 15656
+cfn=(244)
+calls=13 0 
+0 416
+0 605
+cfn=(244)
+calls=75 0 
+0 2336
+0 2616
+cob=(6)
+cfi=(2)
+cfn=(288) __ctype_b_loc
+calls=1260354 0 
+0 3294
+0 2708
+cfn=(244)
+calls=1259973 0 
+0 7384
+0 1647
+cfn=(244)
+calls=1260354 0 
+0 17568
+0 14049
+cfn=(244)
+calls=1321 0 
+0 38472
+0 270
+cfn=(244)
+calls=112 0 
+0 2910
+0 5422
+cfn=(244)
+calls=112 0 
+0 2882
+0 720
+
+fn=(406)
+0 16876
+cfn=(418) 0x00000000000A7060
+calls=4597866 0 
+0 77424
+0 22491
+cfn=(1896) 0x00000000000B6020
+calls=108 0 
+0 14359
+0 4398
+cfn=(4460) 0x00000000000B3C90
+calls=13 0 
+0 221
+0 3270
+cfn=(862) 0x00000000000AFBB0
+calls=408766 0 
+0 1577
+0 913
+cfn=(4358) 0x00000000000B8CB0
+calls=83 0 
+0 453427
+0 497
+cfn=(862)
+calls=66 0 
+0 874
+0 506
+cfn=(3134) 0x00000000000B8CA0
+calls=50 0 
+0 237083
+0 10785
+cfn=(646)
+calls=36 0 
+0 4180
+0 1054
+cfn=(862)
+calls=98 0 
+0 418
+0 1201
+cfn=(1898)
+calls=231 0 
+0 9261
+0 12156
+cfn=(1958) 0x00000000000B6640
+calls=127 0 
+0 19871
+0 1011
+cfn=(1972) 0x00000000000B6390
+calls=34 0 
+0 8164
+0 814
+cfn=(478) 0x00000000000A6220
+calls=1566607 0 
+0 792
+0 264
+
+fn=(478)
+0 792
+
+fn=(610) 0x00000000000B15B0
+0 2646
+cob=(6)
+cfi=(2)
+cfn=(624) _setjmp
+calls=1259933 0 
+0 3654
+0 4536
+cfn=(646)
+calls=1259933 0 
+0 21601
+0 630
+cfn=(2954) 0x00000000000B3D70
+calls=93 0 
+0 178
+cfn=(716) 0x00000000000B40C0
+calls=1259840 0 
+0 495
+0 126
+
+fn=(694)
+0 756
+cfn=(682) 0x00000000000B3DD0
+calls=1259934 0 
+0 252
+0 1008
+cfn=(678) 0x00000000000B3DC0
+calls=1259934 0 
+0 252
+0 378
+cfn=(682)
+calls=1259934 0 
+0 252
+0 756
+
+fn=(716)
+0 495
+
+fn=(732)
+0 30
+
+fn=(1996) 0x0000000000016720
+0 460
+cfn=(2004) 0x00000000000C5B90
+calls=24 0 
+0 294
+0 90
+cfn=(2004)
+calls=29 0 
+0 315
+0 203
+cfn=(1432) 0x00000000000C5A50
+calls=53 0 
+0 667
+0 370
+
+fn=(2128) 0x00000000000B3EB0
+0 300
+cob=(6)
+cfi=(2)
+cfn=(2136) write
+calls=43 0 
+0 84
+0 144
+
+fn=(2444) 0x00000000000B47D0
+0 6
+cob=(6)
+cfi=(2)
+cfn=(2122) lseek
+calls=3 0 
+0 7
+0 8
+cob=(6)
+cfi=(2)
+cfn=(2454) ftruncate
+calls=3 0 
+0 5
+0 9
+
+fn=(3420) _gfortran_string_len_trim
+0 5284
+
+fn=(4358)
+0 2656
+cob=(14)
+cfi=(5)
+cfn=(3144)
+calls=83 0 
+0 581
+0 2162
+cob=(6)
+cfi=(2)
+cfn=(3164)
+calls=83 0 
+0 333488
+0 1577
+cfn=(3198)
+calls=83 0 
+0 112216
+0 747
+
+fn=(4538) 0x00000000000B52B0
+0 60
+cfn=(4540)
+calls=6 0 
+0 2098
+0 92
+cob=(6)
+cfi=(2)
+cfn=(2678)
+calls=6 0 
+0 84
+0 32
+cob=(6)
+cfi=(2)
+cfn=(108)
+calls=4 0 
+0 176
+0 20
+cfn=(4570) 0x00000000000B4270
+calls=4 0 
+0 1256
+0 28
+cob=(6)
+cfi=(2)
+cfn=(66)
+calls=4 0 
+0 116
+0 4
+
+fn=(4542) 0x0000000000017150
+0 3092
+
+fn=(4570)
+0 92
+cob=(6)
+cfi=(2)
+cfn=(4578) __fxstat
+calls=8 0 
+0 96
+0 64
+cfn=(4571) 0x00000000000B4270'2
+calls=8 0 
+0 900
+0 104
+
+fn=(4571)
+0 312
+cob=(6)
+cfi=(2)
+cfn=(4578)
+calls=16 0 
+0 192
+0 128
+cfn=(4571)
+calls=16 0 
+0 424
+0 268
+
+fn=(98) 0x00000000000B3C60
+0 518
+cob=(6)
+cfi=(2)
+cfn=(108)
+calls=1259840 0 
+0 1628
+0 716
+cob=(15) /lib/libpthread-2.7.so
+cfi=(3) ???
+cfn=(130) pthread_mutex_trylock
+calls=1259840 0 
+0 1184
+0 148
+cob=(6)
+cfi=(2)
+cfn=(66)
+calls=1259840 0 
+0 1073
+0 1045
+cfn=(150)
+calls=93 0 
+0 8544
+0 4539
+cob=(6)
+cfi=(2)
+cfn=(108)
+calls=93 0 
+0 3916
+0 1068
+cfn=(2862) 0x00000000000B45D0
+calls=93 0 
+0 14151
+0 3374
+
+fn=(244)
+0 47496
+cob=(6)
+cfi=(2)
+cfn=(250) __ctype_toupper_loc
+calls=7562850 0 
+0 23748
+0 426
+cob=(6)
+cfi=(2)
+cfn=(250)
+calls=159 0 
+0 852
+0 57710
+
+fn=(1814) _gfortran_concat_string
+0 581
+cob=(6)
+cfi=(2)
+cfn=(566)
+calls=31 0 
+0 460
+0 247
+cob=(6)
+cfi=(2)
+cfn=(566)
+calls=31 0 
+0 501
+0 81
+cob=(6)
+cfi=(2)
+cfn=(566)
+calls=9 0 
+0 243
+
+fn=(1832) _gfortran_st_write
+0 6426
+cfn=(98)
+calls=212 0 
+0 41904
+0 7000
+cfn=(368)
+calls=94 0 
+0 5704
+0 72
+cfn=(368)
+calls=118 0 
+0 636
+0 1386
+cfn=(378)
+calls=212 0 
+0 3150
+0 2142
+cfn=(402) 0x00000000000B25A0
+calls=139 0 
+0 49414
+0 378
+cfn=(148) 0x00000000000A71D0
+calls=139 0 
+0 299436
+0 2322
+cfn=(2906)
+calls=94 0 
+0 360
+0 274
+cfn=(2444)
+calls=1 0 
+0 35
+0 2647
+cfn=(82)
+calls=212 0 
+0 756
+0 504
+
+fn=(1896)
+0 552
+cfn=(1898)
+calls=108 0 
+0 9624
+0 1196
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=108 0 
+0 2987
+
+fn=(1972)
+0 286
+cfn=(1974) 0x00000000000B5B90
+calls=34 0 
+0 418
+0 484
+cfn=(1996)
+calls=34 0 
+0 2399
+0 66
+cob=(6)
+cfi=(2)
+cfn=(994) strlen
+calls=34 0 
+0 479
+0 132
+cfn=(1898)
+calls=34 0 
+0 1804
+0 418
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=34 0 
+0 621
+0 198
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=34 0 
+0 162
+0 88
+cob=(6)
+cfi=(2)
+cfn=(566)
+calls=34 0 
+0 411
+0 198
+
+fn=(2918)
+0 4393
+
+fn=(3376) _gfortran_string_trim
+0 57380
+cfn=(3378) 0x0000000000016FB0
+calls=22 0 
+0 1782
+0 144
+cob=(6)
+cfi=(2)
+cfn=(744) memmove
+calls=22 0 
+0 1182
+
+fn=(4536) _gfortran_st_inquire
+0 30
+cfn=(82)
+calls=5 0 
+0 30
+0 30
+cfn=(4538)
+calls=5 0 
+0 2322
+0 330
+cfn=(4608)
+calls=5 0 
+0 666
+0 10
+
+fn=(4694)
+0 38
+cfn=(4538)
+calls=1 0 
+0 1644
+0 31
+cfn=(4734) 0x00000000000B56D0
+calls=1 0 
+0 3758
+0 8
+cfn=(150)
+calls=1 0 
+0 96
+0 43
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=1 0 
+0 140
+0 4
+cfn=(4838) 0x00000000000ACE90
+calls=1 0 
+0 24
+0 4
+
+fn=(4738) 0x00000000000B54C0
+0 12
+cfn=(4540)
+calls=1 0 
+0 1598
+0 24
+cob=(6)
+cfi=(2)
+cfn=(4760) open
+calls=1 0 
+0 7
+0 19
+
+fn=(60)
+0 508
+cob=(6)
+cfi=(2)
+cfn=(66)
+calls=1259937 0 
+0 3683
+
+fn=(402)
+0 3276
+cfn=(406)
+calls=1259857 0 
+0 44878
+0 1260
+
+fn=(494) _gfortran_transfer_character
+0 4407
+cfn=(406)
+calls=1259846 0 
+0 87074
+0 1130
+
+fn=(724) 0x00000000000A72B0
+0 1512
+cfn=(0)
+calls=1259857 0 
+0 14264
+0 630
+
+fn=(856) 0x00000000000AEED0
+0 645
+
+fn=(2862)
+0 801
+cfn=(150)
+calls=93 0 
+0 8544
+0 4806
+
+fn=(2944)
+0 623
+cfn=(2918)
+calls=93 0 
+0 2047
+0 712
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=93 0 
+0 627
+0 356
+
+fn=(4460)
+0 221
+
+fn=(4540)
+0 108
+cfn=(4542)
+calls=12 0 
+0 3092
+0 96
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=12 0 
+0 804
+0 96
+
+fn=(4650)
+0 5
+
+fn=(4734)
+0 8
+cfn=(150)
+calls=1 0 
+0 472
+0 5
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=1 0 
+0 1465
+0 9
+cob=(6)
+cfi=(2)
+cfn=(4578)
+calls=1 0 
+0 12
+0 4
+cob=(6)
+cfi=(2)
+cfn=(2122)
+calls=1 0 
+0 7
+0 14
+cob=(6)
+cfi=(2)
+cfn=(4808) isatty
+calls=1 0 
+0 24
+0 39
+cfn=(4738)
+calls=1 0 
+0 1660
+0 39
+
+fn=(270) 0x00000000000A6700
+0 1890
+cfn=(240)
+calls=1259857 0 
+0 14476
+0 610
+cfn=(240)
+calls=378 0 
+0 76045
+0 4590
+cfn=(240)
+calls=4 0 
+0 240
+0 348
+cfn=(304) 0x00000000000A6230
+calls=68 0 
+0 3060
+0 408
+cfn=(240)
+calls=68 0 
+0 6944
+0 3062
+cfn=(240)
+calls=223 0 
+0 11699
+0 1603
+cfn=(304)
+calls=18 0 
+0 315
+0 28
+cfn=(240)
+calls=18 0 
+0 2979
+0 210
+cfn=(240)
+calls=131 0 
+0 9763
+0 407
+cfn=(304)
+calls=16 0 
+0 495
+0 696
+cfn=(240)
+calls=1260104 0 
+0 13376
+0 2974
+cfn=(240)
+calls=13 0 
+0 1495
+0 104
+cfn=(304)
+calls=13 0 
+0 585
+0 67
+cfn=(271) 0x00000000000A6700'2
+calls=6 0 
+0 965
+0 448
+cfn=(304)
+calls=110 0 
+0 4005
+0 1091
+cfn=(304)
+calls=1 0 
+0 45
+0 169
+cfn=(240)
+calls=1259816 0 
+0 12253
+0 222
+cfn=(304)
+calls=13 0 
+0 360
+0 375
+cfn=(304)
+calls=1259803 0 
+0 3375
+0 1010
+cfn=(304)
+calls=124 0 
+0 5355
+0 476
+cfn=(240)
+calls=124 0 
+0 18789
+0 979
+cfn=(240)
+calls=124 0 
+0 7140
+0 338
+cfn=(304)
+calls=38 0 
+0 900
+0 80
+cfn=(240)
+calls=38 0 
+0 2564
+0 180
+cfn=(240)
+calls=38 0 
+0 1207
+0 179
+cfn=(304)
+calls=6 0 
+0 45
+0 453
+cfn=(304)
+calls=107 0 
+0 4050
+0 1105
+cfn=(240)
+calls=124 0 
+0 13685
+0 1666
+cfn=(240)
+calls=124 0 
+0 7230
+0 494
+cfn=(240)
+calls=12 0 
+0 690
+0 42
+
+fn=(271)
+0 15
+cfn=(240)
+calls=6 0 
+0 115
+0 2
+cfn=(240)
+calls=5 0 
+0 489
+0 28
+cfn=(240)
+calls=1 0 
+0 60
+0 8
+cfn=(240)
+calls=2 0 
+0 61
+0 6
+cfn=(240)
+calls=9 0 
+0 60
+0 14
+cfn=(304)
+calls=2 0 
+0 45
+0 12
+cfn=(304)
+calls=1 0 
+0 45
+0 5
+
+fn=(304)
+0 22680
+
+fn=(418)
+0 27249
+cfn=(422)
+calls=2929090 0 
+0 38077
+0 6373
+cfn=(422)
+calls=1362022 0 
+0 4981
+0 744
+
+fn=(682)
+0 506
+
+fn=(1332) _gfortran_string_index
+0 25230
+
+fn=(2066)
+0 753
+cfn=(2112)
+calls=13 0 
+0 468
+0 54
+cfn=(2128)
+calls=13 0 
+0 264
+0 531
+cfn=(1904)
+calls=1359 0 
+0 3519
+0 357
+cob=(6)
+cfi=(2)
+cfn=(566)
+calls=1359 0 
+0 918
+0 102
+
+fn=(2602) _gfortran_date_and_time
+0 16
+cob=(6)
+cfi=(2)
+cfn=(2606)
+calls=2 0 
+0 12
+0 17
+cob=(6)
+cfi=(2)
+cfn=(2612) localtime
+calls=2 0 
+0 1445
+0 12
+cob=(6)
+cfi=(2)
+cfn=(2820) gmtime
+calls=2 0 
+0 365
+0 117
+
+fn=(3378)
+0 36
+cob=(6)
+cfi=(2)
+cfn=(154)
+calls=22 0 
+0 1620
+0 126
+
+fn=(4324) _gfortran_pow_i4_i4
+0 308
+
+fn=(148)
+0 756
+cfn=(150)
+calls=1259857 0 
+0 34890
+0 4158
+cfn=(240)
+calls=1259857 0 
+0 7686
+0 504
+cfn=(270)
+calls=1259857 0 
+0 250434
+0 1008
+
+fn=(862)
+0 2869
+
+fn=(2112)
+0 102
+cfn=(2128)
+calls=9 0 
+0 264
+0 112
+
+fn=(678)
+0 254
+
+fn=(1958)
+0 1356
+cfn=(1898)
+calls=127 0 
+0 11977
+0 1225
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=123 0 
+0 770
+0 1210
+cob=(6)
+cfi=(2)
+cfn=(566)
+calls=123 0 
+0 3226
+0 18
+cob=(6)
+cfi=(2)
+cfn=(566)
+calls=4 0 
+0 77
+0 12
+
+fn=(1974)
+0 418
+
+fn=(2004)
+0 609
+
+fn=(2954)
+0 178
+
+fn=(4622)
+0 86
+cob=(6)
+cfi=(2)
+cfn=(994)
+calls=4 0 
+0 179
+0 28
+cob=(6)
+cfi=(2)
+cfn=(4640) strncasecmp
+calls=3 0 
+0 171
+0 32
+
+fn=(82)
+0 792
+
+fn=(854) _gfortran_transfer_real
+0 1419
+cfn=(856)
+calls=408870 0 
+0 645
+0 4902
+cfn=(406)
+calls=408832 0 
+0 750186
+0 1290
+
+fn=(1432)
+0 667
+
+fn=(2050) _gfortran_st_write_done
+0 89
+cob=(6)
+cfi=(2)
+cfn=(4)
+calls=93 0 
+0 9345
+0 378
+cfn=(610)
+calls=212 0 
+0 33866
+0 1008
+cfn=(724)
+calls=212 0 
+0 16406
+0 252
+cfn=(54)
+calls=212 0 
+0 1638
+0 882
+cfn=(60)
+calls=212 0 
+0 4158
+0 2706
+cfn=(0)
+calls=93 0 
+0 9434
+0 341
+
+fn=(3134)
+0 1012
+cob=(14)
+cfi=(5)
+cfn=(3144)
+calls=50 0 
+0 322
+0 516
+cob=(6)
+cfi=(2)
+cfn=(3164)
+calls=8 0 
+0 36447
+0 210
+cob=(6)
+cfi=(2)
+cfn=(3164)
+calls=15 0 
+0 80941
+0 225
+cob=(6)
+cfi=(2)
+cfn=(3164)
+calls=27 0 
+0 93325
+0 736
+cfn=(3198)
+calls=50 0 
+0 22480
+0 869
+
+fn=(3508) _gfortran_cpu_time_8
+0 386430
+cob=(6)
+cfi=(2)
+cfn=(3512) getrusage
+calls=64405 0 
+0 322025
+0 772860
+
+fn=(4672)
+0 10
+cfn=(4673) 0x00000000000B3480'2
+calls=1 0 
+0 30
+0 9
+
+fn=(4673)
+0 17
+cfn=(4673)
+calls=1 0 
+0 7
+0 13
+
+fn=(4838)
+0 13
+cfn=(678)
+calls=1 0 
+0 2
+0 3
+cfn=(682)
+calls=1 0 
+0 2
+0 4
+
+ob=(3) /filespace/groups/cnerg/users/sjackson/dag-mcnp5-meshtal
+fl=(4) ???
+fn=(2598) getidt_
+0 22
+cob=(12)
+cfi=(1)
+cfn=(2602)
+calls=2 0 
+0 1984
+0 12
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=2 0 
+0 6573
+0 5
+cob=(12)
+cfi=(1)
+cfn=(1398)
+calls=2 0 
+0 871
+0 5
+cob=(12)
+cfi=(1)
+cfn=(1398)
+calls=2 0 
+0 871
+0 20
+cob=(12)
+cfi=(1)
+cfn=(1398)
+calls=2 0 
+0 938
+0 5
+cob=(12)
+cfi=(1)
+cfn=(1398)
+calls=2 0 
+0 938
+0 5
+cob=(12)
+cfi=(1)
+cfn=(1398)
+calls=2 0 
+0 938
+0 5
+cob=(12)
+cfi=(1)
+cfn=(1398)
+calls=2 0 
+0 803
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=2 0 
+0 679
+0 4
+
+fn=(3504) secnd_
+0 644050
+cob=(12)
+cfi=(1)
+cfn=(3508)
+calls=64405 0 
+0 1481315
+0 837265
+
+fn=(3600) __mcnp_random_MOD_rn_skip_ahead
+0 77526342
+
+fn=(3616) set_lgc.2281
+0 132388124
+
+fn=(3618) lgeval_
+0 202287174
+
+fn=(3628) acetot_
+0 433012037
+
+fn=(3694) __ra1_mod_MOD_ra_ncheck
+0 1169792
+
+fn=(3728) moab::Core::tag_get_data(moab::TagInfo*, unsigned long const*, int, void*) const
+0 14621310
+cfn=(3784) moab::DenseTag::get_data(moab::SequenceManager const*, unsigned long const*, unsigned long, void*) const
+calls=1215415 0 
+0 96017785
+cfn=(3730) moab::SparseTag::get_data(moab::SequenceManager const*, unsigned long const*, unsigned long, void*) const
+calls=246716 0 
+0 26645328
+0 2924262
+
+fn=(3732) std::tr1::_Hashtable<unsigned long, std::pair<unsigned long const, void*>, std::allocator<std::pair<unsigned long const, void*> >, std::_Select1st<std::pair<unsigned long const, void*> >, std::equal_to<unsigned long>, std::tr1::hash<unsigned long>, std::tr1::__detail::_Mod_range_hashing, std::tr1::__detail::_Default_ranged_hash, std::tr1::__detail::_Prime_rehash_policy, false, false, true>::find(unsigned long const&) const
+0 3454024
+
+fn=(3804) std::vector<unsigned long, std::allocator<unsigned long> >::push_back(unsigned long const&)
+0 2400678
+cfn=(3806) std::vector<unsigned long, std::allocator<unsigned long> >::_M_insert_aux(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, unsigned long const&)
+calls=400113 0 
+0 93891073
+
+fn=(3858) moab::SequenceData::allocate_adjacency_data()
+0 11
+cob=(6)
+cfi=(2)
+cfn=(154)
+calls=1 0 
+0 909
+0 6
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=1 0 
+0 539581
+0 7
+
+fn=(4020) void std::__introsort_loop<__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, long>(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, long)
+0 479357974
+cfn=(4021) void std::__introsort_loop<__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, long>(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, long)'2
+calls=3497921 0 
+0 67907797
+0 45945233
+
+fn=(4021)
+0 46010011
+cfn=(4021)
+calls=70020 0 
+0 1190340
+0 21897786
+
+fn=(4030) moab::Range::const_iterator::operator+=(long)
+0 267813781
+
+fn=(4860) moab::TrackLengthMeshTally::print(double, double)
+0 2
+cfn=(4862) moab::TrackLengthMeshTally::write_results(double, double, std::string const*)
+calls=1 0 
+0 676891539
+
+fn=(3492) MAIN__
+cfn=(3502) mcrun_
+calls=1 0 
+0 36331706124
+
+fn=(3588) utask_
+0 14
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=2 0 
+0 6700
+0 8
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=2 0 
+0 80
+0 8
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=2 0 
+0 3334
+0 8
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=2 0 
+0 158
+0 8
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=2 0 
+0 564
+0 8
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=2 0 
+0 92
+0 8
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=2 0 
+0 234
+0 8
+cob=(6)
+cfi=(2)
+cfn=(566)
+calls=2 0 
+0 54
+0 8
+cob=(6)
+cfi=(2)
+cfn=(566)
+calls=2 0 
+0 54
+0 422
+
+fn=(3592) time_to_stop.4959
+0 2189498
+cfn=(3594) __ra2_mod_MOD_ra_kcheck
+calls=64397 0 
+0 450779
+0 3284165
+cfn=(3504)
+calls=64397 0 
+0 2962262
+0 2107072
+
+fn=(3598) __mcnp_random_MOD_rn_init_particle
+0 772740
+cfn=(3600)
+calls=64395 0 
+0 77526342
+0 450765
+
+fn=(3612) rotas_
+0 8505506
+cfn=(3610) __mcnp_random_MOD_rang
+calls=309841 0 
+0 7746025
+0 2788569
+cfn=(3610)
+calls=309841 0 
+0 7746025
+0 31402552
+
+fn=(3622) savpar_
+0 204665436
+
+fn=(3686) dagmc_fmesh_score_
+0 8300655
+cfn=(3688) moab::TrackLengthMeshTally::add_track_segment(moab::CartVect&, moab::CartVect&, double, void*)
+calls=251535 0 
+0 31907256380
+0 503070
+
+fn=(3790) moab::MeshSetSequence::get_type(moab::SequenceManager const*, unsigned long, moab::EntityType, moab::Range&, bool) const
+0 2471376
+cfn=(3792) unsigned long const* std::lower_bound<unsigned long const*, unsigned long>(unsigned long const*, unsigned long const*, unsigned long const&)
+calls=51487 0 
+0 2167722
+0 2923118
+cfn=(3794) moab::Range::insert(moab::Range::const_iterator, unsigned long, unsigned long)
+calls=98118 0 
+0 15968700
+0 205948
+cfn=(3794)
+calls=51487 0 
+0 7248007
+0 1463987
+
+fn=(3796) moab::Core::get_connectivity(unsigned long, unsigned long const*&, int&, bool, std::vector<unsigned long, std::allocator<unsigned long> >*) const
+0 243329704
+cfn=(3798) moab::UnstructuredElemSeq::get_connectivity(unsigned long, unsigned long const*&, int&, bool, std::vector<unsigned long, std::allocator<unsigned long> >*) const
+calls=7156756 0 
+0 179221917
+
+fn=(3818) moab::AdaptiveKDTree::closest_triangle(unsigned long, double const*, double*, unsigned long&)
+0 572824
+cfn=(3820) moab::AdaptiveKDTree::find_close_triangle(unsigned long, double const*, double*, unsigned long&)
+calls=20458 0 
+0 253196865
+0 450076
+cfn=(3828) moab::AdaptiveKDTree::leaves_within_distance(unsigned long, double const*, double, std::vector<unsigned long, std::allocator<unsigned long> >&)
+calls=20458 0 
+0 449682468
+0 654656
+cfn=(3788) moab::Core::get_entities_by_type(unsigned long, moab::EntityType, moab::Range&, bool) const
+calls=20458 0 
+0 14017005
+0 204580
+cfn=(3824) _ZN4moabL20closest_to_trianglesEPNS_9InterfaceERKNS_5RangeERKNS_8CartVectERdRS5_Rm
+calls=20458 0 
+0 19448369
+0 61374
+cfn=(3786) moab::Range::clear()
+calls=20458 0 
+0 5615886
+0 102290
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=20458 0 
+0 1718472
+0 368244
+
+fn=(3826) moab::GeomUtil::closest_location_on_tri(moab::CartVect const&, moab::CartVect const*, moab::CartVect&)
+0 14802770
+
+fn=(3928) __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > > std::lower_bound<__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, unsigned long>(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, unsigned long const&)
+0 1382104529
+
+fn=(4016) moab::AEntityFactory::get_zero_to_n_elements(unsigned long, unsigned, std::vector<unsigned long, std::allocator<unsigned long> >&, bool, int)
+0 159331095
+cfn=(3852) moab::AEntityFactory::get_adjacencies(unsigned long, std::vector<unsigned long, std::allocator<unsigned long> >*&, bool)
+calls=10622073 0 
+0 531103650
+0 233685606
+cfn=(3928)
+calls=10622073 0 
+0 473200270
+0 74354511
+cfn=(3928)
+calls=10622073 0 
+0 541484405
+0 74354511
+cfn=(4018) void std::vector<unsigned long, std::allocator<unsigned long> >::_M_range_insert<__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > > >(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, std::forward_iterator_tag)
+calls=10622073 0 
+0 4038667729
+0 95598657
+
+fn=(4024) moab::range_inserter std::copy<__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, moab::range_inserter>(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, moab::range_inserter)
+0 74354511
+cfn=(4026) moab::Range::insert(moab::Range::const_iterator, unsigned long)
+calls=3540691 0 
+0 468774866
+0 31606848
+cfn=(4026)
+calls=3511872 0 
+0 601623558
+0 63559524
+
+fn=(4026)
+0 274830618
+cob=(13)
+cfi=(8)
+cfn=(3722)
+calls=3440890 0 
+0 384242404
+0 34608502
+cob=(13)
+cfi=(8)
+cfn=(3722)
+calls=3540691 0 
+0 348391372
+0 28325528
+
+fn=(4038) MCNPTrackScore::make_score(double, void*)
+0 32114484
+cfn=(4040) __fmesh_mod_MOD_dagmc_mesh_score
+calls=3568276 0 
+0 3818055320
+0 10704828
+
+fn=(4158) output_
+0 52
+cfn=(4312) sumary_
+calls=1 0 
+0 678449076
+0 21
+
+fn=(4518) action_
+0 36
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 22548
+0 8
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=1 0 
+0 3864
+0 11
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=1 0 
+0 825
+0 11
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=1 0 
+0 12630
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 526
+0 1158
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=2 0 
+0 11116
+0 8
+cob=(12)
+cfi=(1)
+cfn=(1398)
+calls=2 0 
+0 1340
+0 26
+cob=(12)
+cfi=(1)
+cfn=(1398)
+calls=2 0 
+0 1463
+0 162
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=6 0 
+0 39921
+0 88
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=2 0 
+0 11315
+0 78
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=8 0 
+0 46507
+0 52
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=2 0 
+0 1052
+0 35
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 6622
+0 4
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 6489
+0 4
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 6477
+0 4
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 6833
+0 8
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 5657
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 526
+0 32
+
+fn=(4862)
+0 15
+cob=(13)
+cfi=(8)
+cfn=(4866)
+calls=1 0 
+0 19
+0 13
+cfn=(4868) moab::Core::get_entities_by_dimension(unsigned long, int, moab::Range&, bool) const
+calls=1 0 
+0 430
+0 14571180
+cfn=(4872) moab::Core::get_connectivity(unsigned long const*, int, std::vector<unsigned long, std::allocator<unsigned long> >&, bool) const
+calls=662326 0 
+0 273540652
+0 30466996
+cfn=(3800) moab::Core::get_coords(unsigned long const*, int, double*) const
+calls=1986978 0 
+0 69544230
+0 7285586
+cfn=(3800)
+calls=662326 0 
+0 23181410
+0 44375842
+cfn=(4876) moab::Core::tag_set_data(moab::TagInfo*, unsigned long const*, int, void const*)
+calls=662326 0 
+0 63022282
+0 8966692
+cob=(14)
+cfi=(5)
+cfn=(4946)
+calls=356454 0 
+0 10693620
+cob=(9)
+cfi=(7)
+cfn=(2982)
+calls=1 0 
+0 866
+0 5298608
+cfn=(4876)
+calls=662326 0 
+0 63022223
+0 3973950
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=662325 0 
+0 55635300
+0 3311625
+
+fn=(4874) void std::vector<unsigned long, std::allocator<unsigned long> >::_M_range_insert<unsigned long const*>(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, unsigned long const*, unsigned long const*, std::forward_iterator_tag)
+0 32453974
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=662326 0 
+0 15895824
+0 3311630
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=662326 0 
+0 45038168
+0 5298608
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=662326 0 
+0 15895824
+0 11259542
+cob=(13)
+cfi=(8)
+cfn=(3722)
+calls=662326 0 
+0 64907962
+0 2649304
+
+fn=(4876)
+0 13246520
+cfn=(4878) moab::DenseTag::set_data(moab::SequenceManager*, unsigned long const*, unsigned long, void const*)
+calls=1324652 0 
+0 110148683
+0 2649302
+
+fn=(4882) moab::SequenceData::increase_tag_count(unsigned)
+0 28
+cob=(6)
+cfi=(2)
+cfn=(4886) realloc
+calls=2 0 
+0 550
+0 18
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=2 0 
+0 68
+0 10
+
+fn=(3514) wclock_
+0 45
+cob=(12)
+cfi=(1)
+cfn=(3520)
+calls=5 0 
+0 260
+cob=(9)
+cfi=(7)
+cfn=(2982)
+calls=1 0 
+0 1080
+0 80
+
+fn=(3596) hstory_
+0 1481085
+cfn=(3598)
+calls=64395 0 
+0 78749847
+0 128790
+cfn=(3602) startp_
+calls=64395 0 
+0 523971679
+0 8932740
+cfn=(3614) chkcel_
+calls=177524 0 
+0 368333826
+0 2515350
+cfn=(3624) track_
+calls=251535 0 
+0 696232394
+0 1257675
+cfn=(3626) __dxtran_mod_MOD_dist_dxtran_sphere
+calls=251535 0 
+0 5030700
+0 12325215
+cfn=(3628)
+calls=251535 0 
+0 433012037
+0 5030700
+cfn=(3630) __ra1_mod_MOD_ra_qpl
+calls=251535 0 
+0 2263815
+0 18613590
+cfn=(3610)
+calls=251535 0 
+0 6288375
+0 251535
+cob=(14)
+cfi=(5)
+cfn=(3640)
+calls=251535 0 
+0 48721328
+cob=(9)
+cfi=(7)
+cfn=(2982)
+calls=1 0 
+0 850
+0 29891752
+cfn=(3684) __fmesh_mod_MOD_mesh_score
+calls=251535 0 
+0 31940207465
+0 99274499
+cfn=(3750) surfac_
+calls=105311 0 
+0 339809120
+0 17243064
+cfn=(3690) __ra1_mod_MOD_ra_mcheck
+calls=146224 0 
+0 1608464
+0 1608464
+cfn=(3692) colidn_
+calls=146224 0 
+0 459409932
+0 26699436
+cfn=(3756) __fmesh_mod_MOD_mesh_end_history
+calls=64395 0 
+0 508857546
+0 128790
+cfn=(3764) __mcnp_random_MOD_rn_update_stats
+calls=64395 0 
+0 1159142
+0 193185
+
+fn=(3604) sourcb_
+0 515160
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=64395 0 
+0 2060640
+0 257580
+cob=(6)
+cfi=(2)
+cfn=(566)
+calls=64395 0 
+0 12621420
+0 24792075
+cfn=(3606) smpsrc_
+calls=128790 0 
+0 158282910
+0 17322255
+cfn=(3612)
+calls=64395 0 
+0 3155355
+0 2575783
+cfn=(3614)
+calls=64394 0 
+0 165223296
+0 193202
+cfn=(3614)
+calls=2 0 
+0 3649
+0 257611
+
+fn=(3742) moab::AdaptiveKDTree::ray_intersect_triangles(unsigned long, double, double const*, double const*, std::vector<unsigned long, std::allocator<unsigned long> >&, std::vector<double, std::allocator<double> >&, int, double)
+0 3846386
+cfn=(3744) moab::AdaptiveKDTree::get_tree_box(unsigned long, double*, double*)
+calls=113129 0 
+0 16969350
+0 593067
+cfn=(3766) std::vector<moab::NodeSeg, std::allocator<moab::NodeSeg> >::_M_insert_aux(__gnu_cxx::__normal_iterator<moab::NodeSeg*, std::vector<moab::NodeSeg, std::allocator<moab::NodeSeg> > >, moab::NodeSeg const&)
+calls=10570 0 
+0 1638350
+0 5507320
+cfn=(3768) moab::Core::get_child_meshsets(unsigned long, std::vector<unsigned long, std::allocator<unsigned long> >&, int) const
+calls=260240 0 
+0 68364213
+0 2560116
+cfn=(3782) moab::AdaptiveKDTree::get_split_plane(unsigned long, moab::AdaptiveKDTree::Plane&)
+calls=249669 0 
+0 27713259
+0 5046230
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=10570 0 
+0 887880
+0 42280
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=10570 0 
+0 887880
+0 21140
+cfn=(3786)
+calls=10570 0 
+0 2850330
+0 8138401
+cfn=(3746) moab::GeomUtil::segment_box_intersect(moab::CartVect, moab::CartVect, moab::CartVect const&, moab::CartVect const&, double&, double&)
+calls=113129 0 
+0 12101800
+0 349959
+cfn=(3786)
+calls=10571 0 
+0 148172
+0 73997
+cfn=(3788)
+calls=10571 0 
+0 6739711
+0 500731
+cfn=(3796)
+calls=31106 0 
+0 1835254
+0 279954
+cfn=(3800)
+calls=31106 0 
+0 2395162
+0 311060
+cfn=(3802) moab::GeomUtil::ray_tri_intersect(moab::CartVect const*, moab::CartVect const&, moab::CartVect const&, double, double&, double const*)
+calls=31106 0 
+0 3093715
+0 552424
+cfn=(3804)
+calls=7711 0 
+0 1742560
+0 5547752
+cfn=(3808) std::vector<double, std::allocator<double> >::_M_insert_aux(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&)
+calls=7711 0 
+0 2105103
+0 7714
+cfn=(3766)
+calls=1 0 
+0 284
+0 1
+
+fn=(3746)
+0 12101800
+
+fn=(3750)
+0 6002727
+cfn=(3622)
+calls=105311 0 
+0 127005066
+0 1053110
+cfn=(3752) newcel_
+calls=105311 0 
+0 174264252
+0 31483965
+
+fn=(3756)
+0 643950
+cfn=(3758) dagmc_fmesh_end_history_
+calls=64395 0 
+0 505058241
+0 3155355
+
+fn=(3760) moab::TrackLengthMeshTally::end_history()
+0 60410216
+cob=(13)
+cfi=(8)
+cfn=(3842)
+calls=3522081 0 
+0 62925409
+0 10759428
+cfn=(3762) std::_Rb_tree<unsigned long, unsigned long, std::_Identity<unsigned long>, std::less<unsigned long>, std::allocator<unsigned long> >::_M_erase(std::_Rb_tree_node<unsigned long>*)
+calls=64395 0 
+0 368773758
+0 708345
+
+fn=(3770) moab::MeshSetSequence::get_children(moab::SequenceManager const*, unsigned long, std::vector<unsigned long, std::allocator<unsigned long> >&, int) const
+0 49409178
+cfn=(3772) std::vector<unsigned long, std::allocator<unsigned long> >::resize(unsigned long, unsigned long)
+calls=1266902 0 
+0 123549367
+0 5067608
+cfn=(3776) unsigned long* std::__copy_move<false, true, std::random_access_iterator_tag>::__copy_m<unsigned long>(unsigned long const*, unsigned long const*, unsigned long*)
+calls=1266902 0 
+0 99292680
+0 1266902
+
+fn=(3772)
+0 17736628
+cfn=(3774) std::vector<unsigned long, std::allocator<unsigned long> >::_M_fill_insert(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, unsigned long, unsigned long const&)
+calls=1266902 0 
+0 103278935
+0 2533804
+
+fn=(3782)
+0 14584980
+cfn=(3728)
+calls=1215415 0 
+0 110602765
+0 9723320
+
+fn=(3788)
+0 875512
+cfn=(3794)
+calls=3 0 
+0 405
+0 18
+cob=(13)
+cfi=(8)
+cfn=(3842)
+calls=3 0 
+0 63
+0 617913
+cfn=(3790)
+calls=51487 0 
+0 32448858
+
+fn=(3798)
+0 179221917
+
+fn=(3806)
+0 75685818
+cob=(13)
+cfi=(8)
+cfn=(3722)
+calls=2441478 0 
+0 354261602
+0 17090346
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=2441478 0 
+0 162325278
+0 34180692
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=2441478 0 
+0 58595472
+0 9322032
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=1997598 0 
+0 178330390
+0 28188174
+
+fn=(3810) std::vector<double, std::allocator<double> >::_M_check_len(unsigned long, char const*) const
+0 154220
+
+fn=(3814) double* std::__uninitialized_move_a<double*, double*, std::allocator<double> >(double*, double*, double*, std::allocator<double>&)
+0 169642
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=15422 0 
+0 370128
+0 77110
+
+fn=(3822) std::vector<unsigned long, std::allocator<unsigned long> >::reserve(unsigned long)
+0 613740
+cob=(13)
+cfi=(8)
+cfn=(3722)
+calls=20458 0 
+0 2148231
+0 102290
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=20458 0 
+0 490992
+0 184122
+
+fn=(3832) moab::Core::get_adjacencies(unsigned long const*, int, int, bool, moab::Range&, int)
+0 95598657
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=3540691 0 
+0 381725628
+0 38947601
+cfn=(3834) _ZN4moabL28get_adjacencies_intersectionIPKmEENS_9ErrorCodeEPNS_4CoreET_S6_ibRSt6vectorImSaImEE
+calls=3540691 0 
+0 19255166816
+0 38947601
+cfn=(4024)
+calls=3540691 0 
+0 1239919307
+0 3540691
+
+fn=(3838) moab::AEntityFactory::create_vert_elem_adjacencies()
+0 24
+cfn=(3786)
+calls=1 0 
+0 14
+0 36
+cfn=(3786)
+calls=9 0 
+0 390
+0 90
+cfn=(3788)
+calls=10 0 
+0 788
+0 19760777
+cfn=(3848) moab::AEntityFactory::get_vertices(unsigned long, unsigned long const*&, int&, std::vector<unsigned long, std::allocator<unsigned long> >&)
+calls=2470086 0 
+0 205017138
+0 116779094
+cfn=(3850) moab::AEntityFactory::add_adjacency(unsigned long, unsigned long, bool)
+calls=9454832 0 
+0 2331011810
+0 28364498
+cfn=(3786)
+calls=1 0 
+0 14
+0 14820587
+
+fn=(4018)
+0 253657544
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=2150323 0 
+0 250841266
+0 17202584
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=2150323 0 
+0 51607752
+0 30104522
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=2150323 0 
+0 51607752
+0 237861652
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=8495059 0 
+0 203881416
+0 42475295
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=8495059 0 
+0 1031873663
+0 67960472
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=8495059 0 
+0 203881416
+0 26852236
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=1367059 0 
+0 147580092
+0 118930826
+cob=(13)
+cfi=(8)
+cfn=(3722)
+calls=8495059 0 
+0 1275412509
+0 33980236
+
+fn=(4022) void std::__insertion_sort<__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > > >(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >)
+0 802504384
+
+fn=(4032) moab::CN::SubEntityConn(void const*, moab::EntityType, int, int, void*, int&)
+0 940837874
+
+fn=(4040)
+0 117753108
+cfn=(4042) __fmesh_mod_MOD_wtmult_fmesh
+calls=3568276 0 
+0 3297087024
+0 403215188
+
+fn=(4042)
+0 1580746268
+cfn=(4044) getxs_
+calls=7136552 0 
+0 1270306256
+0 446034500
+
+fn=(4126) moab::TrackLengthMeshTally::point_in_tet(moab::CartVect const&, unsigned long const*)
+0 1735620
+cfn=(3796)
+calls=115708 0 
+0 6826772
+0 925664
+cfn=(3800)
+calls=115708 0 
+0 4049780
+0 5610626
+
+fn=(4154) __fmesh_mod_MOD_fmesh_vtask
+0 5720
+
+fn=(1328) nxtsym_
+0 837
+cob=(12)
+cfi=(1)
+cfn=(1332)
+calls=27 0 
+0 1350
+0 7867
+cob=(12)
+cfi=(1)
+cfn=(1336)
+calls=397 0 
+0 9844
+0 7114
+cob=(12)
+cfi=(1)
+cfn=(1332)
+calls=62 0 
+0 3871
+0 1600
+cob=(12)
+cfi=(1)
+cfn=(1332)
+calls=45 0 
+0 13090
+0 404
+
+fn=(3626)
+0 5030700
+
+fn=(3690)
+0 1608464
+
+fn=(3726) moab::AdaptiveKDTree::leaf_containing_point(unsigned long, double const*, moab::AdaptiveKDTreeIter&)
+0 2036322
+cfn=(3728)
+calls=113129 0 
+0 13575480
+0 1754505
+
+fn=(3740) moab::TrackLengthMeshTally::find_next_tet_by_ray_fire(moab::CartVect&, moab::CartVect&, double, unsigned long*, double&, unsigned long)
+0 3054483
+cfn=(3742)
+calls=113129 0 
+0 182851555
+0 984668
+cfn=(3830) moab::TrackLengthMeshTally::get_skin_triangle_adjacencies(unsigned long, unsigned long&, unsigned long*)
+calls=2851 0 
+0 19145165
+0 352800
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=7711 0 
+0 647724
+0 347098
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=7711 0 
+0 647724
+0 791903
+
+fn=(3768)
+0 50184478
+cfn=(3770)
+calls=1266902 0 
+0 278585735
+
+fn=(3776)
+0 13935922
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=1266902 0 
+0 79022248
+0 6334510
+
+fn=(3786)
+0 36010579
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=3539008 0 
+0 297276672
+0 7184362
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=3592181 0 
+0 301743204
+0 43132869
+
+fn=(3808)
+0 177353
+cfn=(3810)
+calls=7711 0 
+0 154220
+0 30844
+cfn=(3812) std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long)
+calls=7711 0 
+0 933031
+0 46266
+cfn=(3814)
+calls=7711 0 
+0 308440
+0 77110
+cfn=(3814)
+calls=7711 0 
+0 308440
+0 69399
+
+fn=(3830)
+0 372944
+cfn=(3796)
+calls=23309 0 
+0 1375231
+0 582725
+cfn=(3832)
+calls=23309 0 
+0 2866897387
+0 93236
+cfn=(4028) moab::Range::size() const
+calls=23309 0 
+0 326326
+0 233090
+cfn=(4030)
+calls=23309 0 
+0 279708
+0 93236
+cfn=(3786)
+calls=23309 0 
+0 2377518
+0 139854
+
+fn=(3848)
+0 41991462
+cfn=(3796)
+calls=2470086 0 
+0 145735074
+0 17290602
+
+fn=(3856) moab::AEntityFactory::set_adjacency_ptr(unsigned long, std::vector<unsigned long, std::allocator<unsigned long> >*)
+0 13734071
+cfn=(3858)
+calls=1 0 
+0 540514
+0 8
+
+fn=(4034) moab::CN::ConnectivityMatch(unsigned long const*, unsigned long const*, int, int&, int&)
+0 556691048
+
+fn=(4156) __mcnp_random_MOD_rn_query
+0 133
+
+fn=(4312)
+0 12
+cfn=(3594)
+calls=1 0 
+0 7
+0 3
+cfn=(4314) __ra2_mod_MOD_ra_lcheck
+calls=1 0 
+0 11
+0 48
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 13249
+0 4
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 6348
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 675
+0 2
+cob=(14)
+cfi=(5)
+cfn=(1826)
+calls=1 0 
+0 31
+0 8
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=1 0 
+0 31
+0 5
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=1 0 
+0 94
+0 14
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 3608
+0 4
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=1 0 
+0 637
+0 5
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=1 0 
+0 1179
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 526
+0 4
+cfn=(2598)
+calls=1 0 
+0 14680
+0 14
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 1593
+0 4
+cob=(12)
+cfi=(1)
+cfn=(1398)
+calls=1 0 
+0 611
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 675
+0 11
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 1637
+0 4
+cob=(12)
+cfi=(1)
+cfn=(1398)
+calls=1 0 
+0 983
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 675
+0 11
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 1593
+0 4
+cob=(12)
+cfi=(1)
+cfn=(1398)
+calls=1 0 
+0 611
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 675
+0 27
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 1593
+0 7
+cob=(12)
+cfi=(1)
+cfn=(1398)
+calls=1 0 
+0 760
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 675
+0 11
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 1593
+0 4
+cob=(12)
+cfi=(1)
+cfn=(1398)
+calls=1 0 
+0 627
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 675
+0 14
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 1637
+0 4
+cob=(12)
+cfi=(1)
+cfn=(1398)
+calls=1 0 
+0 661
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 675
+0 47
+cob=(12)
+cfi=(1)
+cfn=(4324)
+calls=11 0 
+0 308
+0 105
+cob=(12)
+cfi=(1)
+cfn=(1814)
+calls=1 0 
+0 118
+0 7
+cob=(12)
+cfi=(1)
+cfn=(1814)
+calls=1 0 
+0 118
+0 7
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 6046
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 526
+0 11
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 2439
+0 4
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=1 0 
+0 804
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 526
+0 17
+cob=(12)
+cfi=(1)
+cfn=(1814)
+calls=1 0 
+0 123
+0 7
+cob=(12)
+cfi=(1)
+cfn=(1814)
+calls=1 0 
+0 119
+0 8
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 5356
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 556
+0 77
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 3097
+0 4
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=1 0 
+0 1387
+0 4
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=1 0 
+0 544
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 526
+0 93
+cob=(12)
+cfi=(1)
+cfn=(3420)
+calls=1 0 
+0 19
+0 9
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 10625
+0 4
+cob=(12)
+cfi=(1)
+cfn=(1398)
+calls=1 0 
+0 1118
+0 11
+cob=(6)
+cfi=(2)
+cfn=(154)
+calls=1 0 
+0 97
+0 21
+cob=(12)
+cfi=(1)
+cfn=(1814)
+calls=1 0 
+0 91
+0 7
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=1 0 
+0 2460
+0 5
+cob=(6)
+cfi=(2)
+cfn=(4)
+calls=1 0 
+0 81
+0 11
+cob=(6)
+cfi=(2)
+cfn=(154)
+calls=1 0 
+0 83
+0 21
+cob=(12)
+cfi=(1)
+cfn=(1814)
+calls=1 0 
+0 91
+0 7
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=1 0 
+0 4806
+0 5
+cob=(6)
+cfi=(2)
+cfn=(4)
+calls=1 0 
+0 81
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 657
+0 405
+cob=(12)
+cfi=(1)
+cfn=(1336)
+calls=11 0 
+0 980
+0 148
+cob=(12)
+cfi=(1)
+cfn=(1336)
+calls=6 0 
+0 870
+0 2301
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=30 0 
+0 930
+0 450
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=30 0 
+0 2130
+0 390
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=30 0 
+0 930
+0 420
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=30 0 
+0 1920
+0 360
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=30 0 
+0 930
+0 390
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=30 0 
+0 1440
+0 540
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=20 0 
+0 2128
+0 390
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=10 0 
+0 1052
+0 774
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=27 0 
+0 48250
+0 756
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=27 0 
+0 129170
+0 54
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=27 0 
+0 18225
+0 297
+cfn=(1328)
+calls=27 0 
+0 45977
+0 1674
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=27 0 
+0 2133
+0 594
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=27 0 
+0 62478
+0 837
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=27 0 
+0 151647
+0 54
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=27 0 
+0 18225
+0 1065
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=24 0 
+0 1464
+0 336
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=24 0 
+0 1368
+0 540
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=27 0 
+0 62478
+0 783
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=27 0 
+0 153886
+0 54
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=27 0 
+0 18225
+0 988
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=22 0 
+0 1342
+0 286
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=22 0 
+0 891
+0 300
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=15 0 
+0 53205
+0 60
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=15 0 
+0 9975
+0 60
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=15 0 
+0 6720
+0 75
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=15 0 
+0 9555
+0 75
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=15 0 
+0 10290
+0 75
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=15 0 
+0 6720
+0 75
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=15 0 
+0 8160
+0 30
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=15 0 
+0 7890
+0 134
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 7499
+0 4
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 6652
+0 8
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 5957
+0 7
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 6346
+0 4
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 6652
+0 8
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 5520
+0 7
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 5602
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 526
+0 469
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 32040
+0 4
+cob=(12)
+cfi=(1)
+cfn=(1398)
+calls=1 0 
+0 3793
+0 4
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 6599
+0 4
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 6178
+0 4
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 12853
+0 8
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 6201
+0 4
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 9488
+0 4
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 6857
+0 4
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 7907
+0 4
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 6147
+0 4
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 7791
+0 4
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 5681
+0 4
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 5566
+0 4
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 6189
+0 4
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 7018
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 526
+0 22
+cfn=(3504)
+calls=1 0 
+0 46
+0 11
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 20585
+0 12
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 9196
+0 4
+cob=(12)
+cfi=(1)
+cfn=(1398)
+calls=1 0 
+0 1466
+0 10
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 8687
+0 4
+cob=(12)
+cfi=(1)
+cfn=(1398)
+calls=1 0 
+0 1623
+0 25
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 10023
+0 4
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 7926
+0 4
+cob=(12)
+cfi=(1)
+cfn=(1398)
+calls=1 0 
+0 1230
+0 4
+cob=(12)
+cfi=(1)
+cfn=(1398)
+calls=1 0 
+0 1116
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 526
+0 15
+cfn=(4156)
+calls=1 0 
+0 43
+0 17
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 5748
+0 4
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 5792
+0 4
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 5567
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 526
+0 239
+cfn=(4516) crtcze_
+calls=1 0 
+0 2811
+0 2
+cfn=(4518)
+calls=1 0 
+0 187440
+0 59
+cfn=(4526) __dxtran_mod_MOD_dxdiag
+calls=1 0 
+0 50
+0 2
+cfn=(4528) __ra1_mod_MOD_ra_result
+calls=1 0 
+0 15
+0 8
+cfn=(4530) __fmesh_mod_MOD_fmesh_print
+calls=1 0 
+0 677042124
+
+fn=(4526)
+0 50
+
+fn=(4528)
+0 6
+cfn=(3594)
+calls=1 0 
+0 7
+0 2
+
+fn=(4858) dagmc_fmesh_print_
+0 11
+cfn=(4860)
+calls=1 0 
+0 676891541
+
+fn=(4924) moab::SequenceData::create_data(int, int, void const*)
+0 34
+cob=(6)
+cfi=(2)
+cfn=(154)
+calls=2 0 
+0 734
+0 46
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=2 0 
+0 6061460
+0 2
+
+fn=(3594)
+0 450793
+
+fn=(3602)
+0 3734910
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=64395 0 
+0 4829625
+0 708345
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=64395 0 
+0 2575800
+0 5924340
+cfn=(3604)
+calls=64395 0 
+0 387260936
+0 4443405
+cfn=(3620) __dxtran_mod_MOD_inside_dxtran_sphere
+calls=64395 0 
+0 1223505
+0 28913363
+cfn=(3622)
+calls=64395 0 
+0 77660370
+0 6697080
+
+fn=(3606)
+0 1931850
+cfn=(3608) k.2285
+calls=128790 0 
+0 3219750
+0 1287900
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 1287900
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 772740
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 643950
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 643950
+cfn=(3610)
+calls=128790 0 
+0 3219750
+0 643950
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 901530
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 1674270
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 772740
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 1545480
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 2962170
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 2704590
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 3219750
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 772740
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 1803060
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 2704590
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 1416690
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 1545480
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 3348540
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 1545480
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 3863700
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 2704590
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 772740
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 4636440
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 2833380
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 3348540
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 2833380
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 8371350
+cfn=(3608)
+calls=128790 0 
+0 3219750
+0 1416690
+
+fn=(3620)
+0 1223505
+
+fn=(3744)
+0 1870218
+cfn=(3728)
+calls=133587 0 
+0 16030440
+0 2137392
+
+fn=(3758)
+0 901530
+cfn=(3760)
+calls=64395 0 
+0 503577156
+0 579555
+
+fn=(3764)
+0 1159142
+
+fn=(3794)
+0 6099921
+cob=(13)
+cfi=(8)
+cfn=(3722)
+calls=98118 0 
+0 10187002
+0 1175016
+cob=(13)
+cfi=(8)
+cfn=(3722)
+calls=51491 0 
+0 5343394
+0 411928
+
+fn=(3816) moab::TrackLengthMeshTally::get_starting_tet_conformal(moab::CartVect&, unsigned long*)
+0 306870
+cfn=(3818)
+calls=20458 0 
+0 746093109
+0 143206
+cfn=(3830)
+calls=20458 0 
+0 2853626090
+0 429618
+
+fn=(3828)
+0 511450
+cob=(13)
+cfi=(8)
+cfn=(3722)
+calls=20458 0 
+0 119016476
+0 347786
+cfn=(3744)
+calls=20458 0 
+0 3068700
+0 11335652
+cfn=(3768)
+calls=503331 0 
+0 131838214
+0 3441485
+cfn=(3782)
+calls=482873 0 
+0 53598903
+0 8006644
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=20458 0 
+0 1718472
+0 81832
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=20458 0 
+0 104715166
+0 7766882
+cfn=(3806)
+calls=20458 0 
+0 4214348
+0 20458
+
+fn=(4530)
+0 151
+cfn=(4532) unique_
+calls=1 0 
+0 118570
+0 14
+cob=(12)
+cfi=(1)
+cfn=(4620)
+calls=1 0 
+0 6854
+0 12
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 4388
+0 4
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=1 0 
+0 822
+0 4
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=1 0 
+0 772
+0 4
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=1 0 
+0 1129
+0 4
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=1 0 
+0 559
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 526
+0 8
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 1749
+0 4
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=1 0 
+0 741
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 526
+0 8
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 5282
+0 4
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 7862
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 526
+0 43
+cfn=(4858)
+calls=1 0 
+0 676891552
+
+fn=(4878)
+0 41064212
+cfn=(4880) moab::SequenceData::allocate_tag_array(int, int)
+calls=2 0 
+0 6062994
+0 9272569
+cob=(6)
+cfi=(2)
+cfn=(566)
+calls=1324651 0 
+0 23843718
+0 21194424
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=2 0 
+0 6061460
+0 2649306
+
+fn=(3748) tgtvel_
+0 5066620
+cfn=(3610)
+calls=97435 0 
+0 2435875
+0 1048
+cfn=(3610)
+calls=524 0 
+0 13100
+0 883211
+cfn=(3610)
+calls=790 0 
+0 19750
+0 2370
+cfn=(3610)
+calls=790 0 
+0 19750
+0 1580
+cob=(14)
+cfi=(5)
+cfn=(3640)
+calls=790 0 
+0 153909
+0 251056
+cfn=(3610)
+calls=123553 0 
+0 3088825
+0 494212
+cfn=(3610)
+calls=123553 0 
+0 3088825
+0 1182762
+cob=(14)
+cfi=(5)
+cfn=(3640)
+calls=97169 0 
+0 18822960
+0 874521
+cfn=(3610)
+calls=97169 0 
+0 2429225
+0 97169
+cob=(14)
+cfi=(5)
+cfn=(3640)
+calls=97169 0 
+0 18826705
+0 777352
+cfn=(3610)
+calls=97169 0 
+0 2429225
+0 3160
+cfn=(3610)
+calls=790 0 
+0 19750
+0 2155098
+cfn=(3610)
+calls=97959 0 
+0 2448975
+0 1563676
+cfn=(3612)
+calls=97435 0 
+0 21998425
+0 21772106
+
+fn=(3850)
+0 255280464
+cfn=(3852)
+calls=9454832 0 
+0 540934521
+0 111888376
+cfn=(3928)
+calls=9062430 0 
+0 367419854
+0 74460169
+cfn=(3806)
+calls=1960729 0 
+0 802084654
+0 19694468
+cfn=(3804)
+calls=392402 0 
+0 94549191
+0 64700113
+
+fn=(3852)
+0 240922860
+cfn=(3854) moab::AEntityFactory::get_adjacency_ptr(unsigned long, std::vector<unsigned long, std::allocator<unsigned long> >*&)
+calls=20076905 0 
+0 501922621
+0 262569373
+cob=(13)
+cfi=(8)
+cfn=(3722)
+calls=392402 0 
+0 48032302
+0 3139216
+cfn=(3856)
+calls=392402 0 
+0 14274593
+0 1177206
+
+fn=(3854)
+0 501922621
+
+fn=(4028)
+0 220315060
+
+fn=(4314)
+0 11
+
+fn=(4532)
+0 4621
+cob=(12)
+cfi=(1)
+cfn=(3420)
+calls=1 0 
+0 1755
+0 7
+cob=(12)
+cfi=(1)
+cfn=(1332)
+calls=1 0 
+0 3363
+0 14
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=1 0 
+0 67
+0 13
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=1 0 
+0 90
+0 3
+cob=(12)
+cfi=(1)
+cfn=(3420)
+calls=1 0 
+0 1755
+0 7
+cob=(12)
+cfi=(1)
+cfn=(1332)
+calls=1 0 
+0 3363
+0 6
+cob=(12)
+cfi=(1)
+cfn=(3420)
+calls=1 0 
+0 1755
+0 12
+cob=(12)
+cfi=(1)
+cfn=(1332)
+calls=1 0 
+0 193
+0 37
+cob=(12)
+cfi=(1)
+cfn=(3376)
+calls=5 0 
+0 9055
+0 25
+cob=(12)
+cfi=(1)
+cfn=(3376)
+calls=5 0 
+0 9730
+0 50
+cob=(6)
+cfi=(2)
+cfn=(154)
+calls=5 0 
+0 485
+0 95
+cob=(12)
+cfi=(1)
+cfn=(1814)
+calls=5 0 
+0 385
+0 45
+cob=(6)
+cfi=(2)
+cfn=(4)
+calls=5 0 
+0 405
+0 40
+cob=(12)
+cfi=(1)
+cfn=(3376)
+calls=5 0 
+0 9055
+0 60
+cob=(6)
+cfi=(2)
+cfn=(154)
+calls=5 0 
+0 415
+0 110
+cob=(12)
+cfi=(1)
+cfn=(1814)
+calls=5 0 
+0 260
+0 45
+cob=(6)
+cfi=(2)
+cfn=(4)
+calls=5 0 
+0 405
+0 60
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=5 0 
+0 335
+0 65
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=5 0 
+0 450
+0 30
+cob=(6)
+cfi=(2)
+cfn=(4)
+calls=5 0 
+0 405
+0 35
+cob=(12)
+cfi=(1)
+cfn=(3376)
+calls=5 0 
+0 9660
+0 50
+cob=(12)
+cfi=(1)
+cfn=(4536)
+calls=5 0 
+0 3418
+0 45
+cob=(6)
+cfi=(2)
+cfn=(4)
+calls=5 0 
+0 405
+0 25
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=1 0 
+0 140
+0 145
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=4 0 
+0 17464
+0 20
+cob=(12)
+cfi=(1)
+cfn=(3376)
+calls=4 0 
+0 7784
+0 16
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=4 0 
+0 4184
+0 36
+cob=(6)
+cfi=(2)
+cfn=(4)
+calls=4 0 
+0 324
+0 20
+cob=(12)
+cfi=(1)
+cfn=(3376)
+calls=4 0 
+0 7244
+0 36
+cob=(12)
+cfi=(1)
+cfn=(3376)
+calls=4 0 
+0 716
+0 40
+cob=(6)
+cfi=(2)
+cfn=(154)
+calls=4 0 
+0 388
+0 76
+cob=(12)
+cfi=(1)
+cfn=(1814)
+calls=4 0 
+0 292
+0 36
+cob=(6)
+cfi=(2)
+cfn=(4)
+calls=4 0 
+0 324
+0 56
+cob=(6)
+cfi=(2)
+cfn=(154)
+calls=4 0 
+0 332
+0 76
+cob=(12)
+cfi=(1)
+cfn=(1814)
+calls=4 0 
+0 308
+0 24
+cob=(6)
+cfi=(2)
+cfn=(4)
+calls=4 0 
+0 324
+0 20
+cob=(12)
+cfi=(1)
+cfn=(3376)
+calls=4 0 
+0 7244
+0 52
+cob=(6)
+cfi=(2)
+cfn=(154)
+calls=4 0 
+0 332
+0 88
+cob=(12)
+cfi=(1)
+cfn=(1814)
+calls=4 0 
+0 208
+0 36
+cob=(6)
+cfi=(2)
+cfn=(4)
+calls=4 0 
+0 324
+0 36
+cob=(12)
+cfi=(1)
+cfn=(494)
+calls=4 0 
+0 3848
+0 24
+cob=(6)
+cfi=(2)
+cfn=(4)
+calls=4 0 
+0 324
+0 8
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=4 0 
+0 2860
+0 52
+
+fn=(4868)
+0 129
+cfn=(4870) moab::MeshSetSequence::get_dimension(moab::SequenceManager const*, unsigned long, int, moab::Range&, bool) const
+calls=1 0 
+0 301
+
+fn=(3586) trnspt_
+0 10
+cfn=(3588)
+calls=2 0 
+0 11770
+0 6
+cfn=(3504)
+calls=2 0 
+0 92
+0 257622
+cfn=(3592)
+calls=64397 0 
+0 10993776
+0 2318224
+cfn=(3596)
+calls=64395 0 
+0 35639232390
+0 386378
+cfn=(3504)
+calls=2 0 
+0 92
+0 82
+cfn=(4152) vtask_
+calls=2 0 
+0 42764
+0 6
+cfn=(3504)
+calls=2 0 
+0 92
+0 72
+
+fn=(3610)
+0 53183600
+
+fn=(3684)
+0 21128940
+cfn=(3686)
+calls=251535 0 
+0 31916060105
+0 3018420
+
+fn=(3688)
+0 6794493
+cfn=(3816)
+calls=20458 0 
+0 3600598893
+0 1123020
+cfn=(3796)
+calls=56404 0 
+0 3327836
+0 28094976
+cfn=(3796)
+calls=3511872 0 
+0 207200448
+0 49955864
+cfn=(4032)
+calls=3568276 0 
+0 378237256
+0 37152871
+cfn=(4032)
+calls=5307553 0 
+0 562600618
+0 71006632
+cfn=(4034)
+calls=8875829 0 
+0 556691048
+0 60413410
+cfn=(3800)
+calls=7110292 0 
+0 547492484
+0 63992628
+cfn=(3802)
+calls=7110292 0 
+0 725082356
+0 46742220
+cfn=(4038)
+calls=3568276 0 
+0 3860874632
+0 10704828
+cfn=(4046) moab::TrackLengthMeshTally::add_score_to_mesh_cell(unsigned long, double)
+calls=3568276 0 
+0 1085868413
+0 138952135
+cfn=(3832)
+calls=3517382 0 
+0 18186948914
+0 14069528
+cfn=(4028)
+calls=3517382 0 
+0 73329578
+0 31656438
+cfn=(4030)
+calls=3517382 0 
+0 42208584
+0 19340785
+cfn=(4030)
+calls=1758003 0 
+0 40039983
+0 10550770
+cfn=(4028)
+calls=3517382 0 
+0 73329578
+0 31617868
+cfn=(4030)
+calls=3511872 0 
+0 42142464
+0 14058508
+cfn=(4028)
+calls=3517382 0 
+0 73329578
+0 31617868
+cfn=(4030)
+calls=3511872 0 
+0 42142464
+0 19329765
+cfn=(4030)
+calls=1758003 0 
+0 21096036
+0 31606848
+cfn=(3786)
+calls=3511872 0 
+0 667891044
+0 11020
+cfn=(3786)
+calls=5510 0 
+0 562020
+0 22983509
+cfn=(4030)
+calls=1753869 0 
+0 39952271
+0 3947229
+cfn=(3718) moab::TrackLengthMeshTally::get_starting_tet(moab::CartVect&, moab::CartVect&, double, unsigned long*, double&)
+calls=146224 0 
+0 274703353
+0 12423307
+cfn=(4030)
+calls=1753869 0 
+0 39952271
+0 3507738
+
+fn=(3708) acecol_
+0 16814070
+cfn=(3610)
+calls=2 0 
+0 50
+0 97862
+cfn=(3610)
+calls=48931 0 
+0 1223275
+0 4291154
+cob=(14)
+cfi=(5)
+cfn=(1826)
+calls=146224 0 
+0 4532944
+0 2778256
+cfn=(3710) acecos_
+calls=146224 0 
+0 107205118
+0 7514407
+
+fn=(3710)
+0 4825392
+cob=(14)
+cfi=(5)
+cfn=(1826)
+calls=146224 0 
+0 4532944
+0 36056126
+cfn=(3610)
+calls=146224 0 
+0 3655600
+0 6369884
+cob=(14)
+cfi=(5)
+cfn=(1826)
+calls=58098 0 
+0 1801038
+0 1057512
+cob=(14)
+cfi=(5)
+cfn=(1826)
+calls=88126 0 
+0 2731906
+0 3363152
+cob=(14)
+cfi=(5)
+cfn=(1826)
+calls=146224 0 
+0 4532944
+0 1754688
+cob=(14)
+cfi=(5)
+cfn=(1826)
+calls=146224 0 
+0 4532944
+0 438672
+cfn=(3610)
+calls=146224 0 
+0 3655600
+0 27896716
+
+fn=(3718)
+0 3211521
+cob=(13)
+cfi=(8)
+cfn=(3722)
+calls=113129 0 
+0 11086656
+0 1244419
+cfn=(3726)
+calls=113129 0 
+0 17366307
+0 791903
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=113129 0 
+0 9502836
+0 1536867
+cfn=(3740)
+calls=113129 0 
+0 208823120
+0 1660561
+cfn=(4126)
+calls=115708 0 
+0 19148462
+0 330701
+
+fn=(3730)
+0 5181036
+cfn=(3732)
+calls=246716 0 
+0 3454024
+0 3454024
+cob=(6)
+cfi=(2)
+cfn=(566)
+calls=246716 0 
+0 11595652
+0 2960592
+
+fn=(3752)
+0 26272108
+cfn=(3614)
+calls=84852 0 
+0 147135464
+0 258810
+cfn=(3614)
+calls=18 0 
+0 28976
+0 568894
+
+fn=(3774)
+0 54556278
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=1184387 0 
+0 28425288
+0 14526133
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=31028 0 
+0 744672
+0 713644
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=31028 0 
+0 744672
+0 341308
+cob=(13)
+cfi=(8)
+cfn=(3722)
+calls=31028 0 
+0 3040772
+0 186168
+
+fn=(3802)
+0 728176071
+
+fn=(3820)
+0 531908
+cob=(13)
+cfi=(8)
+cfn=(3722)
+calls=20458 0 
+0 2004884
+0 265954
+cfn=(3822)
+calls=20458 0 
+0 3539375
+0 7169382
+cfn=(3768)
+calls=482873 0 
+0 121775972
+0 143206
+cfn=(3768)
+calls=20458 0 
+0 6791814
+0 4951478
+cfn=(3782)
+calls=482873 0 
+0 53598903
+0 8732630
+cfn=(3786)
+calls=20458 0 
+0 286412
+0 143206
+cfn=(3788)
+calls=20458 0 
+0 13185265
+0 511450
+cfn=(3824)
+calls=20458 0 
+0 19448369
+0 265954
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=20458 0 
+0 1718472
+0 81832
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=20458 0 
+0 2209475
+0 40916
+cfn=(3786)
+calls=20458 0 
+0 5615886
+0 184122
+
+fn=(3824)
+0 2076434
+cfn=(3796)
+calls=122740 0 
+0 7241660
+0 981920
+cfn=(3800)
+calls=122740 0 
+0 9450980
+0 736440
+cfn=(3826)
+calls=122740 0 
+0 14802770
+0 3606534
+
+fn=(4006) moab::AEntityFactory::get_up_adjacency_elements(unsigned long, unsigned, std::vector<unsigned long, std::allocator<unsigned long> >&, bool, int)
+0 559416
+cfn=(3796)
+calls=23309 0 
+0 1678248
+0 279708
+cfn=(4008) moab::AEntityFactory::get_element(unsigned long const*, int, moab::EntityType, unsigned long&, bool, unsigned long, int)
+calls=23309 0 
+0 32265836
+0 512798
+cob=(13)
+cfi=(8)
+cfn=(3722)
+calls=23309 0 
+0 2570680
+0 1888029
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=69927 0 
+0 1678248
+0 932360
+cfn=(4016)
+calls=23309 0 
+0 12207717
+0 512798
+cfn=(4016)
+calls=46618 0 
+0 24416542
+0 1468467
+cfn=(4020)
+calls=69927 0 
+0 1202171
+0 140302
+cfn=(4022)
+calls=112 0 
+0 25536
+0 8571627
+cfn=(4018)
+calls=23309 0 
+0 7043504
+0 419562
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=69927 0 
+0 7489284
+0 303017
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=23309 0 
+0 1957956
+0 116545
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=23309 0 
+0 1957956
+0 489153
+cfn=(4022)
+calls=69815 0 
+0 11942912
+0 951735
+cfn=(3806)
+calls=60178 0 
+0 17789729
+0 120356
+
+fn=(4008)
+0 536107
+cfn=(4010) moab::AEntityFactory::get_adjacencies(unsigned long, unsigned long const*&, int&) const
+calls=23309 0 
+0 1165450
+0 396253
+cfn=(3792)
+calls=23309 0 
+0 1041796
+0 233090
+cfn=(3792)
+calls=23309 0 
+0 1186151
+0 1865266
+cfn=(4014) moab::AEntityFactory::entities_equivalent(unsigned long, unsigned long const*, int, moab::EntityType)
+calls=139896 0 
+0 24999521
+0 842202
+
+fn=(4044)
+0 1270306256
+
+fn=(4516)
+0 2811
+
+fn=(3502)
+0 7
+cob=(6)
+cfi=(2)
+cfn=(744)
+calls=1 0 
+0 55
+0 4
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=1 0 
+0 19
+0 3
+cfn=(3504)
+calls=1 0 
+0 46
+0 3
+cfn=(3514)
+calls=1 0 
+0 1157
+0 13
+cob=(12)
+cfi=(1)
+cfn=(1832)
+calls=1 0 
+0 2455
+0 10
+cob=(12)
+cfi=(1)
+cfn=(854)
+calls=1 0 
+0 7935
+0 2
+cob=(12)
+cfi=(1)
+cfn=(2050)
+calls=1 0 
+0 571
+0 42
+cob=(6)
+cfi=(2)
+cfn=(154)
+calls=1 0 
+0 97
+0 91
+cob=(6)
+cfi=(2)
+cfn=(4)
+calls=1 0 
+0 81
+0 511
+cfn=(3514)
+calls=2 0 
+0 154
+0 12
+cfn=(3586)
+calls=2 0 
+0 35653243376
+0 10
+cfn=(3514)
+calls=2 0 
+0 154
+0 38
+cfn=(4156)
+calls=2 0 
+0 90
+0 36
+cfn=(4158)
+calls=2 0 
+0 678449149
+0 3
+
+fn=(3692)
+0 6287632
+cfn=(3694)
+calls=146224 0 
+0 1169792
+0 2339584
+cfn=(3610)
+calls=146224 0 
+0 3655600
+0 62926403
+cob=(14)
+cfi=(5)
+cfn=(3640)
+calls=146224 0 
+0 24957871
+0 48170346
+cfn=(3748)
+calls=97435 0 
+0 110921240
+0 584896
+cfn=(3708)
+calls=146224 0 
+0 144457136
+0 2681393
+cfn=(3612)
+calls=48789 0 
+0 11032401
+0 4433507
+cfn=(3612)
+calls=97435 0 
+0 22002496
+0 13789635
+
+fn=(3754) angl_
+0 3054708
+cob=(6)
+cfi=(2)
+cfn=(1820)
+calls=84853 0 
+0 2715296
+0 1442501
+
+fn=(3762)
+0 529481
+cfn=(3763) std::_Rb_tree<unsigned long, unsigned long, std::_Identity<unsigned long>, std::less<unsigned long>, std::allocator<unsigned long> >::_M_erase(std::_Rb_tree_node<unsigned long>*)'2
+calls=19679 0 
+0 190969606
+0 348129
+cfn=(3763)
+calls=116043 0 
+0 164453982
+0 407166
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=135722 0 
+0 11400648
+0 664746
+
+fn=(3763)
+0 31651807
+cfn=(3763)
+calls=1749310 0 
+0 512972375
+0 4911147
+cfn=(3763)
+calls=1637049 0 
+0 320468205
+0 10159077
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=3386359 0 
+0 284454156
+0 24247401
+
+fn=(3766)
+0 264275
+cob=(13)
+cfi=(8)
+cfn=(3722)
+calls=10571 0 
+0 1035972
+0 222016
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=1 0 
+0 84
+0 116287
+
+fn=(3784)
+0 54693675
+cob=(6)
+cfi=(2)
+cfn=(566)
+calls=1215415 0 
+0 27954545
+0 13369565
+
+fn=(3800)
+0 656114046
+
+fn=(3812)
+0 69399
+cob=(13)
+cfi=(8)
+cfn=(3722)
+calls=7711 0 
+0 863632
+
+fn=(3836) moab::AEntityFactory::get_adjacencies(unsigned long, unsigned, bool, std::vector<unsigned long, std::allocator<unsigned long> >&)
+0 465506492
+cfn=(4006)
+calls=23309 0 
+0 141492192
+0 46621
+cfn=(3838)
+calls=1 0 
+0 2715755260
+0 63312882
+cfn=(4016)
+calls=10552146 0 
+0 6185156175
+0 21104292
+
+fn=(4012) moab::AEntityFactory::get_adjacency_ptr(unsigned long, std::vector<unsigned long, std::allocator<unsigned long> > const*&) const
+0 582725
+
+fn=(4014)
+0 5176152
+cfn=(3796)
+calls=139896 0 
+0 8253864
+0 11569505
+
+fn=(4046)
+0 293208306
+cob=(13)
+cfi=(8)
+cfn=(4096)
+calls=1637233 0 
+0 30583139
+cob=(9)
+cfi=(7)
+cfn=(2982)
+calls=1 0 
+0 3937
+0 27681418
+cfn=(4048) std::_Rb_tree<unsigned long, unsigned long, std::_Identity<unsigned long>, std::less<unsigned long>, std::allocator<unsigned long> >::_M_insert_(std::_Rb_tree_node_base const*, std::_Rb_tree_node_base const*, unsigned long const&)
+calls=3522081 0 
+0 727347451
+0 7044162
+
+fn=(4152)
+0 37040
+cfn=(4154)
+calls=2 0 
+0 5720
+0 4
+
+fn=(4872)
+0 19869780
+cfn=(4874)
+calls=662326 0 
+0 196710836
+0 7947912
+cfn=(3796)
+calls=662326 0 
+0 39077234
+0 9934890
+
+fn=(3608)
+0 90153000
+
+fn=(3614)
+0 181648494
+cfn=(3754)
+calls=84853 0 
+0 7212505
+0 424265
+cfn=(3616)
+calls=84853 0 
+0 3139561
+0 182941849
+cfn=(3616)
+calls=3450132 0 
+0 129248563
+0 117644789
+cfn=(3618)
+calls=149249 0 
+0 56113282
+0 2351903
+
+fn=(3624)
+0 543317492
+cfn=(3618)
+calls=314762 0 
+0 146173892
+0 6741010
+
+fn=(3630)
+0 2263815
+
+fn=(3792)
+0 4395710
+
+fn=(3834)
+0 2250707343
+cfn=(4036) std::vector<unsigned long, std::allocator<unsigned long> >::erase(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >)
+calls=7034764 0 
+0 147730044
+0 66900185
+cob=(13)
+cfi=(8)
+cfn=(3736)
+calls=3517382 0 
+0 379879289
+0 164205881
+cfn=(3836)
+calls=7034764 0 
+0 4423755879
+0 48695092
+cfn=(4020)
+calls=3471694 0 
+0 592008833
+0 20654544
+cfn=(4022)
+calls=3427789 0 
+0 781535892
+0 5109283361
+cfn=(4022)
+calls=43905 0 
+0 9000044
+0 63820248
+cfn=(3836)
+calls=3540691 0 
+0 5168618035
+0 28372146
+
+fn=(4010)
+0 186472
+cfn=(4012)
+calls=23309 0 
+0 582725
+0 396253
+
+fn=(4036)
+0 147730044
+
+fn=(4048)
+0 45846090
+cob=(13)
+cfi=(8)
+cfn=(3722)
+calls=19679 0 
+0 1928542
+0 7004804
+cob=(13)
+cfi=(8)
+cfn=(3722)
+calls=3502402 0 
+0 343244804
+0 35220810
+cob=(13)
+cfi=(8)
+cfn=(4052)
+calls=3522081 0 
+0 234325419
+0 59776982
+
+fn=(4870)
+0 48
+cfn=(3792)
+calls=1 0 
+0 41
+0 44
+cfn=(3794)
+calls=1 0 
+0 149
+0 19
+
+fn=(4880)
+0 26
+cfn=(4882)
+calls=2 0 
+0 674
+0 18
+cfn=(4924)
+calls=2 0 
+0 6062276
+
+ob=(21) /usr/lib/valgrind/amd64-linux/callgrind
+fl=(6) /root/valgrind/3.3.1/valgrind-3.3.1/coregrind/m_trampoline.S
+fn=(2608) vgPlain_amd64_linux_REDIR_FOR_vgettimeofday
+161 6
++1 6
++1 6
+
+ob=(6)
+fl=(2)
+fn=(108)
+0 924
+cob=(15)
+cfi=(3)
+cfn=(110) pthread_mutex_lock
+calls=1259944 0 
+0 4884
+
+fn=(1144) 0x0000000000042090
+0 1200
+cfn=(1152) 0x0000000000042410
+calls=450527 0 
+0 4572
+0 672
+
+fn=(2122)
+0 14
+
+fn=(2880) 0x00000000000739D0
+0 115242825
+
+fn=(3174) 0x00000000000430E0
+0 3298
+
+fn=(154)
+0 526516276
+cfn=(156) 0x0000000000075C20
+calls=24151756 0 
+0 1810288269
+0 297596156
+
+fn=(624)
+0 252
+cfn=(626) __sigsetjmp
+calls=1259933 0 
+0 3402
+
+fn=(744)
+0 748121150
+cfn=(3434) 0x000000000007D4C0
+calls=26 0 
+0 860
+0 549233446
+cfn=(3480) 0x000000000007D380
+calls=14082036 0 
+0 891496251
+0 14082035
+
+fn=(3534) 0x0000000000041460
+0 35200
+
+fn=(944) 0x0000000000071490
+0 4452
+
+fn=(1188) 0x0000000000041D00
+0 3492
+
+fn=(1668) 0x00000000000410B0
+0 792
+
+fn=(4886)
+0 108
+cfn=(4888) 0x00000000000771B0
+calls=2 0 
+0 408
+0 34
+
+fn=(962) vfprintf
+0 7208
+cfn=(964) strchrnul
+calls=408915 0 
+0 2120
+0 2332
+cfn=(966) _IO_default_xsputn
+calls=408915 0 
+0 3816
+0 17596
+cfn=(964)
+calls=408915 0 
+0 4656
+0 1696
+cfn=(966)
+calls=408915 0 
+0 3816
+0 28613
+cfn=(3190) _IO_padn
+calls=81 0 
+0 6804
+0 648
+cfn=(966)
+calls=81 0 
+0 3726
+0 14
+cfn=(966)
+calls=408701 0 
+0 102
+0 7289
+cfn=(3168) __printf_fp
+calls=133 0 
+0 468994
+0 1918
+cfn=(968) 0x0000000000043890
+calls=408782 0 
+0 1850
+0 8040
+
+fn=(966)
+0 26667
+cfn=(3188) mempcpy
+calls=133 0 
+0 4128
+0 258
+
+fn=(1820)
+0 24874200
+
+fn=(2136)
+0 84
+
+fn=(3172) isinf
+0 2064
+
+fn=(3180) 0x0000000000048DF0
+0 34480
+cfn=(1152)
+calls=238 0 
+0 14382
+0 6768
+cfn=(3534)
+calls=552 0 
+0 35200
+0 31848
+cfn=(1152)
+calls=2640 0 
+0 147456
+0 15264
+
+fn=(3524) 0x0000000000041DA0
+0 2468
+
+fn=(3880) __default_morecore
+0 214
+cfn=(3882) sbrk
+calls=107 0 
+0 4387
+0 535
+
+fn=(3884) brk
+0 1605
+
+fn=(3894) mmap
+0 654
+
+fn=(566)
+0 76028010
+
+fn=(942) 0x0000000000071540
+0 2120
+cfn=(944)
+calls=408915 0 
+0 4452
+0 2120
+
+fn=(952) 0x0000000000073110
+0 4028
+cfn=(956) _IO_setb
+calls=408915 0 
+0 4876
+0 3180
+
+fn=(2622) 0x000000000008F6D0
+0 19
+cfn=(2628) getenv
+calls=2 0 
+0 337
+0 9
+cfn=(4)
+calls=2 0 
+0 81
+0 2
+cfn=(2654) strdup
+calls=2 0 
+0 192
+0 5
+cfn=(2666) 0x0000000000090330
+calls=2 0 
+0 65
+0 25
+
+fn=(2722) 0x000000000008EED0
+0 16
+cfn=(994)
+calls=4 0 
+0 50
+0 60
+cfn=(2730) strcmp
+calls=10 0 
+0 88
+0 24
+
+fn=(3214)
+0 20319
+
+fn=(3480)
+0 891496251
+
+fn=(3882)
+0 2461
+cfn=(3884)
+calls=107 0 
+0 1605
+0 321
+
+fn=(156)
+0 1769169016
+cfn=(2880)
+calls=225 0 
+0 12811542
+0 6456364
+cfn=(2880)
+calls=14 0 
+0 3972
+0 21825865
+cfn=(3894)
+calls=2 0 
+0 12
+0 2071
+cfn=(3880)
+calls=107 0 
+0 5136
+0 4204
+cfn=(6) 0x00000000000752B0
+calls=88 0 
+0 5834
+0 2656
+cfn=(3894)
+calls=107 0 
+0 642
+0 1070
+
+fn=(250)
+0 24600
+
+fn=(2606)
+0 30
+cob=(21)
+cfi=(6)
+cfn=(2608)
+calls=7 161 
+0 18
+0 24
+
+fn=(2628)
+0 8
+cfn=(994)
+calls=2 0 
+0 30
+0 299
+
+fn=(2654)
+0 5
+cfn=(994)
+calls=2 0 
+0 61
+0 3
+cfn=(154)
+calls=2 0 
+0 83
+0 9
+cfn=(566)
+calls=2 0 
+0 31
+
+fn=(2700) 0x000000000008FC60
+0 112
+cfn=(2722)
+calls=2 0 
+0 133
+0 17
+cfn=(2722)
+calls=2 0 
+0 105
+0 35
+cfn=(2730)
+calls=2 0 
+0 30
+0 15
+
+fn=(2730)
+0 42
+
+fn=(2731) strcmp'2
+0 76
+
+fn=(2778) 0x000000000008D840
+0 502
+
+fn=(2914)
+0 2280
+cfn=(2916) _IO_file_sync
+calls=102 0 
+0 1330
+0 1900
+
+fn=(3164)
+0 3281
+cfn=(3166) vsnprintf
+calls=133 0 
+0 541492
+0 664
+cfn=(3166)
+calls=83 0 
+0 60274
+0 424
+
+fn=(3188)
+0 6450
+
+fn=(3434)
+0 860
+
+fn=(4810) tcgetattr
+0 16
+
+fn=(4)
+0 530572800
+cfn=(6)
+calls=23366948 0 
+0 1444584596
+0 132643200
+
+fn=(66)
+0 1183
+cob=(15)
+cfi=(3)
+cfn=(68) pthread_mutex_unlock
+calls=2519789 0 
+0 3718
+
+fn=(288)
+0 3294
+
+fn=(964)
+0 6776
+
+fn=(1152)
+0 167684
+
+fn=(2612)
+0 27
+cfn=(2622)
+calls=2 0 
+0 720
+0 12
+cfn=(2778)
+calls=2 0 
+0 251
+0 18
+cfn=(2700)
+calls=2 0 
+0 413
+0 4
+
+fn=(2916)
+0 1330
+
+fn=(3190)
+0 5703
+cfn=(966)
+calls=214 0 
+0 10305
+0 1890
+
+fn=(4888)
+0 120
+cfn=(156)
+calls=2 0 
+0 115
+0 65
+cfn=(6)
+calls=1 0 
+0 51
+0 4
+cfn=(6)
+calls=1 0 
+0 51
+0 2
+
+fn=(4578)
+0 300
+
+fn=(6)
+0 1342019254
+cfn=(2880)
+calls=20463 0 
+0 102427311
+0 143967
+
+fn=(994)
+0 3766
+
+fn=(2454)
+0 5
+
+fn=(3166)
+0 4240
+cfn=(942)
+calls=216 0 
+0 8692
+0 1696
+cfn=(952)
+calls=216 0 
+0 12084
+0 848
+cfn=(962)
+calls=216 0 
+0 571238
+0 2968
+
+fn=(3168)
+0 4902
+cfn=(3170) isnan
+calls=133 0 
+0 1806
+0 2322
+cfn=(3172)
+calls=133 0 
+0 2064
+0 4230
+cfn=(566)
+calls=25 0 
+0 579
+0 3680
+cfn=(1144)
+calls=41 0 
+0 5500
+0 543
+cfn=(1668)
+calls=64 0 
+0 792
+0 273
+cfn=(566)
+calls=29 0 
+0 671
+0 2933
+cfn=(3174)
+calls=133 0 
+0 3298
+0 1076
+cfn=(1188)
+calls=91 0 
+0 2262
+0 7310
+cfn=(3180)
+calls=133 0 
+0 13182
+0 26663
+cfn=(3180)
+calls=2926 0 
+0 260688
+0 13238
+cfn=(3180)
+calls=133 0 
+0 11528
+0 7645
+cfn=(994)
+calls=133 0 
+0 2967
+0 38442
+cfn=(3188)
+calls=133 0 
+0 2322
+0 2580
+cfn=(966)
+calls=133 0 
+0 9288
+0 10312
+cfn=(3524)
+calls=6 0 
+0 228
+0 48
+cfn=(3524)
+calls=6 0 
+0 228
+0 840
+cfn=(3190)
+calls=133 0 
+0 11094
+0 497
+cfn=(1188)
+calls=23 0 
+0 598
+0 557
+cfn=(1188)
+calls=19 0 
+0 494
+0 1888
+cfn=(3524)
+calls=6 0 
+0 240
+0 1355
+cfn=(1144)
+calls=7 0 
+0 944
+0 120
+cfn=(1152)
+calls=14 0 
+0 1274
+0 794
+cfn=(1188)
+calls=2 0 
+0 92
+0 1496
+cfn=(3524)
+calls=17 0 
+0 658
+0 119
+cfn=(3524)
+calls=17 0 
+0 658
+0 1010
+cfn=(3524)
+calls=12 0 
+0 456
+0 69
+cfn=(1188)
+calls=1 0 
+0 46
+0 95
+
+fn=(4808)
+0 3
+cfn=(4810)
+calls=1 0 
+0 16
+0 5
+
+fn=(626)
+0 3402
+
+fn=(956)
+0 4876
+
+fn=(968)
+0 1850
+
+fn=(2666)
+0 40
+cfn=(2678)
+calls=2 0 
+0 12
+0 13
+
+fn=(2678)
+0 162
+
+fn=(2820)
+0 27
+cfn=(2622)
+calls=2 0 
+0 15
+0 16
+cfn=(2778)
+calls=2 0 
+0 251
+0 18
+cfn=(2700)
+calls=2 0 
+0 34
+0 4
+
+fn=(3170)
+0 1806
+
+fn=(3512)
+0 322025
+
+fn=(4640)
+0 171
+
+fn=(4760)
+0 7
+
+ob=(15)
+fl=(3)
+fn=(68)
+0 338
+cfn=(70) __pthread_mutex_unlock_usercnt
+calls=2519789 0 
+0 3380
+
+fn=(70)
+0 3380
+
+fn=(110)
+0 4884
+
+fn=(130)
+0 1184
+
+totals: 36331706124
