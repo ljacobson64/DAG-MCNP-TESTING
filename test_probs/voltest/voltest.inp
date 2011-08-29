@@ -1,0 +1,28 @@
+Empty volume with uniform wall source at x=-100
+sdef erg=14.1 vec 1 0 0 dir 1 x=-100 y=d1 z=d2
+si1 -100 100
+sp1 0 1
+si2 -100 100
+sp2 0 1
+c
+mode n                $ type of particle
+c ctme 1  $ number of minutes to run
+nps 1e6           $ number of particles
+c void
+prdmp 100000 100000 1 1 $ save only the last dump, written with output every 5000
+rdum 29j 1e-6 1e-6
+fmesh24:n origin -10 -10 -10 imesh -9 -6 -3 -1 1 3 6 9 10 
+                             jmesh -9 -6 -3 -1 1 3 6 9 10
+                             kmesh -9 -6 -3 -1 1 3 6 9 10
+c                             emesh 0, .1, 1, 20, 1e36
+fm24 2 0 
+fmesh34:n geom=dag
+fm34 1e6 0 
+fc34 dagmc inp=cylinder.h5m out=  meshtal34.vtk
+     (test line-- continuation of fc34 card)
+fmesh44:n geom=dag
+fc44 dagmc inp twospheres.h5m -dagmc (further input ingored)
+fm44 1e6 0 
+dagmc usecad=no distlimit=on
+print 32
+

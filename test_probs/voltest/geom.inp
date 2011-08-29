@@ -1,0 +1,7 @@
+Input geometry (convert with mcnp2cad -g -m -o geom.sat geom.inp)
+1 0 1
+2 0 -1
+
+1 so 100
+
+

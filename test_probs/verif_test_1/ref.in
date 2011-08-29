@@ -1,0 +1,62 @@
+Native MCNP input for mesh tally verification problem #1: reflecting boundaries
+C Cell cards
+1   1 -1    1 -2 3 -4 5 -6  imp:n=1
+C this cell exists to move our mesh away from the problem boundary
+C to avoid the boundary issues with KDE tallies
+11  1 -1    11 -12 13 -14 15 -16 (-1:2:-3:4:-5:6)   imp:n=1
+3   0      -11:12:-13:14:-15:16 imp:n=0
+
+C Surf cards
+1 px 0
+2 px 10
+3 py -1
+4 py  1
+5 pz -1
+6 pz  1
+*11 px -5
+*12 px 15
+*13 py -1.1
+*14 py  1.1
+*15 pz -1.1
+*16 pz  1.1
+
+mode n
+C single material is water for simplicity
+C * scattering may be complicating our results
+m1 1001 2 8016 1
+C planar surface source
+C * mono-directional: x-direction
+C * mono-energetic: 1 MeV
+C * uniform distribution on -6 < (y,z) < 6
+C * start on surface 1
+sdef x=-3 y=d1 z=d2 vec=1 0 0 dir=1 erg=1
+si1 H -1.1 1.1
+sp1  0  1  
+si2 H -1.1 1.1
+sp2  0  1
+C traditional MCNP5 cartesian mesh tally over domain
+C 0< x< 10, -1 < (y,z) < 1
+C adjust resolution for comparison purposes by changing
+C [ijk]ints to preserve cubic aspect ratio
+fmesh14:n geom=xyz  origin=0 -1 -1
+        imesh=10   iints=30
+        jmesh=1    jints=10
+        kmesh=1    kints=10
+C traditional MCNP5 cartesian mesh tally over domain
+C 0< x< 10, -1 < (y,z) < 1
+C resolution in y,z fixed to a single voxel to provide
+C a 1-D tally distribution
+fmesh24:n geom=xyz  origin 0 -1 -1
+        imesh=10   iints=30
+        jmesh=1    jints=1
+        kmesh=1    kints=1
+C DAGMC unstc'd mesh tally over domain of cell 1
+fmesh34:n geom=dag
+fc34 dagmc inp=tallymesh.h5m out=tracklen_meshtal.vtk conformal=1
+C
+C multipliers to make these total heating tallies
+fm14 1 0 -1
+fm34 1 0 -1
+C adjust runtime=statistics with the following
+nps 1e6
+c ctme 30

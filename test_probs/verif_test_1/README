@@ -1,0 +1,6 @@
+ref.in - native MCNP input (+ dag mesh tally)
+kde.in - DAGMC input for KDE collision mesh tally
+tallymesh.h5m - input file for dag mesh tally
+inputs/geom.sat - mcnp2cad output from ref.in
+inputs/tallymesh.cub - CUBIT 12 mesh of smallest volume
+       from geom.sat; used to generate tallymesh.h5m

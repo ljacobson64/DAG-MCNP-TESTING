@@ -1,0 +1,40 @@
+#!/bin/sh
+
+# This is a simple script to run dag-mcnp5 under callgrind, with as 
+# little delay as possible during geometry loading.
+# This script currently has some rough edges, so I am not distributing
+# it generally yet, but we should hold on to this technique
+
+# 2/3/11: This script has been modified from the original obbstat version
+# to engage callgrind instrumentation after the runtpe file appears;
+# this allows mesh tallies to load before instrumentation is enabled.
+
+# testing executable plus params
+DAGMC=/filespace/groups/cnerg/users/sjackson/dag-mcnp5-meshtal
+DAGPARAMS="i=ref.in"
+
+# Count the number of non-callgrind files in working dir
+N=`ls -I "callgrind.*" -I "out*" | wc -w`
+
+# Start callgrind as a background task, set to engage when mcrun() is called
+# However, start with intrumentation off for speed purposes
+valgrind --tool=callgrind --instr-atstart=no --collect-atstart=no --toggle-collect=mcrun_ \
+         $DAGMC $DAGPARAMS & 
+
+# Now keep an eye on the file count in the working dir.  Sleep until some new 
+# files appear: when mcnp5 starts emitting outp files, that means dagmc geometry loading is done.
+while [ $N -eq `ls -I "callgrind.*" -I "out*" | wc -w` ]
+do
+    sleep 5
+done 
+
+# enable callgrind instrumentation, since mcrun() is about to start 
+callgrind_control -i on 
+
+# print some diagnostics to assure the user that things are on their way.
+sleep 5
+callgrind_control -s 
+callgrind_control -b
+
+# Wait for dagmc to finish
+wait
