@@ -1,0 +1,15 @@
+---------------------------------------------------------------
+Verification Test #1:  Slab of water with reflecting boundaries
+---------------------------------------------------------------
+Based on the test found in Test-meshtal/test_probs/verif_test_1
+  - geometry and source altered slightly to avoid KDE boundary issues
+
+ref.in - native MCNP input (includes KDE mesh tally)
+kde.in - DAGMC input for KDE mesh tally
+mcnp_mesh.h5m - input file for dagmc mcnp-style mesh tally
+tet_mesh.h5m - input file for dagmc tetrahedral mesh tally
+
+inputs/geom.sat - mcnp2cad output from ref.in
+inputs/geom_reflect.sat - added reflecting boundaries to geom.sat
+inputs/mcnp_mesh.cub - CUBIT12 mcnp-style mesh used to generate mcnp_mesh.h5m
+inputs/tet_mesh.cub - CUBIT12 tetrahedral mesh used to generate tet_mesh.h5m
