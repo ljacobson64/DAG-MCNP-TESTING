@@ -1,0 +1,15 @@
+inp41 - test. f1=1, f4=50/( 4/3 pi 50**3) = 9.54930e-5 
+c 2 1 0 -1 imp:n=1
+c 3 2 0  1 imp:n=0
+c 
+c 13 1 so 50.
+c 
+nps 500000
+mode n
+sdef
+f1:n 13
+f4:n 2
+prdmp j -.1 -1 j 9999999
+c
+c   use new rn generator
+rand  gen 2  seed 12345  stride 1234

@@ -1,0 +1,25 @@
+testprob32 -- Modified 2-Zone BIG TEN to test del n's, URR
+c 2 1     1   4.806192e-02      -1                   $ Core
+c 3 2     2   4.777758e-02       1    2   -3   -4    $ Reflector
+c 3     0                     -2:3:4
+c  
+c 1     rcc     0.0 0.0 -28.8169   0.0 0.0 57.6338  26.67    $ Core
+c 2     pz    -48.26                          $ Bottom of Reflector
+c 3     pz     48.26                          $ Top of Reflector
+c 4     cz     41.91                          $ Reflector OR
+c 
+mode    n
+kcode   500   1.00    1   10
+c imp:n   1.0   1.0   0.0
+sdef   cel=2  erg=d1
+sp1    -3
+vol   0 128787.3    403814.4    0.0     0
+c area   14127.0      9657.8      2234.6      2234.6
+c        5518.0      5518.0     25416.4
+c  Central Core (12 wt.%)
+m1    92235.50d   5.7781e-03     92238.40c   4.2218e-02
+      92232.49c   1.7407e-05     92234.61c   4.8416e-05
+c  Depleted Uranium
+m2    92235.50d   1.0058e-04     92238.40c   4.7677e-02
+totnu
+prdmp  2j -1

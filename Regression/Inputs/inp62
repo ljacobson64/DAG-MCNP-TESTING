@@ -1,0 +1,13 @@
+test lcad use
+m1 1001 2 8016 1
+m2 92235 1
+f1:n 1
+f2:n 1
+f4:n 1
+f6:n 1
+f7:n 1
+f8:p 1
+sdef 
+nps 100
+mode n p
+prdmp 2j -1 

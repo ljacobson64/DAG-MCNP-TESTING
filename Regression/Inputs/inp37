@@ -1,0 +1,34 @@
+test problem for time splitting test
+c message: name=inp37
+c 2 1  2  -1.       -1  imp:n=1
+c 3 2  2  -1.   1   -2  imp:n=1
+c   3  0             2  imp:n 0
+c  
+c 13 1    so     0.1
+c 14 2    so    30.0
+c  
+mode n e p
+imp:e  0 1 1 0 1 $ just as a read test
+sdef cel=2 erg d2 rad=d1
+si1 0.0 0.001
+si2 h .303 1.353
+sp2   0    1
+m2   1001 2  8016 1
+nps    157 
+fc104 neutron flux in cell 2
+f104:n 3 1
+print -85
+fc204 photon flux in cell 2
+f204:p 3 1
+fc304 electron flux in cell 2
+f304:e 3 1
+e0   .01 .1 1 100
+t0   100 1000 10000 1e20
+prdmp 2j -1
+rand gen=1  hist=8401
+esplt:e   .5 .001  .5 1  .5 10  .5 .1  .5 .01
+esplt:n    2 .001   2 10  2 1    2 .01  2 .1  .1 1-5  .1 1-6
+esplt:p   .5 .01  .5 .1  .5 10  .5 1  .5 .001
+tsplt:p    2 10000  2 100  2 100000  2 1000
+tsplt:e    3 1000   3 100000  3 100  3 10000
+tsplt:n    4 100  4 100000  4 1000  4 10000 4 1+6

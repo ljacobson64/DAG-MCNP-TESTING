@@ -1,0 +1,444 @@
+1600 0 8 0           
+14 Cubit  (iGeom) 17 ACIS 16.0.7 Linux 24 Tue Feb 22 15:25:49 2011 
+1 9.9999999999999995e-07 1e-10 
+body $8 -1 -1 $-1 $9 $-1 $-1 F #
+body $10 -1 -1 $-1 $11 $-1 $-1 T -2 2 -2 2 6 2 #
+body $12 -1 -1 $-1 $13 $-1 $-1 T -1.5 -1.5 2.5 1.5 1.5 5.5 #
+body $14 -1 -1 $-1 $15 $-1 $-1 T -0.5 -4.5 -0.5 0.5 -3.5 0.5 #
+body $16 -1 -1 $-1 $17 $-1 $-1 T -1 -1 -5 1 1 -3 #
+body $18 -1 -1 $-1 $19 $-1 $-1 T -8 -8 -8 8 8 8 #
+body $20 -1 -1 $-1 $21 $-1 $-1 T -1000 -1000 -1000 1000 1000 1000 #
+body $22 -1 -1 $-1 $23 $-1 $-1 T -1200 -1200 -1200 1200 1200 1200 #
+simple-snl-attrib $-1 -1 $24 $-1 $0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 4 -2147483648 -1 #
+lump $25 -1 -1 $-1 $-1 $26 $0 F #
+simple-snl-attrib $-1 -1 $27 $-1 $1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 47 -2147483648 -1 #
+lump $28 -1 -1 $-1 $-1 $29 $1 T -2 2 -2 2 6 2 #
+simple-snl-attrib $-1 -1 $30 $-1 $2 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 50 -2147483648 -1 #
+lump $31 -1 -1 $-1 $-1 $32 $2 T -1.5 -1.5 2.5 1.5 1.5 5.5 #
+simple-snl-attrib $-1 -1 $33 $-1 $3 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 53 -2147483648 -1 #
+lump $34 -1 -1 $-1 $-1 $35 $3 T -0.5 -4.5 -0.5 0.5 -3.5 0.5 #
+simple-snl-attrib $-1 -1 $36 $-1 $4 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 56 -2147483648 -1 #
+lump $37 -1 -1 $-1 $-1 $38 $4 T -1 -1 -5 1 1 -3 #
+simple-snl-attrib $-1 -1 $39 $-1 $5 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 59 -2147483648 -1 #
+lump $40 -1 -1 $-1 $-1 $41 $5 T -8 -8 -8 8 8 8 #
+simple-snl-attrib $-1 -1 $42 $-1 $6 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 62 -2147483648 -1 #
+lump $43 -1 -1 $-1 $-1 $44 $6 T -1000 -1000 -1000 1000 1000 1000 #
+simple-snl-attrib $-1 -1 $45 $-1 $7 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 65 -2147483648 -1 #
+lump $46 -1 -1 $-1 $-1 $47 $7 T -1200 -1200 -1200 1200 1200 1200 #
+simple-snl-attrib $-1 -1 $-1 $8 $0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 2 @5 GROUP @9 graveyard 0 7 1 1 761061882 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $-1 $9 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 1 -2147483648 -1 #
+shell $-1 -1 -1 $-1 $48 $-1 $49 $-1 $9 T -1224 -1224 -1224 1224 1224 1224 #
+simple-snl-attrib $-1 -1 $-1 $10 $1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 2 @11 ENTITY_NAME @9 MCNP_ID_1 0 0 #
+simple-snl-attrib $-1 -1 $-1 $-1 $11 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 2 -2147483648 -1 #
+shell $-1 -1 -1 $-1 $-1 $-1 $50 $-1 $11 T -2 2 -2 2 6 2 #
+simple-snl-attrib $-1 -1 $-1 $12 $2 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 2 @11 ENTITY_NAME @9 MCNP_ID_2 0 0 #
+simple-snl-attrib $-1 -1 $-1 $-1 $13 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 3 -2147483648 -1 #
+shell $-1 -1 -1 $-1 $-1 $-1 $51 $-1 $13 T -1.5 -1.5 2.5 1.5 1.5 5.5 #
+simple-snl-attrib $-1 -1 $-1 $14 $3 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 2 @11 ENTITY_NAME @9 MCNP_ID_3 0 0 #
+simple-snl-attrib $-1 -1 $-1 $-1 $15 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 4 -2147483648 -1 #
+shell $-1 -1 -1 $-1 $-1 $-1 $52 $-1 $15 T -0.5 -4.5 -0.5 0.5 -3.5 0.5 #
+simple-snl-attrib $-1 -1 $-1 $16 $4 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 2 @11 ENTITY_NAME @9 MCNP_ID_4 0 0 #
+simple-snl-attrib $-1 -1 $-1 $-1 $17 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 5 -2147483648 -1 #
+shell $-1 -1 -1 $-1 $-1 $-1 $53 $-1 $17 T -1 -1 -5 1 1 -3 #
+simple-snl-attrib $-1 -1 $54 $18 $5 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 2 @5 GROUP @15 mat_1_rho_-7.85 0 7 1 2 1061728403 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $-1 $19 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 6 -2147483648 -1 #
+shell $-1 -1 -1 $-1 $55 $-1 $56 $-1 $19 T -8 -8 -8 8 8 8 #
+simple-snl-attrib $-1 -1 $-1 $20 $6 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 2 @11 ENTITY_NAME @9 MCNP_ID_6 0 0 #
+simple-snl-attrib $-1 -1 $-1 $-1 $21 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 7 -2147483648 -1 #
+shell $-1 -1 -1 $-1 $57 $-1 $58 $-1 $21 T -1000 -1000 -1000 1000 1000 1000 #
+simple-snl-attrib $-1 -1 $-1 $22 $7 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 2 @11 ENTITY_NAME @9 MCNP_ID_7 0 0 #
+simple-snl-attrib $-1 -1 $-1 $-1 $23 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 8 -2147483648 -1 #
+shell $-1 -1 -1 $-1 $59 $-1 $60 $-1 $23 T -1200 -1200 -1200 1200 1200 1200 #
+shell $-1 -1 -1 $-1 $-1 $-1 $61 $-1 $9 T -1200 -1200 -1200 1200 1200 1200 #
+face $62 -1 -1 $-1 $63 $64 $26 $-1 $65 forward single T -1224 -1224 1224 1224 1224 1224 F #
+face $66 -1 -1 $-1 $-1 $-1 $29 $-1 $67 forward single T -2 2 -2 2 6 2 F #
+face $68 -1 -1 $-1 $-1 $-1 $32 $-1 $69 forward single T -1.5 -1.5 2.5 1.5 1.5 5.5 F #
+face $70 -1 -1 $-1 $-1 $-1 $35 $-1 $71 forward single T -0.5 -4.5 -0.5 0.5 -3.5 0.5 F #
+face $72 -1 -1 $-1 $-1 $-1 $38 $-1 $73 forward single T -1 -1 -5 1 1 -3 F #
+simple-snl-attrib $-1 -1 $-1 $39 $5 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 2 @11 ENTITY_NAME @9 MCNP_ID_5 0 0 #
+shell $-1 -1 -1 $-1 $74 $-1 $75 $-1 $19 T -1.5 -1.5 2.5 1.5 1.5 5.5 #
+face $76 -1 -1 $-1 $-1 $-1 $41 $-1 $77 forward single T -8 -8 -8 8 8 8 F #
+shell $-1 -1 -1 $-1 $-1 $-1 $78 $-1 $21 T -8 -8 -8 8 8 8 #
+face $79 -1 -1 $-1 $-1 $-1 $44 $-1 $80 forward single T -1000 -1000 -1000 1000 1000 1000 F #
+shell $-1 -1 -1 $-1 $-1 $-1 $81 $-1 $23 T -1000 -1000 -1000 1000 1000 1000 #
+face $82 -1 -1 $-1 $83 $84 $47 $-1 $85 forward single T -1200 -1200 1200 1200 1200 1200 F #
+face $86 -1 -1 $-1 $87 $88 $48 $-1 $89 reversed single T -1200 -1200 1200 1200 1200 1200 F #
+simple-snl-attrib $-1 -1 $-1 $-1 $49 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 1 -2147483648 -1 #
+face $90 -1 -1 $-1 $91 $92 $26 $-1 $93 reversed single T -1224 -1224 -1224 1224 1224 -1224 F #
+loop $-1 -1 -1 $-1 $-1 $94 $49 T -1224 -1224 1224 1224 1224 1224 unknown #
+plane-surface $-1 -1 -1 $-1 0 0 1224 0 0 1 1 0 0 forward_v I I I I #
+simple-snl-attrib $-1 -1 $95 $-1 $50 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 1 0 1 18760519 #
+sphere-surface $-1 -1 -1 $-1 0 4 0 2 1 0 0 0 0 1 forward_v I I I I #
+simple-snl-attrib $-1 -1 $96 $-1 $51 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 1 0 1 1725010457 #
+sphere-surface $-1 -1 -1 $-1 0 0 4 1.5 1 0 0 0 0 1 forward_v I I I I #
+simple-snl-attrib $-1 -1 $97 $-1 $52 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 1 0 1 1543415475 #
+sphere-surface $-1 -1 -1 $-1 0 -4 0 0.5 1 0 0 0 0 1 forward_v I I I I #
+simple-snl-attrib $-1 -1 $98 $-1 $53 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 1 0 1 580439379 #
+sphere-surface $-1 -1 -1 $-1 0 0 -4 1 1 0 0 0 0 1 forward_v I I I I #
+shell $-1 -1 -1 $-1 $99 $-1 $100 $-1 $19 T -1 -1 -5 1 1 -3 #
+face $101 -1 -1 $-1 $-1 $-1 $55 $-1 $102 reversed single T -1.5 -1.5 2.5 1.5 1.5 5.5 F #
+simple-snl-attrib $-1 -1 $103 $-1 $56 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 1 0 1 2022388549 #
+sphere-surface $-1 -1 -1 $-1 0 0 0 8 1 0 0 0 0 1 forward_v I I I I #
+face $104 -1 -1 $-1 $-1 $-1 $57 $-1 $105 reversed single T -8 -8 -8 8 8 8 F #
+simple-snl-attrib $-1 -1 $106 $-1 $58 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 1 0 1 1693132709 #
+sphere-surface $-1 -1 -1 $-1 0 0 0 1000 1 0 0 0 0 1 forward_v I I I I #
+face $107 -1 -1 $-1 $-1 $-1 $59 $-1 $108 reversed single T -1000 -1000 -1000 1000 1000 1000 F #
+simple-snl-attrib $-1 -1 $-1 $-1 $60 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 24 -2147483648 -1 #
+face $109 -1 -1 $-1 $110 $111 $47 $-1 $112 reversed single T -1200 -1200 -1200 1200 1200 -1200 F #
+loop $-1 -1 -1 $-1 $-1 $113 $60 T -1200 -1200 1200 1200 1200 1200 unknown #
+plane-surface $-1 -1 -1 $-1 0 0 1200 0 0 1 1 0 0 forward_v I I I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $61 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 7 -2147483648 -1 #
+face $114 -1 -1 $-1 $115 $116 $48 $-1 $117 forward single T -1200 -1200 -1200 1200 1200 -1200 F #
+loop $-1 -1 -1 $-1 $-1 $118 $61 T -1200 -1200 1200 1200 1200 1200 unknown #
+plane-surface $-1 -1 -1 $-1 0 0 1200 0 0 1 1 0 0 forward_v I I I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $63 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 2 -2147483648 -1 #
+face $119 -1 -1 $-1 $120 $121 $26 $-1 $122 reversed single T -1224 -1224 -1224 1224 -1224 1224 F #
+loop $-1 -1 -1 $-1 $-1 $123 $63 T -1224 -1224 -1224 1224 1224 -1224 unknown #
+plane-surface $-1 -1 -1 $-1 0 0 -1224 0 0 1 1 0 0 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $124 $125 $126 $127 forward $64 $-1 #
+simple-snl-attrib $-1 -1 $128 $66 $50 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 13 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $129 $68 $51 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 14 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $130 $70 $52 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 15 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $131 $72 $53 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 16 -2147483648 -1 #
+shell $-1 -1 -1 $-1 $132 $-1 $133 $-1 $19 T -0.5 -4.5 -0.5 0.5 -3.5 0.5 #
+face $134 -1 -1 $-1 $-1 $-1 $74 $-1 $135 reversed single T -1 -1 -5 1 1 -3 F #
+simple-snl-attrib $-1 -1 $136 $-1 $75 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 1 0 1 1725010457 #
+sphere-surface $-1 -1 -1 $-1 0 0 4 1.5 1 0 0 0 0 1 forward_v I I I I #
+simple-snl-attrib $-1 -1 $137 $76 $56 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 17 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $138 $-1 $78 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 1 0 1 2022388549 #
+sphere-surface $-1 -1 -1 $-1 0 0 0 8 1 0 0 0 0 1 forward_v I I I I #
+simple-snl-attrib $-1 -1 $139 $79 $58 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 22 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $140 $-1 $81 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 1 0 1 1693132709 #
+sphere-surface $-1 -1 -1 $-1 0 0 0 1000 1 0 0 0 0 1 forward_v I I I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $83 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 25 -2147483648 -1 #
+face $141 -1 -1 $-1 $142 $143 $47 $-1 $144 reversed single T -1200 -1200 -1200 1200 -1200 1200 F #
+loop $-1 -1 -1 $-1 $-1 $145 $83 T -1200 -1200 -1200 1200 1200 -1200 unknown #
+plane-surface $-1 -1 -1 $-1 0 0 -1200 0 0 1 1 0 0 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $146 $147 $148 $149 forward $84 $-1 #
+simple-snl-attrib $-1 -1 $-1 $-1 $87 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 8 -2147483648 -1 #
+face $150 -1 -1 $-1 $151 $152 $48 $-1 $153 forward single T -1200 -1200 -1200 1200 -1200 1200 F #
+loop $-1 -1 -1 $-1 $-1 $154 $87 T -1200 -1200 -1200 1200 1200 -1200 unknown #
+plane-surface $-1 -1 -1 $-1 0 0 -1200 0 0 1 1 0 0 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $155 $156 $157 $158 reversed $88 $-1 #
+simple-snl-attrib $-1 -1 $-1 $-1 $91 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 3 -2147483648 -1 #
+face $159 -1 -1 $-1 $160 $161 $26 $-1 $162 reversed single T -1224 -1224 -1224 -1224 1224 1224 F #
+loop $-1 -1 -1 $-1 $-1 $163 $91 T -1224 -1224 -1224 1224 -1224 1224 unknown #
+plane-surface $-1 -1 -1 $-1 0 -1224 0 0 1 -0 -0 0 1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $164 $165 $166 $167 forward $92 $-1 #
+coedge $-1 -1 -1 $-1 $168 $94 $169 $170 forward $64 $-1 #
+coedge $-1 -1 -1 $-1 $94 $168 $171 $172 forward $64 $-1 #
+coedge $-1 -1 -1 $-1 $173 $174 $94 $127 reversed $175 $-1 #
+edge $176 -1 -1 $-1 $177 -1224 $178 1224 $126 $179 forward @7 unknown T 1224 -1224 1224 1224 1224 1224 #
+simple-snl-attrib $-1 -1 $-1 $95 $50 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 18760519 1 112 1 #
+simple-snl-attrib $-1 -1 $-1 $96 $51 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1725010457 1 126 1 #
+simple-snl-attrib $-1 -1 $-1 $97 $52 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1543415475 1 140 1 #
+simple-snl-attrib $-1 -1 $-1 $98 $53 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 580439379 1 154 1 #
+shell $-1 -1 -1 $-1 $-1 $-1 $180 $-1 $19 T -2 2 -2 2 6 2 #
+face $181 -1 -1 $-1 $-1 $-1 $99 $-1 $182 reversed single T -0.5 -4.5 -0.5 0.5 -3.5 0.5 F #
+simple-snl-attrib $-1 -1 $183 $-1 $100 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 1 0 1 580439379 #
+sphere-surface $-1 -1 -1 $-1 0 0 -4 1 1 0 0 0 0 1 forward_v I I I I #
+simple-snl-attrib $-1 -1 $184 $101 $75 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 14 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $-1 $103 $56 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 2022388549 1 172 1 #
+simple-snl-attrib $-1 -1 $185 $104 $78 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 17 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $-1 $106 $58 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1693132709 1 191 1 #
+simple-snl-attrib $-1 -1 $186 $107 $81 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 22 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $-1 $-1 $110 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 26 -2147483648 -1 #
+face $187 -1 -1 $-1 $188 $189 $47 $-1 $190 reversed single T -1200 -1200 -1200 -1200 1200 1200 F #
+loop $-1 -1 -1 $-1 $-1 $191 $110 T -1200 -1200 -1200 1200 -1200 1200 unknown #
+plane-surface $-1 -1 -1 $-1 0 -1200 0 0 1 -0 -0 0 1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $192 $193 $194 $195 forward $111 $-1 #
+coedge $-1 -1 -1 $-1 $196 $113 $197 $198 forward $84 $-1 #
+coedge $-1 -1 -1 $-1 $113 $196 $199 $200 forward $84 $-1 #
+coedge $-1 -1 -1 $-1 $201 $202 $113 $149 reversed $203 $-1 #
+edge $204 -1 -1 $-1 $205 -1200 $206 1200 $148 $207 forward @7 unknown T 1200 -1200 1200 1200 1200 1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $115 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 9 -2147483648 -1 #
+face $208 -1 -1 $-1 $209 $210 $48 $-1 $211 forward single T -1200 -1200 -1200 -1200 1200 1200 F #
+loop $-1 -1 -1 $-1 $-1 $212 $115 T -1200 -1200 -1200 1200 -1200 1200 unknown #
+plane-surface $-1 -1 -1 $-1 0 -1200 0 0 1 -0 -0 0 1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $213 $214 $215 $216 reversed $116 $-1 #
+coedge $-1 -1 -1 $-1 $217 $118 $218 $219 reversed $88 $-1 #
+coedge $-1 -1 -1 $-1 $118 $217 $220 $221 reversed $88 $-1 #
+coedge $-1 -1 -1 $-1 $222 $223 $118 $158 forward $224 $-1 #
+edge $225 -1 -1 $-1 $226 -1200 $227 1200 $157 $228 forward @7 unknown T 1200 -1200 1200 1200 1200 1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $120 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 4 -2147483648 -1 #
+face $229 -1 -1 $-1 $230 $231 $26 $-1 $232 reversed single T -1224 1224 -1224 1224 1224 1224 F #
+loop $-1 -1 -1 $-1 $-1 $233 $120 T -1224 -1224 -1224 -1224 1224 1224 unknown #
+plane-surface $-1 -1 -1 $-1 -1224 0 0 1 0 0 0 0 -1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $234 $171 $235 $236 forward $121 $-1 #
+coedge $-1 -1 -1 $-1 $237 $123 $234 $238 forward $92 $-1 #
+coedge $-1 -1 -1 $-1 $123 $237 $239 $240 forward $92 $-1 #
+coedge $-1 -1 -1 $-1 $174 $173 $123 $167 reversed $175 $-1 #
+edge $241 -1 -1 $-1 $242 -1224 $243 1224 $166 $244 forward @7 unknown T 1224 -1224 -1224 1224 1224 -1224 #
+coedge $-1 -1 -1 $-1 $125 $124 $245 $246 forward $64 $-1 #
+coedge $-1 -1 -1 $-1 $247 $248 $124 $170 reversed $231 $-1 #
+edge $249 -1 -1 $-1 $178 -1224 $250 1224 $169 $251 forward @7 unknown T -1224 1224 1224 1224 1224 1224 #
+coedge $-1 -1 -1 $-1 $163 $252 $125 $172 reversed $121 $-1 #
+edge $253 -1 -1 $-1 $254 -1224 $177 1224 $171 $255 forward @7 unknown T -1224 -1224 1224 1224 -1224 1224 #
+coedge $-1 -1 -1 $-1 $166 $126 $252 $256 forward $175 $-1 #
+coedge $-1 -1 -1 $-1 $126 $166 $247 $257 reversed $175 $-1 #
+loop $-1 -1 -1 $-1 $-1 $173 $230 T 1224 -1224 -1224 1224 1224 1224 unknown #
+simple-snl-attrib $-1 -1 $-1 $-1 $127 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 37 -2147483648 -1 #
+vertex $258 -1 -1 $-1 $127 $259 #
+vertex $260 -1 -1 $-1 $127 $261 #
+straight-curve $-1 -1 -1 $-1 1224 0 1224 0 1 0 I I #
+face $262 -1 -1 $-1 $-1 $-1 $132 $-1 $263 reversed single T -2 2 -2 2 6 2 F #
+simple-snl-attrib $-1 -1 $264 $-1 $133 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 1 0 1 1543415475 #
+sphere-surface $-1 -1 -1 $-1 0 -4 0 0.5 1 0 0 0 0 1 forward_v I I I I #
+simple-snl-attrib $-1 -1 $265 $134 $100 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 16 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $-1 $136 $75 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1725010457 -1 18 0 #
+simple-snl-attrib $-1 -1 $-1 $138 $78 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 2022388549 -1 23 0 #
+simple-snl-attrib $-1 -1 $-1 $140 $81 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1693132709 -1 30 0 #
+simple-snl-attrib $-1 -1 $-1 $-1 $142 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 27 -2147483648 -1 #
+face $266 -1 -1 $-1 $267 $268 $47 $-1 $269 reversed single T -1200 1200 -1200 1200 1200 1200 F #
+loop $-1 -1 -1 $-1 $-1 $270 $142 T -1200 -1200 -1200 -1200 1200 1200 unknown #
+plane-surface $-1 -1 -1 $-1 -1200 0 0 1 0 0 0 0 -1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $271 $199 $272 $273 forward $143 $-1 #
+coedge $-1 -1 -1 $-1 $274 $145 $271 $275 forward $111 $-1 #
+coedge $-1 -1 -1 $-1 $145 $274 $276 $277 forward $111 $-1 #
+coedge $-1 -1 -1 $-1 $202 $201 $145 $195 reversed $203 $-1 #
+edge $278 -1 -1 $-1 $279 -1200 $280 1200 $194 $281 forward @7 unknown T 1200 -1200 -1200 1200 1200 -1200 #
+coedge $-1 -1 -1 $-1 $147 $146 $282 $283 forward $84 $-1 #
+coedge $-1 -1 -1 $-1 $284 $285 $146 $198 reversed $268 $-1 #
+edge $286 -1 -1 $-1 $206 -1200 $287 1200 $197 $288 forward @7 unknown T -1200 1200 1200 1200 1200 1200 #
+coedge $-1 -1 -1 $-1 $191 $289 $147 $200 reversed $143 $-1 #
+edge $290 -1 -1 $-1 $291 -1200 $205 1200 $199 $292 forward @7 unknown T -1200 -1200 1200 1200 -1200 1200 #
+coedge $-1 -1 -1 $-1 $194 $148 $289 $293 forward $203 $-1 #
+coedge $-1 -1 -1 $-1 $148 $194 $284 $294 reversed $203 $-1 #
+loop $-1 -1 -1 $-1 $-1 $201 $267 T 1200 -1200 -1200 1200 1200 1200 unknown #
+simple-snl-attrib $-1 -1 $-1 $-1 $149 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 229 -2147483648 -1 #
+vertex $295 -1 -1 $-1 $149 $296 #
+vertex $297 -1 -1 $-1 $149 $298 #
+straight-curve $-1 -1 -1 $-1 1200 0 1200 0 1 0 I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $151 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 10 -2147483648 -1 #
+face $299 -1 -1 $-1 $300 $301 $48 $-1 $302 forward single T -1200 1200 -1200 1200 1200 1200 F #
+loop $-1 -1 -1 $-1 $-1 $303 $151 T -1200 -1200 -1200 -1200 1200 1200 unknown #
+plane-surface $-1 -1 -1 $-1 -1200 0 0 1 0 0 0 0 -1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $218 $304 $305 $306 reversed $152 $-1 #
+coedge $-1 -1 -1 $-1 $307 $154 $308 $309 reversed $116 $-1 #
+coedge $-1 -1 -1 $-1 $154 $307 $304 $310 reversed $116 $-1 #
+coedge $-1 -1 -1 $-1 $223 $222 $154 $216 forward $224 $-1 #
+edge $311 -1 -1 $-1 $312 -1200 $313 1200 $215 $314 forward @7 unknown T 1200 -1200 -1200 1200 1200 -1200 #
+coedge $-1 -1 -1 $-1 $156 $155 $315 $316 reversed $88 $-1 #
+coedge $-1 -1 -1 $-1 $317 $212 $155 $219 forward $152 $-1 #
+edge $318 -1 -1 $-1 $319 -1200 $226 1200 $218 $320 forward @7 unknown T -1200 -1200 1200 1200 -1200 1200 #
+coedge $-1 -1 -1 $-1 $321 $322 $156 $221 forward $301 $-1 #
+edge $323 -1 -1 $-1 $227 -1200 $324 1200 $220 $325 forward @7 unknown T -1200 1200 1200 1200 1200 1200 #
+coedge $-1 -1 -1 $-1 $215 $157 $322 $326 forward $224 $-1 #
+coedge $-1 -1 -1 $-1 $157 $215 $317 $327 reversed $224 $-1 #
+loop $-1 -1 -1 $-1 $-1 $223 $300 T 1200 -1200 -1200 1200 1200 1200 unknown #
+simple-snl-attrib $-1 -1 $-1 $-1 $158 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 61 -2147483648 -1 #
+vertex $328 -1 -1 $-1 $158 $329 #
+vertex $330 -1 -1 $-1 $158 $331 #
+straight-curve $-1 -1 -1 $-1 1200 0 1200 0 1 0 I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $160 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 5 -2147483648 -1 #
+face $332 -1 -1 $-1 $-1 $175 $26 $-1 $333 reversed single T 1224 -1224 -1224 1224 1224 1224 F #
+loop $-1 -1 -1 $-1 $-1 $247 $160 T -1224 1224 -1224 1224 1224 1224 unknown #
+plane-surface $-1 -1 -1 $-1 0 1224 0 0 -1 0 0 0 -1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $334 $245 $248 $335 forward $161 $-1 #
+coedge $-1 -1 -1 $-1 $252 $163 $164 $238 reversed $121 $-1 #
+coedge $-1 -1 -1 $-1 $245 $334 $163 $236 reversed $161 $-1 #
+edge $336 -1 -1 $-1 $254 -1224 $337 1224 $235 $338 forward @7 unknown T -1224 -1224 -1224 -1224 -1224 1224 #
+coedge $-1 -1 -1 $-1 $165 $164 $334 $339 forward $92 $-1 #
+edge $340 -1 -1 $-1 $243 -1224 $337 1224 $234 $341 forward @7 unknown T -1224 -1224 -1224 1224 -1224 -1224 #
+coedge $-1 -1 -1 $-1 $248 $247 $165 $240 reversed $231 $-1 #
+edge $342 -1 -1 $-1 $343 -1224 $242 1224 $239 $344 forward @7 unknown T -1224 1224 -1224 1224 1224 -1224 #
+simple-snl-attrib $-1 -1 $-1 $-1 $167 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 41 -2147483648 -1 #
+vertex $345 -1 -1 $-1 $167 $346 #
+vertex $347 -1 -1 $-1 $256 $348 #
+straight-curve $-1 -1 -1 $-1 1224 0 -1224 0 -1 0 I I #
+coedge $-1 -1 -1 $-1 $233 $235 $168 $246 reversed $161 $-1 #
+edge $349 -1 -1 $-1 $250 -1224 $254 1224 $245 $350 forward @7 unknown T -1224 -1224 1224 -1224 1224 1224 #
+coedge $-1 -1 -1 $-1 $239 $169 $174 $257 forward $231 $-1 #
+coedge $-1 -1 -1 $-1 $169 $239 $233 $335 reversed $231 $-1 #
+simple-snl-attrib $-1 -1 $-1 $-1 $170 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 38 -2147483648 -1 #
+vertex $351 -1 -1 $-1 $170 $352 #
+straight-curve $-1 -1 -1 $-1 0 1224 1224 -1 0 0 I I #
+coedge $-1 -1 -1 $-1 $171 $234 $173 $256 reversed $121 $-1 #
+simple-snl-attrib $-1 -1 $-1 $-1 $172 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 40 -2147483648 -1 #
+vertex $353 -1 -1 $-1 $246 $354 #
+straight-curve $-1 -1 -1 $-1 0 -1224 1224 1 0 0 I I #
+edge $355 -1 -1 $-1 $177 -1224 $243 1224 $173 $356 forward @7 unknown T 1224 -1224 -1224 1224 -1224 1224 #
+edge $357 -1 -1 $-1 $178 -1224 $242 1224 $174 $358 forward @7 unknown T 1224 1224 -1224 1224 1224 1224 #
+simple-snl-attrib $-1 -1 $-1 $-1 $177 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 25 -2147483648 -1 #
+point $-1 -1 -1 $-1 1224 -1224 1224 #
+simple-snl-attrib $-1 -1 $-1 $-1 $178 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 26 -2147483648 -1 #
+point $-1 -1 -1 $-1 1224 1224 1224 #
+simple-snl-attrib $-1 -1 $359 $-1 $180 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 1 0 1 18760519 #
+sphere-surface $-1 -1 -1 $-1 0 4 0 2 1 0 0 0 0 1 forward_v I I I I #
+simple-snl-attrib $-1 -1 $360 $181 $133 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 15 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $-1 $183 $100 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 580439379 -1 19 0 #
+simple-snl-attrib $-1 -1 $-1 $-1 $188 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 28 -2147483648 -1 #
+face $361 -1 -1 $-1 $-1 $203 $47 $-1 $362 reversed single T 1200 -1200 -1200 1200 1200 1200 F #
+loop $-1 -1 -1 $-1 $-1 $284 $188 T -1200 1200 -1200 1200 1200 1200 unknown #
+plane-surface $-1 -1 -1 $-1 0 1200 0 0 -1 0 0 0 -1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $363 $282 $285 $364 forward $189 $-1 #
+coedge $-1 -1 -1 $-1 $289 $191 $192 $275 reversed $143 $-1 #
+coedge $-1 -1 -1 $-1 $282 $363 $191 $273 reversed $189 $-1 #
+edge $365 -1 -1 $-1 $291 -1200 $366 1200 $272 $367 forward @7 unknown T -1200 -1200 -1200 -1200 -1200 1200 #
+coedge $-1 -1 -1 $-1 $193 $192 $363 $368 forward $111 $-1 #
+edge $369 -1 -1 $-1 $280 -1200 $366 1200 $271 $370 forward @7 unknown T -1200 -1200 -1200 1200 -1200 -1200 #
+coedge $-1 -1 -1 $-1 $285 $284 $193 $277 reversed $268 $-1 #
+edge $371 -1 -1 $-1 $372 -1200 $279 1200 $276 $373 forward @7 unknown T -1200 1200 -1200 1200 1200 -1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $195 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 233 -2147483648 -1 #
+vertex $374 -1 -1 $-1 $195 $375 #
+vertex $376 -1 -1 $-1 $293 $377 #
+straight-curve $-1 -1 -1 $-1 1200 0 -1200 0 -1 0 I I #
+coedge $-1 -1 -1 $-1 $270 $272 $196 $283 reversed $189 $-1 #
+edge $378 -1 -1 $-1 $287 -1200 $291 1200 $282 $379 forward @7 unknown T -1200 -1200 1200 -1200 1200 1200 #
+coedge $-1 -1 -1 $-1 $276 $197 $202 $294 forward $268 $-1 #
+coedge $-1 -1 -1 $-1 $197 $276 $270 $364 reversed $268 $-1 #
+simple-snl-attrib $-1 -1 $-1 $-1 $198 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 230 -2147483648 -1 #
+vertex $380 -1 -1 $-1 $198 $381 #
+straight-curve $-1 -1 -1 $-1 0 1200 1200 -1 0 0 I I #
+coedge $-1 -1 -1 $-1 $199 $271 $201 $293 reversed $143 $-1 #
+simple-snl-attrib $-1 -1 $-1 $-1 $200 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 232 -2147483648 -1 #
+vertex $382 -1 -1 $-1 $283 $383 #
+straight-curve $-1 -1 -1 $-1 0 -1200 1200 1 0 0 I I #
+edge $384 -1 -1 $-1 $205 -1200 $280 1200 $201 $385 forward @7 unknown T 1200 -1200 -1200 1200 -1200 1200 #
+edge $386 -1 -1 $-1 $206 -1200 $279 1200 $202 $387 forward @7 unknown T 1200 1200 -1200 1200 1200 1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $205 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 153 -2147483648 -1 #
+point $-1 -1 -1 $-1 1200 -1200 1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $206 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 154 -2147483648 -1 #
+point $-1 -1 -1 $-1 1200 1200 1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $209 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 11 -2147483648 -1 #
+face $388 -1 -1 $-1 $-1 $224 $48 $-1 $389 forward single T 1200 -1200 -1200 1200 1200 1200 F #
+loop $-1 -1 -1 $-1 $-1 $322 $209 T -1200 1200 -1200 1200 1200 1200 unknown #
+plane-surface $-1 -1 -1 $-1 0 1200 0 0 -1 0 0 0 -1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $315 $390 $321 $391 reversed $210 $-1 #
+coedge $-1 -1 -1 $-1 $212 $317 $214 $310 forward $152 $-1 #
+coedge $-1 -1 -1 $-1 $390 $315 $212 $306 forward $210 $-1 #
+edge $392 -1 -1 $-1 $319 -1200 $393 1200 $305 $394 forward @7 unknown T -1200 -1200 -1200 -1200 -1200 1200 #
+coedge $-1 -1 -1 $-1 $214 $213 $390 $395 reversed $116 $-1 #
+coedge $-1 -1 -1 $-1 $322 $321 $213 $309 forward $301 $-1 #
+edge $396 -1 -1 $-1 $397 -1200 $312 1200 $308 $398 forward @7 unknown T -1200 1200 -1200 1200 1200 -1200 #
+edge $399 -1 -1 $-1 $313 -1200 $393 1200 $304 $400 forward @7 unknown T -1200 -1200 -1200 1200 -1200 -1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $216 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 65 -2147483648 -1 #
+vertex $401 -1 -1 $-1 $216 $402 #
+vertex $403 -1 -1 $-1 $327 $404 #
+straight-curve $-1 -1 -1 $-1 1200 0 -1200 0 -1 0 I I #
+coedge $-1 -1 -1 $-1 $305 $303 $217 $316 forward $210 $-1 #
+edge $405 -1 -1 $-1 $324 -1200 $319 1200 $315 $406 forward @7 unknown T -1200 -1200 1200 -1200 1200 1200 #
+coedge $-1 -1 -1 $-1 $304 $218 $223 $327 forward $152 $-1 #
+simple-snl-attrib $-1 -1 $-1 $-1 $219 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 62 -2147483648 -1 #
+vertex $407 -1 -1 $-1 $316 $408 #
+straight-curve $-1 -1 -1 $-1 0 -1200 1200 1 0 0 I I #
+coedge $-1 -1 -1 $-1 $308 $220 $303 $391 forward $301 $-1 #
+coedge $-1 -1 -1 $-1 $220 $308 $222 $326 reversed $301 $-1 #
+simple-snl-attrib $-1 -1 $-1 $-1 $221 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 64 -2147483648 -1 #
+vertex $409 -1 -1 $-1 $221 $410 #
+straight-curve $-1 -1 -1 $-1 0 1200 1200 -1 0 0 I I #
+edge $411 -1 -1 $-1 $227 -1200 $312 1200 $222 $412 forward @7 unknown T 1200 1200 -1200 1200 1200 1200 #
+edge $413 -1 -1 $-1 $226 -1200 $313 1200 $223 $414 forward @7 unknown T 1200 -1200 -1200 1200 -1200 1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $226 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 41 -2147483648 -1 #
+point $-1 -1 -1 $-1 1200 -1200 1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $227 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 42 -2147483648 -1 #
+point $-1 -1 -1 $-1 1200 1200 1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $230 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 6 -2147483648 -1 #
+plane-surface $-1 -1 -1 $-1 1224 0 0 -1 0 0 0 -0 1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $235 $233 $237 $339 reversed $161 $-1 #
+edge $415 -1 -1 $-1 $250 -1224 $343 1224 $248 $416 forward @7 unknown T -1224 1224 -1224 -1224 1224 1224 #
+simple-snl-attrib $-1 -1 $-1 $-1 $236 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 45 -2147483648 -1 #
+vertex $417 -1 -1 $-1 $339 $418 #
+straight-curve $-1 -1 -1 $-1 -1224 -1224 0 0 0 -1 I I #
+edge $419 -1 -1 $-1 $337 -1224 $343 1224 $334 $420 forward @7 unknown T -1224 -1224 -1224 -1224 1224 -1224 #
+simple-snl-attrib $-1 -1 $-1 $-1 $238 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 42 -2147483648 -1 #
+straight-curve $-1 -1 -1 $-1 0 -1224 -1224 -1 0 0 I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $240 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 44 -2147483648 -1 #
+vertex $421 -1 -1 $-1 $240 $422 #
+straight-curve $-1 -1 -1 $-1 0 1224 -1224 1 0 0 I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $242 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 29 -2147483648 -1 #
+point $-1 -1 -1 $-1 1224 1224 -1224 #
+simple-snl-attrib $-1 -1 $-1 $-1 $243 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 30 -2147483648 -1 #
+point $-1 -1 -1 $-1 1224 -1224 -1224 #
+simple-snl-attrib $-1 -1 $-1 $-1 $246 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 39 -2147483648 -1 #
+straight-curve $-1 -1 -1 $-1 -1224 0 1224 0 -1 0 I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $250 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 27 -2147483648 -1 #
+point $-1 -1 -1 $-1 -1224 1224 1224 #
+simple-snl-attrib $-1 -1 $-1 $-1 $254 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 28 -2147483648 -1 #
+point $-1 -1 -1 $-1 -1224 -1224 1224 #
+simple-snl-attrib $-1 -1 $-1 $-1 $256 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 46 -2147483648 -1 #
+straight-curve $-1 -1 -1 $-1 1224 -1224 0 0 0 -1 I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $257 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 48 -2147483648 -1 #
+straight-curve $-1 -1 -1 $-1 1224 1224 0 0 0 -1 I I #
+simple-snl-attrib $-1 -1 $423 $262 $180 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 13 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $-1 $264 $133 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1543415475 -1 20 0 #
+simple-snl-attrib $-1 -1 $-1 $-1 $267 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 29 -2147483648 -1 #
+plane-surface $-1 -1 -1 $-1 1200 0 0 -1 0 0 0 -0 1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $272 $270 $274 $368 reversed $189 $-1 #
+edge $424 -1 -1 $-1 $287 -1200 $372 1200 $285 $425 forward @7 unknown T -1200 1200 -1200 -1200 1200 1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $273 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 237 -2147483648 -1 #
+vertex $426 -1 -1 $-1 $368 $427 #
+straight-curve $-1 -1 -1 $-1 -1200 -1200 0 0 0 -1 I I #
+edge $428 -1 -1 $-1 $366 -1200 $372 1200 $363 $429 forward @7 unknown T -1200 -1200 -1200 -1200 1200 -1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $275 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 234 -2147483648 -1 #
+straight-curve $-1 -1 -1 $-1 0 -1200 -1200 -1 0 0 I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $277 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 236 -2147483648 -1 #
+vertex $430 -1 -1 $-1 $277 $431 #
+straight-curve $-1 -1 -1 $-1 0 1200 -1200 1 0 0 I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $279 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 157 -2147483648 -1 #
+point $-1 -1 -1 $-1 1200 1200 -1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $280 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 158 -2147483648 -1 #
+point $-1 -1 -1 $-1 1200 -1200 -1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $283 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 231 -2147483648 -1 #
+straight-curve $-1 -1 -1 $-1 -1200 0 1200 0 -1 0 I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $287 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 155 -2147483648 -1 #
+point $-1 -1 -1 $-1 -1200 1200 1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $291 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 156 -2147483648 -1 #
+point $-1 -1 -1 $-1 -1200 -1200 1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $293 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 238 -2147483648 -1 #
+straight-curve $-1 -1 -1 $-1 1200 -1200 0 0 0 -1 I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $294 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 240 -2147483648 -1 #
+straight-curve $-1 -1 -1 $-1 1200 1200 0 0 0 -1 I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $300 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 12 -2147483648 -1 #
+plane-surface $-1 -1 -1 $-1 1200 0 0 -1 0 0 0 -0 1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $303 $305 $307 $395 forward $210 $-1 #
+edge $432 -1 -1 $-1 $324 -1200 $397 1200 $321 $433 forward @7 unknown T -1200 1200 -1200 -1200 1200 1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $306 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 69 -2147483648 -1 #
+vertex $434 -1 -1 $-1 $395 $435 #
+straight-curve $-1 -1 -1 $-1 -1200 -1200 0 0 0 -1 I I #
+edge $436 -1 -1 $-1 $393 -1200 $397 1200 $390 $437 forward @7 unknown T -1200 -1200 -1200 -1200 1200 -1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $309 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 66 -2147483648 -1 #
+vertex $438 -1 -1 $-1 $309 $439 #
+straight-curve $-1 -1 -1 $-1 0 1200 -1200 1 0 0 I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $310 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 68 -2147483648 -1 #
+straight-curve $-1 -1 -1 $-1 0 -1200 -1200 -1 0 0 I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $312 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 45 -2147483648 -1 #
+point $-1 -1 -1 $-1 1200 1200 -1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $313 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 46 -2147483648 -1 #
+point $-1 -1 -1 $-1 1200 -1200 -1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $316 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 63 -2147483648 -1 #
+straight-curve $-1 -1 -1 $-1 -1200 0 1200 0 -1 0 I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $319 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 43 -2147483648 -1 #
+point $-1 -1 -1 $-1 -1200 -1200 1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $324 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 44 -2147483648 -1 #
+point $-1 -1 -1 $-1 -1200 1200 1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $326 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 72 -2147483648 -1 #
+straight-curve $-1 -1 -1 $-1 1200 1200 0 0 0 -1 I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $327 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 70 -2147483648 -1 #
+straight-curve $-1 -1 -1 $-1 1200 -1200 0 0 0 -1 I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $335 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 47 -2147483648 -1 #
+straight-curve $-1 -1 -1 $-1 -1224 1224 0 0 0 -1 I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $337 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 31 -2147483648 -1 #
+point $-1 -1 -1 $-1 -1224 -1224 -1224 #
+simple-snl-attrib $-1 -1 $-1 $-1 $339 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 43 -2147483648 -1 #
+straight-curve $-1 -1 -1 $-1 -1224 0 -1224 0 1 0 I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $343 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 32 -2147483648 -1 #
+point $-1 -1 -1 $-1 -1224 1224 -1224 #
+simple-snl-attrib $-1 -1 $-1 $359 $180 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 18760519 -1 21 0 #
+simple-snl-attrib $-1 -1 $-1 $-1 $364 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 239 -2147483648 -1 #
+straight-curve $-1 -1 -1 $-1 -1200 1200 0 0 0 -1 I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $366 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 159 -2147483648 -1 #
+point $-1 -1 -1 $-1 -1200 -1200 -1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $368 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 235 -2147483648 -1 #
+straight-curve $-1 -1 -1 $-1 -1200 0 -1200 0 1 0 I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $372 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 160 -2147483648 -1 #
+point $-1 -1 -1 $-1 -1200 1200 -1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $391 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 71 -2147483648 -1 #
+straight-curve $-1 -1 -1 $-1 -1200 1200 0 0 0 -1 I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $393 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 48 -2147483648 -1 #
+point $-1 -1 -1 $-1 -1200 -1200 -1200 #
+simple-snl-attrib $-1 -1 $-1 $-1 $395 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 67 -2147483648 -1 #
+straight-curve $-1 -1 -1 $-1 -1200 0 -1200 0 1 0 I I #
+simple-snl-attrib $-1 -1 $-1 $-1 $397 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 47 -2147483648 -1 #
+point $-1 -1 -1 $-1 -1200 1200 -1200 #
+End-of-ACIS-data 

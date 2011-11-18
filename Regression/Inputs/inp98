@@ -1,0 +1,35 @@
+Cd-109 (88keV) source inside of silicon
+c
+c            Cells
+c
+c 1  1  -2.33   -1    $Silicon cylinder
+c 2  0           1    $Outside world
+c
+c
+c            Surfaces
+c
+c 1  rcc 0.0 0.0 -0.5   0.0 0.0 1.0  0.5  $H=1 cm, r=0.5 cm cylinder
+c
+c
+c            Data
+c
+mode p
+imp:p  0 1  0 1
+c
+c            Materials
+c  
+m1  14000.04p 0.5  1001.04p 0.5 elib=03e $Silicon, Hydrogen
+c
+c            Source
+c
+sdef   erg=0.088 pos = 0.0 0.0 0.0  
+c
+c            Tallies
+c
+f18:p    2 
+e18     0.0 1e-10  0.02  0.025   0.1
+f14:p     2
+e14     0.0  0.0625  0.0675 0.1
+c
+nps 1.0e6
+prdmp 2j -1 j 100000

@@ -1,0 +1,118 @@
+testprob18 -- kcode in a hexagonal prism lattice.
+c     three half control rods and five whole control rods.
+30    0 -905 -19 29 1  fill=1
+31    0 -906 -19 29 1  fill=1 (16.7113 0 0)
+37    0 -907 -19 29 1  fill=1 (-16.7113 0 0)
+34    0 -913 -19 29    fill=1 (0 11.9185 0)
+32    0 -914 -19 29    fill=1 (10.3217 5.9592 0)
+33    0 -915 -19 29    fill=1 (8.3557 14.4724 0)
+35    0 -916 -19 29    fill=1 (-8.3557 14.4724 0)
+36    0 -917 -19 29    fill=1 (-10.3217 5.9592 0)
+c     universe 1:  structure of control rod.
+38    11  -2.02      -880  u=1   $ control rod core
+39     6  -8.4   880 -881  u=1   $ control rod cladding
+40    12  -1.00  881 -882  u=1   $ control rod gap
+41     6  -8.4   882       u=1   $ control rod sheath
+c     the space between the control rods, filled with lattice.
+140   0  -17 1 29 -19 905 906 907 913 914 915 916 917  fill=2
+c     universe 2:  lattice of fuel rods with water in between.
+42    12 -1.00   -300                         u=2   lat=2   fill=
+      -37:27 -1:33 0:0 &
+      2 4r 3 9r 2 4r 3 11r 2 4r 3 11r 2 4r 3 9r 2
+      2 4r 3 9r 2 3r 3 12r 2 3r 3 12r 2 3r 3 9r 2 1r
+      2 3r 3 10r 2 2r 3 13r 2 2r 3 13r 2 2r 3 10r 2 1r
+      2 3r 3 57r 2 2r &
+      2 2r 3 58r 2 2r
+      2 2r 3 16r 2 2r 3 17r 2 2r 3 16r 2 3r
+      2 2r 3 15r 2 3r 3 16r 2 3r 3 15r 2 4r
+      2 1r 3 15r 2 4r 3 15r 2 4r 3 15r 2 4r
+      2 1r 3 15r 2 3r 3 16r 2 3r 3 15r 2 5r
+      2 1r 3 15r 2 2r 3 17r 2 2r 3 15r 2 6r
+      2 1r 3 54r 2 7r &
+c       can code remember & thru comment?
+ 2 3 55r 2 7r
+      2 3 25r 2 2r 3 25r 2 8r
+      2 3 24r 2 3r 3 24r 2 9r
+      2 3 23r 2 4r 3 23r 2 10r
+      2 3 15r 2 2r 3 4r 2 3r 3 4r 2 2r 3 15r 2 11r
+      2 3 14r 2 3r 3 4r 2 2r 3 4r 2 3r 3 14r 2 12r
+      2 3 13r 2 4r 3 11r 2 4r 3 13r 2 13r
+      2 3 13r 2 3r 3 12r 2 3r 3 13r 2 14r
+      2 3 13r 2 2r 3 13r 2 2r 3 13r 2 15r
+      2 3 46r 2 16r
+      2 3 45r 2 17r
+      2 3 44r 2 18r
+      2 1r 3 41r 2 20r
+      2 1r 3 40r 2 21r
+      2 1r 3 39r 2 22r
+      2 2r 3 36r 2 24r
+      2 2r 3 35r 2 25r
+      2 3r 3 32r 2 27r
+      2 4r 3 29r 2 29r
+      2 5r 3 26r 2 31r
+      2 6r 3 23r 2 33r
+      2 8r 3 18r 2 36r
+      2 11r 3 11r 2 40r
+      2 64r
+c     universe 3:  structure of fuel rod lattice elements.
+154   2 -13.75        -58    u=3   $ fuel element
+149  12  -1.00    58 -268    u=3   $ gap
+144   7 -19.66   268 -478    u=3   $ liner
+159   6  -8.4    478 -698    u=3   $ cladding
+141  12  -1.00   698         u=3   $ water between the fuel rods
+162    0 17:-29:19:-1    $ outside world
+ 
+    *1    py   0       $ x-z plane, reflective
+17    cz  29.135
+19    pz  31.75    $ top of reactor
+29    pz -31.75    $ bottom of reactor
+58    c/z     3.4414     .8515     .3240
+268   c/z     3.4414     .8515     .3345
+478   c/z     3.4414     .8515     .3475
+698   c/z     3.4414     .8515     .4318
+880   cz   1.7251
+881   cz   1.8051
+882   cz   1.9051
+905   cz   2.1055
+906   c/z  16.7113 0 2.1055
+907   c/z  -16.7113 0 2.1055
+913   c/z  0 11.9185 2.1055
+914   c/z  10.3217 5.9592 2.1055
+915   c/z  8.3557 14.4724 2.1055
+916   c/z  -8.3557 14.4724 2.1055
+917   c/z  -10.3217 5.9592 2.1055
+300   rhp  3.4414  0.851476 -1.0e+6   0.0 0.0 2.0e+6  0.4916 0.0 0.0
+           0.2458  0.425738  0.0     -0.2458  0.425738  0.0
+ 
+imp:n    1   18r   0
+m2      92235.50d  -.70573    92238.40c  -.23821     7014.50d  -.05605
+m6      41093.40c  -1.00000    
+m7      74000.55d  -.74000  
+m11      5010.03d  -.6870      5011.40c  -.0840      6012.40c  -.2290
+m12      1001.60c 1 1002.60c 3   8016.40c 1
+mt12     hwtr.01 lwtr.01
+pert1:n  cell=42,141,40,149  rho=-1.50
+kcode     200   .05   5  6 
+ksrc   3 .2 .2 .2 3 .2 -3 .2 .2 .2 3 .2 4 3 .2 -4 3 .2 4 3 .1 -4 3 .2
+f1:n  (300.2<(42[-7 -1 0]))
+e    .01 .1 1. 10.
+fq    f e
+fc4   fuel rod flux in 5 y locations averaged over 5 x elements
+f4:n  (154<(42[-10:-6 -1 0]))   $ average 5 x elements at j=-1
+      (154<(42[-10:-6  3 0])) &  $ average 5 x elements at j=3 
+(154<(42[-10:-6 10 0]))   $ average 5 x elements at j=10 &
+      (154<(42[-10:-6 21 0]))   $ average 5 x elements at j=21
+      (154<(42[-10:-6 29 0]))   $ average 5 x elements at j=29
+sd4   104.7089062 4r            $ 5 times the volume of cell 154
+fm4 (1 2 -5) (1 2 -6) (1 2 -7) (1 2 -8) (1 2 4001) (1 2 102021)
+fc14   fuel rod flux in 5 y locations averaged over 5 x elements
+f14:n  (154<(42[-10:-6 -1 0]))   $ average 5 x elements at j=-1
+      (154<(42[-10:-6  3 0])) &  $ average 5 x elements at j=3 
+(154<(42[-10:-6 10 0]))   $ average 5 x elements at j=10 &
+      (154<(42[-10:-6 21 0]))   $ average 5 x elements at j=21
+      (154<(42[-10:-6 29 0]))   $ average 5 x elements at j=29
+sd14   104.7089062 4r            $ 5 times the volume of cell 154
+fm14 (-1 2 -5) (-1 2 -6) (-1 2 -7) (-1 2 -8) (-1 2 4001) (-1 2 102021)
+print 30 90 102 110 160 161 162
+prdmp 2j -1
+ptrac buffer=20 file=asc write=all event=bnk

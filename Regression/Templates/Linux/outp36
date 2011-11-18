@@ -1,0 +1,615 @@
+      1-       test of rectangular image problem                                               
+      2-       1 0 imp:n=0                                                                     
+      3-       2 0 imp:n=1                                                                     
+      4-       3 0 imp:n=1                                                                     
+      5-       4 0 imp:n=1                                                                     
+      6-       5 0 imp:n=1                                                                     
+      7-       6 1 -7.85 imp:n=1                                                               
+      8-       7 0 imp:n=1                                                                     
+      9-       8 0 imp:n=1                                                                     
+     10-       9 0 imp:n=1   $ implicit complement                                             
+     11-                                                                                       
+     12-       1                                                                               
+     13-       2                                                                               
+     14-       3                                                                               
+     15-       4                                                                               
+     16-       5                                                                               
+     17-       6                                                                               
+     18-       7                                                                               
+     19-       8                                                                               
+     20-       9                                                                               
+     21-       10                                                                              
+     22-       11                                                                              
+     23-       12                                                                              
+     24-       13                                                                              
+     25-       14                                                                              
+     26-       15                                                                              
+     27-       16                                                                              
+     28-       17                                                                              
+     29-       22                                                                              
+     30-       24                                                                              
+     31-       25                                                                              
+     32-       26                                                                              
+     33-       27                                                                              
+     34-       28                                                                              
+     35-       29                                                                              
+     36-                                                                                       
+     37-       c 2 1    0 -1          imp:p=1                                                  
+     38-       c 3 2    0 -2          imp:p=1                                                  
+     39-       c 4 3    0 -3          imp:p=1                                                  
+     40-       c 5 4    0 -4          imp:p 1                                                  
+     41-       c 6 5    1 -7.85 1 2 3 4 -5  imp:p=1                                            
+     42-       c 7 6    0  5 -6       imp:p=1                                                  
+     43-       c   7    0  6          imp:p=0                                                  
+     44-       c                                                                               
+     45-       c 13 1    sy 4 2                                                                
+     46-       c 14 2    sz 4 1.5                                                              
+     47-       c 15 3    sy -4 0.5                                                             
+     48-       c 16 4    sz -4 1                                                               
+     49-       c 17 5    so 8.                                                                 
+     50-       c 22 6    so 1000                                                               
+     51-       c                                                                               
+     52-       mode p                                                                          
+     53-       sdef  erg=6 pos=-100 0 0                                                        
+     54-       m1   26000 1.                                                                   
+     55-       fir5:p  100 0 0 0 -100 0 0 0 1000 0                                             
+     56-       *fir35:p  100 0 0 0 -100 0 0 0 1000 0                                           
+     57-       fs5    -16.1 200i 16.1                                                          
+     58-       c5     -16.1 200i 16.1                                                          
+     59-       fs35    -16.1 200i 16.1                                                         
+     60-       c35    -16.1 200i 16.1                                                          
+     61-       notrn                                                                           
+     62-       nps   1                                                                         
+     63-       talnp                                                                           
+     64-       print                                                                           
+     65-       prdmp   2j -11                                                                  
+     66-       imp:p 0 1 1 1 1 1 1 0 1                                                         
+1source                                                                                                 print table 10
+
+ values of defaulted or explicitly defined source variables
+
+    cel        0.0000E+00
+    sur        0.0000E+00
+    erg        6.0000E+00
+    tme        0.0000E+00
+    dir        isotropic 
+    pos       -1.0000E+02   0.0000E+00   0.0000E+00
+    x          0.0000E+00
+    y          0.0000E+00
+    z          0.0000E+00
+    rad        0.0000E+00
+    ext        0.0000E+00
+    axs        0.0000E+00   0.0000E+00   0.0000E+00
+    vec        0.0000E+00   0.0000E+00   0.0000E+00
+    ccc        0.0000E+00
+    nrm        1.0000E+00
+    ara        0.0000E+00
+    wgt        1.0000E+00
+    eff        1.0000E-02
+    par        0.0000E+00
+    tr         0.0000E+00
+
+
+ order of sampling source variables.
+ pos erg tme
+
+1tally   5                                                                                              print table 30
+           tally type 5    particle flux at a  fir  detector.                             
+           tally for  photons  
+
+ fir (flux image for radiograph) detector specifications:
+     image grid centered at x,y,z =  1.00000E+02  0.00000E+00  0.00000E+00
+     direction cosines perpendicular to image grid =  1.00000E+00  0.00000E+00  0.00000E+00
+     image detector axes:    t (c card) axis = -0.00000 -0.00000  1.00000     s (fs card) axis = -0.00000  1.00000  0.00000
+     image grid collimator radius = 1.00000E+03
+     there are    201 image grid planar pixels along t axis from  c card entries starting at -1.61000E+01 and ending at  1.61000E+01
+     there are    201 image grid planar pixels along s axis from fs card entries starting at -1.61000E+01 and ending at  1.61000E+01
+     the flux image position will be centered in each pixel
+
+
+
+1tally  35                                                                                              print table 30
+           tally type 5*   energy flux at a  fir  detector.                               
+           tally for  photons  
+
+ fir (flux image for radiograph) detector specifications:
+     image grid centered at x,y,z =  1.00000E+02  0.00000E+00  0.00000E+00
+     direction cosines perpendicular to image grid =  1.00000E+00  0.00000E+00  0.00000E+00
+     image detector axes:    t (c card) axis = -0.00000 -0.00000  1.00000     s (fs card) axis = -0.00000  1.00000  0.00000
+     image grid collimator radius = 1.00000E+03
+     there are    201 image grid planar pixels along t axis from  c card entries starting at -1.61000E+01 and ending at  1.61000E+01
+     there are    201 image grid planar pixels along s axis from fs card entries starting at -1.61000E+01 and ending at  1.61000E+01
+     the flux image position will be centered in each pixel
+
+
+1material composition                                                                                   print table 40
+
+ material
+  number     component nuclide, atom fraction
+
+     1           26000, 1.00000E+00
+
+
+
+
+
+ material
+  number     component nuclide, mass fraction
+
+     1           26000, 1.00000E+00
+1cell volumes and masses                                                                                print table 50
+
+        cell     atom          gram         input       calculated                            reason volume
+                density       density       volume        volume         mass       pieces    not calculated
+
+     1     1  0.00000E+00   0.00000E+00   0.00000E+00   8.46139E+08   0.00000E+00      0                      
+     2     2  0.00000E+00   0.00000E+00   0.00000E+00   3.35064E+01   0.00000E+00      0                      
+     3     3  0.00000E+00   0.00000E+00   0.00000E+00   1.41350E+01   0.00000E+00      0                      
+     4     4  0.00000E+00   0.00000E+00   0.00000E+00   5.23356E-01   0.00000E+00      0                      
+     5     5  0.00000E+00   0.00000E+00   0.00000E+00   4.18780E+00   0.00000E+00      0                      
+     6     6  8.46498E-02   7.85000E+00   0.00000E+00   2.09222E+03   1.64239E+04      0                      
+     7     7  0.00000E+00   0.00000E+00   0.00000E+00   4.18864E+09   0.00000E+00      0                      
+     8     8  0.00000E+00   0.00000E+00   0.00000E+00   9.63535E+09   0.00000E+00      0                      
+     9     9  0.00000E+00   0.00000E+00   0.00000E+00   1.00000E+00   0.00000E+00      0                      
+1surface areas                                                                                          print table 50
+
+         surface    input      calculated    reason area
+                    area          area       not calculated
+
+     1        1  0.00000E+00   5.99270E+06                   
+     2        2  0.00000E+00   5.99270E+06                   
+     3        3  0.00000E+00   5.99270E+06                   
+     4        4  0.00000E+00   5.99270E+06                   
+     5        5  0.00000E+00   5.99270E+06                   
+     6        6  0.00000E+00   5.99270E+06                   
+     7        7  0.00000E+00   5.76000E+06                   
+     8        8  0.00000E+00   5.76000E+06                   
+     9        9  0.00000E+00   5.76000E+06                   
+    10       10  0.00000E+00   5.76000E+06                   
+    11       11  0.00000E+00   5.76000E+06                   
+    12       12  0.00000E+00   5.76000E+06                   
+    13       13  0.00000E+00   5.02625E+01                   
+    14       14  0.00000E+00   2.82721E+01                   
+    15       15  0.00000E+00   3.14086E+00                   
+    16       16  0.00000E+00   1.25649E+01                   
+    17       17  0.00000E+00   8.04230E+02                   
+    18       22  0.00000E+00   1.25662E+07                   
+    19       24  0.00000E+00   5.76000E+06                   
+    20       25  0.00000E+00   5.76000E+06                   
+    21       26  0.00000E+00   5.76000E+06                   
+    22       27  0.00000E+00   5.76000E+06                   
+    23       28  0.00000E+00   5.76000E+06                   
+    24       29  0.00000E+00   5.76000E+06                   
+1cells                                                                                                  print table 60
+
+                      atom        gram                                     neutron    photon                           
+        cell  mat    density     density     volume       mass     pieces importance importance                        
+
+     1     1    0  0.00000E+00 0.00000E+00 8.46139E+08 0.00000E+00     0  0.0000E+00 0.0000E+00                        
+     2     2    0  0.00000E+00 0.00000E+00 3.35064E+01 0.00000E+00     0  1.0000E+00 1.0000E+00                        
+     3     3    0  0.00000E+00 0.00000E+00 1.41350E+01 0.00000E+00     0  1.0000E+00 1.0000E+00                        
+     4     4    0  0.00000E+00 0.00000E+00 5.23356E-01 0.00000E+00     0  1.0000E+00 1.0000E+00                        
+     5     5    0  0.00000E+00 0.00000E+00 4.18780E+00 0.00000E+00     0  1.0000E+00 1.0000E+00                        
+     6     6    1  8.46498E-02 7.85000E+00 2.09222E+03 1.64239E+04     0  1.0000E+00 1.0000E+00                        
+     7     7    0  0.00000E+00 0.00000E+00 4.18864E+09 0.00000E+00     0  1.0000E+00 1.0000E+00                        
+     8     8    0  0.00000E+00 0.00000E+00 9.63535E+09 0.00000E+00     0  0.0000E+00 0.0000E+00                        
+     9     9    0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00     0  1.0000E+00 1.0000E+00                        
+
+ total                                     1.46701E+10 1.64239E+04
+1surfaces                                                                                               print table 70
+
+         surface     trans  type   surface coefficients
+
+     1      1                   
+     2      2                   
+     3      3                   
+     4      4                   
+     5      5                   
+     6      6                   
+     7      7                   
+     8      8                   
+     9      9                   
+    10     10                   
+    11     11                   
+    12     12                   
+    13     13                   
+    14     14                   
+    15     15                   
+    16     16                   
+    17     17                   
+    18     22                   
+    19     24                   
+    20     25                   
+    21     26                   
+    22     27                   
+    23     28                   
+    24     29                   
+
+    minimum source weight = 1.0000E+00    maximum source weight = 1.0000E+00
+
+ ***************************************************
+ * Random Number Generator  =                    1 *
+ * Random Number Seed       =       19073486328125 *
+ * Random Number Multiplier =       19073486328125 *
+ * Random Number Adder      =                    0 *
+ * Random Number Bits Used  =                   48 *
+ * Random Number Stride     =               152917 *
+ ***************************************************
+
+1physical constants                                                                                     print table 98
+
+
+   name                    value     description
+
+   huge      1.0000000000000E+36     infinity
+    pie      3.1415926535898E+00     pi
+  euler      5.7721566490153E-01     euler constant
+ avogad      6.0220434469282E+23     avogadro number (molecules/mole)
+  aneut      1.0086649670000E+00     neutron mass (amu)
+  avgdn      5.9703109000000E-01     avogadro number/neutron mass (1.e-24*molecules/mole/amu)
+  slite      2.9979250000000E+02     speed of light (cm/shake)
+ planck      4.1357320000000E-13     planck constant (mev shake)
+  fscon      1.3703930000000E+02     inverse fine structure constant h*c/(2*pi*e**2)
+ gpt(1)      9.3958000000000E+02     neutron mass (mev)
+ gpt(3)      5.1100800000000E-01     electron mass (mev)
+
+
+ fission q-values:     nuclide    q(mev)   nuclide    q(mev)
+                         90232    171.91     91233    175.57
+                         92233    180.84     92234    179.45
+                         92235    180.88     92236    179.50
+                         92237    180.40     92238    181.31
+                         92239    180.40     92240    180.40
+                         93237    183.67     94238    186.65
+                         94239    189.44     94240    186.36
+                         94241    188.99     94242    185.98
+                         94243    187.48     95241    190.83
+                         95242    190.54     95243    190.25
+                         96242    190.49     96244    190.49
+                         other    180.00
+1cross-section tables                                                                                   print table 100
+
+     table    length
+
+                        tables from file testlib1                                                        
+
+  26000.02p     651                                                                                            01/15/93
+ 
+  comment.   26000.02p lacks Compton profile data for photon energy broadening.            
+
+  total         651
+ 
+  warning.  simple physics turned on for photons > 100 mev.                                
+
+          1 warning message so far.
+1   starting mcrun.      cp0 =  0.00         print table 110
+
+      test of rectangular image problem                                               
+
+
+     nps    x          y          z       cell   surf     u          v          w        energy     weight      time
+ 
+      1 -1.000E+02  0.000E+00  0.000E+00     7      0  5.085E-01  4.733E-01  7.193E-01  6.000E+00  1.000E+00  0.000E+00
+1problem summary                                                                                                           
+
+      run terminated when           1  particle histories were done.
+0
+ photon creation     tracks      weight        energy            photon loss         tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source                   1    1.0000E+00    6.0000E+00          escape                   1    1.0000E+00    6.0000E+00
+                                                                 energy cutoff            0    0.            0.        
+                                                                 time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ from neutrons            0    0.            0.                  compton scatter          0    0.            0.        
+ bremsstrahlung           0    0.            0.                  capture                  0    0.            0.        
+ p-annihilation           0    0.            0.                  pair production          0    0.            0.        
+ photonuclear             0    0.            0.                  photonuclear abs         0    0.            0.        
+ electron x-rays          0    0.            0.                                                                        
+ 1st fluorescence         0    0.            0.                                                                        
+ 2nd fluorescence         0    0.            0.                                                                        
+     total                1    1.0000E+00    6.0000E+00              total                1    1.0000E+00    6.0000E+00
+
+   number of photons banked                        0        average time of (shakes)              cutoffs
+   photon tracks per source particle      1.0000E+00          escape            0.0000E+00          tco   1.0000E+33
+   photon collisions per source particle  0.0000E+00          capture           0.0000E+00          eco   1.0000E-03
+   total photon collisions                         0          capture or escape 0.0000E+00          wc1  -5.0000E-01
+                                                              any termination   0.0000E+00          wc2  -2.5000E-01
+
+ computer time so far in this run     0.00 minutes            maximum number ever in bank         0
+ computer time in mcrun               0.00 minutes            bank overflows to backup file       0
+ source particles per minute            0.0000E+00
+ random numbers generated                        2            most random numbers used was           2 in history           1
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+1photon   activity in each cell                                                                         print table 126
+
+                 tracks     population   collisions   collisions     number        flux        average      average
+        cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                    (per history)    energy       energy     (relative)      (cm)
+
+     2     2           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
+     3     3           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
+     4     4           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
+     5     5           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
+     6     6           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
+     7     7           1            1            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
+     9     9           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
+
+     total             1            1            0    0.0000E+00
+1photon   weight balance in each cell                                                                   print table 130
+
+        cell index        2           3           4           5           6           7           9
+       cell number        2           3           4           5           6           7           9       total                 
+
+ external events:
+          entering  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+            source  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  1.0000E+00  0.0000E+00  1.0000E+00
+     energy cutoff  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+       time cutoff  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+           exiting  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+                    ----------  ----------  ----------  ----------  ----------  ----------  ----------  ----------
+             total  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  1.0000E+00  0.0000E+00  1.0000E+00
+
+ variance reduction events:
+     weight window  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+   cell importance  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+     weight cutoff  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+ e or t importance  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+            dxtran  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+ forced collisions  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+    exp. transform  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+                    ----------  ----------  ----------  ----------  ----------  ----------  ----------  ----------
+             total  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+
+ physical events:
+     from neutrons  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+    bremsstrahlung  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+           capture  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+    p-annihilation  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+   pair production  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+      photonuclear  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+  photonuclear abs  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+   electron x-rays  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+      fluorescence  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+                    ----------  ----------  ----------  ----------  ----------  ----------  ----------  ----------
+             total  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+
+                    ----------  ----------  ----------  ----------  ----------  ----------  ----------  ----------
+             total  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  1.0000E+00  0.0000E+00  1.0000E+00
+ 
+1photoatomic activity of each nuclide in each cell, per source particle                                 print table 140
+
+   cell  cell   nuclides     atom       total  collisions   wgt. lost
+  index  name            fraction  collisions    * weight  to capture
+
+      6     6  26000.02p 1.00E+00           0  0.0000E+00  0.0000E+00
+
+        total                               0  0.0000E+00  0.0000E+00
+
+
+  total over all cells by nuclide       total  collisions   wgt. lost
+                                   collisions    * weight  to capture
+
+               26000.02p                    0  0.0000E+00  0.0000E+00
+
+1tally   5        nps =           1
+           tally type 5    particle flux at a  fir  detector.           units   1/cm**2   
+           tally for  photons  
+
+ fir (flux image for radiograph) detector specifications:
+     image grid centered at x,y,z =  1.00000E+02  0.00000E+00  0.00000E+00
+     direction cosines perpendicular to image grid =  1.00000E+00  0.00000E+00  0.00000E+00
+     image detector axes:    t (c card) axis = -0.00000 -0.00000  1.00000     s (fs card) axis = -0.00000  1.00000  0.00000
+     image grid collimator radius = 1.00000E+03
+     there are    201 image grid planar pixels along t axis from  c card entries starting at -1.61000E+01 and ending at  1.61000E+01
+     there are    201 image grid planar pixels along s axis from fs card entries starting at -1.61000E+01 and ending at  1.61000E+01
+     the flux image position will be centered in each pixel
+
+
+ 
+ detector score diagnostics                  cumulative          tally         cumulative
+                                             fraction of         per           fraction of
+   times average score     transmissions     transmissions       history       total tally
+        1.00000E-01                  0         0.00000        0.00000E+00        0.00000
+        1.00000E+00                  0         0.00000        0.00000E+00        0.00000
+        2.00000E+00                  0         0.00000        0.00000E+00        0.00000
+        5.00000E+00                  0         0.00000        0.00000E+00        0.00000
+        1.00000E+01                  0         0.00000        0.00000E+00        0.00000
+        1.00000E+02                  0         0.00000        0.00000E+00        0.00000
+        1.00000E+03                  0         0.00000        0.00000E+00        0.00000
+        1.00000E+38                  0         0.00000        0.00000E+00        0.00000
+  1st 200 histories                  0         1.00000        0.00000E+00        1.00000
+
+ average tally per history = 0.00000E+00            largest score = 0.00000E+00
+ (largest score)/(average tally) = 1.00000E+00      nps of largest score =           0
+
+ score contributions by cell
+        cell      misses        hits    tally per history    weight per hit
+     7     7           1           0       0.00000E+00         0.00000E+00
+
+ score misses
+   russian roulette on pd                   0
+   psc=0.                                   0
+   russian roulette in transmission         0
+   underflow in transmission                0
+   hit a zero-importance cell               0
+   energy cutoff                            0
+   other: outside tally bin bounds.           1
+
+
+ ***** the nps-dependent tfc bin check results are suspect because there are only  1 nps tally values to analyze *****
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally   5
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.05      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.00      yes          yes            0.00      yes         yes                                     0.00
+ passed?        yes          yes      yes          yes             yes      yes         yes                                       no
+
+ ===================================================================================================================================
+
+
+ warning.  the tally in the tally fluctuation chart bin did not pass  1 of the 10 statistical checks.
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally   5 with nps =           1  print table 160
+
+
+ normed average tally per history  = 1.96423E-06          unnormed average tally per history  = 1.96423E-06
+ estimated tally relative error    = 0.0000               estimated variance of the variance  = 0.0000
+ relative error from zero tallies  = 0.0000               relative error from nonzero scores  = 0.0000
+
+ number of nonzero history tallies =           1          efficiency for the nonzero tallies  = 1.0000
+ history number of largest  tally  =           1          largest  unnormalized history tally = 1.96423E-06
+ (largest  tally)/(average tally)  = 1.00000E+00          (largest  tally)/(avg nonzero tally)= 1.00000E+00
+
+ (confidence interval shift)/mean  = 0.0000               shifted confidence interval center  = 1.96423E-06
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            1.96423E-06             1.96423E-06                     0.000000
+      relative error                  0.00000E+00             0.00000E+00                     0.000000
+      variance of the variance        0.00000E+00             0.00000E+00                     0.000000
+      shifted center                  1.96423E-06             1.96423E-06                     0.000000
+      figure of merit                 0.00000E+00             0.00000E+00                     0.000000
+
+ there is not enough information in the largest  history scores (usually less than 500 scores) for a reliable estimate of the slope.
+ the large score tail of the empirical history score probability density function appears to have no unsampled regions.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 1.000E+15)**2 = (0.000E+00)*(1.000E+30) = 0.000E+00
+ print table 161 cannot be done for this tally because all tallies were between 1.58489E-06 and 1.99526E-06 which is one tally bin.
+
+1tally  35        nps =           1
+           tally type 5*   energy flux at a  fir  detector.             units   mev/cm**2 
+           tally for  photons  
+
+ fir (flux image for radiograph) detector specifications:
+     image grid centered at x,y,z =  1.00000E+02  0.00000E+00  0.00000E+00
+     direction cosines perpendicular to image grid =  1.00000E+00  0.00000E+00  0.00000E+00
+     image detector axes:    t (c card) axis = -0.00000 -0.00000  1.00000     s (fs card) axis = -0.00000  1.00000  0.00000
+     image grid collimator radius = 1.00000E+03
+     there are    201 image grid planar pixels along t axis from  c card entries starting at -1.61000E+01 and ending at  1.61000E+01
+     there are    201 image grid planar pixels along s axis from fs card entries starting at -1.61000E+01 and ending at  1.61000E+01
+     the flux image position will be centered in each pixel
+
+
+ 
+ detector score diagnostics                  cumulative          tally         cumulative
+                                             fraction of         per           fraction of
+   times average score     transmissions     transmissions       history       total tally
+        1.00000E-01                  0         0.00000        0.00000E+00        0.00000
+        1.00000E+00                  0         0.00000        0.00000E+00        0.00000
+        2.00000E+00                  0         0.00000        0.00000E+00        0.00000
+        5.00000E+00                  0         0.00000        0.00000E+00        0.00000
+        1.00000E+01                  0         0.00000        0.00000E+00        0.00000
+        1.00000E+02                  0         0.00000        0.00000E+00        0.00000
+        1.00000E+03                  0         0.00000        0.00000E+00        0.00000
+        1.00000E+38                  0         0.00000        0.00000E+00        0.00000
+  1st 200 histories                  0         1.00000        0.00000E+00        1.00000
+
+ average tally per history = 0.00000E+00            largest score = 0.00000E+00
+ (largest score)/(average tally) = 1.00000E+00      nps of largest score =           0
+
+ score contributions by cell
+        cell      misses        hits    tally per history    weight per hit
+     7     7           1           0       0.00000E+00         0.00000E+00
+
+ score misses
+   russian roulette on pd                   0
+   psc=0.                                   0
+   russian roulette in transmission         0
+   underflow in transmission                0
+   hit a zero-importance cell               0
+   energy cutoff                            0
+   other: outside tally bin bounds.           1
+
+
+ ***** the nps-dependent tfc bin check results are suspect because there are only  1 nps tally values to analyze *****
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally  35
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.05      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.00      yes          yes            0.00      yes         yes                                     0.00
+ passed?        yes          yes      yes          yes             yes      yes         yes                                       no
+
+ ===================================================================================================================================
+
+
+ warning.  the tally in the tally fluctuation chart bin did not pass  1 of the 10 statistical checks.
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally  35 with nps =           1  print table 160
+
+
+ normed average tally per history  = 1.17854E-05          unnormed average tally per history  = 1.17854E-05
+ estimated tally relative error    = 0.0000               estimated variance of the variance  = 0.0000
+ relative error from zero tallies  = 0.0000               relative error from nonzero scores  = 0.0000
+
+ number of nonzero history tallies =           1          efficiency for the nonzero tallies  = 1.0000
+ history number of largest  tally  =           1          largest  unnormalized history tally = 1.17854E-05
+ (largest  tally)/(average tally)  = 1.00000E+00          (largest  tally)/(avg nonzero tally)= 1.00000E+00
+
+ (confidence interval shift)/mean  = 0.0000               shifted confidence interval center  = 1.17854E-05
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            1.17854E-05             1.17854E-05                     0.000000
+      relative error                  0.00000E+00             0.00000E+00                     0.000000
+      variance of the variance        0.00000E+00             0.00000E+00                     0.000000
+      shifted center                  1.17854E-05             1.17854E-05                     0.000000
+      figure of merit                 0.00000E+00             0.00000E+00                     0.000000
+
+ there is not enough information in the largest  history scores (usually less than 500 scores) for a reliable estimate of the slope.
+ the large score tail of the empirical history score probability density function appears to have no unsampled regions.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 1.000E+15)**2 = (0.000E+00)*(1.000E+30) = 0.000E+00
+ print table 161 cannot be done for this tally because all tallies were between 1.00000E-05 and 1.25893E-05 which is one tally bin.
+
+1status of the statistical checks used to form confidence intervals for the mean for each tally bin
+
+
+ tally   result of statistical checks for the tfc bin (the first check not passed is listed) and error magnitude check for all bins
+
+     5   missed  1 of 10 tfc bin checks: there is insufficient tfc bin tally information to estimate the large tally slope reliably
+         passed all bin error check:     0 tally bins all have relative errors less than 0.05 with no zero bins
+
+    35   missed  1 of 10 tfc bin checks: there is insufficient tfc bin tally information to estimate the large tally slope reliably
+         passed all bin error check:     0 tally bins all have relative errors less than 0.05 with no zero bins
+
+
+ the 10 statistical checks are only for the tally fluctuation chart bin and do not apply to other tally bins.
+
+ warning.     2 of the   2 tally fluctuation chart bins did not pass all 10 statistical checks.
+1tally fluctuation charts                         
+
+                       tally    5                                tally   35
+          nps      mean     error   vov  slope    fom      mean     error   vov  slope    fom
+            1   1.9642E-06 0.0000 0.0000  0.0           1.1785E-05 0.0000 0.0000  0.0        
+ tally data written to file inp36m
+
+         4 warning messages so far.
+
+
+ run terminated when           1  particle histories were done.

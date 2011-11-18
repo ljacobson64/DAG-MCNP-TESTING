@@ -1,0 +1,16 @@
+unused material defined with "&" yield fatal error
+c 2 1   1 -1   -1
+c 3 2   0       1 -2
+c 4 666 0          2
+c 
+c 13 1 so 1
+c 14 2 so 2
+c
+m1 1000 1
+m2 &     $ &this is a test
+  2000 1 
+mode p
+imp:p 0 1 1 0 1
+sdef
+prdmp 2j -1
+nps 1

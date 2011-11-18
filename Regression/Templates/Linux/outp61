@@ -1,0 +1,1195 @@
+      1-       test tally assignment and complement material assignment                        
+      2-       1 2 -19.1 imp:n=1                                                               
+      3-       4 0 imp:n=0                                                                     
+      4-       5 1 -1 imp:n=1   $ implicit complement                                          
+      5-                                                                                       
+      6-       1                                                                               
+      7-       2                                                                               
+      8-       3                                                                               
+      9-       4                                                                               
+     10-       5                                                                               
+     11-       6                                                                               
+     12-       19                                                                              
+     13-       20                                                                              
+     14-       21                                                                              
+     15-       22                                                                              
+     16-       23                                                                              
+     17-       24                                                                              
+     18-       25                                                                              
+     19-       26                                                                              
+     20-       27                                                                              
+     21-       28                                                                              
+     22-       29                                                                              
+     23-       30                                                                              
+     24-                                                                                       
+     25-        f11:n 1 T                                                                      
+     26-        f12:n 1 T                                                                      
+     27-        f14:n 1 T                                                                      
+     28-        f16:n 1 T                                                                      
+     29-        f17:n 1 T                                                                      
+     30-        f18:p 1 T                                                                      
+ 
+  warning.  f8 tally unreliable since neutron transport nonanalog.                         
+     31-       m1 1001 2 8016 1                                                                
+     32-       m2 92235 1                                                                      
+     33-       f1:n 1                                                                          
+     34-       f2:n 1                                                                          
+     35-       f4:n 1                                                                          
+     36-       f6:n 1                                                                          
+     37-       f7:n 1                                                                          
+     38-       f8:p 1                                                                          
+ 
+  warning.  f8 tally unreliable since neutron transport nonanalog.                         
+     39-       sdef                                                                            
+     40-       nps 100                                                                         
+     41-       mode n p                                                                        
+  comment.  photonuclear physics may be needed (phys:p).                                   
+     42-       prdmp 2j -1                                                                     
+ 
+  comment.  photon   importances have been set equal to 1.                                 
+ 
+  warning.    1 materials had unnormalized fractions. print table 40.                      
+1cells                                                                                                  print table 60
+
+                      atom        gram                                     neutron    photon     photon wt             
+        cell  mat    density     density     volume       mass     pieces importance importance generation             
+
+     1     1    2  4.89360E-02 1.91000E+01 8.00000E+00 1.52800E+02     0  1.0000E+00 1.0000E+00 -1.000E+00             
+     2     4    0  0.00000E+00 0.00000E+00 9.10000E+01 0.00000E+00     0  0.0000E+00 0.0000E+00 -1.000E+00             
+     3     5    1  1.00309E-01 1.00000E+00 1.00000E+00 1.00000E+00     0  1.0000E+00 1.0000E+00 -1.000E+00             
+
+ total                                     1.00000E+02 1.53800E+02
+
+    minimum source weight = 1.0000E+00    maximum source weight = 1.0000E+00
+
+ ***************************************************
+ * Random Number Generator  =                    1 *
+ * Random Number Seed       =       19073486328125 *
+ * Random Number Multiplier =       19073486328125 *
+ * Random Number Adder      =                    0 *
+ * Random Number Bits Used  =                   48 *
+ * Random Number Stride     =               152917 *
+ ***************************************************
+
+
+         3 warning messages so far.
+1cross-section tables                                                                                   print table 100
+
+     table    length
+
+                        tables from file testlib1                                                        
+
+   1001.60c    2525  1-h-1 from endf-vi.1                                                         mat 125      11/25/93
+   8016.40c    9171   ENDL library name:  nd900719  MCNP translation:  900831 14:10:05                       900207    
+                     temperature = 2.5860E-08 adjusted to 2.5300E-08
+  92235.69c  653780  92-u-235 at 293.6K from t16 u235la9d njoy99.50     prompt nu                 mat9228      07/02/03
+                     probability tables used from 2.2500E-03 to 2.5000E-02 mev.
+   1000.02p     623                                                                                            01/15/93
+ 
+  comment.    1000.02p lacks Compton profile data for photon energy broadening.            
+   8000.02p     623                                                                                            01/15/93
+ 
+  comment.    8000.02p lacks Compton profile data for photon energy broadening.            
+  92000.02p     767                                                                                            01/15/93
+ 
+  comment.   92000.02p lacks Compton profile data for photon energy broadening.            
+
+  total      667489
+ 
+  warning.  neutron energy cutoff is below some cross-section tables.                      
+ 
+  comment.     1 cross sections modified by free gas thermal treatment.                    
+
+ maximum photon energy set to  100.0 mev (maximum electron energy)
+ 
+  warning.  cannot generate delayed gamma-rays from fissions.                              
+
+                        tables from file testlib1                                                        
+
+   1000.01e     478                                                                                          11/16/88  
+   8000.01e     478                                                                                          11/16/88  
+  92000.01e     478                                                                                          11/16/88  
+
+         5 warning messages so far.
+1problem summary                                                                                                           
+
+      run terminated when         100  particle histories were done.
+0
+ neutron creation    tracks      weight        energy            neutron loss        tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source                 100    1.0000E+00    1.4000E+01          escape                 161    1.5849E+00    1.0821E+01
+                                                                 energy cutoff            0    0.            0.        
+                                                                 time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ upscattering             0    0.            5.4190E-11          downscattering           0    0.            2.3949E+00
+ photonuclear             0    0.            0.                  capture                  0    1.7526E-02    1.2584E-01
+ (n,xn)                   7    6.9985E-02    8.9188E-02          loss to (n,xn)           3    2.9994E-02    4.1991E-01
+ prompt fission          81    7.9562E-01    1.5558E+00          loss to fission         24    2.3323E-01    1.8829E+00
+ delayed fission          0    0.            0.                                                                        
+     total              188    1.8656E+00    1.5645E+01              total              188    1.8656E+00    1.5645E+01
+
+   number of neutrons banked                      61        average time of (shakes)              cutoffs
+   neutron tracks per source particle     1.8800E+00          escape            8.3568E+00          tco   1.0000E+33
+   neutron collisions per source particle 2.0600E+00          capture           1.4254E+01          eco   0.0000E+00
+   total neutron collisions                      206          capture or escape 8.4213E+00          wc1  -5.0000E-01
+   net multiplication              1.6024E+00 0.1007          any termination   7.2331E+00          wc2  -2.5000E-01
+0
+ photon creation     tracks      weight        energy            photon loss         tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source                   0    0.            0.                  escape                  27    7.2075E-01    9.3988E-01
+                                                                 energy cutoff            0    0.            7.2387E-04
+                                                                 time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ from neutrons           76    2.1442E+00    2.2040E+00          compton scatter          0    0.            5.1392E-01
+ bremsstrahlung          93    2.2340E+00    7.1641E-02          capture                230    5.8697E+00    8.8632E-01
+ p-annihilation           4    4.0000E-02    2.0440E-02          pair production          2    2.0000E-02    8.9676E-02
+ photonuclear             0    0.            0.                  photonuclear abs         0    0.            0.        
+ electron x-rays          0    0.            0.                                                                        
+ 1st fluorescence        69    1.8159E+00    1.2832E-01                                                                
+ 2nd fluorescence        17    3.7637E-01    6.1718E-03                                                                
+     total              259    6.6105E+00    2.4305E+00              total              259    6.6105E+00    2.4305E+00
+
+   number of photons banked                      190        average time of (shakes)              cutoffs
+   photon tracks per source particle      2.5900E+00          escape            5.8648E-01          tco   1.0000E+33
+   photon collisions per source particle  2.8200E+00          capture           2.3490E+00          eco   1.0000E-03
+   total photon collisions                       282          capture or escape 2.1563E+00          wc1   0.0000E+00
+                                                              any termination   2.1499E+00          wc2   0.0000E+00
+
+ computer time so far in this run     0.00 minutes            maximum number ever in bank        16
+ computer time in mcrun               0.00 minutes            bank overflows to backup file       0
+ source particles per minute            0.0000E+00
+ random numbers generated                     6835            most random numbers used was         910 in history          39
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+1neutron  activity in each cell                                                                         print table 126
+
+                 tracks     population   collisions   collisions     number        flux        average      average
+        cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                    (per history)    energy       energy     (relative)      (cm)
+
+     1     1         108          161           67    6.5764E-01   1.0434E+00   8.6602E+00   9.9397E-01   3.1236E+00
+     3     5         169          161          139    1.3565E+00   4.5200E-02   6.2733E+00   9.8187E-01   5.5652E+00
+
+     total           277          322          206    2.0142E+00
+1photon   activity in each cell                                                                         print table 126
+
+                 tracks     population   collisions   collisions     number        flux        average      average
+        cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                    (per history)    energy       energy     (relative)      (cm)
+
+     1     1           5          187          276    7.1023E+00   1.1572E+00   1.1572E+00   3.0187E+00   6.3823E-01
+     3     5          24           30            6    1.1484E-01   1.4429E+00   1.4429E+00   2.3694E+00   1.5898E+01
+
+     total            29          217          282    7.2172E+00
+1summary of photons produced in neutron collisions
+
+        cell      number of      weight per     energy per     avg photon      mev/gm per    weight/neut    energy/neut
+                   photons       source neut    source neut      energy       source neut     collision      collision
+
+     1     1            68       2.06418E+00    1.81902E+00    8.81230E-01    1.19046E-02    3.13875E+00    2.76596E+00
+     2     4             0       0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00
+     3     5             8       8.00000E-02    3.84938E-01    4.81172E+00    3.84938E-01    5.89741E-02    2.83767E-01
+       total            76       2.14418E+00    2.20396E+00    1.02788E+00
+
+
+
+  energy      number of        number       cum number      weight of       weight       cum weight
+ interval      photons        frequency    distribution      photons       frequency    distribution
+ 
+   20.000             0      0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00
+   15.000             0      0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00
+   10.000             0      0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00
+    9.000             0      0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00
+    8.000             0      0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00
+    7.000             0      0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00
+    6.000             4      5.26316E-02    5.26316E-02    4.00000E-02    1.86551E-02    1.86551E-02
+    5.000             0      0.00000E+00    5.26316E-02    0.00000E+00    0.00000E+00    1.86551E-02
+    4.000             1      1.31579E-02    6.57895E-02    1.11729E-02    5.21078E-03    2.38659E-02
+    3.000             4      5.26316E-02    1.18421E-01    7.55687E-02    3.52436E-02    5.91095E-02
+    2.000             5      6.57895E-02    1.84211E-01    1.32252E-01    6.16793E-02    1.20789E-01
+    1.000            18      2.36842E-01    4.21053E-01    4.83703E-01    2.25589E-01    3.46378E-01
+    0.500            18      2.36842E-01    6.57895E-01    5.68807E-01    2.65279E-01    6.11657E-01
+    0.100            19      2.50000E-01    9.07895E-01    6.39527E-01    2.98261E-01    9.09918E-01
+    0.010             7      9.21053E-02    1.00000E+00    1.93152E-01    9.00818E-02    1.00000E+00
+    0.000             0      0.00000E+00    1.00000E+00    0.00000E+00    0.00000E+00    1.00000E+00
+
+   total             76      1.00000E+00                   2.14418E+00    1.00000E+00
+
+1tally   1        nps =         100
+           tally type 1    number of particles crossing a surface.                        
+           tally for  neutrons 
+ 
+ surface  1                                                                                                            
+                 3.16917E-01 0.1903
+
+
+ ***** the nps-dependent tfc bin check results are suspect because there are only  1 nps tally values to analyze *****
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally   1
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.19      yes          yes            0.07      yes         yes                                     0.00
+ passed?        yes           no      yes          yes             yes      yes         yes                                       no
+
+ ===================================================================================================================================
+
+
+ warning.  the tally in the tally fluctuation chart bin did not pass  2 of the 10 statistical checks.
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally   1 with nps =         100  print table 160
+
+
+ normed average tally per history  = 3.16917E-01          unnormed average tally per history  = 3.16917E-01
+ estimated tally relative error    = 0.1903               estimated variance of the variance  = 0.0713
+ relative error from zero tallies  = 0.1687               relative error from nonzero scores  = 0.0881
+
+ number of nonzero history tallies =          26          efficiency for the nonzero tallies  = 0.2600
+ history number of largest  tally  =          39          largest  unnormalized history tally = 2.90542E+00
+ (largest  tally)/(average tally)  = 9.16776E+00          (largest  tally)/(avg nonzero tally)= 2.38362E+00
+
+ (confidence interval shift)/mean  = 0.0207               shifted confidence interval center  = 3.23469E-01
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            3.16917E-01             3.42545E-01                     0.080869
+      relative error                  1.90326E-01             1.89572E-01                    -0.003959
+      variance of the variance        7.12659E-02             6.89837E-02                    -0.032024
+      shifted center                  3.23469E-01             3.23975E-01                     0.001565
+      figure of merit                 0.00000E+00             0.00000E+00                     0.000000
+
+ there is not enough information in the largest  history scores (usually less than 500 scores) for a reliable estimate of the slope.
+ the history score probability density function appears to have an unsampled region at the largest  history scores:
+ please examine. see print table 161.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 5.254E-01)**2 = (0.000E+00)*(2.761E-01) = 0.000E+00
+
+1unnormed tally density for tally   1            nonzero tally mean(m) = 1.219E+00   nps =         100  print table 161
+
+ abscissa              ordinate   log plot of tally probability density function in tally fluctuation chart bin(d=decade,slope= 0.0)
+  tally  number num den log den:d----------------------------------------------------------------d----------------------------------
+ 1.00+00      6 2.92-01  -0.535 *****************************************************************|*************                     
+ 1.26+00     16 6.18-01  -0.209 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm|mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+ 1.58+00      0 0.00+00   0.000                                                                  |                                  
+ 2.00+00      1 2.44-02  -1.613 ********                                                         |                                  
+ 2.51+00      1 1.94-02  -1.713 *                                                                |                                  
+ 3.16+00      2 3.08-02  -1.512 **************                                                   |                                  
+  total      26 2.60-01         d----------------------------------------------------------------d----------------------------------
+
+1tally   2        nps =         100
+           tally type 2    particle flux averaged over a surface.       units   1/cm**2   
+           tally for  neutrons 
+
+           areas   
+                surface:       1                                                                                   
+                         4.00000E+00
+ 
+ surface  1                                                                                                            
+                 1.02451E-01 0.2153
+
+
+ ***** the nps-dependent tfc bin check results are suspect because there are only  1 nps tally values to analyze *****
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally   2
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.22      yes          yes            0.18      yes         yes                                     0.00
+ passed?        yes           no      yes          yes              no      yes         yes                                       no
+
+ ===================================================================================================================================
+
+
+ warning.  the tally in the tally fluctuation chart bin did not pass  3 of the 10 statistical checks.
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally   2 with nps =         100  print table 160
+
+
+ normed average tally per history  = 1.02451E-01          unnormed average tally per history  = 4.09804E-01
+ estimated tally relative error    = 0.2153               estimated variance of the variance  = 0.1800
+ relative error from zero tallies  = 0.1687               relative error from nonzero scores  = 0.1338
+
+ number of nonzero history tallies =          26          efficiency for the nonzero tallies  = 0.2600
+ history number of largest  tally  =          28          largest  unnormalized history tally = 5.96729E+00
+ (largest  tally)/(average tally)  = 1.45613E+01          (largest  tally)/(avg nonzero tally)= 3.78594E+00
+
+ (confidence interval shift)/mean  = 0.0374               shifted confidence interval center  = 1.06279E-01
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            1.02451E-01             1.16207E-01                     0.134270
+      relative error                  2.15334E-01             2.21821E-01                     0.030126
+      variance of the variance        1.79962E-01             1.61635E-01                    -0.101837
+      shifted center                  1.06279E-01             1.06882E-01                     0.005677
+      figure of merit                 0.00000E+00             0.00000E+00                     0.000000
+
+ there is not enough information in the largest  history scores (usually less than 500 scores) for a reliable estimate of the slope.
+ the history score probability density function appears to have an unsampled region at the largest  history scores:
+ please examine. see print table 161.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 4.644E-01)**2 = (0.000E+00)*(2.157E-01) = 0.000E+00
+
+1unnormed tally density for tally   2            nonzero tally mean(m) = 1.576E+00   nps =         100  print table 161
+
+ abscissa              ordinate   log plot of tally probability density function in tally fluctuation chart bin(d=decade,slope= 0.0)
+  tally  number num den log den:d--------------------------------------------------d------------------------------------------------
+ 1.26+00     16 6.18-01  -0.209 ***************************************************|************************************************
+ 1.58+00      6 1.84-01  -0.735 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm|mmmmmmmmmmmmmmmmmmmmm                           
+ 2.00+00      0 0.00+00   0.000                                                    |                                                
+ 2.51+00      1 1.94-02  -1.713 **********************                             |                                                
+ 3.16+00      1 1.54-02  -1.813 *****************                                  |                                                
+ 3.98+00      1 1.22-02  -1.913 ***********                                        |                                                
+ 5.01+00      0 0.00+00   0.000                                                    |                                                
+ 6.31+00      1 7.71-03  -2.113 *                                                  |                                                
+  total      26 2.60-01         d--------------------------------------------------d------------------------------------------------
+
+1tally   4        nps =         100
+           tally type 4    track length estimate of particle flux.      units   1/cm**2   
+           tally for  neutrons 
+
+           volumes 
+                   cell:       1                                                                                   
+                         8.00000E+00
+ 
+ cell  1                                                                                                               
+                 2.52013E-01 0.1086
+
+
+ ***** the nps-dependent tfc bin check results are suspect because there are only  1 nps tally values to analyze *****
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally   4
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.11      yes          yes            0.10      yes         yes                                     0.00
+ passed?        yes           no      yes          yes              no      yes         yes                                       no
+
+ ===================================================================================================================================
+
+
+ warning.  the tally in the tally fluctuation chart bin did not pass  3 of the 10 statistical checks.
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally   4 with nps =         100  print table 160
+
+
+ normed average tally per history  = 2.52013E-01          unnormed average tally per history  = 2.01610E+00
+ estimated tally relative error    = 0.1086               estimated variance of the variance  = 0.1026
+ relative error from zero tallies  = 0.0000               relative error from nonzero scores  = 0.1086
+
+ number of nonzero history tallies =         100          efficiency for the nonzero tallies  = 1.0000
+ history number of largest  tally  =          39          largest  unnormalized history tally = 1.21739E+01
+ (largest  tally)/(average tally)  = 6.03831E+00          (largest  tally)/(avg nonzero tally)= 6.03831E+00
+
+ (confidence interval shift)/mean  = 0.0161               shifted confidence interval center  = 2.56062E-01
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            2.52013E-01             2.64584E-01                     0.049884
+      relative error                  1.08590E-01             1.12793E-01                     0.038707
+      variance of the variance        1.02608E-01             9.32657E-02                    -0.091046
+      shifted center                  2.56062E-01             2.55913E-01                    -0.000580
+      figure of merit                 0.00000E+00             0.00000E+00                     0.000000
+
+ there is not enough information in the largest  history scores (usually less than 500 scores) for a reliable estimate of the slope.
+ the history score probability density function appears to have an unsampled region at the largest  history scores:
+ please examine. see print table 161.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 9.209E-01)**2 = (0.000E+00)*(8.481E-01) = 0.000E+00
+
+1unnormed tally density for tally   4            nonzero tally mean(m) = 2.016E+00   nps =         100  print table 161
+
+ abscissa              ordinate   log plot of tally probability density function in tally fluctuation chart bin(d=decade,slope= 0.0)
+  tally  number num den log den:d---------------------------------------d----------------------------------------d------------------
+ 1.26+00     51 1.97+00   0.294 ****************************************|****************************************|******************
+ 1.58+00     28 8.59-01  -0.066 ****************************************|****************************************|***               
+ 2.00+00      6 1.46-01  -0.835 ****************************************|*************                           |                  
+ 2.51+00      2 3.87-02  -1.412 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmm          |                                        |                  
+ 3.16+00      0 0.00+00   0.000                                         |                                        |                  
+ 3.98+00      2 2.44-02  -1.612 **********************                  |                                        |                  
+ 5.01+00      1 9.70-03  -2.013 *****                                   |                                        |                  
+ 6.31+00      3 2.31-02  -1.636 *********************                   |                                        |                  
+ 7.94+00      3 1.84-02  -1.736 ****************                        |                                        |                  
+ 1.00+01      2 9.72-03  -2.012 *****                                   |                                        |                  
+ 1.26+01      2 7.72-03  -2.112 *                                       |                                        |                  
+  total     100 1.00+00         d---------------------------------------d----------------------------------------d------------------
+
+1tally   6        nps =         100
+           tally type 6    track length estimate of heating.            units   mev/gram  
+           tally for  neutrons 
+
+           masses  
+                   cell:       1                                                                                   
+                         1.52800E+02
+ 
+ cell  1                                                                                                               
+                 1.92071E-01 0.1005
+
+
+ ***** the nps-dependent tfc bin check results are suspect because there are only  1 nps tally values to analyze *****
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally   6
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.10      yes          yes            0.20      yes         yes                                     0.00
+ passed?        yes           no      yes          yes              no      yes         yes                                       no
+
+ ===================================================================================================================================
+
+
+ warning.  the tally in the tally fluctuation chart bin did not pass  3 of the 10 statistical checks.
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally   6 with nps =         100  print table 160
+
+
+ normed average tally per history  = 1.92071E-01          unnormed average tally per history  = 2.93485E+01
+ estimated tally relative error    = 0.1005               estimated variance of the variance  = 0.2050
+ relative error from zero tallies  = 0.0000               relative error from nonzero scores  = 0.1005
+
+ number of nonzero history tallies =         100          efficiency for the nonzero tallies  = 1.0000
+ history number of largest  tally  =          26          largest  unnormalized history tally = 2.20647E+02
+ (largest  tally)/(average tally)  = 7.51816E+00          (largest  tally)/(avg nonzero tally)= 7.51816E+00
+
+ (confidence interval shift)/mean  = 0.0200               shifted confidence interval center  = 1.95914E-01
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            1.92071E-01             2.04467E-01                     0.064536
+      relative error                  1.00491E-01             1.11240E-01                     0.106969
+      variance of the variance        2.04973E-01             1.77026E-01                    -0.136344
+      shifted center                  1.95914E-01             1.96004E-01                     0.000459
+      figure of merit                 0.00000E+00             0.00000E+00                     0.000000
+
+ there is not enough information in the largest  history scores (usually less than 500 scores) for a reliable estimate of the slope.
+ the history score probability density function appears to have an unsampled region at the largest  history scores:
+ please examine. see print table 161.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 9.951E-01)**2 = (0.000E+00)*(9.903E-01) = 0.000E+00
+
+1unnormed tally density for tally   6            nonzero tally mean(m) = 2.935E+01   nps =         100  print table 161
+
+ abscissa              ordinate   log plot of tally probability density function in tally fluctuation chart bin(d=decade,slope= 0.0)
+  tally  number num den log den:d---------------------------------d-----------------------------------d-----------------------------
+ 2.00+01     49 1.19-01  -0.923 **********************************|***********************************|*****************************
+ 2.51+01     31 6.00-02  -1.222 **********************************|***********************************|******************           
+ 3.16+01      6 9.23-03  -2.035 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm|mmmmmmmmmmmmmmmmmmmmmmmmmm         |                             
+ 3.98+01      2 2.44-03  -2.612 **********************************|*****                              |                             
+ 5.01+01      0 0.00+00   0.000                                   |                                   |                             
+ 6.31+01      2 1.54-03  -2.812 ********************************* |                                   |                             
+ 7.94+01      5 3.06-03  -2.514 **********************************|*********                          |                             
+ 1.00+02      1 4.86-04  -3.313 ***************                   |                                   |                             
+ 1.26+02      1 3.86-04  -3.413 ************                      |                                   |                             
+ 1.58+02      2 6.14-04  -3.212 *******************               |                                   |                             
+ 2.00+02      0 0.00+00   0.000                                   |                                   |                             
+ 2.51+02      1 1.94-04  -3.713 *                                 |                                   |                             
+  total     100 1.00+00         d---------------------------------d-----------------------------------d-----------------------------
+
+1tally   7        nps =         100
+           tally type 7    track length estimate of fission heating.    units   mev/gram  
+           tally for  neutrons 
+
+           masses  
+                   cell:       1                                                                                   
+                         1.52800E+02
+ 
+ cell  1                                                                                                               
+                 2.12775E-01 0.0969
+
+
+ ***** the nps-dependent tfc bin check results are suspect because there are only  1 nps tally values to analyze *****
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally   7
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.10      yes          yes            0.20      yes         yes                                     0.00
+ passed?        yes          yes      yes          yes              no      yes         yes                                       no
+
+ ===================================================================================================================================
+
+
+ warning.  the tally in the tally fluctuation chart bin did not pass  2 of the 10 statistical checks.
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally   7 with nps =         100  print table 160
+
+
+ normed average tally per history  = 2.12775E-01          unnormed average tally per history  = 3.25120E+01
+ estimated tally relative error    = 0.0969               estimated variance of the variance  = 0.2040
+ relative error from zero tallies  = 0.0000               relative error from nonzero scores  = 0.0969
+
+ number of nonzero history tallies =         100          efficiency for the nonzero tallies  = 1.0000
+ history number of largest  tally  =          26          largest  unnormalized history tally = 2.36624E+02
+ (largest  tally)/(average tally)  = 7.27807E+00          (largest  tally)/(avg nonzero tally)= 7.27807E+00
+
+ (confidence interval shift)/mean  = 0.0192               shifted confidence interval center  = 2.16870E-01
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            2.12775E-01             2.26000E-01                     0.062159
+      relative error                  9.69279E-02             1.07491E-01                     0.108980
+      variance of the variance        2.04036E-01             1.76408E-01                    -0.135407
+      shifted center                  2.16870E-01             2.16936E-01                     0.000304
+      figure of merit                 0.00000E+00             0.00000E+00                     0.000000
+
+ there is not enough information in the largest  history scores (usually less than 500 scores) for a reliable estimate of the slope.
+ the history score probability density function appears to have an unsampled region at the largest  history scores:
+ please examine. see print table 161.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 1.032E+00)**2 = (0.000E+00)*(1.064E+00) = 0.000E+00
+
+1unnormed tally density for tally   7            nonzero tally mean(m) = 3.251E+01   nps =         100  print table 161
+
+ abscissa              ordinate   log plot of tally probability density function in tally fluctuation chart bin(d=decade,slope= 0.0)
+  tally  number num den log den:d------------------------------------d-------------------------------------d------------------------
+ 2.00+01     31 7.55-02  -1.122 *************************************|*************************************|************************
+ 2.51+01     38 7.36-02  -1.133 *************************************|*************************************|************************
+ 3.16+01     16 2.46-02  -1.609 *************************************|*************************************|*****                   
+ 3.98+01      3 3.66-03  -2.436 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm|mmmmmmmmmmmm                         |                        
+ 5.01+01      0 0.00+00   0.000                                      |                                     |                        
+ 6.31+01      2 1.54-03  -2.812 ***********************************  |                                     |                        
+ 7.94+01      2 1.22-03  -2.912 ********************************     |                                     |                        
+ 1.00+02      4 1.94-03  -2.711 *************************************|*                                    |                        
+ 1.26+02      0 0.00+00   0.000                                      |                                     |                        
+ 1.58+02      3 9.20-04  -3.036 ***************************          |                                     |                        
+ 2.00+02      0 0.00+00   0.000                                      |                                     |                        
+ 2.51+02      1 1.94-04  -3.713 *                                    |                                     |                        
+  total     100 1.00+00         d------------------------------------d-------------------------------------d------------------------
+
+1tally  11        nps =         100
+           tally type 1    number of particles crossing a surface.                        
+           tally for  neutrons 
+ 
+ surface  1                                                                                                            
+                 3.16917E-01 0.1903
+ 
+ surface union total                                                                                                   
+                 3.16917E-01 0.1903
+
+
+ ***** the nps-dependent tfc bin check results are suspect because there are only  1 nps tally values to analyze *****
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally  11
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.19      yes          yes            0.07      yes         yes                                     0.00
+ passed?        yes           no      yes          yes             yes      yes         yes                                       no
+
+ ===================================================================================================================================
+
+
+ warning.  the tally in the tally fluctuation chart bin did not pass  2 of the 10 statistical checks.
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally  11 with nps =         100  print table 160
+
+
+ normed average tally per history  = 3.16917E-01          unnormed average tally per history  = 3.16917E-01
+ estimated tally relative error    = 0.1903               estimated variance of the variance  = 0.0713
+ relative error from zero tallies  = 0.1687               relative error from nonzero scores  = 0.0881
+
+ number of nonzero history tallies =          26          efficiency for the nonzero tallies  = 0.2600
+ history number of largest  tally  =          39          largest  unnormalized history tally = 2.90542E+00
+ (largest  tally)/(average tally)  = 9.16776E+00          (largest  tally)/(avg nonzero tally)= 2.38362E+00
+
+ (confidence interval shift)/mean  = 0.0207               shifted confidence interval center  = 3.23469E-01
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            3.16917E-01             3.42545E-01                     0.080869
+      relative error                  1.90326E-01             1.89572E-01                    -0.003959
+      variance of the variance        7.12659E-02             6.89837E-02                    -0.032024
+      shifted center                  3.23469E-01             3.23975E-01                     0.001565
+      figure of merit                 0.00000E+00             0.00000E+00                     0.000000
+
+ there is not enough information in the largest  history scores (usually less than 500 scores) for a reliable estimate of the slope.
+ the history score probability density function appears to have an unsampled region at the largest  history scores:
+ please examine. see print table 161.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 5.254E-01)**2 = (0.000E+00)*(2.761E-01) = 0.000E+00
+
+1unnormed tally density for tally  11            nonzero tally mean(m) = 1.219E+00   nps =         100  print table 161
+
+ abscissa              ordinate   log plot of tally probability density function in tally fluctuation chart bin(d=decade,slope= 0.0)
+  tally  number num den log den:d----------------------------------------------------------------d----------------------------------
+ 1.00+00      6 2.92-01  -0.535 *****************************************************************|*************                     
+ 1.26+00     16 6.18-01  -0.209 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm|mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+ 1.58+00      0 0.00+00   0.000                                                                  |                                  
+ 2.00+00      1 2.44-02  -1.613 ********                                                         |                                  
+ 2.51+00      1 1.94-02  -1.713 *                                                                |                                  
+ 3.16+00      2 3.08-02  -1.512 **************                                                   |                                  
+  total      26 2.60-01         d----------------------------------------------------------------d----------------------------------
+
+1tally  12        nps =         100
+           tally type 2    particle flux averaged over a surface.       units   1/cm**2   
+           tally for  neutrons 
+
+           areas   
+                surface:       1          total                                                                    
+                         4.00000E+00  4.00000E+00
+ 
+ surface  1                                                                                                            
+                 1.02451E-01 0.2153
+ 
+ surface union total                                                                                                   
+                 1.02451E-01 0.2153
+
+
+ ***** the nps-dependent tfc bin check results are suspect because there are only  1 nps tally values to analyze *****
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally  12
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.22      yes          yes            0.18      yes         yes                                     0.00
+ passed?        yes           no      yes          yes              no      yes         yes                                       no
+
+ ===================================================================================================================================
+
+
+ warning.  the tally in the tally fluctuation chart bin did not pass  3 of the 10 statistical checks.
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally  12 with nps =         100  print table 160
+
+
+ normed average tally per history  = 1.02451E-01          unnormed average tally per history  = 4.09804E-01
+ estimated tally relative error    = 0.2153               estimated variance of the variance  = 0.1800
+ relative error from zero tallies  = 0.1687               relative error from nonzero scores  = 0.1338
+
+ number of nonzero history tallies =          26          efficiency for the nonzero tallies  = 0.2600
+ history number of largest  tally  =          28          largest  unnormalized history tally = 5.96729E+00
+ (largest  tally)/(average tally)  = 1.45613E+01          (largest  tally)/(avg nonzero tally)= 3.78594E+00
+
+ (confidence interval shift)/mean  = 0.0374               shifted confidence interval center  = 1.06279E-01
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            1.02451E-01             1.16207E-01                     0.134270
+      relative error                  2.15334E-01             2.21821E-01                     0.030126
+      variance of the variance        1.79962E-01             1.61635E-01                    -0.101837
+      shifted center                  1.06279E-01             1.06882E-01                     0.005677
+      figure of merit                 0.00000E+00             0.00000E+00                     0.000000
+
+ there is not enough information in the largest  history scores (usually less than 500 scores) for a reliable estimate of the slope.
+ the history score probability density function appears to have an unsampled region at the largest  history scores:
+ please examine. see print table 161.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 4.644E-01)**2 = (0.000E+00)*(2.157E-01) = 0.000E+00
+
+1unnormed tally density for tally  12            nonzero tally mean(m) = 1.576E+00   nps =         100  print table 161
+
+ abscissa              ordinate   log plot of tally probability density function in tally fluctuation chart bin(d=decade,slope= 0.0)
+  tally  number num den log den:d--------------------------------------------------d------------------------------------------------
+ 1.26+00     16 6.18-01  -0.209 ***************************************************|************************************************
+ 1.58+00      6 1.84-01  -0.735 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm|mmmmmmmmmmmmmmmmmmmmm                           
+ 2.00+00      0 0.00+00   0.000                                                    |                                                
+ 2.51+00      1 1.94-02  -1.713 **********************                             |                                                
+ 3.16+00      1 1.54-02  -1.813 *****************                                  |                                                
+ 3.98+00      1 1.22-02  -1.913 ***********                                        |                                                
+ 5.01+00      0 0.00+00   0.000                                                    |                                                
+ 6.31+00      1 7.71-03  -2.113 *                                                  |                                                
+  total      26 2.60-01         d--------------------------------------------------d------------------------------------------------
+
+1tally  14        nps =         100
+           tally type 4    track length estimate of particle flux.      units   1/cm**2   
+           tally for  neutrons 
+
+           volumes 
+                   cell:       1          total                                                                    
+                         8.00000E+00  8.00000E+00
+ 
+ cell  1                                                                                                               
+                 2.52013E-01 0.1086
+ 
+ cell union total                                                                                                      
+                 2.52013E-01 0.1086
+
+
+ ***** the nps-dependent tfc bin check results are suspect because there are only  1 nps tally values to analyze *****
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally  14
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.11      yes          yes            0.10      yes         yes                                     0.00
+ passed?        yes           no      yes          yes              no      yes         yes                                       no
+
+ ===================================================================================================================================
+
+
+ warning.  the tally in the tally fluctuation chart bin did not pass  3 of the 10 statistical checks.
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally  14 with nps =         100  print table 160
+
+
+ normed average tally per history  = 2.52013E-01          unnormed average tally per history  = 2.01610E+00
+ estimated tally relative error    = 0.1086               estimated variance of the variance  = 0.1026
+ relative error from zero tallies  = 0.0000               relative error from nonzero scores  = 0.1086
+
+ number of nonzero history tallies =         100          efficiency for the nonzero tallies  = 1.0000
+ history number of largest  tally  =          39          largest  unnormalized history tally = 1.21739E+01
+ (largest  tally)/(average tally)  = 6.03831E+00          (largest  tally)/(avg nonzero tally)= 6.03831E+00
+
+ (confidence interval shift)/mean  = 0.0161               shifted confidence interval center  = 2.56062E-01
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            2.52013E-01             2.64584E-01                     0.049884
+      relative error                  1.08590E-01             1.12793E-01                     0.038707
+      variance of the variance        1.02608E-01             9.32657E-02                    -0.091046
+      shifted center                  2.56062E-01             2.55913E-01                    -0.000580
+      figure of merit                 0.00000E+00             0.00000E+00                     0.000000
+
+ there is not enough information in the largest  history scores (usually less than 500 scores) for a reliable estimate of the slope.
+ the history score probability density function appears to have an unsampled region at the largest  history scores:
+ please examine. see print table 161.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 9.209E-01)**2 = (0.000E+00)*(8.481E-01) = 0.000E+00
+
+1unnormed tally density for tally  14            nonzero tally mean(m) = 2.016E+00   nps =         100  print table 161
+
+ abscissa              ordinate   log plot of tally probability density function in tally fluctuation chart bin(d=decade,slope= 0.0)
+  tally  number num den log den:d---------------------------------------d----------------------------------------d------------------
+ 1.26+00     51 1.97+00   0.294 ****************************************|****************************************|******************
+ 1.58+00     28 8.59-01  -0.066 ****************************************|****************************************|***               
+ 2.00+00      6 1.46-01  -0.835 ****************************************|*************                           |                  
+ 2.51+00      2 3.87-02  -1.412 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmm          |                                        |                  
+ 3.16+00      0 0.00+00   0.000                                         |                                        |                  
+ 3.98+00      2 2.44-02  -1.612 **********************                  |                                        |                  
+ 5.01+00      1 9.70-03  -2.013 *****                                   |                                        |                  
+ 6.31+00      3 2.31-02  -1.636 *********************                   |                                        |                  
+ 7.94+00      3 1.84-02  -1.736 ****************                        |                                        |                  
+ 1.00+01      2 9.72-03  -2.012 *****                                   |                                        |                  
+ 1.26+01      2 7.72-03  -2.112 *                                       |                                        |                  
+  total     100 1.00+00         d---------------------------------------d----------------------------------------d------------------
+
+1tally  16        nps =         100
+           tally type 6    track length estimate of heating.            units   mev/gram  
+           tally for  neutrons 
+
+           masses  
+                   cell:       1          total                                                                    
+                         1.52800E+02  1.52800E+02
+ 
+ cell  1                                                                                                               
+                 1.92071E-01 0.1005
+ 
+ cell union total                                                                                                      
+                 1.92071E-01 0.1005
+
+
+ ***** the nps-dependent tfc bin check results are suspect because there are only  1 nps tally values to analyze *****
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally  16
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.10      yes          yes            0.20      yes         yes                                     0.00
+ passed?        yes           no      yes          yes              no      yes         yes                                       no
+
+ ===================================================================================================================================
+
+
+ warning.  the tally in the tally fluctuation chart bin did not pass  3 of the 10 statistical checks.
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally  16 with nps =         100  print table 160
+
+
+ normed average tally per history  = 1.92071E-01          unnormed average tally per history  = 2.93485E+01
+ estimated tally relative error    = 0.1005               estimated variance of the variance  = 0.2050
+ relative error from zero tallies  = 0.0000               relative error from nonzero scores  = 0.1005
+
+ number of nonzero history tallies =         100          efficiency for the nonzero tallies  = 1.0000
+ history number of largest  tally  =          26          largest  unnormalized history tally = 2.20647E+02
+ (largest  tally)/(average tally)  = 7.51816E+00          (largest  tally)/(avg nonzero tally)= 7.51816E+00
+
+ (confidence interval shift)/mean  = 0.0200               shifted confidence interval center  = 1.95914E-01
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            1.92071E-01             2.04467E-01                     0.064536
+      relative error                  1.00491E-01             1.11240E-01                     0.106969
+      variance of the variance        2.04973E-01             1.77026E-01                    -0.136344
+      shifted center                  1.95914E-01             1.96004E-01                     0.000459
+      figure of merit                 0.00000E+00             0.00000E+00                     0.000000
+
+ there is not enough information in the largest  history scores (usually less than 500 scores) for a reliable estimate of the slope.
+ the history score probability density function appears to have an unsampled region at the largest  history scores:
+ please examine. see print table 161.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 9.951E-01)**2 = (0.000E+00)*(9.903E-01) = 0.000E+00
+
+1unnormed tally density for tally  16            nonzero tally mean(m) = 2.935E+01   nps =         100  print table 161
+
+ abscissa              ordinate   log plot of tally probability density function in tally fluctuation chart bin(d=decade,slope= 0.0)
+  tally  number num den log den:d---------------------------------d-----------------------------------d-----------------------------
+ 2.00+01     49 1.19-01  -0.923 **********************************|***********************************|*****************************
+ 2.51+01     31 6.00-02  -1.222 **********************************|***********************************|******************           
+ 3.16+01      6 9.23-03  -2.035 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm|mmmmmmmmmmmmmmmmmmmmmmmmmm         |                             
+ 3.98+01      2 2.44-03  -2.612 **********************************|*****                              |                             
+ 5.01+01      0 0.00+00   0.000                                   |                                   |                             
+ 6.31+01      2 1.54-03  -2.812 ********************************* |                                   |                             
+ 7.94+01      5 3.06-03  -2.514 **********************************|*********                          |                             
+ 1.00+02      1 4.86-04  -3.313 ***************                   |                                   |                             
+ 1.26+02      1 3.86-04  -3.413 ************                      |                                   |                             
+ 1.58+02      2 6.14-04  -3.212 *******************               |                                   |                             
+ 2.00+02      0 0.00+00   0.000                                   |                                   |                             
+ 2.51+02      1 1.94-04  -3.713 *                                 |                                   |                             
+  total     100 1.00+00         d---------------------------------d-----------------------------------d-----------------------------
+
+1tally  17        nps =         100
+           tally type 7    track length estimate of fission heating.    units   mev/gram  
+           tally for  neutrons 
+
+           masses  
+                   cell:       1          total                                                                    
+                         1.52800E+02  1.52800E+02
+ 
+ cell  1                                                                                                               
+                 2.12775E-01 0.0969
+ 
+ cell union total                                                                                                      
+                 2.12775E-01 0.0969
+
+
+ ***** the nps-dependent tfc bin check results are suspect because there are only  1 nps tally values to analyze *****
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally  17
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.10      yes          yes            0.20      yes         yes                                     0.00
+ passed?        yes          yes      yes          yes              no      yes         yes                                       no
+
+ ===================================================================================================================================
+
+
+ warning.  the tally in the tally fluctuation chart bin did not pass  2 of the 10 statistical checks.
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally  17 with nps =         100  print table 160
+
+
+ normed average tally per history  = 2.12775E-01          unnormed average tally per history  = 3.25120E+01
+ estimated tally relative error    = 0.0969               estimated variance of the variance  = 0.2040
+ relative error from zero tallies  = 0.0000               relative error from nonzero scores  = 0.0969
+
+ number of nonzero history tallies =         100          efficiency for the nonzero tallies  = 1.0000
+ history number of largest  tally  =          26          largest  unnormalized history tally = 2.36624E+02
+ (largest  tally)/(average tally)  = 7.27807E+00          (largest  tally)/(avg nonzero tally)= 7.27807E+00
+
+ (confidence interval shift)/mean  = 0.0192               shifted confidence interval center  = 2.16870E-01
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            2.12775E-01             2.26000E-01                     0.062159
+      relative error                  9.69279E-02             1.07491E-01                     0.108980
+      variance of the variance        2.04036E-01             1.76408E-01                    -0.135407
+      shifted center                  2.16870E-01             2.16936E-01                     0.000304
+      figure of merit                 0.00000E+00             0.00000E+00                     0.000000
+
+ there is not enough information in the largest  history scores (usually less than 500 scores) for a reliable estimate of the slope.
+ the history score probability density function appears to have an unsampled region at the largest  history scores:
+ please examine. see print table 161.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 1.032E+00)**2 = (0.000E+00)*(1.064E+00) = 0.000E+00
+
+1unnormed tally density for tally  17            nonzero tally mean(m) = 3.251E+01   nps =         100  print table 161
+
+ abscissa              ordinate   log plot of tally probability density function in tally fluctuation chart bin(d=decade,slope= 0.0)
+  tally  number num den log den:d------------------------------------d-------------------------------------d------------------------
+ 2.00+01     31 7.55-02  -1.122 *************************************|*************************************|************************
+ 2.51+01     38 7.36-02  -1.133 *************************************|*************************************|************************
+ 3.16+01     16 2.46-02  -1.609 *************************************|*************************************|*****                   
+ 3.98+01      3 3.66-03  -2.436 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm|mmmmmmmmmmmm                         |                        
+ 5.01+01      0 0.00+00   0.000                                      |                                     |                        
+ 6.31+01      2 1.54-03  -2.812 ***********************************  |                                     |                        
+ 7.94+01      2 1.22-03  -2.912 ********************************     |                                     |                        
+ 1.00+02      4 1.94-03  -2.711 *************************************|*                                    |                        
+ 1.26+02      0 0.00+00   0.000                                      |                                     |                        
+ 1.58+02      3 9.20-04  -3.036 ***************************          |                                     |                        
+ 2.00+02      0 0.00+00   0.000                                      |                                     |                        
+ 2.51+02      1 1.94-04  -3.713 *                                    |                                     |                        
+  total     100 1.00+00         d------------------------------------d-------------------------------------d------------------------
+
+1tally   8        nps =         100
+           tally type 8    pulse height distribution.                   units   number    
+           tally for  photons  
+ 
+ cell  1                                                                                                               
+                 3.30000E-01 0.1425
+
+
+ ***** the nps-dependent tfc bin check results are suspect because there are only  1 nps tally values to analyze *****
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally   8
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.14      yes          yes            0.01      yes         yes                                     0.00
+ passed?        yes           no      yes          yes             yes      yes         yes                                       no
+
+ ===================================================================================================================================
+
+
+ warning.  the tally in the tally fluctuation chart bin did not pass  2 of the 10 statistical checks.
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally   8 with nps =         100  print table 160
+
+
+ normed average tally per history  = 3.30000E-01          unnormed average tally per history  = 3.30000E-01
+ estimated tally relative error    = 0.1425               estimated variance of the variance  = 0.0052
+ relative error from zero tallies  = 0.1425               relative error from nonzero scores  = 0.0000
+
+ number of nonzero history tallies =          33          efficiency for the nonzero tallies  = 0.3300
+ history number of largest  tally  =           1          largest  unnormalized history tally = 1.00000E+00
+ (largest  tally)/(average tally)  = 3.03030E+00          (largest  tally)/(avg nonzero tally)= 1.00000E+00
+
+ (confidence interval shift)/mean  = 0.0052               shifted confidence interval center  = 3.31700E-01
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            3.30000E-01             3.36634E-01                     0.020102
+      relative error                  1.42489E-01             1.39681E-01                    -0.019705
+      variance of the variance        5.22840E-03             4.73318E-03                    -0.094718
+      shifted center                  3.31700E-01             3.31575E-01                    -0.000377
+      figure of merit                 0.00000E+00             0.00000E+00                     0.000000
+
+ there is not enough information in the largest  history scores (usually less than 500 scores) for a reliable estimate of the slope.
+ the large score tail of the empirical history score probability density function appears to have no unsampled regions.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 7.018E-01)**2 = (0.000E+00)*(4.925E-01) = 0.000E+00
+ print table 161 cannot be done for this tally because all tallies were between 1.00000E+00 and 1.25893E+00 which is one tally bin.
+
+1tally  18        nps =         100
+           tally type 8    pulse height distribution.                   units   number    
+           tally for  photons  
+ 
+ cell  1                                                                                                               
+                 3.30000E-01 0.1425
+ 
+ cell union total                                                                                                      
+                 3.30000E-01 0.1425
+
+
+ ***** the nps-dependent tfc bin check results are suspect because there are only  1 nps tally values to analyze *****
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally  18
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.14      yes          yes            0.01      yes         yes                                     0.00
+ passed?        yes           no      yes          yes             yes      yes         yes                                       no
+
+ ===================================================================================================================================
+
+
+ warning.  the tally in the tally fluctuation chart bin did not pass  2 of the 10 statistical checks.
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally  18 with nps =         100  print table 160
+
+
+ normed average tally per history  = 3.30000E-01          unnormed average tally per history  = 3.30000E-01
+ estimated tally relative error    = 0.1425               estimated variance of the variance  = 0.0052
+ relative error from zero tallies  = 0.1425               relative error from nonzero scores  = 0.0000
+
+ number of nonzero history tallies =          33          efficiency for the nonzero tallies  = 0.3300
+ history number of largest  tally  =           1          largest  unnormalized history tally = 1.00000E+00
+ (largest  tally)/(average tally)  = 3.03030E+00          (largest  tally)/(avg nonzero tally)= 1.00000E+00
+
+ (confidence interval shift)/mean  = 0.0052               shifted confidence interval center  = 3.31700E-01
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            3.30000E-01             3.36634E-01                     0.020102
+      relative error                  1.42489E-01             1.39681E-01                    -0.019705
+      variance of the variance        5.22840E-03             4.73318E-03                    -0.094718
+      shifted center                  3.31700E-01             3.31575E-01                    -0.000377
+      figure of merit                 0.00000E+00             0.00000E+00                     0.000000
+
+ there is not enough information in the largest  history scores (usually less than 500 scores) for a reliable estimate of the slope.
+ the large score tail of the empirical history score probability density function appears to have no unsampled regions.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 7.018E-01)**2 = (0.000E+00)*(4.925E-01) = 0.000E+00
+ print table 161 cannot be done for this tally because all tallies were between 1.00000E+00 and 1.25893E+00 which is one tally bin.
+
+1status of the statistical checks used to form confidence intervals for the mean for each tally bin
+
+
+ tally   result of statistical checks for the tfc bin (the first check not passed is listed) and error magnitude check for all bins
+
+     1   missed  2 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
+         missed all bin error check:     1 tally bins had     0 bins with zeros and     1 bins with relative errors exceeding 0.10
+
+     2   missed  3 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
+         missed all bin error check:     1 tally bins had     0 bins with zeros and     1 bins with relative errors exceeding 0.10
+
+     4   missed  3 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
+         missed all bin error check:     1 tally bins had     0 bins with zeros and     1 bins with relative errors exceeding 0.10
+
+     6   missed  3 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
+         missed all bin error check:     1 tally bins had     0 bins with zeros and     1 bins with relative errors exceeding 0.10
+
+     7   missed  2 of 10 tfc bin checks: the variance of the variance exceeds the recommended value of 0.1                         
+         passed all bin error check:     1 tally bins all have relative errors less than 0.10 with no zero bins
+
+    11   missed  2 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
+         missed all bin error check:     2 tally bins had     0 bins with zeros and     2 bins with relative errors exceeding 0.10
+
+    12   missed  3 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
+         missed all bin error check:     2 tally bins had     0 bins with zeros and     2 bins with relative errors exceeding 0.10
+
+    14   missed  3 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
+         missed all bin error check:     2 tally bins had     0 bins with zeros and     2 bins with relative errors exceeding 0.10
+
+    16   missed  3 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
+         missed all bin error check:     2 tally bins had     0 bins with zeros and     2 bins with relative errors exceeding 0.10
+
+    17   missed  2 of 10 tfc bin checks: the variance of the variance exceeds the recommended value of 0.1                         
+         passed all bin error check:     2 tally bins all have relative errors less than 0.10 with no zero bins
+
+     8   missed  2 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
+         missed all bin error check:     1 tally bins had     0 bins with zeros and     1 bins with relative errors exceeding 0.10
+
+    18   missed  2 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
+         missed all bin error check:     2 tally bins had     0 bins with zeros and     2 bins with relative errors exceeding 0.10
+
+
+ the 10 statistical checks are only for the tally fluctuation chart bin and do not apply to other tally bins.
+
+ warning.    12 of the  12 tally fluctuation chart bins did not pass all 10 statistical checks.
+ warning.    10 of the  12 tallies had bins with relative errors greater than recommended.
+1tally fluctuation charts                         
+
+                       tally    1                                tally    2                                tally    4
+          nps      mean     error   vov  slope    fom      mean     error   vov  slope    fom      mean     error   vov  slope    fom
+          100   3.1692E-01 0.1903 0.0713  0.0           1.0245E-01 0.2153 0.1800  0.0           2.5201E-01 0.1086 0.1026  0.0        
+ 
+
+                       tally    6                                tally    7                                tally   11
+          nps      mean     error   vov  slope    fom      mean     error   vov  slope    fom      mean     error   vov  slope    fom
+          100   1.9207E-01 0.1005 0.2050  0.0           2.1277E-01 0.0969 0.2040  0.0           3.1692E-01 0.1903 0.0713  0.0        
+ 
+
+                       tally   12                                tally   14                                tally   16
+          nps      mean     error   vov  slope    fom      mean     error   vov  slope    fom      mean     error   vov  slope    fom
+          100   1.0245E-01 0.2153 0.1800  0.0           2.5201E-01 0.1086 0.1026  0.0           1.9207E-01 0.1005 0.2050  0.0        
+ 
+
+                       tally   17                                tally    8                                tally   18
+          nps      mean     error   vov  slope    fom      mean     error   vov  slope    fom      mean     error   vov  slope    fom
+          100   2.1277E-01 0.0969 0.2040  0.0           3.3000E-01 0.1425 0.0052  0.0           3.3000E-01 0.1425 0.0052  0.0        
+ tally data written to file inp61m
+
+        19 warning messages so far.
+
+
+ run terminated when         100  particle histories were done.
