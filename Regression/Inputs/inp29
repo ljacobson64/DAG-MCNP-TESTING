@@ -1,0 +1,33 @@
+testprob29 -- ssr from testprob07; copy of inp08 to test auger production
+c 1     0   12
+c 2     0   -12 #3 #6 #7
+c 3     0   -71 -1 2
+c 6     8 -1.2   -9 -11 8   $ cArbOn dIsk
+c 7     9 -1.2   -10 -11 9  $ AnOthEr cArbOn dIsk
+c 
+c 1     cx 15
+c 2     px 0
+c 71    x 40 0
+c 8     px 100
+c 9     px 110
+c 10    px 120
+c 11    x   0 20   -10 20
+c 12    sO 170
+c 
+m8    6012.40c .9 26000.40c .1
+m9    6012.40c .6  1001.0 .2  29000 .2
+pIkmt 6012 0    1001 -1           $   pikmt essential for auger electron 
+      26000 1 102001 1            $     production.
+ssr   nEw 21 21 21 21 21 psc 1
+f4:p  6 7
+f24:e 6 7
+e0     .01 .1 1 10
+prdmp 2j -1
+prInt 130 140
+Imp:p,E  0 0 1 3r 1 
+mOdE E n p
+Esplt:E .5 .01 .5 .1 .5 1         $   esplt causes problem to run faster
+nps  30000
+phys:E 1000 0 0 1 1 1.2 .8 .1 .7  $   phys:e causes problem to run faster
+dbcn j  j  97  97
+

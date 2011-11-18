@@ -1,0 +1,79 @@
+testprob11 -- intertwined super pretzels with s(a,b), mode n p
+1     1 -7.8   -1:-2:-3   $ pretzel of tori
+2     2 -2.66  -4:-5:-6:-7:-8:-9:-10:-11   $ cage of ellipsoids
+3     3 -9     -12 -13:-14:-15:-16:-17:-18:-19:-20:-21   $ toys
+4     4 -.5    1 2 3 4 5 6 7 8 9 10 11(12:13)   $ space between
+                14 15 16 17 18 19 20 21 -22
+5     0        22        $ zero-importance outside world
+6     0        -23 -24 -25 26   $ cookie-cutter cell
+ 
+1     tx 0 0 0 10 2 2
+2     ty 0 0 0 12 2 2.5
+3     tz 0 0 0 10 3 4
+4     sq .028 1 1 0 0 0 -1 0 15 5
+5     sq 1 .00448 1 0 0 0 -1 -5 0 5
+6     sq 1 1 .028 0 0 0 -1 -5 -15 0
+7     sq 1 .00448 1 0 0 0 -1 -5 0 -5
+8     sq .028 1 1 0 0 0 -1 0 15 -5
+9     sq 1 .00448 1 0 0 0 -1 5 0 -5
+10    sq 1 1 .028 0 0 0 -1 5 -15 0
+11    sq 1 .00448 1 0 0 0 -1 5 0 5
+12    sq .1 0 .05 0 1 0 -4 0 -11 17
+13    sq .1 0 .07 0 -.3 0 -10 0 -1 16
+14    sq .05 .2 1 0 0 0 -16 0 -6 -20
+15    sq 1 .1 1 0 0 0 -4 0 14 -14
+16    sq 1 1 .1 0 0 0 -4 0 14 -14
+17    s 0 4.5 22.5 2
+18    s 0 6.5 22.5 2
+19    s 0 5.5 18 4
+20    s 0 4.5 14 1
+21    s 0 6.5 14 1
+22    so 28 
+23    pz 9
+24    c/y 1 .5 10
+25    py -18.5
+26    py -21.5
+ 
+m1    92235.50d 1
+m2    13027.40c 1  8016.40c 2
+m3    29000.02c 1 4009.60c 1
+m4    gas=1 1001.60c 2 8016.40c 1
+m5    13027.26y 1
+mt3   be.01t
+mt4   h/zr.02t  
+pert1:n,p  cell=1  rho=-8.75   $ 5% increase in tally 4
+pert2:n,p  cell=2  rho=-2.74 rxn=-1 $should give fatal error due to rxn
+pert3:n    cell=2  rho=-2.74 rxn=-1 -2 -3 -4 1 2
+imp:n 1 1 1 1 0 0
+mode  n p
+c    monodirectional source on plane with cookie cutter
+sdef  pos 0 -20 0  dir 1  vec .05 1 .1  rad d1  axs .05 1 .1 ara=0.0001
+      ccc 6  erg d2
+si1   0 12
+si2   1e-8 .001
+sp2   0 1
+cut:n  1000 0 .2 .1
+fq    f e
+f4:n    1 2 3
+sd4    (1) (1) (1)
+fc4  volumes=1. so tally is volume-integrated flux
+e4    1e-7 .001 20
+fm4 .98 5 103
+f14:n 2
+sd14 (1) 
+fm14 (1 2 -1) (1 2 -2) (1 2 -3) (1 2 -4) (1 2 1) (1 4 2) T
+f34:n 2
+sd34 (1) 
+fm34 (-1 2 -1) (-1 2 -2) (-1 2 -3) (-1 2 -4) (-1 2 1) (-1 4 2)
+f24:n 2 
+sd24 (1) 
+fm24 ((1.0023e-04 2 (102)(51)(52))(1.0 -1 2 0.000502))
+f11:p   1 2 3 t
+tmp1  4e-8 3r 0 0
+f5:n 0 0 0 0
+dxt:n 0 0 0 0.001 0.002
+f15:p 0 0 0 0
+nps   2500
+PWt 1 1 -1 -1 -1 -1
+print 30 40
+prdmp 2j -1

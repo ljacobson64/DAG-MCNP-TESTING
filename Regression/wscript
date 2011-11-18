@@ -1,0 +1,357 @@
+#! /usr/bin/env python
+# encoding: utf-8
+
+top = '.'
+out = 'results'
+
+from waflib.Configure import conf
+from waflib import Logs
+import os.path
+
+def options(opt):
+    opt.add_option('--dagmcnp', action='store', default='', dest='dagexe',
+                   help = 'Path to DAG-MCNP executable to test' )
+    opt.add_option('-c', '--cases', action='append', default=None, dest='cases',
+                   help = 'Test cases to run' )
+
+@conf
+def detect_mcnp(ctx):
+    ctx.start_msg('Checking for DAG-MCNP')
+    if ctx.options.dagexe:
+        ctx.env.DAGEXE = ctx.options.dagexe
+    else:
+        #ctx.find_program('dag-mcnp5.1.51-opt-acis-c10', var='DAGEXE')
+        ctx.find_program('/local.hd/cnergg/sjackson/dagmc/trunk/Source/src/mcnp5', var='DAGEXE')
+    ctx.end_msg(ctx.env.DAGEXE)
+
+    ctx.start_msg('Checking for xsdir')
+    #ctx.env.XSDIR = ctx.find_file('testdir1', path_list=['.']).bldpath()
+    ctx.env.XSDIR='../../testdir1'
+    ctx.end_msg(ctx.env.XSDIR)
+
+def configure(ctx):
+    #print( 'Configuring in pwd = '+ ctx.out_dir)
+    ctx.detect_mcnp()
+
+
+
+from waflib.Build import BuildContext
+
+class DagmcTestContext(BuildContext):
+
+    cmd = 'test'
+    fun = 'test'
+    
+    intcases = [  1,  2,  3,  4,      6,  7,  8,  9, 10,
+                     12,                         19, 20,
+                 21, 22, 23,         26, 27, 28, 29, 30,
+                 31, 32, 33, 34, 35, 36, 37,     39,    
+                 41, 42,                 47,            
+                 61, 62, 63, 64, 65, 66, 67,            
+                                     86,             90,
+                         93, 94, 95,         98, 99     ]
+    ftol = 1e-4
+    geom_type = 'sat'
+
+
+    def __init__( self ):
+        super(DagmcTestContext, self).__init__()
+        self.allcases = ['{0:02d}'.format( c ) for c in self.intcases ]
+
+    class CaseDefn:
+        flags = list()
+        inputs = dict()
+        outputs = dict()
+        subcases = list()
+
+    def get_case_definition( self, casename ):
+        case = CaseDefn()
+        runname = 'test' 
+
+        # Defaults for all cases
+        case.inputs['inp'] = 'Inputs/inp'+casename
+        case.inputs['gcad'] = 'geom_h5m2/geom{0}.h5m'.format( casename )
+
+        case.flags.append( 'n='+runname )
+        
+        case.outputs['m'] = 'mctl'
+        case.outputs['o'] = 'outp'
+
+        # subcases is empty by default
+
+        # special cases
+        
+        # The original Makefile runs the following cases with the fatal flag,
+        # though in some cases I'm not sure this is needed
+        if casename in  ['01','02','07','11','12','18','19','20',
+                         '21','22','23','26','30','77','89']:
+            case.flags.append( 'fatal' )
+
+        if casename == '08':
+           case.inputs ['wwinp'] = 'Inputs/wwinp08'
+           case.inputs ['rssa' ] = 'sub07w'
+           case.outputs['e'] = 'wout'
+           case.subcases.append ('sub07')
+
+        # case 62 needs the i flag because it only reads in input without doing simulation
+        if casename == '62': case.flags.append( 'i' )
+
+
+
+
+    def case_inputs( self, case ):
+
+        inputs = { 'inp' : 'Inputs/inp{0}'.format(case) ,
+                   'gcad' : 'geom_h5m2/geom{0}.h5m'.format(case) ,
+                   #'gcad' : 'geom_h5m/1E-4_inp{0}.h5m'.format(case) ,
+                 }
+        if case in ['08','10','93']:
+            inputs['wwinp' ] = 'Inputs/wwinp' + case
+
+        if case in ['08', '29']:
+            inputs['rssa'] = case+'seq07w'
+
+        if case == '22':
+            inputs['rssa'] = case+'seq21w'
+
+        if case == '26':
+            inputs['wss'] = case+'seq09w'
+            inputs['run'] = case+'seq09r'
+
+        if case in ['27']:
+            inputs['rssa'] = case+'seq09w'
+
+        if case == '34':
+            inputs['rssa'] = case+'seq33w'
+
+        if case in ['06','62']:
+            inputs['lcad'] = 'Inputs/lcad'+ case
+
+
+        return inputs
+
+    def case_flags( self, case ):
+        flags = ' ' 
+        if case in  ['01','02','07','11','12','18','19','20','21','22','23','26','30','77','89']:
+            flags += 'fatal ' 
+        if case == '62':
+            flags +='i ' 
+        if case in ['26']:
+            flags += 'CN '
+        return flags
+
+    def case_subcase( self, case ):
+        ret = None
+        if case in ['08', '29']:
+            ret = ('07', case+'seq07', [case+'seq07w'] )
+        if case in ['26', '27']:
+            ret = ('09', case+'seq09', [case+'seq09'+s for s in 'wr'] )
+        if case == '22':
+            ret = ('21', case+'seq21', [case+'seq21w'] )
+        if case == '34':
+            ret = ('33', case+'seq33', [case+'seq33w'] )
+        return ret
+
+    def case_outputs( self, case ):
+        outputs = { 'm':'mctl', 'o':'outp' }
+        if case == '62':
+            del outputs['m'] # produces outp only
+        if case in ['08','10','12','14']:
+            outputs[ 'e' ] = 'wout'
+        return outputs
+
+    def range_expand( self, lst ):
+        # Helper function for expanding numeric ranges in the -c command line option
+        for case in lst:
+            # Test for NN-MM format
+            chunks = case.split('-')
+            if len(chunks) == 2 and all( c.isdigit() for c in chunks ):
+                for i in xrange( int( chunks[0]), int(chunks[1])+1  ):
+                    yield '{0:02d}'.format( i )
+            elif case.isdigit() and int(case) in self.intcases:
+                yield '{0:02d}'.format( int(case) ) 
+            else:
+                yield case
+
+    def setup_requested_options( self ):
+        # Turn self.options.cases (a list of strings, or None) into self.cases
+        # Note that this may be called twice, so return immediately if self.cases already exists
+        if hasattr(self, 'cases'): return
+        opt_cases = self.options.cases
+        if opt_cases is None or opt_cases == ['all']:
+            self.cases = self.allcases  
+        else:
+            self.cases = []
+            for c in self.range_expand( self.options.cases ):
+                if c in self.allcases:
+                    self.cases.append( c )
+                elif c.isdigit() and int(c) in self.intcases:
+                    self.cases.append( '{0:02d}'.format(int(c)) )    
+                else:
+                    Logs.pprint( 'YELLOW', "Unknown case: " + c )
+
+    def mcnp_case_setup( self, case,  *k, **kw ):
+        geomtype = 'sat'
+        if 'geomtype' in kw:
+            geomtype = kw['geomtype']
+        indir = case
+        if 'indir' in kw:
+            indir = kw['indir']
+        kw['name']  = 'setup ' + case
+        kw['target'] = []
+        kw['rule']  = 'mkdir -p {0}; cd {0};'.format(indir)
+        for key, link in self.case_inputs(case).iteritems():
+            if link == os.path.basename(link): continue # do not link to preexisting file   
+            kw['rule'] += '\n ln -s ../../{0};'.format( link )
+            kw['target'].append( os.path.join(indir, os.path.basename(link)) )
+        
+        kw['source'] = ['wscript']
+         
+        #kw['always'] = True
+        return self(*k, **kw)
+
+    def runmcnp( self, case, *k, **kw ):
+
+        indir = case
+        if 'indir' in kw: indir = kw['indir']
+
+        sub = self.case_subcase(case)
+        extra_src = None
+        if sub is not None:
+            subcase, subname, subouts = sub
+            self.mcnp_case_setup(subcase, indir=indir )
+            extra_src = [os.path.join(indir,s) for s in subouts]
+            self.runmcnp(subcase, indir=indir, mcnpname=subname, target=extra_src )
+            #self.sources.extend( extra_src )
+
+        args = self.case_inputs( case )
+        # This command runs after mcnp_case_setup, meaning the args have already been symlinked to ./
+        for a,i in args.iteritems():
+            args[a] = os.path.basename(i)
+
+        if 'mcnpname' in kw: args['n'] = kw['mcnpname']
+        else: args['n'] = 'inp' + case # Fixme: use a more logical name once tests are stable
+
+        args['xsdir'] = self.env.XSDIR
+        if 'ftol' in kw:
+            args['ftol'] = kw['ftol']
+
+        argstring = ' '.join ( ['{0}={1}'.format(a,b) for (a,b) in args.iteritems() ] )
+
+        screen_out = 'screen_out'
+        redirstring = ' &> {0}'.format(screen_out)
+        flagstr = self.case_flags( case )
+
+        kw['rule'] = 'cd {0};'.format(indir) + \
+                     '${DAGEXE} ' + flagstr + argstring + redirstring
+
+        kw['name'] = 'run dag-mcnp ' + case
+        kw['source'] = ['wscript'] + [os.path.join(indir,x) for x in (args['inp'],args['gcad'])]
+        if extra_src is not None: kw['source'].extend( extra_src )
+        outputs = self.case_outputs( case )
+
+        target = []
+        if 'target' in kw: target = kw['target']
+        kw['target'] = target + [ indir+'/'+args['n'] + suffix for suffix in outputs.iterkeys() ]
+
+        return self( *k, **kw )
+
+    def diffmcnp( self, case, *k, **kw ):
+        
+        indir = case
+        if 'indir' in kw: indir = kw['indir']
+
+        outputs = self.case_outputs(case)
+        for key, val in outputs.iteritems():
+            ref = self.path.find_node('Templates/Linux/{0}{1}'.format(val,case)).bldpath()
+            # diff returns 1 if files differ, but we don't want waf to halt in such a case.
+            # Make waf only halt if diff returns 2, indicating an actual error (like a missing file)
+            self( rule='diff -b -w ${SRC} > ${TGT}; if [ $? == 2 ] \n then \n exit 1 \n fi',
+                  source = [case+'/inp{0}{1}'.format(case,key), ref],
+                  target = [case+'/dif{0}'.format(key)],
+                  name = 'diff '+val )
+
+        return self( *k, **kw)
+
+class SummaryContext( DagmcTestContext ):
+    cmd = 'summary'
+    fun = 'summary'
+
+def test(bld):
+
+    bld.setup_requested_options()
+
+    for c in bld.cases: 
+    #    bld.add_group(c)
+    #    bld.set_group(c)
+        bld.mcnp_case_setup( c, geomtype = 'h5m' )
+        bld.runmcnp( c, ftol=1e-4, geomtype='h5m' )
+        bld.diffmcnp( c ) 
+        
+    #tests = DagMCTests()
+    #tests.run_all_cases( bld )
+
+    #bld.recurse('01')
+
+    #bld.cases = ['01']
+    bld.add_post_fun( summary  )
+    bld.install_path = None # Disable the waf 'install' step 
+
+
+def summary( bld ):
+    
+    bld.setup_requested_options()
+
+    okay = True
+    outputs = {}
+    for c in bld.cases:
+        o = bld.case_outputs(c)
+        outputs.update( o )
+
+    #outputs understood by this function, in the order we want them printed
+    summary_outputs = ['o','m','e']
+    #filter by the outputs that actually exist for the requested cases
+    summary_outputs = filter( lambda x:x in outputs.keys(), summary_outputs ) 
+
+    Logs.pprint( 'CYAN', 'case', sep = '  ')
+    for o in summary_outputs[:]:
+        Logs.pprint( 'CYAN', ' dif{0} (bytes)'.format(o), sep='    ')
+    Logs.pprint( 'CYAN', '' ) # newline
+    
+    for case in bld.cases: 
+        case_outputs = bld.case_outputs(case)
+        Logs.pprint( 'CYAN', case, sep = ' ' )
+        for suffix in summary_outputs:
+            filepath = '{0}/{1}/dif{2}'.format( out, case, suffix )
+            diff = None
+            if os.path.exists(filepath):
+                size = os.path.getsize( filepath )
+                diff = int(size)
+
+            color = 'GREEN'
+            if diff is None: 
+                if suffix in case_outputs.keys():
+                    Logs.pprint( 'YELLOW', '{0:>16s}'.format('missing'), sep = ' ' )
+                    okay = False
+                else:
+                    Logs.pprint( 'GREEN', '{0:>16s}'.format('-'), sep = ' ' )
+            elif diff == 0:
+                Logs.pprint( 'GREEN', '{0:>16d}'.format(0), sep = ' ')
+            else:
+                Logs.pprint( 'RED', '{0:>16d}'.format(diff), sep = ' ')
+                okay = False
+        Logs.pprint( 'GREEN', '' ) # Print newline to log
+
+    if okay: Logs.pprint('GREEN', 'All test passed.' )
+    else:    Logs.pprint('CYAN', 'Some tests failed.')
+
+
+
+def build(bld):
+    # This it the default entry point when users invoke waf without specific options.
+    # By default, (re)run configure and test.
+    import Options
+    lst = ['configure','test']
+    Options.commands = lst + Options.commands
+
+

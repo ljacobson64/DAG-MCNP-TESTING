@@ -1,0 +1,64 @@
+inp90: oy sphere to test delayed neutrons with tme>tco(neutron)
+c      See artf7582
+c 2 10    1   -18.78    -10   imp:n=1
+c 3 11    0          10 -11   imp:n=1
+c 4 12    0          11       imp:n=0
+c
+c 13 10   so   8.47
+c 14 11   so   1.e2
+c
+mode n
+totnu
+phys:n 3j -1 $ natural delayed neuts/fission multiplicity
+cut:n 1.e8
+nps 1000
+prdmp 2j -1
+rand gen=1 seed=1000000000001
+sdef  pos=0. 0. 0. rad=d1 erg=d2
+      wgt=1.
+      tme=0.
+si1  0.  8.47
+sp1  -21 2
+sp2  -3 0.89506 3.2953 $ constants for 1-MeV neut.-induced fiss. of u238
+m1   92235.69c -0.95 
+     92238.40c -0.05
+fq0 t u
+fc114 population
+f114:n 2
+fm114  1 -2
+sd114  1.
+t114 1.e2 1.e4 1.e6 0.9e8 1.e8 4.e9 1.e10
+fc124 population
+f124:n 2
+fm124  1 -2
+sd124  1.
+fc134 collisions
+f134:n 2
+fm134  1 -2
+ft134 inc
+fu134 0 10 100 1000 100000
+sd134  1.
+t134 1.e2 1.e4 1.e6 0.9e8 1.e8 4.e9 1.e10
+fc144 collisions
+f144:n 2
+fm144  1 -2
+ft144 inc
+fu144 0 10 100 1000 100000 1000000 10000000 10000000000
+sd144  1.
+fc154 flux
+f154:n 2
+sd154  1.
+t154 1.e2 1.e4 1.e6 0.9e8 1.e8 4.e9 1.e10
+fc164 flux
+f164:n 2
+sd164  1.
+fc105 detector
+f105x:n 0. 90.  0.
+t105 1.e2 1.e4 1.e6 0.9e8 1.e8 4.e9 1.e10
+fc115 detector
+f115x:n 0. 90.  0.
+t115 1.e2 1.e4 1.e6 0.9e8
+fc125 detector
+f125x:n 0. 90.  0.
+c
+print 30

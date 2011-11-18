@@ -1,0 +1,51 @@
+C eee array out of bounds error
+c PHOTON AND ELECTRON:   GS/RR INTEGER SPLITTING
+c  2 1   1  -1e4     -2
+c  3 2   1  -1e4     -3 2
+c  4 3   1  -1e4     -4 3
+c  5 4   1  -1e4     -5 4
+c  6 5   1  -1e4     -6 5
+c  7 6   1  -1e4     -7 6
+c  8 7   1  -1e4     -8 7
+c  9 8   1  -1e4     -9 8
+c 10 9   1  -1e4     -10 9
+c 11 10  1  -1e4     -1  10
+c 12 11  0            1
+c 
+c  1  so   10
+c  2  so   1e-3
+c  3  so   2e-3
+c  4  so   3e-3
+c  5  so   4e-3
+c  6  so   5e-3
+c  7  so   6e-3
+c  8  so   7e-3
+c  9  so   8e-3
+c 10  so   9e-3
+c 
+mode p e
+imp:p 0 1 3 2m 1 5 2m 1 1 1 1  0 1 
+imp:e 0 1 3 2m 1 5 2m 1 1 1 1  0 1
+sdef   pos 0.0  0.0  0.0      erg=.12
+m1    92238 1.0
+f4:e 2
+e4    0 1.e-10 .09465 .09467 .09843 .09845 .111055
+      .111057 .114833 .114835 0.115 0.12 0.12000001  100
+cut:p     1.e123 .001  0  0  $ -0.5  -0.25
+cut:e   j 0.01  0  0  $ -0.5  -0.25
+c -------------------PHYS:P CARD DEFINITIONS---------------------------
+c  EMCPF = E UPPER LIMIT FOR DETAILED PHYSICS
+c   IDES = 1 PHOTONS WILL NOT PRODUCE ELECTRONS (I.E. NO TTBR)
+c  NOCOH = 1 COHERENT SCATTERING WILL NOT OCCUR
+c ---------------------------------------------------------------------
+phys:p  10  j  1
+c -------------------PHYS:E CARD DEFINITIONS---------------------------
+c   EMAX = E UPPER LIMIT FOR ELECTRON ENERGY
+c ---------------------------------------------------------------------
+phys:e  1
+c ---------------------------------------------------------------------
+c     dbcn 2j 11 11 
+idum 7j 2
+print
+prdmp 2j -1
+nps 20 

@@ -1,0 +1,38 @@
+PHTVR -- Double fluorence test with dxtran and forced collisions
+c 1   1     1     -10 -1  $ source cell
+c 2   2     0 1 -2
+c 3   3     1 -.1  2   -3
+c 4   4     0 3 -100
+c  100     0         100
+c
+c  1  1        so 75
+c  14  2        so 80
+c  17  3        so 81
+c      100        so 500
+c
+mode  p
+imp:p 1 3r 0 1 1
+imp:e 1 3r 0 1 1 
+fcl:p 0 0 1 0 0 0 0
+dxt:p 0 0 0 75.1 75.101
+dd2 1e-2 2e10 
+phys:p j 1 0
+cut:p j j 0 0
+m1    92238.                1  $MAT
+c sdef erg .2 par=p sur=2 dir=d1
+c si1 .999 1
+c sp1 0 1
+sdef erg .2 par=p pos=0 0 0 rad=74.9
+*f1:p 1
+c1 0 1
+fq1 d e c
+f4:p 1
+f8:p 1
+*f18:p 1
+print -10 -20 -30 -40 -50 -60 -70 -72 -80 -85 -86 -90 -100 -102 -110
+       -120 -140 -161 -162 -170 -190 -200
+prdmp 2j -1
+e4  0 1e-8 .002 18i .2
+e8  0 1e-8 .002 18i .2
+nps 10000
+
