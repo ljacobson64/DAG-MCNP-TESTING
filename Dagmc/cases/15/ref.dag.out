@@ -59,7 +59,7 @@
      59-       si2 8                                                                           
      60-       si3 15                                                                          
      61-       prdmp 2j -1                                                                     
-     62-       dagmc                                                                           
+     62-       dagmc distlimit=on                                                              
      63-                                                                                       
  
   comment.  total fission nubar data are being used.                                       
