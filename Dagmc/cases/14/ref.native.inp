@@ -1,0 +1,114 @@
+title - 3x3x3 plutonium array
+1   5 -2.710 -1 2 5 -27 imp:n=1 u=-1 $ container
+2   2 -.5400 3 -4 -38 imp:n=1 $ table
+3   5 -2.375 4 -44 -38 imp:n=1 $ table top
+4   6 -4.800 -2 5 -6 imp:n=1 u=-1 $ pad
+5   1 -2.5000 6 -7 -8 9 imp:n=1 u=-1 $  lower spacer
+6   3 -.001 6 -7 -9 imp:n=1 u=-1  $ inside lower spacer
+7   1 -2.5000 -8 7 -10 imp:n=1 u=-1 $ heat sink on lower spacer
+15  3 -.001 8 -2 -11 6 imp:n=1 u=-1 $ air gap outside lower spacer (OK)
+8   2 -7.870 -8 10 -11 imp:n=1 u=-1 $ lower can bottom
+9   7 -19.6 -12 11 -14 imp:n=1 u=-1 $ lower pu
+10  5 -2.710 12 -13 11 -14 imp:n=1 u=-1 $ lower can side
+11  4 -2.640 -8 14 -15 imp:n=1 u=-1 $ can top
+14  3 -.001 13 -2 -14 11 imp:n=1 u=-1 $ air gap outside lower pu (OK)
+12  1 -2.5000 -8 9 15 -16 imp:n=1 u=-1 $ second spacer
+13  3 -.001 8 -2 -16 14 imp:n=1 u=-1 $ air gap outside some of 2nd spacer (OK)
+40  3 -.001 8 -2 -18 16 imp:n=1 u=-1 $ air gap outside 2nd heat sink
+16  3 -.001 -9 15 -16 imp:n=1 u=-1 $ inside snd spacer
+20  1 -2.5000 -8 16 -17 imp:n=1 u=-1 $ 2nd spacer heat sink (top)
+21  2 -7.870 -8 17 -18 imp:n=1 u=-1 $ 2nd can bottom
+22  7 -19.6 -12 18 -19 imp:n=1 u=-1 $ 2nd pu
+32  5 -2.710 -13 12 -19 18 imp:n=1 u=-1 $ 2nd can sides
+23  4 -2.640 -8 19 -20 imp:n=1 u=-1 $ 2nd can top
+39  3 -.001 13 -2 -19 18 imp:n=1 u=-1 $ air gap outside 2nd pu
+24  3 -.001 -9 20 -21 imp:n=1 u=-1  $ inside 3rd spacer
+33  1 -2.5000 -8 9 20 -21 imp:n=1 u=-1 $ 3rd spacer
+38  3 -.001 8 -2 -23 19 imp:n=1 u=-1 $ air gap outside 3rd spacer
+25  1 -2.5000 -8 21 -22 imp:n=1 u=-1 $ 3rd heat sink
+26  2 -7.870 -8 22 -23 imp:n=1 u=-1 $ 3rd can bottom
+27  7 -19.6 -12 23 -24 imp:n=1 u=-1 $ 3rd Pu
+34  5 -2.710 -13 12 -24 23 imp:n=1 u=-1 $ 3rd can sides
+28  4 -2.640 -8 24 -25 imp:n=1 u=-1 $ 3rd can top
+37  3 -.001 13 -2 23 -24 imp:n=1 u=-1 $ air gap outside 3rd pu
+29  3 -.001 -9 25 -26 imp:n=1 u=-1 $ inside top spacer
+35  1 -2.500 -8 9 25 -26 imp:n=1 u=-1 $ top spacer
+30  6 -4.810 -2 26 -27 imp:n=1 u=-1 $ top pad
+36  3 -.001 8 -2 -26 24 imp:n=1 u=-1 $ air gap outside top spacer
+41  0       -42 -43 44 fill=1 imp:n=1 $ can around each column
+42  0 (1:27:-5) u=1 imp:n=1 $ gap between column and can
+51   like 41 but trcl=1 $ other cans
+52   like 41 but trcl=2 $    |
+53   like 41 but trcl=3 $    |
+54   like 41 but trcl=4 $    |
+55   like 41 but trcl=5 $    |
+56   like 41 but trcl=6 $    |
+57   like 41 but trcl=7 $    |
+58   like 41 but trcl=8 $ other cans
+19  3 -.001 -37 #2 #3 #41 #51 #52 #53 #54 #55 #56 #57 #58 imp:n=1 $ room air
+17  0       37 imp:n=0 $ universe
+
+9   c/y 3.609 3.609 3.104
+12  c/y 3.60900 3.609 3.26250
+13  c/y 3.60900 3.609 3.29950
+8   c/y 3.609 3.609 3.326
+2   c/y 3.609 3.609 3.425
+1   c/y 3.609 3.609 3.609
+42  c/y 3.609 3.609 3.6100
+38  c/y 3.609 3.609 80
+3   py 0.0
+4   py 30.0
+5   py 32.540
+6   py 40.795
+7   py 47.725
+10  py 48.360
+11  py 48.381
+14  py 53.014
+15  py 53.580
+16  py 55.425
+37  so 500
+17  py 56.060
+18  py 56.081
+19  py 60.714
+20  py 61.280
+21  py 63.125
+22  py 63.760
+23  py 63.781
+24  py 67.714
+25  py 68.280
+26  py 70.125
+27  py 78.380
+43  py 78.3810
+44  py 32.539
+
+tr1 9.6 0. 0.
+tr2 19.2 0. 0.
+tr3 0. 0. 9.6
+tr4 9.6 0. 9.6
+tr5 19.2 0. 9.6
+tr6 0 0 19.2
+tr7 9.6 0 19.2
+tr8 19.2 0 19.2
+m3  7014. -0.78 8016. -0.21 18000. -0.01
+m1  24000. -.002 29000. -.0025 26000. -.007 12000. -.010 25055. -.0015
+      14000. -.006 22000. -.0015 13027. -.9670
+m2  6012. -.0008 25055. -.0037 15031. -.00015 14000. -.0001 16032.
+      -.00025 50000. -.0030 26000. -.992
+m5  29000. -.0025 26000. -.007 12000. -.0105 25055. -.0125  14000. -.003
+      13027. -.9630
+m4  24000. -.001 29000. -.0025 26000. -.007 12000. -.01025 25055. -.007
+      14000. -.0045 22000. -.00075 13027. -.9645
+m7  94239. -.9356
+      94240. -.0597
+      94241. -.0046
+      94242. -.0001
+m6  6012. -.0003 25055. -.005 15031. -.00005 14000. -.0033 16032.
+      -.00009 50000. -.0011 26000. -.3554 24000. -.0007 29000. -.028
+      12000. -.0097 13027. -.5945032
+kcode 3000 1.0 60 150
+c sdef axs= 0 1 0 pos=16.4 50 16.4 ext=d1 rad=d2
+ksrc 13 58 16.4
+si1 14
+si2 .001 16
+
+

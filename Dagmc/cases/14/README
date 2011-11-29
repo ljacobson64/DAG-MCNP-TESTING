@@ -1,0 +1,14 @@
+The Pu array test problem is a 3x3x3 array of Pu cylinders. There are 9 
+pillars each containing 3 Pu cylinders separated by spacers and heat sinks.
+All of these are sitting on a slab on a table top. A better geometric 
+decription can be found in the criticality handbook.
+
+This problem was run with the cad and
+compared with experimental results and MCNP5-1.51 results:
+
+MCNP5-1.51:        1.00450, rel err = 0.00134
+DAGMC:             1.00348, rel err = 0.00134
+Experiment:        0.9953, rel err = 0.0010 (walls excluded)
+
+*note that this problem does not have as good of agreement between the 
+different solutions as godiva or the three U cylinders.

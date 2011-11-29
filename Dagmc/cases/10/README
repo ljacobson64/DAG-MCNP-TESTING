@@ -1,0 +1,1 @@
+10: Beams on a plane.  Five beams (axis in the z-direction) are fired at the center of a disk with mu = 1, 0.98058, 0.92848, 0.85749, 0.78087.  The surface current is tallied and each should have a score of around 1/5.
