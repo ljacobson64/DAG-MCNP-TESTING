@@ -102,9 +102,9 @@ class DagmcTestContext(BuildContext):
         for a,i in args.iteritems():
             args[a] = os.path.basename(i)
 
-        args['n'] = kw.get('mcnpname', 'inp'+case.name) # FIXME: better default
+        args['n'] = kw.get('mcnpname', case.runname) 
 
-        if hasattr( self.env, 'XSDIR' ):
+        if hasattr( self.env, 'XSDIR' ) and len(self.env.XSDIR) > 0:
             args['xsdir'] = self.env.XSDIR
 
         if 'ftol' in kw:
@@ -140,8 +140,8 @@ class DagmcTestContext(BuildContext):
             # diff returns 1 if files differ, but we don't want waf to halt in such a case.
             # Make waf only halt if diff returns 2, indicating an actual error (like a missing file)
             self( rule='diff -b -w ${SRC} > ${TGT}; if [ $? == 2 ] \n then \n exit 1 \n fi',
-                  source = [case.name+'/inp{0}{1}'.format(case.name,key), ref],
-                  target = [case.name+'/dif{0}'.format(key)],
+                  source = [os.path.join(indir,case.runname+key), ref],
+                  target = [os.path.join(indir,'dif{0}'.format(key))],
                   name = 'dif'+ key + ' ' + case.name)
 
         return self( *k, **kw)
