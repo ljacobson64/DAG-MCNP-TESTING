@@ -18,5 +18,5 @@ si1 L 0 0 0  20.98 0 0  10.49 18.169 0
 si2 8
 si3 15
 prdmp 2j -1
-dagmc 
+dagmc distlimit=on
 
