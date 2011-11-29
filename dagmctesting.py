@@ -2,6 +2,7 @@
 from waflib.Configure import conf
 from waflib import Logs
 import os.path
+
 def options(opt):
     opt.add_option('-e', '--exe', action='store', default='', dest='dagexe',
                    help = 'Path to DAG-MCNP executable to test' )
@@ -9,6 +10,8 @@ def options(opt):
                    help = 'Test cases to run' )
     opt.add_option('-f', '--facet', action='store_true', default=False, dest='facet_inputs',
                    help = 'Use faceted input geometries instead of CAD geometries' )
+    opt.add_option('--mpi', action='store_true', default=False, dest='use_mpi',
+                   help = 'Run MPI-based dagmc.  -j argument is used for number of tasks.' )
 
 @conf
 def detect_mcnp(ctx):
@@ -16,14 +19,18 @@ def detect_mcnp(ctx):
     if ctx.options.dagexe:
         ctx.env.DAGEXE = ctx.options.dagexe
     else:
-        #ctx.find_program('dag-mcnp5.1.51-opt-acis-c10', var='DAGEXE')
-        ctx.find_program('mcnp5', path_list='../../Source/src/', var='DAGEXE')
+        if ctx.options.use_mpi:
+            ctx.find_program('mcnp5.mpi', path_list='../../Source/src', var='DAGEXE' )
+        else:
+            ctx.find_program('mcnp5', path_list='../../Source/src/', var='DAGEXE')
     ctx.env.DAGEXE = os.path.abspath( ctx.env.DAGEXE )
     ctx.end_msg(ctx.env.DAGEXE)
 
 def configure(ctx):
-    #print( 'Configuring in pwd = '+ ctx.out_dir)
     ctx.detect_mcnp()
+    if ctx.options.use_mpi:
+        ctx.env.MPI_JOBS= ctx.options.jobs
+        ctx.options.jobs = 1
     
 from waflib.Build import BuildContext
 
@@ -56,7 +63,13 @@ class DagmcTestContext(BuildContext):
         # Turn self.options.cases (a list of strings, or None) into self.cases
         # Note that this may be called twice, so return immediately if self.cases already exists
         if hasattr(self, 'cases'): return
+
+        if self.options.use_mpi:
+            self.mpi_jobs = self.options.jobs
+            self.options.jobs = 1
+
         self.setup_testcases()
+        
         opt_cases = self.options.cases
         if opt_cases is None or opt_cases == ['all']:
             self.cases = self.allcases  
@@ -71,7 +84,6 @@ class DagmcTestContext(BuildContext):
                     Logs.pprint( 'YELLOW', "Unknown case: " + c )
 
     def mcnp_case_setup( self, case, *k, **kw ):
-        geomtype = kw.get('geomtype', 'sat')
         indir = kw.get('indir', case.name)
         kw['name']  = 'setup ' + case.name
         kw['target'] = []
@@ -116,9 +128,14 @@ class DagmcTestContext(BuildContext):
         redirstring = ' &> {0}'.format(screen_out)
         flagstr = ' '.join( case.flags )
 
+        mpistr = ''
+        if( self.options.use_mpi ):
+            mpistr = 'mpiexec -np {0}'.format( self.env.MPI_JOBS )
+            print mpistr
+
         kw['rule'] = 'cd {0};'.format(indir) + \
                      'rm -f {0}?;'.format(args['n']) +\
-                     ' '.join( ['${DAGEXE}', flagstr, argstring, redirstring] )
+                     ' '.join( [mpistr, '${DAGEXE}', flagstr, argstring, redirstring] )
 
         kw['name'] = 'run dag-mcnp ' + case.name
         kw['source'] = ['wscript'] + [os.path.join(indir,x) for x in (args['inp'],args['gcad'])]
@@ -180,7 +197,6 @@ def summary( bld ):
                 size = os.path.getsize( filepath )
                 diff = int(size)
 
-            color = 'GREEN'
             if diff is None: 
                 if suffix in case.outputs.keys():
                     Logs.pprint( 'YELLOW', '{0:>16s}'.format('missing'), sep = ' ' )
@@ -217,7 +233,7 @@ def build(bld):
     # This it the default entry point when users invoke waf without specific options.
     # By default, run test.
     import Options
-    lst = ['test']
+    lst = ['configure','test']
     Options.commands = lst + Options.commands
 
 
