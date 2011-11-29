@@ -1,0 +1,8 @@
+Beams in x-direction grazing a plane
+nps 1000
+mode n
+sdef pos=0 0 0 vec=1 0 0 dir=1
+dagmc 
+prdmp 2j -1
+print
+

@@ -1,0 +1,6 @@
+The three uranium cylinders test problem is a set of three aluminum cylinders
+that are arranged in an equilateral triangle and which all contain a solution
+of UO2F2 and water. 
+
+MCNP5-1.51:             0.99455, rel err = 0.00133
+DAGMC:                  0.99622, rel err = 0.00133

@@ -1,0 +1,1 @@
+08: Two fissile spheres in a vacuum B.  Calculates keff, uses implicit complement.  There currently is a statistically significant difference in keff if run sufficiently long.

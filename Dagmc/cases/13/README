@@ -1,0 +1,5 @@
+13: Beam traveling down a small vent surrounded by iron.  The vent is the intersetion of two cylinders.
+
+Note that the problem was run with two different nps values.  
+ The 5E8 nps value was to reduce the statistical errors of the tallies 
+ and the 5E6 nps value is used to reduce run time for testing purposes and is the default nps value.
