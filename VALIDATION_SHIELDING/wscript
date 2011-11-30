@@ -1,0 +1,44 @@
+#! /usr/bin/env python
+# encoding: utf-8
+
+top = '.'
+out = 'results'
+
+import os.path, sys
+
+sys.path.append('..')
+from dagmctesting import *
+
+def setup_testcases( self ):
+    self.allcases = [ 'BE08', 'C29', 'CCR20', 'COAIR', 'COTEF',
+                      'FE09', 'FS1ONN', 'FS3OFN', 'FS3ONP', 'FS7OFP',
+                      'FS7ONN', 'H2O19', 'KERMIN', 'LI616', 'N31',
+                      'PB14', 'SKYINP', 'SMAIR', 'SMTEF' ]
+
+DagmcTestContext.setup_testcases = setup_testcases
+
+def get_case_definition( self, casename ):
+    case = DagmcTestContext.CaseDefn()
+    case.name = casename
+    case.runname = '{0}test.'.format(casename)
+
+    def output_template( t ):
+        return 'Templates/Linux/1e-4/{0}_{1}'.format(t, casename)
+
+    # Defaults for all cases
+    case.inputs['inp'] = 'Inputs/{0}i'.format(casename)
+    
+    if self.options.facet_inputs: 
+        case.inputs['gcad'] = 'geom_h5m/1E-4_{0}i.h5m'.format( casename )
+    else:
+        case.inputs['gcad'] = 'geom_sat/geom_{0}i.sat'.format( casename )
+        case.flags.append( 'ftol=1e-4' )
+
+
+    case.outputs['o'] = output_template( 'outp' ) 
+    case.outputs['m'] = output_template( 'mctl' )
+
+    return case
+
+DagmcTestContext.get_case_definition = get_case_definition
+

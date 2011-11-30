@@ -1,0 +1,44 @@
+#! /usr/bin/env python
+# encoding: utf-8
+
+top = '.'
+out = 'results'
+
+import os.path, sys
+
+sys.path.append('..')
+from dagmctesting import *
+
+def setup_testcases( self ):
+    self.allcases = [ 'FLAT25', 'GODIVA',  'ICT2C3', 'JEZ233', 'LST2C2', 'PNL2',  
+                      'PUSH2O', 'STACY36', 'UH3C6',  'ZEUS2',  'BIGTEN', 'FLATPU',
+                      'GODIVR', 'IMF03',   'JEZ240', 'ORNL10', 'PNL33',  'SB25',  
+                      'THOR',   'UMF5C2',  'FLAT23', 'FLSTF1', 'HISHPG', 'IMF04', 
+                      'JEZPU',  'ORNL11',  'PUBTNS', 'SB5RN3', 'TT2C11', 'ZEBR8H' ]
+
+DagmcTestContext.setup_testcases = setup_testcases
+
+def get_case_definition( self, casename ):
+    case = DagmcTestContext.CaseDefn()
+    case.name = casename
+    case.runname = '{0}test.'.format(casename)
+
+    def output_template( t ):
+        return 'Templates/Linux/1e-4/{0}{1}'.format(t, casename)
+
+    # Defaults for all cases
+    case.inputs['inp'] = 'Inputs/{0}i'.format(casename)
+    
+    if self.options.facet_inputs: 
+        case.inputs['gcad'] = 'geom_h5m/1E-4_{0}i.h5m'.format( casename )
+    else:
+        case.inputs['gcad'] = 'geom_sat/geom_{0}i.sat'.format( casename )
+        case.flags.append( 'ftol=1e-4' )
+
+
+    case.outputs['o'] = output_template( 'outp' ) 
+
+    return case
+
+DagmcTestContext.get_case_definition = get_case_definition
+
