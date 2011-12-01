@@ -1,0 +1,22 @@
+ Jezebel-240  PU-MET-FAST-002  Pu sphere  20.1 a/o Pu-240  ENDF/B-VI
+c 1         1        0.040553        -1        $ Pu Sphere
+c 2         0                         1
+c  
+c 1         so       6.6595
+c  
+kcode     5000  1.0  50   250
+c imp:n     1.0    0.0
+sdef   cel=2  erg=d1
+sp1    -3
+vol       0.0 1237.12      0.0 0.0
+area      0.0 11r  557.31
+totnu
+m1        31000.66c     1.3722e-3
+          94239.66c     2.9934e-2
+          94240.66c     7.8754e-3
+          94241.66c     1.2146e-3
+          94242.66c     1.5672e-4
+prdmp    j   275 -1
+print
+
+ end of input

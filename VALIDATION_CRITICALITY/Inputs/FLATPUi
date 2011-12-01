@@ -1,0 +1,26 @@
+ PU-MET-FAST-006  FLATTOP-Pu  Pu Sphere Reflected by Normal U  ENDF/B-VI
+c 1         1        0.038831        -1        $ Pu Sphere
+c 2         2        0.048070         1   -2   $ Normal U Reflector
+c 3         0                         2
+c  
+c 1         so       4.5332
+c 2         so      24.1420
+c  
+kcode     5000   1.0     50   250
+c imp:n     1.0    1.0    0.0
+sdef   cel=2  erg=d1
+sp1    -3
+vol      0  390.21  58549.54      0.0  0.0
+area     0.0 11r  258.24   7324.14
+totnu
+c        Plutonium (4.8 at.% Pu-240)
+m1        31000.66c     1.4755e-4
+          94239.66c     3.6697e-2        94241.66c     1.1639e-4
+          94240.66c     1.8700e-3
+c        Normal Uranium Reflector
+m2        92234.66c     2.6438e-6        92235.66c     3.4610e-4
+          92238.66c     4.7721e-2
+prdmp    j    275 -1
+print
+
+ end of input

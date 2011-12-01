@@ -1,0 +1,29 @@
+ Pu sphere in sphere of H2O  PU-MET-FAST-011  ENDF/B-VI
+c 1        1   0.049726       -1                   $ Plutonium sphere
+c 2        2   0.100149        1    -2             $ Water sphere
+c 3        0                   2
+c 
+c 1        so      4.1217                          $ radius of oralloy sphere
+c 2        so     29.5217                          $ radius of water sphere
+c  
+mode     n
+kcode    5000   1.0   50   250
+c imp:n    1.0    1.0   0.0
+sdef     cel=2    erg=d1   rad=d2   pos=0.0 0.0 0.0
+sp1      -3
+si2      0.0    4.1217
+sp2      -21    2
+vol       0.0 293.30  107480.37   0.0 0.0
+area      0.0 11r 213.48   10951.98
+c        Plutonium (5.18 w/o Pu-240)
+m1       94239.66c     4.6982e-2     94240.66c     2.5852e-3
+         94241.66c     1.4915e-4     94242.66c     9.9432e-6
+c        Water
+m2        1001.62c     6.6766e-2
+          8016.62c     3.3383e-2
+mt2      lwtr.60t
+totnu
+prdmp    j    275 -1
+print
+
+ end of input

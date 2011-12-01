@@ -1,0 +1,54 @@
+ STACY Run 36  Uranyl Nitrate  9.97 wt.% Enr  253.9 g/l U  83.55 cm  ENDF/B-VI
+c  LEU-SOL-THERM-007  25 C
+c 1    1    0.086845     1   -2    4   -6           $ Tank Wall
+c 2    1    0.086845    -2    3   -4                $ Tank Bottom
+c 3    1    0.086845    -2    6   -7                $ Tank Top
+c 4    2    0.098947    -1    4   -5                $ Uranyl Nitrate Solution
+c 5    3    4.9425e-5   -1    5   -6                $ Air inside Tank
+c 6    0                 2:-3:7
+c
+c 1   cz   29.5                                     $ Inner Radius of Tank
+c 2   cz   29.8                                     $ Outer Radius of Tank
+c 3   pz   -2.0                                     $ Bottom of Tank
+c 4   pz    0.0                                     $ Bottom of Uranyl Nitrate
+c 5   pz   83.55                                    $ Top of Uranyl Nitrate
+c 6   pz  150.0                                     $ Top of Air
+c 7   pz  152.5                                     $ Top of Tank
+c
+kcode  5000  1.0  50  250
+c imp:n   1.0   4r  0.0
+totnu
+sdef   cel=5  erg=d1  pos= 0 0 40
+sp1    -3
+area    0.0 11r 27803.09     28928.41       2789.86       2789.86
+         2733.97      2789.86       2879.86
+vol     0.0 8383.34      5579.72       6974.65     228423.28
+       181627.37         0.0 0.0
+c   SS304  7.93 g/cc
+m1      6000.66c    4.3736e-5
+       14028.66c    9.8013e-4       14029.62c    4.9628e-5
+       14030.66c    3.2944e-5
+       15031.66c    4.3170e-5
+       16000.62c    2.9782e-6
+       24050.62c    7.2887e-4       24052.62c    1.4056e-2
+       24053.62c    1.5936e-3       24054.62c    3.9673e-4
+       25055.62c    1.1561e-3
+       26054.62c    3.5058e-3       26056.62c    5.4501e-2
+       26057.62c    1.2478e-3       26058.62c    1.6638e-4
+       28058.62c    5.6939e-3       28060.62c    2.1768e-3
+       28061.62c    9.4245e-5       28062.62c    2.9942e-4
+       28064.62c    7.5897e-5
+c   Uranyl Nitrate Solution  253.9 g/l U  1.4102 g/cc
+m2      1001.62c    5.8115e-2
+        7014.62c    2.6195e-3        7015.66c    9.7280e-6
+        8016.62c    3.7545e-2        8017.66c    1.5024e-5
+       92234.66c    5.2265e-7       92235.66c    6.4857e-5
+       92236.66c    6.4776e-8       92238.66c    5.7769e-4
+mt2     lwtr.60t
+c   Air as Nitrogen and Oxygen  0.001184 g/cc
+m3      7014.62c    3.8872e-5        7015.66c    1.4436e-7
+        8016.62c    1.0405e-5        8017.66c    4.1636e-9
+prdmp   j   300 -1
+print
+ 
+ end of input
