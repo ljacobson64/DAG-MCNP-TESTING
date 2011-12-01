@@ -1,0 +1,25 @@
+HEU-MET-FAST-028  FLATTOP-25  HEU Sphere Reflected by Normal U  ENDF/B-VI
+c 1         1        0.0476745       -1        $ HEU Sphere
+c 2         2        0.0480697        1   -2   $ Normal U Reflector
+c 3         0                         2
+c  
+c 1         so       6.1156
+c 2         so      24.1242
+c  
+kcode     5000   1.0     50   250
+c imp:n     1.0    1.0    0.0
+sdef   cel=2  erg=d1
+sp1    -3
+vol       0  958.09  58809.48      0.0  0.0
+area      0 11r 469.99   7313.34
+totnu
+c        Uranium (93.24 wt.% U-235)
+m1        92234.66c     4.8869e-4        92235.66c     4.4482e-2
+          92238.66c     2.7038e-3
+c        Normal Uranium Reflector
+m2        92234.66c     2.6438e-6        92235.66c     3.4610e-4
+          92238.66c     4.7721e-2
+prdmp    j    275 -1
+print
+
+ end of input

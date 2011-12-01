@@ -1,0 +1,31 @@
+ Bare Sphere of 4.9 wt.% UO2F2-H2O  LEU-SOL-THERM-002  Case 2  ENDF/B-VI+SAB2002
+c 1    1    0.098748     -1                        $ UO2F2D2O Solution
+c 2    2    0.060317      1   -2                   $ Alumninum 1100 Shell
+c 3    0                  2
+c
+c 1    so   34.4995                                $ OR of Solution
+c 2    so   34.6583                                $ OR of Shell
+c
+mode n
+totnu
+kcode   5000  1.0  50  250
+c imp:n   1   1   0
+sdef    cel=2  erg=d1
+sp1     -3
+c    Uranyl Fluoride in Water  4.9 wt.% Enriched
+m1    1001.62c   6.1683e-2
+      8016.62c   3.3318e-2     8017.66c   1.3332e-5
+      9019.62c   2.4893e-3
+     92234.66c   2.5304e-7    92235.66c   6.1604e-5
+     92238.66c   1.1828e-3
+c    1100 Aluminum
+m2   13027.62c   5.9699e-2
+     14028.62c   5.0913e-4    14029.62c   2.5779e-5
+     14030.62c   1.7113e-5
+     25055.62c   1.4853e-5
+     29063.62c   3.5528e-5    29065.62c   1.5836e-5
+mt1   lwtr.60t
+prdmp    j    750 -1
+print
+
+ end of input

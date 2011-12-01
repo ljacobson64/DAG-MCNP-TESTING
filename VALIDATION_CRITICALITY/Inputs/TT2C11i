@@ -1,0 +1,111 @@
+Tinkertoy 2  HEU-MET-FAST-026  Array C-11 3x3x3 Array  Paraffin Rfl  ENDF/B-VI
+c  STS 18.720 cm  7.6-cm thick reflector
+c 1    1   0.048033    -1   #2   #3    7   -8         u=1     $ HEU Cylinder
+c 2    2   0.087058    -2                             u=1     $ Left SS Rod
+c 3    2   0.087058    -3                             u=1     $ Right SS Rod
+c 4    0                1    7   -8                   u=1     $ Side Void
+c 5    0               #2   #3   -7                   u=1     $ Bottom Void
+c 6    0               #2   #3    8                   u=1     $ Top Void
+c 7    0               -9    6  -15   14  -25   22    u=2
+c                       lat=1  fill=-1:1 -1:1 -1:1   1  26r   $ 3x3x3 Array
+c 8    0                5  -10   13  -16   19  -28    fill=2  $ Core
+c 9    0                4   -5   12  -17   20  -21            $ Left Void
+c 10   0                4   -5   12  -17   23  -24            $ Center Void
+c 11   0                4   -5   12  -17   26  -27            $ Right Void
+c 12   3   0.115698     4   -5   12  -17   18  -29
+c                      #9  #10  #11                           $ Lower Reflector
+c 13   0               10  -11   12  -17   20  -21            $ Left Void
+c 14   0               10  -11   12  -17   23  -24            $ Center Void
+c 15   0               10  -11   12  -17   26  -27            $ Right Void
+c 16   3   0.115698    10  -11   12  -17   18  -29
+c                    #13  #14  #15                           $ Upper Reflector
+c 17   3   0.115698     5  -10   12  -13   18  -29            $ Back Reflector
+c 18   3   0.115698     5  -10   16  -17   18  -29            $ Front Reflector
+c 19   3   0.115698     5  -10   13  -16   18  -19            $ Left Reflector
+c 20   3   0.115698     5  -10   13  -16   28  -29            $ Right Reflector
+c 21   0               -4:11:-12:17:-18:29
+c
+c 1    cz       5.742                 $ Radius of HEU Cylinder
+c 2    c/z      0   -4.2735  0.254    $ Radius of Left SS Rod
+c 3    c/z      0    4.2735  0.254    $ Radius of Right SS Rod
+c 4    pz     -51.8275                $ Bottom of Lower Paraffin Sheet
+c 5    pz     -44.2275                $ Top of Lower Paraffin Sheet
+c 6    pz     -14.7425                $ Bottom of Cell
+c 7    pz      -5.3825                $ Bottom of HEU Cylinder
+c 8    pz       5.3825                $ Top of HEU Cylinder
+c 9    pz      14.7425                $ Top of Cell
+c 10   pz      44.2275                $ Bottom of Upper Paraffin Sheet
+c 11   pz      51.8275                $ Top of Upper Paraffin Sheet
+c 12   py     -52.906                 $ Front Edge of Front Paraffin Sheet
+c 13   py     -45.306                 $ Back Edge of Front Paraffin Sheet
+c 14   py     -15.102                 $ Front Edge of Cell
+c 15   py      15.102                 $ Back Edge of Cell
+c 16   py      45.306                 $ Front Edge of Back Paraffin Sheet
+c 17   py      52.906                 $ Back Edge of Back Paraffin Sheet
+c 18   px     -52.906                 $ Left Edge of Left Paraffin Sheet
+c 19   px     -45.306                 $ Right Edge of Left Paraffin Sheet
+c 20   px     -30.458                 $ Left Edge of Left Paraffin Gap
+c 21   px     -29.950                 $ Right Edge of Left Paraffin Gap
+c 22   px     -15.102                 $ Left Edge of Cell
+c 23   px      -0.254                 $ Left Edge of Center Paraffin Gap
+c 24   px       0.254                 $ Right Edge of Center Paraffin Gap
+c 25   px      15.102                 $ Right Edge of Cell
+c 26   px      29.950                 $ Left Edge of Right Paraffin Gap
+c 27   px      30.458                 $ Right Edge of Right Paraffin Ggap
+c 28   px      45.306                 $ Left Edge of Right Paraffin Sheet
+c 29   px      52.906                 $ Right Edge of Right Paraffin Sheet
+c
+mode    n
+totnu
+kcode    5000   1.0   50   250
+c imp:n    1.0    19r   0.0
+ksrc     0       0       0
+        30.204   0       0
+       -30.204   0       0
+         0      30.204   0
+        30.204  30.204   0
+       -30.204  30.204   0
+         0     -30.204   0
+        30.204 -30.204   0
+       -30.204 -30.204   0
+         0       0      29.485
+        30.204   0      29.485
+       -30.204   0      29.485
+         0      30.204  29.485
+        30.204  30.204  29.485
+       -30.204  30.204  29.485
+         0     -30.204  29.485
+        30.204 -30.204  29.485
+       -30.204 -30.204  29.485
+         0       0     -29.485
+        30.204   0     -29.485
+       -30.204   0     -29.485
+         0      30.204 -29.485
+        30.204  30.204 -29.485
+       -30.204  30.204 -29.485
+         0     -30.204 -29.485
+        30.204 -30.204 -29.485
+       -30.204 -30.204 -29.485
+c     HEU
+m1   92234.66c    4.8271e-4     92235.66c    4.4797e-2
+     92236.66c    9.5723e-5     92238.66c    2.6577e-3
+c     Stainless steel
+m2    6000.66c    3.1691e-4
+     12000.62c    1.7321e-3
+     14028.62c    1.5624e-3     14029.62c    7.9110e-5
+     14030.62c    5.2514e-5
+     24050.62c    7.1571e-4     24052.62c    1.3802e-2
+     24053.62c    1.5648e-3     24054.62c    3.8956e-4
+     26054.62c    3.5612e-3     26056.62c    5.5362e-2
+     26057.62c    1.2676e-3     26058.62c    1.6901e-4
+     28058.62c    4.4262e-3     28060.62c    1.6922e-3
+     28061.62c    7.3262e-5     28062.62c    2.3275e-4
+     28064.62c    5.8999e-5
+c     Paraffin with Polyethylene Scattering Law
+m3    1001.62c    7.8134e-2
+      6000.66c    3.7564e-2
+mt3   poly.60t
+prdmp    j    250 -1
+print
+
+ end of input

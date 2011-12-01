@@ -1,0 +1,25 @@
+ U233-MET-FAST-005 Case 2  U-233 Sphere Refl by Be  ENDF/B-VI
+c 1         1        0.048170        -1        $ U-233 Sphere
+c 2         2        0.121218         1   -2   $ Be Reflector
+c 3         0                         2
+c  
+c 1         so       4.5999
+c 2         so       8.7960
+c  
+kcode     5000  1.0    50   250
+c imp:n     1.0    1.0   0.0
+sdef   cel=2  erg=d1
+sp1    -3
+vol        0.0 407.69   2442.96      0.0 0.0
+area       0.0 11j 265.89    972.26
+totnu
+c        Uranium (98.2 wt.% U-233)
+m1        92233.66c     4.7312e-2       92234.66c     5.2770e-4
+          92238.66c     3.3015e-4
+c        Beryllium Reflector
+m2         4009.62c     1.1984e-1
+           8016.62c     1.3770e-3        8017.66c     5.5104e-7
+prdmp    j    275 -1
+print
+
+ end of input

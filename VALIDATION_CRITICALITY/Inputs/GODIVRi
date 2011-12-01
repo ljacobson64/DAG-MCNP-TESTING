@@ -1,0 +1,28 @@
+ Oy sphere (97.67 w/o) in sphere of H2O  HEU-MET-FAST-004  ENDF/B-VI
+c 1        1   0.048143       -1                           $ oralloy sphere
+c 2        2   0.10021         1    -2                     $ water sphere
+c 3        0                   2
+c  
+c 1        so      6.5537                          $ radius of oralloy sphere
+c 2        so     33.4717                          $ radius of water sphere
+c  
+mode     n
+kcode    5000  1.0    50   250
+c imp:n    1.0    1.0   0.0
+sdef     cel=2    erg=d1   rad=d2   pos=0.0 0.0 0.0
+sp1      -3
+si2      0.0    0.65537
+sp2      -21    2
+vol      0.0 1179.1  155891.   0.0 0.0
+area     0.0 11r 539.74   14078.
+c        Oy (97.675 w/o)
+m1       92234.66c     0.011150      92235.66c     0.97694
+         92236.66c     0.0019919     92238.66c     0.0099250
+c        Water
+m2        1001.62c     0.66667        8016.62c     0.33333
+mt2      lwtr.60t
+totnu
+prdmp    j    275 -1
+print
+
+ end of input

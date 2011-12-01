@@ -1,0 +1,24 @@
+ U233-MET-FAST-006  FLATTOP-23  ENDF/B-VI
+c 1         1        0.0475915       -1        $ U-233 Sphere
+c 2         2        0.0480695        1   -2   $ Normal U Reflector
+c 3         0                         2
+c  
+c 1         so       4.2058
+c 2         so      24.1194
+c  
+kcode     5000   1.0     50   250
+c imp:n     1.0    1.0    0.0
+sdef   cel=2  erg=d1
+sp1    -3
+vol     0   311.63  58462.76      0.0   0
+area     0 11r  222.28   7310.43
+totnu
+c        Uranium (98.13 wt.% U-233)
+m1        92233.66c     4.6710e-2        92234.66c     5.8772e-4
+          92235.66c     1.4158e-5        92238.66c     2.7959e-4
+c        Normal Uranium Reflector
+m2        92235.66c     3.5050e-4        92238.66c     4.7719e-2
+prdmp    j    275 -1
+print
+
+ end of input

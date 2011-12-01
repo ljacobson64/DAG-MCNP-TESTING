@@ -1,0 +1,182 @@
+ Zeus 2  9 Units, 6 C Plates/Unit  HEU-MET-INTER-006  ENDF/B-VI  RN2
+c        Comet Hardware
+c 1        2    0.059114     11  -12   47  -48              $ Platen
+c 2        2    0.059114      9  -19   44  -45              $ Alignment Tube
+c        Reflector Regions
+c 3        4    0.082875      1   -4    5   -8   10  -41
+c                           49                           $ Below Top Reflector
+c 4        4    0.082875      1   -4    5   -8   41  -42  $ Upper Reflector
+c 5        4    0.082875      1   -4    5   -8   42  -43
+c                          #40                           $ Hollow Reflector
+c 6        4    0.082875     12  -13   46  -48            $ Bottom Reflector
+c        Column of Platters
+c 7        3    0.085764     13  -14   46  -48            $ Unit 1, Lwr Gr
+c 8        1    0.048176     14  -15   46  -48            $ Unit 1, Inner HEU
+c 9        3    0.085764     15  -16   46  -48            $ Unit 1, Upr Gr
+c 10       3    0.085764     16  -17   46  -48            $ Unit 2, Lwr Gr
+c 11       1    0.048176     17  -18   46  -48            $ Unit 2, Inner HEU
+c 12       3    0.085764     18  -19   46  -48            $ Unit 2, Upr Gr
+c 13       3    0.085764     19  -20  -48                 $ Unit 3, Lwr 
+c 14       1    0.048176     20  -21  -48                 $ Unit 3, Inner HEU
+c 15       3    0.085764     21  -22  -48                 $ Unit 3, Upr Gr
+c 16       3    0.085764     22  -23  -48                 $ Unit 4, Lwr Gr
+c 17       1    0.048176     23  -24  -48                 $ Unit 4, Inner HEU
+c 18       3    0.085764     24  -25  -48                 $ Unit 4, Upr Gr
+c 19       3    0.085764     25  -26  -48                 $ Unit 5, Lwr Gr
+c 20       1    0.048176     26  -27  -48                 $ Unit 5, Inner HEU
+c 21       3    0.085764     27  -28  -48                 $ Unit 5, Upr Gr
+c 22       3    0.085764     28  -29  -48                 $ Unit 6, Lwr Gr
+c 23       1    0.048176     29  -30  -48                 $ Unit 6, Inner HEU
+c 24       3    0.085764     30  -31  -48                 $ Unit 6, Upr Gr
+c 25       3    0.085764     31  -32  -48                 $ Unit 7, Lwr Gr
+c 26       1    0.048176     32  -33  -48                 $ Unit 7, Inner HEU
+c 27       3    0.085764     33  -34  -48                 $ Unit 7, Upr Gr
+c 28       3    0.085764     34  -35  -48                 $ Unit 8, Lwr Gr
+c 29       1    0.048176     35  -36  -48                 $ Unit 8, Inner HEU
+c 30       3    0.085764     36  -37  -48                 $ Unit 8, Upr Gr
+c 31       3    0.085764     37  -38  -48                 $ Unit 9, Lwr Gr
+c 32       1    0.048176     38  -39  -48                 $ Unit 9, Inner HEU
+c 33       3    0.085764     39  -40  -48                 $ Unit 9, Upr Gr
+c        Internal Voids
+c 34       0                 11  -12   45  -47            $ A-Tube - Platen Gap
+c 35       0                 10  -11   45  -49            $ A-Tube - Refl Gap
+c 36       0                  9  -19  -44                 $ Inside Alignment Tube
+c 37       0                 12  -19   45  -46            $ Tube-Platter Gap
+c 38       0                 11  -41   48  -49            $ Platter-Rfl Gap
+c 39       0                 40  -41  -48                 $ Column-Upr Rfl Gap
+c 40       0                  2   -3    6   -7   42  -43  $ Above Top Reflector
+c        External Voids
+c 41       0                 -1   10                      $ Left of Side Rfls
+c 42       0                  4   10                      $ Right of Side Rfls
+c 43       0                  1   -4   -5   10            $ Front of Side Rfls
+c 44       0                  1   -4    8   10            $ Behind Side Rfls
+c 45       0                  1   -4    5   -8   43       $ Above Side Reflectors
+c 46       0                -10   #2  #36                 $ Below Reflectors
+c 
+c 1       px            -44.14520                         $ Left Rfl Edge
+c 2       px            -27.94000                         $ Left Int Rfl Edge
+c 3       px             27.94000                         $ Right Int Rfl Edge
+c 4       px             44.14520                         $ Right Rfl Edge
+c 5       py            -44.14520                         $ Front Rfl Edge
+c 6       py            -27.94000                         $ Front Int Rfl Edge
+c 7       py             27.94000                         $ Back Int Rfl Edge
+c 8       py             44.14520                         $ Back Rfl Edge
+c 9       pz             -5.79120                      $ Bottom of Alignment Tube
+c 10      pz              0.0                          $ Bottom of Reflectors
+c 11      pz             26.78384                      $ Bottom of Platen
+c 12      pz             30.59384                      $ Top of Platen
+c 13      pz             45.02104                      $ Column Reflector
+c 14      pz             48.04312                      $ 1st Unit: Lwr Gr
+c 15      pz             48.34284                      $ 1st Unit: HEU
+c 16      pz             51.36492                      $ 1st Unit: Upr Gr
+c 17      pz             54.38700                      $ 2nd Unit: Lwr Gr
+c 18      pz             54.68672                      $ 2nd Unit: HEU
+c 19      pz             57.70880                      $ 2nd Unit: Upr Gr
+c 20      pz             60.73088                      $ 3rd Unit: Lwr Gr
+c 21      pz             61.03060                      $ 3rd Unit: HEU
+c 22      pz             64.05268                      $ 3rd Unit: Upr Gr
+c 23      pz             67.07476                      $ 4th Unit: Lwr Gr
+c 24      pz             67.37448                      $ 4th Unit: HEU
+c 25      pz             70.39656                      $ 4th Unit: Upr Gr
+c 26      pz             73.41864                      $ 5th Unit: Lwr Gr
+c 27      pz             73.71836                      $ 5th Unit: HEU
+c 28      pz             76.74044                      $ 5th Unit: Upr Gr
+c 29      pz             79.76252                      $ 6th Unit: Lwr Gr
+c 30      pz             80.06224                      $ 6th Unit: HEU
+c 31      pz             83.08432                      $ 6th Unit: Upr Gr
+c 32      pz             86.10640                      $ 7th Unit: Lwr Gr
+c 33      pz             86.40612                      $ 7th Unit: HEU
+c 34      pz             89.42820                      $ 7th Unit: Upr Gr
+c 35      pz             92.45028                      $ 8th Unit: Lwr Gr
+c 36      pz             92.75000                      $ 8th Unit: HEU
+c 37      pz             95.77208                      $ 8th Unit: Upr Gr
+c 38      pz             98.79416                      $ 9th Unit: Lwr Gr
+c 39      pz             99.09388                      $ 9th Unit: HEU
+c 40      pz            102.11596                      $ 9th Unit: Upr Gr
+c 41      pz            102.89540                      $ Top of Crnr Refls
+c 42      pz            117.32260                      $ Top Reflector
+c 43      pz            123.90120                      $ Top of Side Refls
+c 44      cz              2.5400                       $ 1.0-in Radius
+c 45      cz              3.1496                       $ 1.24-in. Radius
+c 46      cz              3.1750                       $ 1.25-in. Radius
+c 47      cz              4.7625                       $ 1.875-in. Radius
+c 48      cz             26.6700                       $ Platter OR
+c 49      cz             26.7970                       $ Corner Rfl IR
+c
+mode     n
+kcode    5000    1.0    50   250
+dbcn       7j 3147300
+c imp:n    1.0      39r   0.0     5r
+ksrc       0.0  -15.0   48.17287        0.0   15.0   48.17287
+         -15.0    0.0   48.17287       15.0    0.0   48.17287
+           0.0  -15.0   54.52084        0.0   15.0   52.52084
+         -15.0    0.0   54.52084       15.0    0.0   52.52084
+           0.0  -15.0   61.15252        0.0   15.0   61.15252
+         -15.0    0.0   61.15252       15.0    0.0   61.15252
+           0.0  -15.0   67.51164        0.0   15.0   67.51164
+         -15.0    0.0   67.51164       15.0    0.0   67.51164
+           0.0  -15.0   73.85198        0.0   15.0   73.85198
+         -15.0    0.0   73.85198       15.0    0.0   73.85198
+           0.0  -15.0   80.19334        0.0   15.0   80.19334
+         -15.0    0.0   80.19334       15.0    0.0   80.19334
+           0.0  -15.0   86.53822        0.0   15.0   86.53822
+         -15.0    0.0   86.53822       15.0    0.0   86.53822
+           0.0  -15.0   92.87829        0.0   15.0   92.87829
+         -15.0    0.0   92.87829       15.0    0.0   92.87829
+           0.0  -15.0   99.21454        0.0   15.0   99.21454
+         -15.0    0.0   99.21454       15.0    0.0   99.21454
+vol         0.0 8242.27     691.91
+           569966.67  112462.83   30739.30   31781.3
+             6657.37     660.26    6657.37
+             6657.37     660.26    6657.37
+             6753.08     669.75    6753.08
+             6753.08     669.75    6753.08
+             6753.08     669.75    6753.08
+             6753.08     669.75    6753.08
+             6753.08     669.75    6753.08
+             6753.08     669.75    6753.08
+             6753.08     669.75    6753.08
+              152.75   59587.30    1287.04      13.68
+             1623.64    1741.72   20542.20
+                0.0        5r 0.0
+c area        0.0 11r 10939.29     367.61     367.61   10939.29
+c            10939.29     367.61     367.61   10939.29
+c               31.16   10630.76
+c             2224.75    2203.42    2202.91
+c             2202.91    2202.91    2202.91
+c             2202.91    2202.91    2234.58
+c             2234.58    2234.58    2234.58
+c             2234.58    2234.58    2234.58
+c             2234.58    2234.58    2234.58
+c             2234.58    2234.58    2234.58
+c             2234.58    2234.58    2234.58
+c             2234.58    2234.58    2234.58
+c             2234.58    2234.58    2234.58
+c             7795.19    7715.19    7795.19    1013.41
+c             1256.63     540.92     114.01
+c            12754.20   17324.60
+c        Average HEU (93.22 wt.%)
+m1       92234.66c     4.9576e-4       92235.66c     4.4941e-2
+         92236.66c     1.5931e-4       92238.66c     2.5799e-3
+c        Aluminum 6061 (2.70 g/cc)
+m2       12000.62c     6.6049e-4
+         13027.62c     5.7816e-2
+         14028.66c     3.1630e-4       14029.62c     1.6016e-5
+         14030.66c     1.0631e-5
+         22000.62c     2.5146e-5
+         24050.62c     3.3536e-6       24052.62c     6.4673e-5
+         24053.62c     7.3325e-6       24054.62c     1.8254e-6
+         25055.62c     2.1915e-5
+         26054.62c     5.9360e-6       26056.62c     9.2280e-5
+         26057.62c     2.1128e-6       26058.62c     2.8171e-7
+         29063.62c     4.8053e-5       29065.62c     2.1418e-5
+c        Graphite (1.7106 g/cc)
+m3        6000.66c     0.085764
+c        Pure Copper (Average:  8.7451 g/cc)
+m4       29063.62c     5.7325e-2       29065.62c     2.5550e-2
+mt3      grph.60t
+totnu
+prdmp     j   275 -1
+print
+
+ end of input
