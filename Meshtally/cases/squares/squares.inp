@@ -32,11 +32,12 @@ fmesh34:n geom=dag
 fm34 2 0 
 fc34 A tally with a lot of needless comment in the fc card,
       with the dag-mc data starting thus: dagmc inp=cylinder.h5m 
-      out=meshtal34.vtk convex=true -dagmc (further words ignored)
+      out=test_meshtal34.vtk convex=true -dagmc 
+      (further words ignored)
 fmesh44:n geom=dag
-fc44 dagmc inp=twospheres.h5m out=meshtal44.vtk
+fc44 dagmc inp=twospheres.h5m out=test_meshtal44.vtk
 fmesh54:n geom=dag emesh 1 4 6 14
-fc54 dagmc inp=cylinder.h5m out=meshtal54.vtk convex=true 
+fc54 dagmc inp=cylinder.h5m out=test_meshtal54.vtk convex=true 
 dagmc usecad=no distlimit=on
 print 32
 
