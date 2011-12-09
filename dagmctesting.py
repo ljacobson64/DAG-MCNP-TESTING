@@ -122,7 +122,7 @@ class DagmcTestContext(BuildContext):
         if 'ftol' in kw:
             args['ftol'] = kw['ftol']
 
-        argstring = ' '.join ( ['{0}={1}'.format(a,b) for (a,b) in args.iteritems() ] )
+        argstring = ' '.join ( ['{0}={1}'.format(a,b) for (a,b) in args.iteritems() if not a.startswith('EXTRA') ] )
 
         screen_out = 'screen_out'
         redirstring = ' &> {0}'.format(screen_out)
@@ -179,7 +179,7 @@ def summary( bld ):
         outputs.update( o )
 
     #outputs understood by this function, in the order we want them printed
-    summary_outputs = ['o','m','e']
+    summary_outputs = ['o','m','e'] + [ 'meshtal{0}.vtk'.format(x) for x in (14,24,34,44,54,64) ]
     #filter by the outputs that actually exist for the requested cases
     summary_outputs = filter( lambda x:x in outputs.keys(), summary_outputs ) 
 
