@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo "diff meshtal34.vtk results/meshtal34.vtk:"
+diff meshtal34.vtk results/meshtal34.vtk
+
+echo "diff meshtal44.vtk results/meshtal44.vtk:"
+diff meshtal44.vtk results/meshtal44.vtk
+
+echo "diff meshtal54.vtk results/meshtal54.vtk:"
+diff meshtal54.vtk results/meshtal54.vtk
