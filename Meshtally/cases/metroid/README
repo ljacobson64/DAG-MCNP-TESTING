@@ -1,0 +1,22 @@
+Metroid (5 sphere) test
+
+* metroid_mcnp.inp : native MCNP geometry for this test problem.  
+* geom.sat : output of running mcnp2cad on metroid_mcnp.inp.  All 
+  mesh files are based on this geometry.
+* meshes/ 
+**      meshall.cub : All volumes tetmeshed in CUBIT
+**      vol2345.h5m : Volumes 2-5 (the inner spheres) from meshall.cub
+* geom23456.h5m : Combined geometry file from dagmc_preproc.  
+  Surfaces for volumes 2-6 are taken from meshall.cub, while the other
+  surfaces are taken from geom.sat.  (Faceting tolerance won't matter
+  because all surfaces not taken from CUBIT are planar.)
+* dagmc.inp : DAG-MCNP5 input file for running this problem
+
+When meshes/vol2345.cub is used as a tally mesh and geom23456.h5m is 
+used as the problem geometry, then this represents a test of a fully
+conformal mesh tally.
+
+The name of this test is given based on its resemblance to the eponymous 
+space critter in the Metroid games.  It has a storied history: as of its
+initial commit it has unearthed a bug in CUBIT, a misuse of tag storage 
+specifiers in MOAB, and a bug in the dagmc mesh tally code.

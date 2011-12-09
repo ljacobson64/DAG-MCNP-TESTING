@@ -1,0 +1,2 @@
+#!/bin/sh
+../../Source/src/mcnp5 i=meshtalTest2Tal.i g=meshtalTest.sat n=output2_
