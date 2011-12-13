@@ -134,7 +134,7 @@ class DagmcTestContext(BuildContext):
             print mpistr
 
         kw['rule'] = 'cd {0};'.format(indir) + \
-                     'rm -f {0}?;'.format(args['n']) +\
+                     'rm -f meshta? {0}? {0}*.vtk;'.format(args['n']) +\
                      ' '.join( [mpistr, '${DAGEXE}', flagstr, argstring, redirstring] )
 
         kw['name'] = 'run dag-mcnp ' + case.name
@@ -154,13 +154,29 @@ class DagmcTestContext(BuildContext):
 
         for key, val in case.outputs.iteritems():
             ref = self.path.find_node(val).bldpath()
-            # diff returns 1 if files differ, but we don't want waf to halt in such a case.
-            # Make waf only halt if diff returns 2, indicating an actual error (like a missing file)
-            self( rule='diff -b -w ${SRC} > ${TGT}; if [ $? == 2 ] \n then \n exit 1 \n fi',
-                  source = [os.path.join(indir,case.runname+key), ref],
-                  target = [os.path.join(indir,'dif{0}'.format(key))],
-                  name = 'dif'+ key + ' ' + case.name)
+            check = os.path.join(indir,case.runname+key)
 
+            # First part of the diff rule
+            if not key.endswith('.vtk'):
+                diff_rule = "diff -bw {0} {1}".format( ref, check )
+            else:
+                # For diffing vtk files, elide the second line of each file
+                # (The second line is a version specifier that changes with each new MOAB revision)
+                # Note that this opens a single quote, so needs to be closed below
+                diff_rule = "bash -c 'diff <(sed -e 2d {0}) <(sed -e 2d {1})".format( ref,check )
+            
+            # diff returns 1 if files differ, but we don't want waf to halt in such a case
+            # Make waf only halt if diff returns 2, indicating an actual error (like a missing file)
+            diff_rule += " > ${TGT}; if [ $? == 2 ] \n then \n exit 1 \n fi"
+
+            if key.endswith('.vtk'):
+                diff_rule += "'"
+            
+            # create the rule
+            self( rule = diff_rule, 
+                  source = [ref, check], target = [os.path.join(indir,'dif{0}'.format(key)) ],
+                  name = 'dif'+key+' '+case.name )
+                  
         return self( *k, **kw)
 
 
@@ -179,13 +195,19 @@ def summary( bld ):
         outputs.update( o )
 
     #outputs understood by this function, in the order we want them printed
-    summary_outputs = ['o','m','e'] + [ 'meshtal{0}.vtk'.format(x) for x in (14,24,34,44,54,64) ]
+    summary_outputs = ['o','m','e'] 
     #filter by the outputs that actually exist for the requested cases
     summary_outputs = filter( lambda x:x in outputs.keys(), summary_outputs ) 
+
+    mesh_tallies = False
+    if any( [x.endswith('.vtk') for x in outputs.keys() ] ):
+        mesh_tallies = True
 
     Logs.pprint( 'CYAN', 'case', sep = '  ')
     for o in summary_outputs[:]:
         Logs.pprint( 'CYAN', ' dif{0} (bytes)'.format(o), sep='    ')
+    if mesh_tallies:
+        Logs.pprint( 'CYAN', 'Mesh tallies' )
     Logs.pprint( 'CYAN', '' ) # newline
     
     for case in map(bld.get_case_definition, bld.cases): 
@@ -208,6 +230,20 @@ def summary( bld ):
             else:
                 Logs.pprint( 'RED', '{0:>16d}'.format(diff), sep = ' ')
                 okay = False
+        if mesh_tallies:
+            keys = [k for k in outputs.keys() if k.endswith('.vtk') ]
+            if len(keys) == 0 : Logs.pprint( 'GREEN', '-' )
+            else:
+                Logs.pprint( 'GREEN', '[', sep = '' )
+                for key in keys:
+                    num = key[-6:-4]
+                    Logs.pprint( 'CYAN', 'dif'+num+' =', sep = '' )
+                    size = os.path.getsize( '{0}/{1}/dif{2}'.format( bld.out_dir, case.name, key ) )
+                    if size == 0: Logs.pprint( 'GREEN', '0', sep = '' )
+                    else: Logs.pprint( 'RED', size, sep = '' )
+                Logs.pprint( 'GREEN', ']' )
+                
+
         Logs.pprint( 'GREEN', '' ) # Print newline to log
 
     if okay: Logs.pprint('GREEN', 'All test passed.' )
