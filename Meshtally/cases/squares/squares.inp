@@ -11,7 +11,7 @@ c
 mode n                $ type of particle
 nps 1e6           $ number of particles
 c void
-prdmp 100000 100000 1 1 $ save only the last dump, written with output every 5000
+prdmp 100000 100000 -1 1 $ save only the last dump, written with output every 5000
 c  dbcn 2j 1 10       $ debug line
 c
 c tmesh
