@@ -110,7 +110,7 @@ class DagmcTestContext(BuildContext):
             #self.sources.extend( extra_src )
 
         args = case.inputs
-        # This command runs after mcnp_case_setup, meaning the args have already been symlinked to ./
+        # This command runs after mcnp_case_setup, meaning the args have already been symlinked to the cwd
         for a,i in args.iteritems():
             args[a] = os.path.basename(i)
 
@@ -131,7 +131,6 @@ class DagmcTestContext(BuildContext):
         mpistr = ''
         if( self.options.use_mpi ):
             mpistr = 'mpiexec -np {0}'.format( self.env.MPI_JOBS )
-            print mpistr
 
         kw['rule'] = 'cd {0};'.format(indir) + \
                      'rm -f meshta? {0}? {0}*.vtk;'.format(args['n']) +\
@@ -188,7 +187,17 @@ def summary( bld ):
     
     bld.setup_requested_options()
 
-    okay = True
+    # inner class to use as shared namespace with print_filesize subfunction defined below
+    # if this was python3 we'd use the nonlocal keyword instead
+    class N:pass
+    v = N()
+    v.okay = True
+
+    maxlen = max( [len(x) for x in bld.cases] )
+
+    column1 = '{0:<' + str(maxlen+2) + '}'
+    columnN = '{0:>14}'
+
     outputs = {}
     for c in bld.cases:
         o = bld.get_case_definition(c).outputs
@@ -203,50 +212,52 @@ def summary( bld ):
     if any( [x.endswith('.vtk') for x in outputs.keys() ] ):
         mesh_tallies = True
 
-    Logs.pprint( 'CYAN', 'case', sep = '  ')
+    Logs.pprint( 'CYAN', column1.format('case'), sep = '')
     for o in summary_outputs[:]:
-        Logs.pprint( 'CYAN', ' dif{0} (bytes)'.format(o), sep='    ')
+        Logs.pprint( 'CYAN', columnN.format('dif{0} (bytes)'.format(o)), sep='')
     if mesh_tallies:
-        Logs.pprint( 'CYAN', 'Mesh tallies' )
+        Logs.pprint( 'CYAN', columnN.format('Mesh tallies'), sep='' )
     Logs.pprint( 'CYAN', '' ) # newline
-    
+
+    def print_filesize( suffix, filepath, fmt=columnN ):
+        diff = None
+        if os.path.exists( filepath ):
+            size = os.path.getsize( filepath )
+            diff = int(size)
+        if diff is None:
+            if suffix in case.outputs.keys():
+                Logs.pprint( 'YELLOW', fmt.format('missing'), sep = '' )
+                v.okay = False
+            else:
+                Logs.pprint( 'GREEN', fmt.format('-'), sep = '' )
+        elif diff == 0:
+            Logs.pprint( 'GREEN', fmt.format(0), sep = '' )
+        else:
+            Logs.pprint( 'RED', fmt.format(diff), sep = '' )
+            v.okay = False
+
     for case in map(bld.get_case_definition, bld.cases): 
-        Logs.pprint( 'CYAN', case.name, sep = ' ' )
+        Logs.pprint( 'CYAN', column1.format(case.name), sep = '' )
         for suffix in summary_outputs:
             filepath = '{0}/{1}/dif{2}'.format( bld.out_dir, case.name, suffix )
-            diff = None
-            if os.path.exists(filepath):
-                size = os.path.getsize( filepath )
-                diff = int(size)
+            print_filesize( suffix, filepath )
 
-            if diff is None: 
-                if suffix in case.outputs.keys():
-                    Logs.pprint( 'YELLOW', '{0:>16s}'.format('missing'), sep = ' ' )
-                    okay = False
-                else:
-                    Logs.pprint( 'GREEN', '{0:>16s}'.format('-'), sep = ' ' )
-            elif diff == 0:
-                Logs.pprint( 'GREEN', '{0:>16d}'.format(0), sep = ' ')
-            else:
-                Logs.pprint( 'RED', '{0:>16d}'.format(diff), sep = ' ')
-                okay = False
         if mesh_tallies:
-            keys = [k for k in outputs.keys() if k.endswith('.vtk') ]
-            if len(keys) == 0 : Logs.pprint( 'GREEN', '-' )
+            keys = [k for k in case.outputs.keys() if k.endswith('.vtk') ]
+            if len(keys) == 0 : Logs.pprint( 'GREEN', '  -', sep = '' )
             else:
-                Logs.pprint( 'GREEN', '[', sep = '' )
+                Logs.pprint( 'GREEN', '  [', sep = '' )
                 for key in keys:
                     num = key[-6:-4]
                     Logs.pprint( 'CYAN', 'dif'+num+' =', sep = '' )
-                    size = os.path.getsize( '{0}/{1}/dif{2}'.format( bld.out_dir, case.name, key ) )
-                    if size == 0: Logs.pprint( 'GREEN', '0', sep = '' )
-                    else: Logs.pprint( 'RED', size, sep = '' )
-                Logs.pprint( 'GREEN', ']' )
+                    filepath = '{0}/{1}/dif{2}'.format( bld.out_dir, case.name, key ) 
+                    print_filesize( key, filepath, '{0}' )
+                Logs.pprint( 'GREEN', ']', sep='' )
                 
 
         Logs.pprint( 'GREEN', '' ) # Print newline to log
 
-    if okay: Logs.pprint('GREEN', 'All test passed.' )
+    if v.okay: Logs.pprint('GREEN', 'All test passed.' )
     else:    Logs.pprint('CYAN', 'Some tests failed.')
 
 

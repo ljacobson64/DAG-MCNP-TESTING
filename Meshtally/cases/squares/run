@@ -1,2 +1,0 @@
-#!/bin/sh
-../../Source/src/mcnp5 i=squares2.inp g=squares2.sat n=squares_run
