@@ -11,7 +11,7 @@ from dagmctesting import *
 
 
 def setup_testcases( self ):
-    self.allcases = [ 'squares', 'metroid' ]
+    self.allcases = [ 'squares', 'metroid', 'stu_cyl', 'stu_cyl2']
 
 
 DagmcTestContext.setup_testcases = setup_testcases
@@ -21,12 +21,10 @@ def get_case_definition( self, casename ):
     case.name = casename
     case.runname = 'test_'.format(casename)
 
-
-    def output_template( t ):
-        return 'cases/{1}/ref.dag.{0}'.format(t, casename)
+    meshes = []
 
     def mesh_tally_output( t ):
-        return 'cases/{1}/results/{0}'.format(t,casename)
+        case.outputs[os.path.basename(t)] = 'cases/{1}/{0}'.format(t,casename)
 
     # Defaults for all cases
     case.inputs['inp'] = 'cases/{0}/{0}.inp'.format(casename)
@@ -38,13 +36,41 @@ def get_case_definition( self, casename ):
 
     # case.outputs['o'] = output_template( 'out' ) 
     if casename == 'squares':
-        meshes = [ 'cases/squares/{0}'.format( x ) for x in ['cylinder.h5m','twospheres.h5m'] ]
-        for m in meshes:
-            case.inputs['EXTRA'+os.path.basename(m)] = m
-        case.outputs['meshtal34.vtk'] = mesh_tally_output( 'meshtal34.vtk' ) 
-        case.outputs['meshtal44.vtk'] = mesh_tally_output( 'meshtal44.vtk' ) 
-        case.outputs['meshtal54.vtk'] = mesh_tally_output( 'meshtal54.vtk' ) 
-        case.outputs['o'] = 'cases/squares/ref_outp'
+        meshes = ['cylinder.h5m','twospheres.h5m'] 
+        mesh_tally_output('ref/meshtal34.vtk')
+        mesh_tally_output('ref/meshtal44.vtk')
+        mesh_tally_output('ref/meshtal54.vtk')
+        case.outputs['o'] = 'cases/squares/ref/outp'
+        case.outputs['meshtal'] = 'cases/squares/ref/meshtal'
+
+    if casename == 'metroid':
+        meshes = ['meshes/vol2345.h5m']
+        mesh_tally_output('ref/meshtal14.vtk')
+        case.outputs['o'] = 'cases/metroid/ref/outp'
+        case.inputs['inp'] = 'cases/metroid/dagmc.inp'
+        case.inputs['gcad'] = 'cases/metroid/geom23456.h5m'
+    
+    if casename == 'stu_cyl':
+        meshes = ['tallyTetMesh.h5m']
+        for i in range(24,65,10):
+            mesh_tally_output( 'ref/meshtal{0}.vtk'.format(i) )
+        case.outputs['o'] = 'cases/stu_cyl/ref/outp'
+        case.inputs['inp']= 'cases/stu_cyl/meshtalTest.i'
+        case.inputs['gcad'] = 'cases/stu_cyl/meshtalTest.sat'
+
+    if casename == 'stu_cyl2':
+        meshes = ['tallyTetMesh.h5m']
+        mesh_tally_output( 'ref/meshtal4.vtk' )
+        mesh_tally_output( 'ref/meshtal64.vtk' )
+        case.outputs['o'] = 'cases/stu_cyl2/ref/outp'
+        case.inputs['inp'] = 'cases/stu_cyl2/meshtalTest2Tal.i'
+        case.inputs['gcad'] = 'cases/stu_cyl2/meshtalTest.sat'
+
+
+        
+    
+    for m in meshes:
+        case.inputs['EXTRA'+os.path.basename(m)] = 'cases/{0}/{1}'.format(casename,m)
 
     return case
 

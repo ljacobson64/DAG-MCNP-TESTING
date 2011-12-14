@@ -143,7 +143,10 @@ class DagmcTestContext(BuildContext):
 
         target = []
         if 'target' in kw: target = kw['target']
-        kw['target'] = target + [ indir+'/'+args['n'] + suffix for suffix in outputs.iterkeys() ]
+        kw['target'] = target + [ indir+'/'+args['n'] + suffix for suffix in outputs.iterkeys() 
+                                                                   if suffix != 'meshtal' ]
+
+        if 'meshtal' in outputs.keys(): kw['target'] = kw['target'] + [os.path.join(indir,'meshtal')] 
 
         return self( *k, **kw )
 
@@ -154,6 +157,8 @@ class DagmcTestContext(BuildContext):
         for key, val in case.outputs.iteritems():
             ref = self.path.find_node(val).bldpath()
             check = os.path.join(indir,case.runname+key)
+            if key == 'meshtal':
+                check = os.path.join(indir,key)
 
             # First part of the diff rule
             if not key.endswith('.vtk'):
@@ -208,6 +213,10 @@ def summary( bld ):
     #filter by the outputs that actually exist for the requested cases
     summary_outputs = filter( lambda x:x in outputs.keys(), summary_outputs ) 
 
+    meshtal_file = False
+    if 'meshtal' in outputs.keys():
+        meshtal_file = True
+
     mesh_tallies = False
     if any( [x.endswith('.vtk') for x in outputs.keys() ] ):
         mesh_tallies = True
@@ -215,9 +224,14 @@ def summary( bld ):
     Logs.pprint( 'CYAN', column1.format('case'), sep = '')
     for o in summary_outputs[:]:
         Logs.pprint( 'CYAN', columnN.format('dif{0} (bytes)'.format(o)), sep='')
+    if meshtal_file:
+        Logs.pprint( 'CYAN', columnN.format('difmeshtal'), sep='' )
     if mesh_tallies:
         Logs.pprint( 'CYAN', columnN.format('Mesh tallies'), sep='' )
     Logs.pprint( 'CYAN', '' ) # newline
+
+    def diff_file_path( suffix ):
+        return '{0}/{1}/dif{2}'.format( bld.out_dir, case.name, suffix )
 
     def print_filesize( suffix, filepath, fmt=columnN ):
         diff = None
@@ -239,16 +253,19 @@ def summary( bld ):
     for case in map(bld.get_case_definition, bld.cases): 
         Logs.pprint( 'CYAN', column1.format(case.name), sep = '' )
         for suffix in summary_outputs:
-            filepath = '{0}/{1}/dif{2}'.format( bld.out_dir, case.name, suffix )
+            filepath = diff_file_path(suffix)
             print_filesize( suffix, filepath )
+
+        if meshtal_file:
+            print_filesize( 'meshtal', diff_file_path('meshtal') )
 
         if mesh_tallies:
             keys = [k for k in case.outputs.keys() if k.endswith('.vtk') ]
             if len(keys) == 0 : Logs.pprint( 'GREEN', '  -', sep = '' )
             else:
                 Logs.pprint( 'GREEN', '  [', sep = '' )
-                for key in keys:
-                    num = key[-6:-4]
+                for key in sorted(keys):
+                    num = ''.join( [x for x in list(key) if x.isdigit() ] )
                     Logs.pprint( 'CYAN', 'dif'+num+' =', sep = '' )
                     filepath = '{0}/{1}/dif{2}'.format( bld.out_dir, case.name, key ) 
                     print_filesize( key, filepath, '{0}' )
