@@ -1,0 +1,621 @@
+      1-       spheres test for meshtal                                                        
+      2-       1 0 imp:n=0                                                                     
+      3-       2 1 -1 imp:n=1                                                                  
+      4-       3 1 -1 imp:n=1                                                                  
+      5-       4 1 -1 imp:n=1                                                                  
+      6-       5 1 -1 imp:n=1                                                                  
+      7-       6 1 -1 imp:n=1                                                                  
+      8-       7 0 imp:n=1                                                                     
+      9-       8 0 imp:n=1   $ implicit complement                                             
+     10-                                                                                       
+     11-       1                                                                               
+     12-       2                                                                               
+     13-       3                                                                               
+     14-       4                                                                               
+     15-       5                                                                               
+     16-       6                                                                               
+     17-       7                                                                               
+     18-       8                                                                               
+     19-       9                                                                               
+     20-       10                                                                              
+     21-       11                                                                              
+     22-       12                                                                              
+     23-       13                                                                              
+     24-       14                                                                              
+     25-       15                                                                              
+     26-       16                                                                              
+     27-       17                                                                              
+     28-       22                                                                              
+     29-       23                                                                              
+     30-       24                                                                              
+     31-       25                                                                              
+     32-       26                                                                              
+     33-       27                                                                              
+     34-                                                                                       
+     35-       c  --------------------                                                         
+     36-       c material 1: Water                                                             
+     37-       m1                                                                              
+     38-             1001  2  $ H                                                              
+     39-             8016  1  $ O1                                                             
+     40-       c  --------------------                                                         
+     41-       c source: point source at origin                                                
+     42-       sdef erg=14.1                                                                   
+     43-       c                                                                               
+     44-       mode n    $ type of particle                                                    
+     45-       nps 1e6   $ number of particles                                                 
+     46-       prdmp 1e5 1e5 -1 1                                                              
+     47-       dagmc $ overlap_thickness=.1                                                    
+     48-       fmesh14:n geom=dag                                                              
+     49-       fc14 dagmc inp=vol2345.h5m conformal=2-5                                        
+     50-                  out=test_meshtal14.vtk                                               
+     51-                                                                                       
+ 
+  warning.    1 materials had unnormalized fractions. print table 40.                      
+1cells                                                                                                  print table 60
+
+                      atom        gram                                     neutron                                     
+        cell  mat    density     density     volume       mass     pieces importance                                   
+
+     1     1    0  0.00000E+00 0.00000E+00 5.41529E+01 0.00000E+00     0  0.0000E+00                                   
+     2     2    1  1.00309E-01 1.00000E+00 4.09227E+00 4.09227E+00     0  1.0000E+00                                   
+     3     3    1  1.00309E-01 1.00000E+00 4.09227E+00 4.09227E+00     0  1.0000E+00                                   
+     4     4    1  1.00309E-01 1.00000E+00 4.09227E+00 4.09227E+00     0  1.0000E+00                                   
+     5     5    1  1.00309E-01 1.00000E+00 4.09227E+00 4.09227E+00     0  1.0000E+00                                   
+     6     6    1  1.00309E-01 1.00000E+00 2.51332E+02 2.51332E+02     0  1.0000E+00                                   
+     7     7    0  0.00000E+00 0.00000E+00 6.17035E+02 0.00000E+00     0  1.0000E+00                                   
+     8     8    0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00     0  1.0000E+00                                   
+
+ total                                     9.39889E+02 2.67701E+02
+
+    minimum source weight = 1.0000E+00    maximum source weight = 1.0000E+00
+
+ ***************************************************
+ * Random Number Generator  =                    1 *
+ * Random Number Seed       =       19073486328125 *
+ * Random Number Multiplier =       19073486328125 *
+ * Random Number Adder      =                    0 *
+ * Random Number Bits Used  =                   48 *
+ * Random Number Stride     =               152917 *
+ ***************************************************
+
+
+          1 warning message so far.
+1cross-section tables                                                                                   print table 100
+
+     table    length
+
+                        tables from file c00740/endf70a                                                  
+
+   1001.70c    3652   1-H -  1 at 293.6K from endf/b-vii.0 njoy99.248                             mat 125      03/27/08
+   8016.70c  170922   8-O - 16 at 293.6K from endf/b-vii.0 njoy99.248                             mat 825      08/25/07
+
+  total      174574
+
+          1 warning message so far.
+1problem summary                                                                                                           
+
+0
+ neutron creation    tracks      weight        energy            neutron loss        tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source              100000    1.0000E+00    1.4100E+01          escape              100000    9.7373E-01    1.1833E+01
+                                                                 energy cutoff            0    0.            0.        
+                                                                 time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ upscattering             0    0.            5.1777E-10          downscattering           0    0.            1.9100E+00
+ photonuclear             0    0.            0.                  capture                  0    2.6268E-02    3.5650E-01
+ (n,xn)                   0    0.            0.                  loss to (n,xn)           0    0.            0.        
+ prompt fission           0    0.            0.                  loss to fission          0    0.            0.        
+ delayed fission          0    0.            0.                                                                        
+     total           100000    1.0000E+00    1.4100E+01              total           100000    1.0000E+00    1.4100E+01
+
+   number of neutrons banked                       0        average time of (shakes)              cutoffs
+   neutron tracks per source particle     1.0000E+00          escape            1.0451E+01          tco   1.0000E+33
+   neutron collisions per source particle 6.5847E-01          capture           4.7635E+01          eco   0.0000E+00
+   total neutron collisions                    65847          capture or escape 1.1428E+01          wc1  -5.0000E-01
+   net multiplication              1.0000E+00 0.0000          any termination   1.1428E+01          wc2  -2.5000E-01
+
+ computer time so far in this run     0.00 minutes            maximum number ever in bank         0
+ computer time in mcrun               0.00 minutes            bank overflows to backup file       0
+ source particles per minute            0.0000E+00
+ random numbers generated                  1316376            most random numbers used was        2247 in history       18990
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+1neutron  activity in each cell                                                                         print table 126
+
+                 tracks     population   collisions   collisions     number        flux        average      average
+        cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                    (per history)    energy       energy     (relative)      (cm)
+
+     2     2       13259        13125         2252    2.1697E-02   2.1640E-01   1.2946E+01   9.8526E-01   9.5577E+00
+     3     3       13360        13224         2275    2.1967E-02   1.9767E-01   1.2955E+01   9.8508E-01   9.5603E+00
+     4     4       13104        12963         2369    2.2811E-02   1.6766E-01   1.2924E+01   9.8499E-01   9.5285E+00
+     5     5       13216        13046         2337    2.2444E-02   2.1666E-01   1.2888E+01   9.8535E-01   9.5135E+00
+     6     6      152939       100000        56614    5.3942E-01   1.1040E-01   1.2455E+01   9.7959E-01   9.2907E+00
+     7     7      100000       100000            0    0.0000E+00   1.8105E-01   1.1941E+01   9.7187E-01   0.0000E+00
+     8     8      100000       100000            0    0.0000E+00   1.7531E-01   1.1957E+01   9.7176E-01   0.0000E+00
+
+     total        405878       352358        65847    6.2834E-01
+
+ Mesh tallies written to file meshtal
+1problem summary                                                                                                           
+
+0
+ neutron creation    tracks      weight        energy            neutron loss        tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source              200000    1.0000E+00    1.4100E+01          escape              200000    9.7379E-01    1.1827E+01
+                                                                 energy cutoff            0    0.            0.        
+                                                                 time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ upscattering             0    0.            4.6489E-10          downscattering           0    0.            1.9165E+00
+ photonuclear             0    0.            0.                  capture                  0    2.6215E-02    3.5633E-01
+ (n,xn)                   0    0.            0.                  loss to (n,xn)           0    0.            0.        
+ prompt fission           0    0.            0.                  loss to fission          0    0.            0.        
+ delayed fission          0    0.            0.                                                                        
+     total           200000    1.0000E+00    1.4100E+01              total           200000    1.0000E+00    1.4100E+01
+
+   number of neutrons banked                       0        average time of (shakes)              cutoffs
+   neutron tracks per source particle     1.0000E+00          escape            9.7300E+00          tco   1.0000E+33
+   neutron collisions per source particle 6.5089E-01          capture           4.2509E+01          eco   0.0000E+00
+   total neutron collisions                   130177          capture or escape 1.0589E+01          wc1  -5.0000E-01
+   net multiplication              1.0000E+00 0.0000          any termination   1.0589E+01          wc2  -2.5000E-01
+
+ computer time so far in this run     0.00 minutes            maximum number ever in bank         0
+ computer time in mcrun               0.00 minutes            bank overflows to backup file       0
+ source particles per minute            0.0000E+00
+ random numbers generated                  2608207            most random numbers used was        2247 in history       18990
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+1neutron  activity in each cell                                                                         print table 126
+
+                 tracks     population   collisions   collisions     number        flux        average      average
+        cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                    (per history)    energy       energy     (relative)      (cm)
+
+     2     2       26736        26434         4630    2.2319E-02   2.0672E-01   1.2940E+01   9.8551E-01   9.5505E+00
+     3     3       26749        26471         4525    2.1896E-02   2.0317E-01   1.2975E+01   9.8576E-01   9.5640E+00
+     4     4       26326        26048         4614    2.2311E-02   1.9284E-01   1.2955E+01   9.8562E-01   9.5480E+00
+     5     5       26346        26017         4534    2.1824E-02   2.0157E-01   1.2917E+01   9.8551E-01   9.5315E+00
+     6     6      306157       200000       111874    5.3391E-01   1.2142E-01   1.2462E+01   9.7979E-01   9.2972E+00
+     7     7      200000       200000            0    0.0000E+00   1.8765E-01   1.1929E+01   9.7200E-01   0.0000E+00
+     8     8      200000       200000            0    0.0000E+00   1.7965E-01   1.1965E+01   9.7184E-01   0.0000E+00
+
+     total        812314       704970       130177    6.2226E-01
+
+ Mesh tallies written to file meshtal
+1problem summary                                                                                                           
+
+0
+ neutron creation    tracks      weight        energy            neutron loss        tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source              300000    1.0000E+00    1.4100E+01          escape              300000    9.7384E-01    1.1828E+01
+                                                                 energy cutoff            0    0.            0.        
+                                                                 time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ upscattering             0    0.            4.6687E-10          downscattering           0    0.            1.9163E+00
+ photonuclear             0    0.            0.                  capture                  0    2.6163E-02    3.5550E-01
+ (n,xn)                   0    0.            0.                  loss to (n,xn)           0    0.            0.        
+ prompt fission           0    0.            0.                  loss to fission          0    0.            0.        
+ delayed fission          0    0.            0.                                                                        
+     total           300000    1.0000E+00    1.4100E+01              total           300000    1.0000E+00    1.4100E+01
+
+   number of neutrons banked                       0        average time of (shakes)              cutoffs
+   neutron tracks per source particle     1.0000E+00          escape            9.8213E+00          tco   1.0000E+33
+   neutron collisions per source particle 6.5137E-01          capture           4.2854E+01          eco   0.0000E+00
+   total neutron collisions                   195412          capture or escape 1.0686E+01          wc1  -5.0000E-01
+   net multiplication              1.0000E+00 0.0000          any termination   1.0686E+01          wc2  -2.5000E-01
+
+ computer time so far in this run     0.00 minutes            maximum number ever in bank         0
+ computer time in mcrun               0.00 minutes            bank overflows to backup file       0
+ source particles per minute            0.0000E+00
+ random numbers generated                  3916208            most random numbers used was        2247 in history       18990
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+1neutron  activity in each cell                                                                         print table 126
+
+                 tracks     population   collisions   collisions     number        flux        average      average
+        cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                    (per history)    energy       energy     (relative)      (cm)
+
+     2     2       40109        39632         6957    2.2365E-02   2.1086E-01   1.2943E+01   9.8542E-01   9.5505E+00
+     3     3       39930        39507         6818    2.2026E-02   2.2261E-01   1.2964E+01   9.8553E-01   9.5562E+00
+     4     4       39643        39195         6898    2.2172E-02   1.8089E-01   1.2949E+01   9.8543E-01   9.5440E+00
+     5     5       39746        39246         6837    2.1936E-02   1.8987E-01   1.2941E+01   9.8569E-01   9.5428E+00
+     6     6      459428       300000       167902    5.3407E-01   1.2063E-01   1.2460E+01   9.7979E-01   9.2960E+00
+     7     7      300000       300000            0    0.0000E+00   1.8438E-01   1.1930E+01   9.7203E-01   0.0000E+00
+     8     8      300000       300000            0    0.0000E+00   1.8023E-01   1.1962E+01   9.7197E-01   0.0000E+00
+
+     total       1218856      1057580       195412    6.2257E-01
+
+ Mesh tallies written to file meshtal
+1problem summary                                                                                                           
+
+0
+ neutron creation    tracks      weight        energy            neutron loss        tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source              400000    1.0000E+00    1.4100E+01          escape              400000    9.7394E-01    1.1831E+01
+                                                                 energy cutoff            0    0.            0.        
+                                                                 time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ upscattering             0    0.            4.5420E-10          downscattering           0    0.            1.9145E+00
+ photonuclear             0    0.            0.                  capture                  0    2.6060E-02    3.5410E-01
+ (n,xn)                   0    0.            0.                  loss to (n,xn)           0    0.            0.        
+ prompt fission           0    0.            0.                  loss to fission          0    0.            0.        
+ delayed fission          0    0.            0.                                                                        
+     total           400000    1.0000E+00    1.4100E+01              total           400000    1.0000E+00    1.4100E+01
+
+   number of neutrons banked                       0        average time of (shakes)              cutoffs
+   neutron tracks per source particle     1.0000E+00          escape            9.6588E+00          tco   1.0000E+33
+   neutron collisions per source particle 6.4781E-01          capture           4.1403E+01          eco   0.0000E+00
+   total neutron collisions                   259125          capture or escape 1.0486E+01          wc1  -5.0000E-01
+   net multiplication              1.0000E+00 0.0000          any termination   1.0486E+01          wc2  -2.5000E-01
+
+ computer time so far in this run     0.00 minutes            maximum number ever in bank         0
+ computer time in mcrun               0.00 minutes            bank overflows to backup file       0
+ source particles per minute            0.0000E+00
+ random numbers generated                  5203800            most random numbers used was        2247 in history       18990
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+1neutron  activity in each cell                                                                         print table 126
+
+                 tracks     population   collisions   collisions     number        flux        average      average
+        cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                    (per history)    energy       energy     (relative)      (cm)
+
+     2     2       53434        52825         9221    2.2250E-02   2.2615E-01   1.2951E+01   9.8551E-01   9.5536E+00
+     3     3       53169        52593         9120    2.2090E-02   2.1225E-01   1.2965E+01   9.8560E-01   9.5562E+00
+     4     4       52903        52305         9142    2.2047E-02   1.8657E-01   1.2959E+01   9.8560E-01   9.5495E+00
+     5     5       53115        52466         9064    2.1821E-02   1.9013E-01   1.2949E+01   9.8565E-01   9.5470E+00
+     6     6      612621       400000       222578    5.3135E-01   1.2323E-01   1.2465E+01   9.7989E-01   9.2987E+00
+     7     7      400000       400000            0    0.0000E+00   1.8691E-01   1.1932E+01   9.7214E-01   0.0000E+00
+     8     8      400000       400000            0    0.0000E+00   1.8370E-01   1.1962E+01   9.7205E-01   0.0000E+00
+
+     total       1625242      1410189       259125    6.1956E-01
+
+ Mesh tallies written to file meshtal
+1problem summary                                                                                                           
+
+0
+ neutron creation    tracks      weight        energy            neutron loss        tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source              500000    1.0000E+00    1.4100E+01          escape              500000    9.7395E-01    1.1828E+01
+                                                                 energy cutoff            0    0.            0.        
+                                                                 time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ upscattering             0    0.            4.5810E-10          downscattering           0    0.            1.9185E+00
+ photonuclear             0    0.            0.                  capture                  0    2.6046E-02    3.5388E-01
+ (n,xn)                   0    0.            0.                  loss to (n,xn)           0    0.            0.        
+ prompt fission           0    0.            0.                  loss to fission          0    0.            0.        
+ delayed fission          0    0.            0.                                                                        
+     total           500000    1.0000E+00    1.4100E+01              total           500000    1.0000E+00    1.4100E+01
+
+   number of neutrons banked                       0        average time of (shakes)              cutoffs
+   neutron tracks per source particle     1.0000E+00          escape            9.7555E+00          tco   1.0000E+33
+   neutron collisions per source particle 6.4944E-01          capture           4.0882E+01          eco   0.0000E+00
+   total neutron collisions                   324720          capture or escape 1.0566E+01          wc1  -5.0000E-01
+   net multiplication              1.0000E+00 0.0000          any termination   1.0566E+01          wc2  -2.5000E-01
+
+ computer time so far in this run     0.00 minutes            maximum number ever in bank         0
+ computer time in mcrun               0.00 minutes            bank overflows to backup file       0
+ source particles per minute            0.0000E+00
+ random numbers generated                  6518268            most random numbers used was        2525 in history      456709
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+1neutron  activity in each cell                                                                         print table 126
+
+                 tracks     population   collisions   collisions     number        flux        average      average
+        cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                    (per history)    energy       energy     (relative)      (cm)
+
+     2     2       66956        66209        11501    2.2182E-02   2.1540E-01   1.2954E+01   9.8557E-01   9.5552E+00
+     3     3       66484        65737        11525    2.2308E-02   2.1586E-01   1.2953E+01   9.8556E-01   9.5481E+00
+     4     4       66079        65326        11489    2.2160E-02   1.9034E-01   1.2950E+01   9.8547E-01   9.5443E+00
+     5     5       66406        65569        11447    2.2021E-02   1.7479E-01   1.2933E+01   9.8542E-01   9.5373E+00
+     6     6      765925       500000       278758    5.3250E-01   1.2264E-01   1.2460E+01   9.7989E-01   9.2956E+00
+     7     7      500000       500000            0    0.0000E+00   1.8496E-01   1.1927E+01   9.7215E-01   0.0000E+00
+     8     8      500000       500000            0    0.0000E+00   1.8249E-01   1.1958E+01   9.7204E-01   0.0000E+00
+
+     total       2031850      1762841       324720    6.2117E-01
+
+ Mesh tallies written to file meshtal
+1problem summary                                                                                                           
+
+0
+ neutron creation    tracks      weight        energy            neutron loss        tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source              600000    1.0000E+00    1.4100E+01          escape              600000    9.7395E-01    1.1830E+01
+                                                                 energy cutoff            0    0.            0.        
+                                                                 time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ upscattering             0    0.            4.5376E-10          downscattering           0    0.            1.9163E+00
+ photonuclear             0    0.            0.                  capture                  0    2.6049E-02    3.5395E-01
+ (n,xn)                   0    0.            0.                  loss to (n,xn)           0    0.            0.        
+ prompt fission           0    0.            0.                  loss to fission          0    0.            0.        
+ delayed fission          0    0.            0.                                                                        
+     total           600000    1.0000E+00    1.4100E+01              total           600000    1.0000E+00    1.4100E+01
+
+   number of neutrons banked                       0        average time of (shakes)              cutoffs
+   neutron tracks per source particle     1.0000E+00          escape            9.6689E+00          tco   1.0000E+33
+   neutron collisions per source particle 6.4796E-01          capture           3.9951E+01          eco   0.0000E+00
+   total neutron collisions                   388774          capture or escape 1.0458E+01          wc1  -5.0000E-01
+   net multiplication              1.0000E+00 0.0000          any termination   1.0458E+01          wc2  -2.5000E-01
+
+ computer time so far in this run     0.00 minutes            maximum number ever in bank         0
+ computer time in mcrun               0.00 minutes            bank overflows to backup file       0
+ source particles per minute            0.0000E+00
+ random numbers generated                  7806921            most random numbers used was        2525 in history      456709
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+1neutron  activity in each cell                                                                         print table 126
+
+                 tracks     population   collisions   collisions     number        flux        average      average
+        cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                    (per history)    energy       energy     (relative)      (cm)
+
+     2     2       80397        79492        13753    2.2127E-02   2.1908E-01   1.2954E+01   9.8564E-01   9.5527E+00
+     3     3       79605        78702        13852    2.2330E-02   2.1677E-01   1.2954E+01   9.8561E-01   9.5479E+00
+     4     4       79485        78593        13807    2.2205E-02   1.8883E-01   1.2955E+01   9.8547E-01   9.5470E+00
+     5     5       79381        78400        13650    2.1905E-02   1.8312E-01   1.2935E+01   9.8542E-01   9.5393E+00
+     6     6      918868       600000       333712    5.3143E-01   1.2388E-01   1.2464E+01   9.7990E-01   9.2981E+00
+     7     7      600000       600000            0    0.0000E+00   1.8681E-01   1.1931E+01   9.7215E-01   0.0000E+00
+     8     8      600000       600000            0    0.0000E+00   1.8274E-01   1.1955E+01   9.7193E-01   0.0000E+00
+
+     total       2437736      2115187       388774    6.1999E-01
+
+ Mesh tallies written to file meshtal
+1problem summary                                                                                                           
+
+0
+ neutron creation    tracks      weight        energy            neutron loss        tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source              700000    1.0000E+00    1.4100E+01          escape              700000    9.7394E-01    1.1832E+01
+                                                                 energy cutoff            0    0.            0.        
+                                                                 time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ upscattering             0    0.            4.4611E-10          downscattering           0    0.            1.9135E+00
+ photonuclear             0    0.            0.                  capture                  0    2.6059E-02    3.5419E-01
+ (n,xn)                   0    0.            0.                  loss to (n,xn)           0    0.            0.        
+ prompt fission           0    0.            0.                  loss to fission          0    0.            0.        
+ delayed fission          0    0.            0.                                                                        
+     total           700000    1.0000E+00    1.4100E+01              total           700000    1.0000E+00    1.4100E+01
+
+   number of neutrons banked                       0        average time of (shakes)              cutoffs
+   neutron tracks per source particle     1.0000E+00          escape            9.5505E+00          tco   1.0000E+33
+   neutron collisions per source particle 6.4559E-01          capture           3.8825E+01          eco   0.0000E+00
+   total neutron collisions                   451910          capture or escape 1.0313E+01          wc1  -5.0000E-01
+   net multiplication              1.0000E+00 0.0000          any termination   1.0313E+01          wc2  -2.5000E-01
+
+ computer time so far in this run     0.00 minutes            maximum number ever in bank         0
+ computer time in mcrun               0.00 minutes            bank overflows to backup file       0
+ source particles per minute            0.0000E+00
+ random numbers generated                  9082039            most random numbers used was        2525 in history      456709
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+1neutron  activity in each cell                                                                         print table 126
+
+                 tracks     population   collisions   collisions     number        flux        average      average
+        cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                    (per history)    energy       energy     (relative)      (cm)
+
+     2     2       93669        92610        16036    2.2130E-02   2.2235E-01   1.2960E+01   9.8560E-01   9.5564E+00
+     3     3       92807        91766        16067    2.2197E-02   2.1218E-01   1.2955E+01   9.8554E-01   9.5486E+00
+     4     4       92763        91690        16049    2.2142E-02   1.8971E-01   1.2956E+01   9.8544E-01   9.5480E+00
+     5     5       92750        91598        15996    2.2018E-02   1.8256E-01   1.2937E+01   9.8538E-01   9.5408E+00
+     6     6     1071989       700000       387762    5.2944E-01   1.2592E-01   1.2468E+01   9.7991E-01   9.3000E+00
+     7     7      700000       700000            0    0.0000E+00   1.8913E-01   1.1933E+01   9.7215E-01   0.0000E+00
+     8     8      700000       700000            0    0.0000E+00   1.8476E-01   1.1954E+01   9.7196E-01   0.0000E+00
+
+     total       2843978      2467664       451910    6.1793E-01
+
+ Mesh tallies written to file meshtal
+1problem summary                                                                                                           
+
+0
+ neutron creation    tracks      weight        energy            neutron loss        tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source              800000    1.0000E+00    1.4100E+01          escape              800000    9.7388E-01    1.1831E+01
+                                                                 energy cutoff            0    0.            0.        
+                                                                 time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ upscattering             0    0.            4.4744E-10          downscattering           0    0.            1.9141E+00
+ photonuclear             0    0.            0.                  capture                  0    2.6119E-02    3.5491E-01
+ (n,xn)                   0    0.            0.                  loss to (n,xn)           0    0.            0.        
+ prompt fission           0    0.            0.                  loss to fission          0    0.            0.        
+ delayed fission          0    0.            0.                                                                        
+     total           800000    1.0000E+00    1.4100E+01              total           800000    1.0000E+00    1.4100E+01
+
+   number of neutrons banked                       0        average time of (shakes)              cutoffs
+   neutron tracks per source particle     1.0000E+00          escape            9.6292E+00          tco   1.0000E+33
+   neutron collisions per source particle 6.4702E-01          capture           3.8795E+01          eco   0.0000E+00
+   total neutron collisions                   517619          capture or escape 1.0391E+01          wc1  -5.0000E-01
+   net multiplication              1.0000E+00 0.0000          any termination   1.0391E+01          wc2  -2.5000E-01
+
+ computer time so far in this run     0.00 minutes            maximum number ever in bank         0
+ computer time in mcrun               0.00 minutes            bank overflows to backup file       0
+ source particles per minute            0.0000E+00
+ random numbers generated                 10394983            most random numbers used was        2525 in history      456709
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+1neutron  activity in each cell                                                                         print table 126
+
+                 tracks     population   collisions   collisions     number        flux        average      average
+        cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                    (per history)    energy       energy     (relative)      (cm)
+
+     2     2      106996       105803        18384    2.2202E-02   2.2671E-01   1.2955E+01   9.8547E-01   9.5543E+00
+     3     3      106025       104835        18257    2.2065E-02   2.1122E-01   1.2957E+01   9.8546E-01   9.5497E+00
+     4     4      106124       104880        18334    2.2116E-02   1.8783E-01   1.2956E+01   9.8535E-01   9.5488E+00
+     5     5      106139       104821        18264    2.1993E-02   1.8652E-01   1.2939E+01   9.8540E-01   9.5415E+00
+     6     6     1225284       800000       444380    5.3083E-01   1.2494E-01   1.2465E+01   9.7988E-01   9.2987E+00
+     7     7      800000       800000            0    0.0000E+00   1.8696E-01   1.1931E+01   9.7209E-01   0.0000E+00
+     8     8      800000       800000            0    0.0000E+00   1.7998E-01   1.1958E+01   9.7184E-01   0.0000E+00
+
+     total       3250568      2820339       517619    6.1920E-01
+
+ Mesh tallies written to file meshtal
+1problem summary                                                                                                           
+
+0
+ neutron creation    tracks      weight        energy            neutron loss        tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source              900000    1.0000E+00    1.4100E+01          escape              900000    9.7391E-01    1.1832E+01
+                                                                 energy cutoff            0    0.            0.        
+                                                                 time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ upscattering             0    0.            4.4795E-10          downscattering           0    0.            1.9133E+00
+ photonuclear             0    0.            0.                  capture                  0    2.6092E-02    3.5450E-01
+ (n,xn)                   0    0.            0.                  loss to (n,xn)           0    0.            0.        
+ prompt fission           0    0.            0.                  loss to fission          0    0.            0.        
+ delayed fission          0    0.            0.                                                                        
+     total           900000    1.0000E+00    1.4100E+01              total           900000    1.0000E+00    1.4100E+01
+
+   number of neutrons banked                       0        average time of (shakes)              cutoffs
+   neutron tracks per source particle     1.0000E+00          escape            9.5903E+00          tco   1.0000E+33
+   neutron collisions per source particle 6.4714E-01          capture           3.8869E+01          eco   0.0000E+00
+   total neutron collisions                   582430          capture or escape 1.0354E+01          wc1  -5.0000E-01
+   net multiplication              1.0000E+00 0.0000          any termination   1.0354E+01          wc2  -2.5000E-01
+
+ computer time so far in this run     0.00 minutes            maximum number ever in bank         0
+ computer time in mcrun               0.00 minutes            bank overflows to backup file       0
+ source particles per minute            0.0000E+00
+ random numbers generated                 11697152            most random numbers used was        2525 in history      456709
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+1neutron  activity in each cell                                                                         print table 126
+
+                 tracks     population   collisions   collisions     number        flux        average      average
+        cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                    (per history)    energy       energy     (relative)      (cm)
+
+     2     2      120383       119028        20675    2.2198E-02   2.2912E-01   1.2955E+01   9.8547E-01   9.5535E+00
+     3     3      119328       117983        20484    2.1996E-02   2.1180E-01   1.2961E+01   9.8551E-01   9.5504E+00
+     4     4      119254       117874        20521    2.2000E-02   1.9042E-01   1.2958E+01   9.8540E-01   9.5503E+00
+     5     5      119449       117972        20574    2.2041E-02   1.9561E-01   1.2939E+01   9.8550E-01   9.5426E+00
+     6     6     1378414       900000       500176    5.3115E-01   1.2510E-01   1.2465E+01   9.7990E-01   9.2982E+00
+     7     7      900000       900000            0    0.0000E+00   1.8780E-01   1.1932E+01   9.7212E-01   0.0000E+00
+     8     8      900000       900000            0    0.0000E+00   1.8226E-01   1.1960E+01   9.7182E-01   0.0000E+00
+
+     total       3656828      3172857       582430    6.1938E-01
+
+ Mesh tallies written to file meshtal
+1problem summary                                                                                                           
+
+      run terminated when     1000000  particle histories were done.
+0
+ neutron creation    tracks      weight        energy            neutron loss        tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source             1000000    1.0000E+00    1.4100E+01          escape             1000000    9.7392E-01    1.1831E+01
+                                                                 energy cutoff            0    0.            0.        
+                                                                 time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ upscattering             0    0.            4.4424E-10          downscattering           0    0.            1.9151E+00
+ photonuclear             0    0.            0.                  capture                  0    2.6077E-02    3.5436E-01
+ (n,xn)                   0    0.            0.                  loss to (n,xn)           0    0.            0.        
+ prompt fission           0    0.            0.                  loss to fission          0    0.            0.        
+ delayed fission          0    0.            0.                                                                        
+     total          1000000    1.0000E+00    1.4100E+01              total          1000000    1.0000E+00    1.4100E+01
+
+   number of neutrons banked                       0        average time of (shakes)              cutoffs
+   neutron tracks per source particle     1.0000E+00          escape            9.5922E+00          tco   1.0000E+33
+   neutron collisions per source particle 6.4713E-01          capture           3.8194E+01          eco   0.0000E+00
+   total neutron collisions                   647130          capture or escape 1.0338E+01          wc1  -5.0000E-01
+   net multiplication              1.0000E+00 0.0000          any termination   1.0338E+01          wc2  -2.5000E-01
+
+ computer time so far in this run     0.00 minutes            maximum number ever in bank         0
+ computer time in mcrun               0.00 minutes            bank overflows to backup file       0
+ source particles per minute            0.0000E+00
+ random numbers generated                 12998025            most random numbers used was        2525 in history      456709
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+1neutron  activity in each cell                                                                         print table 126
+
+                 tracks     population   collisions   collisions     number        flux        average      average
+        cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                    (per history)    energy       energy     (relative)      (cm)
+
+     2     2      133673       132153        22984    2.2207E-02   2.2980E-01   1.2957E+01   9.8547E-01   9.5540E+00
+     3     3      132803       131298        22843    2.2062E-02   2.0988E-01   1.2957E+01   9.8544E-01   9.5489E+00
+     4     4      132394       130868        22707    2.1920E-02   1.9543E-01   1.2958E+01   9.8544E-01   9.5497E+00
+     5     5      132834       131168        22887    2.2062E-02   1.9234E-01   1.2941E+01   9.8545E-01   9.5431E+00
+     6     6     1531704      1000000       555709    5.3115E-01   1.2588E-01   1.2464E+01   9.7992E-01   9.2976E+00
+     7     7     1000000      1000000            0    0.0000E+00   1.8560E-01   1.1930E+01   9.7213E-01   0.0000E+00
+     8     8     1000000      1000000            0    0.0000E+00   1.8421E-01   1.1959E+01   9.7189E-01   0.0000E+00
+
+     total       4063408      3525487       647130    6.1941E-01
+
+ Mesh tallies written to file meshtal
+ tally data written to file test_m
+
+          1 warning message so far.
+
+
+ run terminated when     1000000  particle histories were done.
