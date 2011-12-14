@@ -1,2 +1,0 @@
-#!/bin/sh
-../../Source/src/mcnp5 i=meshtalTest.i g=meshtalTest.sat n=output_
