@@ -1,0 +1,9 @@
+Notes on converting this from pjsouff's test suite:
+
+* ZEBR8H: The 'area' card on the input file is commented out
+          in Patrick's original template file for a faceting 
+          tolerance of 1e-4.  For other tolerances the card
+          exists.  I have left the card uncommented in this 
+          test suite's input file.  The presence or absence
+          of the card does not seem to affect the results at all.
+
