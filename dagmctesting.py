@@ -132,9 +132,9 @@ class DagmcTestContext(BuildContext):
         if( self.options.use_mpi ):
             mpistr = 'mpiexec -np {0}'.format( self.env.MPI_JOBS )
 
-        kw['rule'] = 'cd {0};'.format(indir) + \
+        kw['rule'] = "bash -c 'cd {0};".format(indir) + \
                      'rm -f meshta? {0}? {0}*.vtk;'.format(args['n']) +\
-                     ' '.join( [mpistr, '${DAGEXE}', flagstr, argstring, redirstring] )
+                     ' '.join( [mpistr, '${DAGEXE}', flagstr, argstring, redirstring] ) + "'"
 
         kw['name'] = 'run dag-mcnp ' + case.name
         kw['source'] = ['wscript'] + [os.path.join(indir,x) for x in (args['inp'],args['gcad'])]
@@ -162,20 +162,16 @@ class DagmcTestContext(BuildContext):
 
             # First part of the diff rule
             if not key.endswith('.vtk'):
-                diff_rule = "diff -bw {0} {1}".format( ref, check )
+                diff_rule = "bash -c 'diff -bw {0} {1}".format( ref, check )
             else:
                 # For diffing vtk files, elide the second line of each file
                 # (The second line is a version specifier that changes with each new MOAB revision)
-                # Note that this opens a single quote, so needs to be closed below
                 diff_rule = "bash -c 'diff <(sed -e 2d {0}) <(sed -e 2d {1})".format( ref,check )
             
             # diff returns 1 if files differ, but we don't want waf to halt in such a case
             # Make waf only halt if diff returns 2, indicating an actual error (like a missing file)
-            diff_rule += " > ${TGT}; if [ $? == 2 ] \n then \n exit 1 \n fi"
+            diff_rule += " > ${TGT}; if [ $? == 2 ] \n then \n exit 1 \n fi'"
 
-            if key.endswith('.vtk'):
-                diff_rule += "'"
-            
             # create the rule
             self( rule = diff_rule, 
                   source = [ref, check], target = [os.path.join(indir,'dif{0}'.format(key)) ],
