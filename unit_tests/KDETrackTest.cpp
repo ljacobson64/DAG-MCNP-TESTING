@@ -26,7 +26,8 @@ inline bool DOUBLE_EQUAL( double x, double v ) {
 bool TestChangeBandwidth() {
 
   // make default test KDETrack object
-  KDETrack track;
+  KDEKernel kernel;
+  KDETrack track( &kernel );
 
   // change the bandwidth
   moab::CartVect newBandwidth( 0.1, 0.2, 0.3 );
@@ -50,7 +51,8 @@ bool TestChangeBandwidth() {
 bool TestChangeTrackSegment() {
 
   // make default test KDETrack object
-  KDETrack track;
+  KDEKernel kernel;
+  KDETrack track( &kernel );
 
   // change the track segment
   moab::CartVect newStartPoint( -1, 0, 1 );
@@ -84,7 +86,8 @@ bool TestChangeTrackSegment() {
 bool TestPointWithinMaxRadius() {
 
   // make default test KDETrack object along the x-axis
-  KDETrack track;
+  KDEKernel kernel;
+  KDETrack track( &kernel );
 
   // get neighborhood that was set in the constructor
   double box_min[3];
@@ -153,8 +156,8 @@ bool TestComputeContribution1() {
   moab::CartVect direction( 1/sqrt(3), 1/sqrt(3), 1/sqrt(3) );
   moab::CartVect bandwidth( 0.1, 0.1, 0.1 );
   double length = 1.0;
-  KDEKernel::KernelType k( KDEKernel::EPANECHNIKOV );
-  KDETrack track( start_point, direction, bandwidth, length, k );
+  KDEKernel kernel;
+  KDETrack track( start_point, direction, bandwidth, length, &kernel );
   
   moab::CartVect calc_point( -0.215, -0.157, -0.1 );
   double contribution = track.compute_contribution( calc_point );
@@ -372,8 +375,8 @@ bool TestComputeContribution2() {
   moab::CartVect direction( 1/sqrt(3), 1/sqrt(3), 1/sqrt(3) );
   moab::CartVect bandwidth( 0.1, 0.1, 0.1 );
   double length = 1.0;
-  KDEKernel::KernelType k( KDEKernel::EPANECHNIKOV );
-  KDETrack track( start_point, direction, bandwidth, length, k );
+  KDEKernel kernel;
+  KDETrack track( start_point, direction, bandwidth, length, &kernel );
  
   double calc_point1[] = { -0.215, -0.157, -0.1 };
   double contribution = track.compute_contribution( calc_point1 );
@@ -407,8 +410,8 @@ bool TestSetNeighborhood() {
   moab::CartVect direction( 0, 0.7071, -0.7071 );
   moab::CartVect bandwidth( 0.1, 0.1, 0.1 );
   double length = 1.0;
-  KDEKernel::KernelType k( KDEKernel::EPANECHNIKOV );
-  KDETrack track( start_point, direction, bandwidth, length, k );
+  KDEKernel kernel;
+  KDETrack track( start_point, direction, bandwidth, length, &kernel );
 
   // get neighborhood that was set in the constructor
   double box_min[3];
@@ -446,8 +449,8 @@ void TestPointSpeed() {
   moab::CartVect direction( 0.2, sqrt(0.96), 0 );
   moab::CartVect bandwidth( 0.1, 0.1, 0.1 );
   double length = 1.0;
-  KDEKernel::KernelType k( KDEKernel::EPANECHNIKOV );
-  KDETrack track( start_point, direction, bandwidth, length, k );
+  KDEKernel kernel;
+  KDETrack track( start_point, direction, bandwidth, length, &kernel );
 
   // create test calculation points
   moab::CartVect case1( 0.28, 0, 0 );         // outside radius
