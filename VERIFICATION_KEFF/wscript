@@ -10,7 +10,7 @@ sys.path.append('..')
 from dagmctesting import *
 
 
-DagmcTestContext.intcases = xrange(1,75)
+DagmcTestContext.intcases = xrange(1,76)
 
 def setup_testcases( self ):
     self.allcases = ['{0:02d}'.format( c ) for c in self.intcases ]
