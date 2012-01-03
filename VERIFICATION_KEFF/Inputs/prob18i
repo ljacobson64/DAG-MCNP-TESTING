@@ -1,0 +1,20 @@
+Uc-HZO(2)-l-O-SP
+c  CELL CARDS
+c 1  1    1.0    -1    $SPHERE
+c 2  2    1.0    -2 1  $REFLECTOR
+c 3  0            2    $OUTSIDE WORLD
+c
+c  SURFACE CARDS
+c 1  so  6.12745  
+c 2  so  12.2549
+c 
+c  DATA CARDS
+c imp:n   1 1 0
+kcode   20000  1.5  50  2050
+ksrc    0.0    0.0  0.0
+c sdef pos 0 0 0
+m1      92250.06m 1.0
+m2      92250.03m 1.0
+mgopt f 1
+phys:n  j 100
+prdmp   2j -1 2

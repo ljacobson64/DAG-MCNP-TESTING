@@ -1,0 +1,16 @@
+Ua-1-0-CY
+c  CELL CARDS
+c 1  1    1.0    -1      $SEMI-INFINITE CYLINDER
+c 2  0            1      $OUTSIDE WORLD
+c
+c  SURFACE CARDS
+c 1  rcc 0 0 0   0 0 1e12  5.284935
+c 
+c  DATA CARDS
+c imp:n   1  0
+kcode   20000  1.0  50  2050
+ksrc    0.0    0.0  1.0e6
+m1      92250.04m 1.0
+mgopt f 1
+phys:n  j 100
+prdmp   2j -1 2

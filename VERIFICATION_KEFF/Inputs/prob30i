@@ -1,0 +1,25 @@
+Ue-Fe-Na-l-0-SL
+c  Reflector is on both sides, moderator is on one side
+c  CELL CARDS
+c 1  1   1.0    -2    1      $SEMI-INFINITE SLAB
+c 2  2   1.0   (3 -1):(-4 2) $REFLECTOR
+c 3  3   1.0     4  -5       $MODERATOR
+c 4  0           5 : -3      $OUTSIDE WORLD
+c
+c  SURFACE CARDS
+c 1  px  0.0
+c 2  px  5.119720083
+c 3  px -0.317337461
+c 4  px  5.437057544 
+c 5  px  7.757166007
+c
+c  DATA CARDS
+c imp:n   1  1  1  0
+kcode   20000  1.0  100  2100
+ksrc    0.5   0.0  0.0
+m1      92250.10m 1.0
+m2      92250.11m 1.0
+m3      92250.12m 1.0
+mgopt f 1
+phys:n  j 100
+prdmp   2j -1 2

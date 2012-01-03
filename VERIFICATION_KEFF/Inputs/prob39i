@@ -1,0 +1,16 @@
+UD20a-l-I-SP
+c  CELL CARDS
+C 1  1    1.0    -1      $SPHERE
+C 2  0            1      $OUTSIDE WORLD
+C
+c  SURFACE CARDS
+C 1  so   18.30563081
+C
+c  DATA CARDS
+C imp:n   1  0
+kcode   20000  1.0  100  2100
+ksrc    0.0    0.0  0.0
+m1      92250.19m 1.0
+mgopt f 1
+phys:n  j 100
+prdmp   2j -1 2
