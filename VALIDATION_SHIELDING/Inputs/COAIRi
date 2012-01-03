@@ -1,0 +1,103 @@
+tld Co-60 benchmark problem:  air
+c         this file uses mcnp to model the hupmobile thermo-
+c     luminescent dosimeter radiation experiment.  this experi-
+c     ment consisted of a point radiation source and a teflon cylin-
+c     der 1 ft long with 17 lif tlds imbedded along its axis at spec-
+c     ified intervals.  the point source was located 1 meter from one
+c     edge of the cylinder along its axis.
+c         the teflon cylinder has steel walls 1/4 inch thick and was
+c     divided into cells that were disks along its axis and rings con-
+c     centric with these disks.  the cells were 2.54 cm thick along
+c     the axis--this is approximately 1 mfp of gammas in teflon.  a
+c     ten-meter sphere centered at the center of the cylinder formed
+c     the boundary of the problem.
+c 1      2 -7.874   -14   12  -18
+c 2      2 -7.874   -13   15   16   -18
+c 3      3 -0.00125 -13   15  -16
+c 4      1 -2.1     -12   10  -16
+c 5      1 -2.1     -10    8  -16
+c 6      1 -2.1      -8    6  -16
+c 7      1 -2.1      -6    4  -16
+c 8      1 -2.1      -4    2  -16
+c 9      1 -2.1      -2    1  -16
+c 10     1 -2.1      -1    3  -16
+c 11     1 -2.1      -3    5  -16
+c 12     1 -2.1      -5    7  -16
+c 13     1 -2.1      -7    9  -16
+c 14     1 -2.1      -9   11  -16
+c 15     1 -2.1     -11   13  -16
+c 16     0           19
+c 17     1 -2.1      13   -9   16   -17
+c 18     1 -2.1       9   -5   16   -17
+c 19     1 -2.1       5   -1   16   -17
+c 20     1 -2.1       1   -4   16   -17
+c 21     1 -2.1       4   -8   16   -17
+c 22     1 -2.1       8  -12   16   -17
+c 23     3 -0.00125 -15  -19
+c 24     3 -0.00125  15   18  -14   -19
+c 25     3 -0.00125  14  -19
+c 26     2 -7.874    13   -9   17   -18
+c 27     2 -7.874     9   -5   17   -18
+c 28     2 -7.874     5   -1   17   -18
+c 29     2 -7.874     1   -4   17   -18
+c 30     2 -7.874     4   -8   17   -18
+c 31     2 -7.874     8  -12   17   -18
+c
+c 1      px       0
+c 2      px       2.54
+c 3      px      -2.54
+c 4      px       5.08
+c 5      px      -5.08
+c 6      px       7.62
+c 7      px      -7.62
+c 8      px      10.16
+c 9      px     -10.16
+c 10     px      12.70
+c 11     px     -12.70
+c 12     px      15.24
+c 13     px     -15.24
+c 14     px      15.875
+c 15     px     -16.193
+c 16     cx       6.985
+c 17     cx      13.97           $ cannister inner  bdy. (5.5")
+c 18     cx      14.605          $ cannister outer  bdy. (5.75")
+c 19     so     300.
+c  
+mode p
+imp:p  0 0 0 1 0 18r 1 1 1 0 5r 0
+sdef  pos= -115.24 0 0 erg=d1
+      dir=d2 vec=1 0 0
+si1  l 1.1725 1.33
+sp1  d 1.0    1.0
+c    source biasing: the source was biased to launch the majority
+c    of its particle in two half-cones subtending the teflon
+c    cylinder and the reference detector
+si2  h -1 -0.9999 -0.9 -0.8   .7   .8  .9   .98   1
+sp2  d  0   .0001 .0999  .1  1.5   .1  .1   .08    .02
+c     sb2  d 0      .01  .05  .2  1   5   20 50 100
+sb2  d  0   .005 .5 .1 .1 .005 .001   1e-4 1e-5
+c    point detectors were used their tallies were multiplied by an
+c    fm card to obtain dose.
+f5:p    -215.24 0 0 .1
+c
+c        use LiF for a detector, and not teflon
+fm5     5.20704e-5   4   -5   -6
+c    phys:p j 1
+prdmp  j  2000000  -2
+c
+c      use natural carbon and include LiF for detectors
+c
+m1    6000.04p    .333
+      9000.04p    .667
+m2   26000.04p   1.0
+m3    7000.04p  -0.7818
+      8000.04p  -0.2097
+     18000.04p  -0.0073
+     12000.04p  -0.0012
+c              LiF
+m4    3000.04p    .5
+      9000.04p    .5
+print
+nps       1000000
+
+ end

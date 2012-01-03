@@ -1,0 +1,143 @@
+gamma  ray skyshine experiment  d hollowell 3/90
+c
+c     this mcnp file is an attempt to recreate the gamma
+c      ray skyshine experiment of Nason, Shultis, Faw and
+c      Clifford, Nuc. Sci. & Engineering 79 (1981), p 404.
+c      this input deck should model an approximately 150
+c      degree upward cone gamma ray source, from cobalt 60.  
+c      we measure the dose at 100 m intervals from the source,
+c      out to 700 m, and we measure it at 50 m.  we use
+c      ring detectors for this measurement.
+c     the majority of effort in setting up this problem is
+c      getting a good geometry to give good weight to the
+c      detected photons.
+c     
+c     the region directly illuminated by the source is
+c      divided into concentric spheres.  the region above 
+c      the ground indirectly illuminated is divided into
+c      a set of nestled cones, all with ~ 150 degree 
+c      opening.  the ground is divided into three layers.
+c
+c 1    1  -.001124   -1      +7   -20  #31
+c 2    1  -.001124   +1  -2  +7   -20
+c 3    1  -.001124   +2  -3  +7   -20
+c 4    1  -.001124   +3  -4  +7   -20
+c 5    1  -.001124   +4  -5  +7   -20
+c 6    1  -.001124       +5  -6    +7  -20
+c 7           0              +6:  -42 : +26
+c 21    1  -.001124   -1      +7   +20
+c 22    1  -.001124   +1  -6  +7   +20  -21
+c 23    1  -.001124   +1  -6  +7   +21  -22
+c 24    1  -.001124       -6  +7   +22  -23
+c 25    1  -.001124       -6  +7   +23  -24
+c 26    1  -.001124       -6  +7   +24  -25
+c 27    1  -.001124       -6  +7   +25  -26
+c 31    0                     +7   +30  -31  -32
+c 40    0                     -7   +42  -31
+c 41    2  -2.6           -6  -7   +31  +40 -26
+c 42    2  -2.6           -6  -40  +31  +41 -26
+c 43    2  -2.6           -6  -41  +31  +42 -26
+c 
+c 1     so      3000.                $  a concentric spherical shell
+c 2     so     13000.                $  a concentric spherical shell
+c 3     so     35000.                $  a concentric spherical shell
+c 4     so     55000.                $  a concentric spherical shell
+c 5     so     75000.                $  a concentric spherical shell
+c 6     so    100000.                $  an outer boundary to the problem
+c 7     pz     0.                    $  the ground/air interface
+c 20     kz      -60.   20.346   +1   $  cone with xy plane radius 217cm
+c 21     kz     -665.   20.346   +1   $  cone with xy plane radius 3000cm
+c 22     kz    -2882.   20.346   +1   $  cone with xy plane radius 13000cm
+c 23     kz    -7759.   20.346   +1   $  cone with xy plane radius 35000cm
+c 24     kz   -12193.   20.346   +1   $  cone with xy plane radius 55000cm
+c 25     kz   -16627.   20.346   +1   $  cone with xy plane radius 75000cm
+c 26     kz   -22169.   20.346   +1   $  cone with xy plane radius 100000cm
+c c      cz  125.                     $  columation silo inner diameter
+c 30     cz  117.75                   $  columation silo inner diameter
+c      cz  129.41                   $  columation silo inner diameter
+c 31     cz  217.5                    $  columation silo outer diameter
+c 32     pz  229.                     $  plane at the top of the silo
+c 40     pz   -3.                     $  underground plane for photon imp.
+c 41     pz   -6.                     $  underground plane for photon imp.
+c 42     pz   -9.                     $  underground plane for photon imp.
+c 
+c        the importances have been found, more or less, by trial and error
+imp:p    0  1  1.7  2  3.3  6.7  17.   0
+          10. 2.0  3  7.0  27.  100.  400.
+           0.  0.  2.  4.   6. 0
+c
+c     material #1 is dry air, and #2 is dirt
+c
+m1    6000.04p  .000125      7000.04p  .686910
+      8000.04p  .301248     18000.04p  .011717
+m2    8000.04p  .46133
+     11023.04p  .02346
+     13000.04p  .08272
+     14000.04p  .28038
+     20000.04p  .04126
+     26000.04p  .05598
+c
+mode p
+c
+c
+sdef pos = 0. 0. 198.  erg = d1
+sc1  for cobalt 60 photons
+si1  l  1.173  1.322
+sp1  d  1.     1.
+f5z:p   100.  5000.  99.
+c
+c        the ring detectors are set up to give dose, which will
+c         later be understood in terms of dose/source strength
+c
+f15z:p   100. 10000.  99.
+f25z:p   100. 20000.  99.
+f35z:p   100. 30000.  99.
+f45z:p   100. 40000.  99.
+f55z:p   100. 50000.  99.
+f65z:p   100. 60000.  99.
+f75z:p   100. 70000.  99.
+c
+c     Note that MCNP will give flux as 1/cm**2, per source particle.
+c     To change this to a dose we use the flux multiplier card "FM".
+c     For a given # tally, the fm card fm#   rho  m  -5 -6" will
+c     produce a tally with dose units MeV/cm**3.   In this card "rho"
+c     is the number density (#/(cm*barn)) of the absorbing particles
+c     and "m" is the material number of the absorbing particles.  The
+c     -5 and -6 specify to include (respectively) the interaction
+c     cross section and the heating fraction.  This "fm" card provides
+c     results in MeV/cm**3 per history, and we want, for instance,
+c     [rad/history].  Since 1 rad = 100 erg/g  ,  we can convert the
+c     number produced by this "fm" card to [rad/history] by multiplying
+c     the tally result by
+c     {[1.602e-6(erg/MeV)] * [1(rad)/100(erg/g))] /
+c                                [mass density (g/cm**3)]}
+c     which is 1.43e-05 if the density is .0011 g/cm**3 ... this
+c     multiplicative factor takes Mev/cm**3/history to rad/history.
+c     In the case of Nason Shultis and Faw, they wanted an answer in
+c     microrad/hour/Ci (where Ci is source strength in curies).  For a
+c     666 Ci source, then, to convert from rad/history to microrad/hr/Ci
+c     we multiply further, by a factor:
+c     { [3.7e+10((history/sec)/(Ci))] * [666(Ci)] * [3600(sec/hr)] *
+c                       [1.e+06(microrad/rad)] }  /  [666(Ci)]
+c     which is 1.332e+20 ... this converts rad/history to microrad/
+c     hr/Ci.    We multiply these two factors together to get the
+c     multiplicative factor that converts the "fm" card's MeV/cm**3
+c     to microrad/hr/Ci,  this final multiplicative factor is 1.905e+15
+c
+fm5      4.541e-05  1 -5 -6
+fm15     4.541e-05  1 -5 -6
+fm25     4.541e-05  1 -5 -6
+fm35     4.541e-05  1 -5 -6
+fm45     4.541e-05  1 -5 -6
+fm55     4.541e-05  1 -5 -6
+fm65     4.541e-05  1 -5 -6
+fm75     4.541e-05  1 -5 -6
+c
+c          the low energy photons are not worth the bother
+c          since they are below the detector response function cutoff
+cut:p      1.e+33 0.0399
+c
+prdmp  j  2000000  -2
+nps   1000000
+
+ end
