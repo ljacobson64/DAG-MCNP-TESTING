@@ -45,7 +45,8 @@ def get_case_definition( self, casename ):
     case.inputs['inp'] = 'Inputs/inp'+casename
     
     if self.options.facet_inputs: 
-        case.inputs['gcad'] = 'geom_h5m2/geom{0}.h5m'.format( casename )
+        #case.inputs['gcad'] = 'geom_h5m2/geom{0}.h5m'.format( casename )
+        case.inputs['gcad'] = 'geom_h5m/1E-4_inp{0}.h5m'.format( casename )
     else:
         case.inputs['gcad'] = 'geom_sat/geom{0}.sat'.format( casename )
         case.flags.append( 'ftol=1e-4' )
