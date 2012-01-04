@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Downloading the original h5m collection requires 4.4 GB of disk space"
+echo "and access to the CNERG archive.  Export geom_h5m from archive? (y/n)"
+read response
+case "$response" in 
+    y|Y) 
+        echo "Downloading..."
+        svn export file:///filespace/groups/cnerg/archive/dag_vv/dag_test_suites/VALIDATION_SHIELDING/geom_h5m ;;
+    *) echo "Taking no action" ;;
+esac
+
+
