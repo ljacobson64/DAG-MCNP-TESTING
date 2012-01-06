@@ -282,8 +282,8 @@ def test(bld):
 
     for c in bld.cases: 
         case = bld.get_case_definition(c)
-        bld.mcnp_case_setup( case, geomtype = 'h5m' )
-        bld.runmcnp( case, ftol=1e-4, geomtype='h5m' )
+        bld.mcnp_case_setup( case )
+        bld.runmcnp( case )
         bld.diffmcnp( case ) 
         
     bld.add_post_fun( summary  )
