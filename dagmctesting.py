@@ -137,7 +137,8 @@ class DagmcTestContext(BuildContext):
                      ' '.join( [mpistr, '${DAGEXE}', flagstr, argstring, redirstring] ) + "'"
 
         kw['name'] = 'run dag-mcnp ' + case.name
-        kw['source'] = ['wscript'] + [os.path.join(indir,x) for x in (args['inp'],args['gcad'])]
+        kw['source'] = ['wscript', os.path.join(indir,args['inp'])] 
+        if 'gcad' in args: kw['source'].append( os.path.join(indir, args['gcad']) )
         if extra_src is not None: kw['source'].extend( extra_src )
         outputs = case.outputs
 
