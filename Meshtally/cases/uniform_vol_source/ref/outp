@@ -1,0 +1,117 @@
+      1-       Input file for verification problem #08: uniform volume source                  
+      2-       c Cell Cards                                                                    
+      3-       1  1  -2  -1  imp:n=1                                                           
+      4-       c This cell is needed to avoid KDE boundary issues                              
+      5-       2  1  -2   1 -2  imp:n=1                                                        
+      6-       3  0       2  imp:n=0                                                           
+      7-                                                                                       
+      8-       c Surface Cards                                                                 
+      9-       1   so  0.1                                                                     
+     10-       2   so  0.12                                                                    
+     11-                                                                                       
+     12-       mode n                                                                          
+     13-       c boron - "pure" absorber                                                       
+     14-       m1 5010 1                                                                       
+     15-       c uniform spherical volume source                                               
+     16-       c * radius 0.12 cm                                                              
+     17-       c * mono-energetic: 10 eV                                                       
+     18-       sdef pos=0 0 0 rad=d1 erg=1e-5                                                  
+     19-       si1 0 0.12                                                                      
+     20-       sp1  -21  2                                                                     
+     21-       c TET track length mesh tally for cell 1                                        
+     22-       fmesh24:n geom=dag                                                              
+     23-       fc24 dagmc type=tracklen inp=tet_mesh.h5m out=test_tracklen.vtk -dagmc          
+     24-       c KDE collision mesh tally for cell 1                                           
+     25-       fmesh34:n geom=dag                                                              
+     26-       fc34 dagmc type=kde_coll inp=tet_mesh.h5m out=test_kde_coll.vtk                 
+     27-                  hx=0.00722668 hy=0.00721741 hz=0.00722104 -dagmc                     
+     28-       c KDE track length mesh tally for cell 1                                        
+     29-       fmesh44:n geom=dag                                                              
+     30-       fc44 dagmc type=kde_track inp=tet_mesh.h5m out=test_kde_track.vtk               
+     31-                  hx=0.00722668 hy=0.00721741 hz=0.00722104 -dagmc                     
+     32-       c                                                                               
+     33-       nps 1e6                                                                         
+     34-       prdmp 2j -1                                                                     
+1cells                                                                                                  print table 60
+
+                      atom        gram                                     neutron                                     
+        cell  mat    density     density     volume       mass     pieces importance                                   
+
+     1     1    1  1.20285E-01 2.00000E+00 4.18879E-03 8.37758E-03     1  1.0000E+00                                   
+     2     2    1  1.20285E-01 2.00000E+00 3.04944E-03 6.09888E-03     1  1.0000E+00                                   
+     3     3    0  0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00     0  0.0000E+00                                   
+
+ total                                     7.23823E-03 1.44765E-02
+
+    minimum source weight = 1.0000E+00    maximum source weight = 1.0000E+00
+
+ ***************************************************
+ * Random Number Generator  =                    1 *
+ * Random Number Seed       =       19073486328125 *
+ * Random Number Multiplier =       19073486328125 *
+ * Random Number Adder      =                    0 *
+ * Random Number Bits Used  =                   48 *
+ * Random Number Stride     =               152917 *
+ ***************************************************
+
+1cross-section tables                                                                                   print table 100
+
+     table    length
+
+                        tables from file c00740/endf70a                                                  
+
+   5010.70c   30651   5-B - 10 at 293.6K from endf/b-vii.0 njoy99.248                             mat 525      08/24/07
+
+  total       30651
+1problem summary                                                                                                           
+
+      run terminated when     1000000  particle histories were done.
+0
+ neutron creation    tracks      weight        energy            neutron loss        tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source             1000000    1.0000E+00    1.0000E-05          escape              253137    2.5138E-01    2.5113E-06
+                                                                 energy cutoff            0    0.            0.        
+                                                                 time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    8.2824E-03    8.2684E-08          weight cutoff       746863    8.2323E-03    8.2212E-08
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ upscattering             0    0.            1.5817E-12          downscattering           0    0.            1.3955E-08
+ photonuclear             0    0.            0.                  capture                  0    7.4867E-01    7.4752E-06
+ (n,xn)                   0    0.            0.                  loss to (n,xn)           0    0.            0.        
+ prompt fission           0    0.            0.                  loss to fission          0    0.            0.        
+ delayed fission          0    0.            0.                                                                        
+     total          1000000    1.0083E+00    1.0083E-05              total          1000000    1.0083E+00    1.0083E-05
+
+   number of neutrons banked                       0        average time of (shakes)              cutoffs
+   neutron tracks per source particle     1.0000E+00          escape            8.6052E-01          tco   1.0000E+33
+   neutron collisions per source particle 7.6380E-01          capture           6.9644E-01          eco   0.0000E+00
+   total neutron collisions                   763803          capture or escape 7.3769E-01          wc1  -5.0000E-01
+   net multiplication              1.0000E+00 0.0000          any termination   7.3734E-01          wc2  -2.5000E-01
+
+ computer time so far in this run     0.00 minutes            maximum number ever in bank         0
+ computer time in mcrun               0.00 minutes            bank overflows to backup file       0
+ source particles per minute            0.0000E+00
+ random numbers generated                  8393691            most random numbers used was          60 in history      287440
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+1neutron  activity in each cell                                                                         print table 126
+
+                 tracks     population   collisions   collisions     number        flux        average      average
+        cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                    (per history)    energy       energy     (relative)      (cm)
+
+     1     1      669249       668842       499436    4.9478E-01   9.9837E-06   9.9858E-06   9.9156E-01   4.2563E-02
+     2     2      602388       592244       264367    2.6231E-01   9.9870E-06   9.9886E-06   9.9297E-01   4.2570E-02
+
+     total       1271637      1261086       763803    7.5709E-01
+
+ Mesh tallies written to file meshtal
+ tally data written to file test_m
+
+
+ run terminated when     1000000  particle histories were done.
