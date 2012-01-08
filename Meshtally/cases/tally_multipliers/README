@@ -1,0 +1,19 @@
+Verification Test Problem: 06
+Feature Testing: tally multipliers 
+Brief Description: rectangular prism with reflecting boundaries split into equal
+                   water and steel regions by a plane orthogonal to the x-axis
+
+Input files:
+-----------
+tally_multipliers.inp - mesh tally input file using native geometry
+mcnp_mesh.h5m - orthogonal mesh for KDE tallies
+steel_tet_mesh.h5m - tetrahedral mesh for TET track tally (steel region)
+water_tet_mesh.h5m - tetrahedral mesh for TET track tally (water region)
+
+Reference files:
+---------------
+ref/outp - MCNP outp file for this test case
+ref/kde_coll.vtk - KDE collision tally results
+ref/kde_track.vtk - KDE track tally results
+ref/steel_tracklen.vtk - TET track tally results (steel region)
+ref/water_tracklen.vtk - TET track tally results (water region)

@@ -1,0 +1,20 @@
+Verification Test Problem: 07
+Feature Testing: conformal mesh 
+Brief Description: two cadmium cylinders with different orientations contained
+                   within a rectangular prism with reflecting boundaries filled
+                   with water 
+
+Input files for right cylinder:
+------------------------------
+right_conformal_mesh.inp - mesh tally input file using dagmc geometry
+dagmc_preproc_right_cylinder.h5m - dagmc geometry file replacing right
+                                   cylinder (vol 3) with mesh
+right_cylinder.h5m - tetrahedral mesh for KDE and TET track tallies
+
+Reference files for right cylinder:
+----------------------------------
+ref/right_outp - MCNP outp file for this test case
+ref/right_meshtal - MCNP fmesh tally results (based on dagmc geometry)
+ref/right_kde_coll.vtk - KDE collision tally results
+ref/right_kde_track.vtk - KDE track tally results
+ref/right_tracklen.vtk - TET track tally results

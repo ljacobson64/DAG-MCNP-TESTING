@@ -1,0 +1,43 @@
+Input file for verification problem #01: uniform flux 
+c Cell Cards
+1  0    1 -2 3 -4 5 -6    imp:n=1
+c This cell is needed to avoid KDE boundary issues
+2  0    7 -8 9 -10 11 -12 (-1:2:-3:4:-5:6)    imp:n=1  
+3  0    -7:8:-9:10:-11:12    imp:n=0
+
+c Surface Cards
+1  px 0
+2  px 5 
+3  py -0.5
+4  py  0.5
+5  pz -0.5
+6  pz  0.5
+7  px -0.5
+8  px  5.5
+9  py -1
+10 py  1
+11 pz -1
+12 pz  1
+
+mode n
+c planar surface source
+c * mono-directional: x-direction
+c * mono-energetic: 1 MeV
+c * uniform distribution on -1 < (y,z) < 1
+c NOTE: source size and placement avoids KDE boundary issues
+sdef x=-0.5 y=d1 z=d2 vec=1 0 0 dir=1 erg=1
+si1 H -1 1
+sp1  0  1  
+si2 H -1 1
+sp2  0  1
+c TET track length mesh tally for cell 1
+fmesh24:n geom=dag
+fc24 dagmc type=tracklen inp=tet_mesh.h5m out=test_tracklen.vtk
+           conformal=1 -dagmc
+c KDE track length mesh tally for cell 1
+fmesh44:n geom=dag
+fc44 dagmc type=kde_track inp=mcnp_mesh.h5m out=test_kde_track.vtk
+           hx=0.1042 hy=0.0625 hz=0.0625 -dagmc
+c
+nps 1e5
+prdmp 2j -1
