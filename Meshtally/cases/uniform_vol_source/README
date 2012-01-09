@@ -11,6 +11,12 @@ tet_mesh.h5m - tetrahedral mesh for KDE and TET track tallies
 Reference files:
 ---------------
 ref/outp - MCNP outp file for this test case
-ref/kde_coll.vtk - KDE collision tally results
-ref/kde_track.vtk - KDE track tally results
+*ref/kde_coll.vtk - KDE collision tally results
+*ref/kde_track.vtk - KDE track tally results
 ref/tracklen.vtk - TET track tally results
+
+* NOTE: the KDE results for this test case are included solely for regression
+testing purposes as they are not statistically comparable to MCNP for the
+global bandwidth value that was used.  The cause of the bias in the KDE results
+is currently under investigation and is expected to be related to the choice of
+bandwidth.
