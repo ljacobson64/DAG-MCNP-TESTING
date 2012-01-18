@@ -12,6 +12,8 @@ def options(opt):
                    help = 'Use faceted input geometries instead of CAD geometries' )
     opt.add_option('--mpi', action='store_true', default=False, dest='use_mpi',
                    help = 'Run MPI-based dagmc.  -j argument is used for number of tasks.' )
+    opt.add_option('-l', action='store_true', default=False, dest='early_diffs',
+                   help = 'Print output diff counts as early as possible' )
 
 @conf
 def detect_mcnp(ctx):
@@ -19,12 +21,15 @@ def detect_mcnp(ctx):
     if ctx.options.dagexe:
         ctx.env.DAGEXE = ctx.options.dagexe
     else:
-        if ctx.options.use_mpi:
-            ctx.find_program('mcnp5.mpi', path_list='../../Source/src', var='DAGEXE' )
-        else:
-            ctx.find_program('mcnp5', path_list='../../Source/src/', var='DAGEXE')
-    ctx.env.DAGEXE = os.path.abspath( ctx.env.DAGEXE )
-    ctx.end_msg(ctx.env.DAGEXE)
+        try:
+            if ctx.options.use_mpi:
+                ctx.find_program('mcnp5.mpi', path_list='../../Source/src', var='DAGEXE' )
+            else:
+                ctx.find_program('mcnp5', path_list='../../Source/src/', var='DAGEXE')
+            ctx.env.DAGEXE = os.path.abspath( ctx.env.DAGEXE )
+            ctx.end_msg(ctx.env.DAGEXE)
+        except ctx.errors.ConfigurationError:
+            print "Cannot be found, use -e to specify"
 
 def configure(ctx):
     ctx.detect_mcnp()
@@ -33,9 +38,21 @@ def configure(ctx):
         ctx.options.jobs = 1
     
 from waflib.Build import BuildContext
+from waflib import Task, Build
+
+# To force the most appropriate ordering for mcnp tests, we will probably
+# have to override this method, to return Task.ASK_LATER for tests that are
+# otherwise ready to run but would be better waiting on an available diff-
+# and-report-results rule
+#old_run_stat = Task.Task.runnable_status
+#def alt_runnable_status(self):
+#    print self.name
+#    return old_run_stat(self)
+#Task.Task.runnable_status = alt_runnable_status
 
 class DagmcTestContext(BuildContext):
 
+    
     cmd = 'test'
     fun = 'test'
     
@@ -101,6 +118,9 @@ class DagmcTestContext(BuildContext):
 
         indir = kw.get('indir', case.name)
 
+        if 'DAGEXE' not in self.env:
+            self.fatal( 'Need a dag-mcnp5 executable' )
+
         extra_src = None
         for subcase_params in case.subcases:
             subcase, subname, subouts = subcase_params
@@ -148,12 +168,13 @@ class DagmcTestContext(BuildContext):
                                                                    if suffix != 'meshtal' ]
 
         if 'meshtal' in outputs.keys(): kw['target'] = kw['target'] + [os.path.join(indir,'meshtal')] 
-
         return self( *k, **kw )
 
     def diffmcnp( self, case, *k, **kw ):
         
         indir = kw.get( 'indir', case.name )
+        target_files = []
+
 
         for key, val in case.outputs.iteritems():
             ref = self.path.find_node(val).bldpath()
@@ -163,7 +184,7 @@ class DagmcTestContext(BuildContext):
 
             # First part of the diff rule
             if not key.endswith('.vtk'):
-                diff_rule = "bash -c 'diff -bw {0} {1}".format( ref, check )
+                diff_rule = "bash -c 'diff -abw {0} {1}".format( ref, check )
             else:
                 # For diffing vtk files, elide the second line of each file
                 # (The second line is a version specifier that changes with each new MOAB revision)
@@ -173,11 +194,20 @@ class DagmcTestContext(BuildContext):
             # Make waf only halt if diff returns 2, indicating an actual error (like a missing file)
             diff_rule += " > ${TGT}; if [ $? == 2 ] \n then \n exit 1 \n fi'"
 
+            target_files.append( os.path.join(indir, 'dif{0}'.format(key)) )
+
             # create the rule
             self( rule = diff_rule, 
-                  source = [ref, check], target = [os.path.join(indir,'dif{0}'.format(key)) ],
+                  source = [ref, check], target = [ target_files[-1] ],
                   name = 'dif'+key+' '+case.name )
-                  
+
+        if( self.options.early_diffs ): 
+            ctx = SummaryContext()
+            ctx.options = self.options
+            ctx.cases = [case.name]
+            post = lambda x:summary( ctx )
+            r = self( rule = post, source=target_files, name = "diff sizes, case "+case.name )
+
         return self( *k, **kw)
 
 
@@ -271,8 +301,12 @@ def summary( bld ):
 
         Logs.pprint( 'GREEN', '' ) # Print newline to log
 
-    if v.okay: Logs.pprint('GREEN', 'All test passed.' )
-    else:    Logs.pprint('CYAN', 'Some tests failed.')
+    if len(bld.cases) == 1:
+        if v.okay: Logs.pprint('GREEN', 'passes' )
+        else:      Logs.pprint('CYAN',  'fails'  )
+    else:
+        if v.okay: Logs.pprint('GREEN', 'All test passed.' )
+        else:      Logs.pprint('CYAN',  'Some tests failed.')
 
 
 
