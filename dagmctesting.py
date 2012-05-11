@@ -20,16 +20,19 @@ def detect_mcnp(ctx):
     ctx.start_msg('Checking for DAG-MCNP')
     if ctx.options.dagexe:
         ctx.env.DAGEXE = ctx.options.dagexe
+        if not os.path.exists(ctx.env.DAGEXE):
+            raise ctx.errors.ConfigurationError('Specified path {0} does not exist'.format(ctx.env.DAGEXE))
     else:
         try:
+            progname = 'mcnp5'
             if ctx.options.use_mpi:
-                ctx.find_program('mcnp5.mpi', path_list='../../Source/src', var='DAGEXE' )
-            else:
-                ctx.find_program('mcnp5', path_list='../../Source/src/', var='DAGEXE')
-            ctx.env.DAGEXE = os.path.abspath( ctx.env.DAGEXE )
-            ctx.end_msg(ctx.env.DAGEXE)
-        except ctx.errors.ConfigurationError:
-            print "Cannot be found, use -e to specify"
+                progname = 'mcnp5.mpi'
+            ctx.find_program(progname, path_list='../../Source/src', var='DAGEXE' )
+        except ctx.errors.ConfigurationError as e:
+            print e
+            raise ctx.errors.ConfigurationError("Use -e to specify path to "+progname)
+    ctx.env.DAGEXE = os.path.abspath( ctx.env.DAGEXE )
+    ctx.end_msg(ctx.env.DAGEXE)
 
 def configure(ctx):
     ctx.detect_mcnp()
