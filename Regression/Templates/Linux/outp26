@@ -681,7 +681,7 @@
          7000   8.5192E+00 0.0084 0.0005 10.0           4.8979E+00 0.0085 0.0006 10.0        
          8000   8.4942E+00 0.0078 0.0004 10.0           4.8869E+00 0.0079 0.0005 10.0        
          8425   8.4845E+00 0.0075 0.0004 10.0           4.8808E+00 0.0076 0.0004 10.0        
- surface-source file inp09w with nps =        6709 and        6709 tracks was written for
+ surface-source file 26sub09w with nps =        6709 and        6709 tracks was written for
      cell(s)      2
  tally data written to file inp26m
 

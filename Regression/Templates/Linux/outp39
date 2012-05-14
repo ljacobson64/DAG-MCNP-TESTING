@@ -450,7 +450,7 @@
    energy cutoff                            0
    weight cutoff                         3128
 
- Mesh tallies written to file meshx39
+ Mesh tallies written to file meshtal
 
 1tally   4        nps =        1000
            tally type 4    track length estimate of particle flux.                        
