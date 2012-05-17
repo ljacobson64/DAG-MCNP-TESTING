@@ -6,8 +6,9 @@ read response
 case "$response" in 
     y|Y) 
         echo "Downloading..."
-        svn export file:///filespace/groups/cnerg/archive/dag_vv/dag_test_suites/Regression/geom_h5m ;;
+        svn export file:///filespace/groups/cnerg/archive/dag_vv/dag_test_suites/Regression/geom_h5m geom_h5m_c10 ;;
     *) echo "Taking no action" ;;
 esac
-
+echo "Downloaded cubit10-based h5m files to ./geom_h5m_c10"
+echo "You should now reset the geom_h5m symlink to point to geom_h5m_c10"
 
