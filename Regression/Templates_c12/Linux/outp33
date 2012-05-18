@@ -1,0 +1,424 @@
+      1-       testprob33 -- Test distribution of transformations with chopped Gaussian        
+      2-       1 0 imp:n=0                                                                     
+      3-       2 0 imp:n=1                                                                     
+      4-       3 0 imp:n=1                                                                     
+      5-       4 0 imp:n=1                                                                     
+      6-       6 0 imp:n=1                                                                     
+      7-       7 0 imp:n=1   $ implicit complement                                             
+      8-                                                                                       
+      9-       1                                                                               
+     10-       2                                                                               
+     11-       3                                                                               
+     12-       4                                                                               
+     13-       5                                                                               
+     14-       6                                                                               
+     15-       7                                                                               
+     16-       8                                                                               
+     17-       9                                                                               
+     18-       10                                                                              
+     19-       11                                                                              
+     20-       12                                                                              
+     21-       13                                                                              
+     22-       14                                                                              
+     23-       15                                                                              
+     24-       16                                                                              
+     25-       17                                                                              
+     26-       18                                                                              
+     27-       19                                                                              
+     28-       26                                                                              
+     29-       27                                                                              
+     30-       28                                                                              
+     31-       29                                                                              
+     32-       30                                                                              
+     33-       31                                                                              
+     34-       35                                                                              
+     35-       36                                                                              
+     36-       37                                                                              
+     37-                                                                                       
+     38-       c Three intersecting beams                                                      
+     39-       c FWHM(x)=.470964 FWHM(y)=.235482                                               
+     40-       c sigma(X)=0.2 sigma(Y)=0.1                                                     
+     41-       c Elliptical "cookie cutter" Ax=0.4 Ay=0.2 (chopped 2*sigma)                    
+     42-       c Intensity(X)=2 Intensity(Y)=3 Intensity(Z)=1                                  
+     43-       c Theoretical source sampling efficiency = 0.8646647                            
+     44-       c ---------------------------------------------------------------               
+     45-       c Cells                                                                         
+     46-       c ---------------------------------------------------------------               
+     47-       c 2 1  0        1 -2 3 -4 5 -6                                                  
+     48-       c 3 2  0          -7 (-1:2:-3:4:-5:6)                                           
+     49-       c 4 3  0           7                                                            
+     50-       c 6 999  0    -999                                                              
+     51-       c                                                                               
+     52-       c ---------------------------------------------------------------               
+     53-       c Surfaces                                                                      
+     54-       c ---------------------------------------------------------------               
+     55-       c 13  1  pz -1.                                                                 
+     56-       c 16  2  pz  +1.                                                                
+     57-       c 14  3  px -1.                                                                 
+     58-       c 17  4  px  +1.                                                                
+     59-       c 15  5  py -1.                                                                 
+     60-       c 18  6  py  +1.                                                                
+     61-       c  7  so  100.0                                                                 
+     62-       c 999  cz  0.3                                                                  
+     63-       c 101  py -0.1                                                                  
+     64-       c 102  py +0.1                                                                  
+     65-       c 103  px -0.1                                                                  
+     66-       c 104  px +0.1                                                                  
+     67-       c 105  p  +1 0 +1 -0.141421                                                     
+     68-       c 106  p  +1 0 +1 +0.141421                                                     
+     69-       c 200  pz -200                                                                  
+     70-       c 201  pz 200                                                                   
+     71-       c                                                                               
+     72-       c ---------------------------------------------------------------               
+     73-       c Materials                                                                     
+     74-       c ---------------------------------------------------------------               
+     75-       c ---------------------------------------------------------------               
+     76-       c Source                                                                        
+     77-       c ---------------------------------------------------------------               
+     78-       TR99   0 0 -3  1 0 0  0 1 0  0 0 1                                              
+     79-       SDEF  DIR = 1 VEC = 0 0 1 X = D10 Y = D20 Z = 0 CCC = 6 TR = D88                
+     80-             ERG = 10 PAR = 1                                                          
+     81-       SP20   -41 .235482 0                                                            
+     82-       SI88  L 11 22 33                                                                
+     83-       SP88  1 2 3                                                                     
+     84-       SB88  1 1 1                                                                     
+     85-       TR11   0 0 -2  1 0 0  0 1 0  0 0 1                                              
+     86-       TR22   -2 0 0  0 1 0  0 0 1  1 0 0                                              
+     87-       TR33   0 -2 0  .707107 0 .707107  .707107 0 -.707107  0 1 0                     
+     88-       SP10   -41 .470964 0                                                            
+     89-       c ---------------------------------------------------------------               
+     90-       c Options                                                                       
+     91-       c ---------------------------------------------------------------               
+     92-       c  imp:n 1 1 0 0                                                                
+     93-         mode n                                                                        
+     94-       c ---------------------------------------------------------------               
+     95-       c Tallies                                                                       
+     96-       c ---------------------------------------------------------------               
+     97-         F1:n  13 14 15 16 17 18 T                                                     
+     98-       c  F11:n  2                                                                     
+     99-       c  FS11  104 103 T                                                              
+    100-       c  F21:n  4                                                                     
+    101-       c  FS21  102 101 T                                                              
+    102-       c  F31:n  6                                                                     
+    103-       c  FS31  106 105 T                                                              
+    104-         C0  0. 1.                                                                     
+    105-       c ---------------------------------------------------------------               
+    106-         print   10 110 170                                                            
+    107-         nps 100000                                                                    
+    108-         prdmp 2j -1 j 10000                                                           
+    109-         ssw 16 17 18                                                                  
+    110-                                                                                       
+1source                                                                                                 print table 10
+
+ values of defaulted or explicitly defined source variables
+
+    cel        0.0000E+00
+    sur        0.0000E+00
+    erg        1.0000E+01
+    tme        0.0000E+00
+    dir        1.0000E+00
+    pos        0.0000E+00   0.0000E+00   0.0000E+00
+    z          0.0000E+00
+    rad        0.0000E+00
+    ext        0.0000E+00
+    axs        0.0000E+00   0.0000E+00   0.0000E+00
+    vec        0.0000E+00   0.0000E+00   1.0000E+00
+    ccc        6.0000E+00
+    nrm        1.0000E+00
+    ara        0.0000E+00
+    wgt        1.0000E+00
+    eff        1.0000E-02
+    par        1.0000E+00
+
+
+
+ probability distribution  20 for source variable y  
+      function 41:  normal distribution     f(t)=c*exp(-((t-b)/a)**2)
+
+      width(a)       mean(b)   constant(c)          fwhm
+    1.4142E-01    0.0000E+00    3.9894E+00    2.3548E-01
+
+
+
+ probability distribution  10 for source variable x  
+      function 41:  normal distribution     f(t)=c*exp(-((t-b)/a)**2)
+
+      width(a)       mean(b)   constant(c)          fwhm
+    2.8284E-01    0.0000E+00    1.9947E+00    4.7096E-01
+
+
+
+ probability distribution  88 for source variable tr 
+ biased discrete  distribution
+
+ source        source          cumulative           biased           probability          biased             weight
+  entry         value          probability        cumulative           of bin           probability        multiplier
+
+    1       1.10000E+01       1.666667E-01       3.333333E-01       1.666667E-01       3.333333E-01       5.000000E-01
+    2       2.20000E+01       5.000000E-01       6.666667E-01       3.333333E-01       3.333333E-01       1.000000E+00
+    3       3.30000E+01       1.000000E+00       1.000000E+00       5.000000E-01       3.333333E-01       1.500000E+00
+
+     the mean of source distribution  88 is  2.5667E+01
+
+
+ order of sampling source variables.
+ ccc x   y   z   pos vec dir erg tme
+ surface-source file inp33w will be written for
+     surface(s)     16     17     18
+
+ the following particles will be written to the surface source file: neutron 
+ 
+  warning.  tr 99 card unused.                                                             
+ 
+  warning.  no cross-section tables are called for in this problem.                        
+1cells                                                                                                  print table 60
+
+                      atom        gram                                     neutron                                     
+        cell  mat    density     density     volume       mass     pieces importance                                   
+
+     1     1    0  0.00000E+00 0.00000E+00 3.60951E+07 0.00000E+00     0  0.0000E+00                                   
+     2     2    0  0.00000E+00 0.00000E+00 8.00000E+00 0.00000E+00     0  1.0000E+00                                   
+     3     3    0  0.00000E+00 0.00000E+00 4.18864E+06 0.00000E+00     0  1.0000E+00                                   
+     4     4    0  0.00000E+00 0.00000E+00 5.85524E+08 0.00000E+00     0  1.0000E+00                                   
+     5     6    0  0.00000E+00 0.00000E+00 2.51236E+01 0.00000E+00     0  1.0000E+00                                   
+     6     7    0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00     0  1.0000E+00                                   
+
+ total                                     6.25808E+08 0.00000E+00
+
+    minimum source weight = 5.0000E-01    maximum source weight = 1.5000E+00
+
+ ***************************************************
+ * Random Number Generator  =                    1 *
+ * Random Number Seed       =       19073486328125 *
+ * Random Number Multiplier =       19073486328125 *
+ * Random Number Adder      =                    0 *
+ * Random Number Bits Used  =                   48 *
+ * Random Number Stride     =               152917 *
+ ***************************************************
+
+
+         2 warning messages so far.
+
+         2 warning messages so far.
+1   starting mcrun.      cp0 =  0.00         print table 110
+
+      testprob33 -- Test distribution of transformations with chopped Gaussian        
+
+
+     nps    x          y          z       cell   surf     u          v          w        energy     weight      time
+ 
+      1  3.287E-02 -2.000E+00 -3.609E-04     3      0  0.000E+00  1.000E+00  0.000E+00  1.000E+01  1.500E+00  0.000E+00
+      2 -1.412E-01 -2.557E-02 -2.000E+00     3      0  0.000E+00  0.000E+00  1.000E+00  1.000E+01  5.000E-01  0.000E+00
+      3 -2.000E+00 -9.136E-02 -5.902E-02     3      0  1.000E+00  0.000E+00  0.000E+00  1.000E+01  1.000E+00  0.000E+00
+      4 -2.000E+00 -1.521E-01  3.401E-02     3      0  1.000E+00  0.000E+00  0.000E+00  1.000E+01  1.000E+00  0.000E+00
+      5 -8.235E-02 -3.944E-02 -2.000E+00     3      0  0.000E+00  0.000E+00  1.000E+00  1.000E+01  5.000E-01  0.000E+00
+      6  2.321E-02 -2.000E+00 -5.387E-02     3      0  0.000E+00  1.000E+00  0.000E+00  1.000E+01  1.500E+00  0.000E+00
+      7  9.144E-02 -2.000E+00  1.453E-02     3      0  0.000E+00  1.000E+00  0.000E+00  1.000E+01  1.500E+00  0.000E+00
+      8 -2.000E+00  1.875E-01  6.161E-04     3      0  1.000E+00  0.000E+00  0.000E+00  1.000E+01  1.000E+00  0.000E+00
+      9  1.928E-01 -6.088E-03 -2.000E+00     3      0  0.000E+00  0.000E+00  1.000E+00  1.000E+01  5.000E-01  0.000E+00
+     10 -6.775E-02  4.606E-02 -2.000E+00     3      0  0.000E+00  0.000E+00  1.000E+00  1.000E+01  5.000E-01  0.000E+00
+     11 -8.346E-02 -2.000E+00 -6.654E-02     3      0  0.000E+00  1.000E+00  0.000E+00  1.000E+01  1.500E+00  0.000E+00
+     12 -2.567E-02 -2.000E+00 -1.058E-01     3      0  0.000E+00  1.000E+00  0.000E+00  1.000E+01  1.500E+00  0.000E+00
+     13  4.295E-03 -2.978E-02 -2.000E+00     3      0  0.000E+00  0.000E+00  1.000E+00  1.000E+01  5.000E-01  0.000E+00
+     14  9.297E-02 -2.000E+00 -1.634E-02     3      0  0.000E+00  1.000E+00  0.000E+00  1.000E+01  1.500E+00  0.000E+00
+     15  3.106E-02 -6.578E-02 -2.000E+00     3      0  0.000E+00  0.000E+00  1.000E+00  1.000E+01  5.000E-01  0.000E+00
+     16 -2.000E+00  1.034E-01 -5.032E-02     3      0  1.000E+00  0.000E+00  0.000E+00  1.000E+01  1.000E+00  0.000E+00
+     17 -9.733E-02 -1.960E-02 -2.000E+00     3      0  0.000E+00  0.000E+00  1.000E+00  1.000E+01  5.000E-01  0.000E+00
+     18  1.403E-02 -8.079E-02 -2.000E+00     3      0  0.000E+00  0.000E+00  1.000E+00  1.000E+01  5.000E-01  0.000E+00
+     19 -5.555E-02 -2.000E+00 -7.802E-03     3      0  0.000E+00  1.000E+00  0.000E+00  1.000E+01  1.500E+00  0.000E+00
+     20 -2.000E+00 -1.522E-02  6.670E-02     3      0  1.000E+00  0.000E+00  0.000E+00  1.000E+01  1.000E+00  0.000E+00
+     21 -2.000E+00 -1.566E-01 -1.046E-02     3      0  1.000E+00  0.000E+00  0.000E+00  1.000E+01  1.000E+00  0.000E+00
+     22 -1.292E-01  1.685E-02 -2.000E+00     3      0  0.000E+00  0.000E+00  1.000E+00  1.000E+01  5.000E-01  0.000E+00
+     23 -2.000E+00  3.591E-02  6.586E-02     3      0  1.000E+00  0.000E+00  0.000E+00  1.000E+01  1.000E+00  0.000E+00
+     24 -4.444E-02 -2.000E+00 -6.684E-02     3      0  0.000E+00  1.000E+00  0.000E+00  1.000E+01  1.500E+00  0.000E+00
+     25 -2.000E+00 -4.506E-03 -2.419E-02     3      0  1.000E+00  0.000E+00  0.000E+00  1.000E+01  1.000E+00  0.000E+00
+     26  4.619E-02 -2.000E+00  3.801E-02     3      0  0.000E+00  1.000E+00  0.000E+00  1.000E+01  1.500E+00  0.000E+00
+     27  1.091E-01  5.825E-03 -2.000E+00     3      0  0.000E+00  0.000E+00  1.000E+00  1.000E+01  5.000E-01  0.000E+00
+     28  8.087E-02 -2.000E+00  9.865E-02     3      0  0.000E+00  1.000E+00  0.000E+00  1.000E+01  1.500E+00  0.000E+00
+     29 -6.349E-02 -2.000E+00 -1.803E-02     3      0  0.000E+00  1.000E+00  0.000E+00  1.000E+01  1.500E+00  0.000E+00
+     30 -2.000E+00  1.305E-01 -6.499E-02     3      0  1.000E+00  0.000E+00  0.000E+00  1.000E+01  1.000E+00  0.000E+00
+     31  5.749E-02 -2.000E+00 -4.658E-02     3      0  0.000E+00  1.000E+00  0.000E+00  1.000E+01  1.500E+00  0.000E+00
+     32  2.820E-02  7.456E-02 -2.000E+00     3      0  0.000E+00  0.000E+00  1.000E+00  1.000E+01  5.000E-01  0.000E+00
+     33 -2.000E+00 -1.102E-02  9.913E-02     3      0  1.000E+00  0.000E+00  0.000E+00  1.000E+01  1.000E+00  0.000E+00
+     34  2.481E-02 -3.432E-02 -2.000E+00     3      0  0.000E+00  0.000E+00  1.000E+00  1.000E+01  5.000E-01  0.000E+00
+     35  1.412E-01 -2.000E+00  1.249E-01     3      0  0.000E+00  1.000E+00  0.000E+00  1.000E+01  1.500E+00  0.000E+00
+     36 -2.000E+00 -1.073E-01 -1.260E-03     3      0  1.000E+00  0.000E+00  0.000E+00  1.000E+01  1.000E+00  0.000E+00
+     37  1.593E-01 -4.450E-02 -2.000E+00     3      0  0.000E+00  0.000E+00  1.000E+00  1.000E+01  5.000E-01  0.000E+00
+     38 -2.000E+00  8.352E-05  8.170E-02     3      0  1.000E+00  0.000E+00  0.000E+00  1.000E+01  1.000E+00  0.000E+00
+     39  3.971E-02 -2.000E+00  9.082E-02     3      0  0.000E+00  1.000E+00  0.000E+00  1.000E+01  1.500E+00  0.000E+00
+     40 -2.000E+00 -4.579E-02 -3.823E-02     3      0  1.000E+00  0.000E+00  0.000E+00  1.000E+01  1.000E+00  0.000E+00
+     41 -7.856E-02  1.774E-02 -2.000E+00     3      0  0.000E+00  0.000E+00  1.000E+00  1.000E+01  5.000E-01  0.000E+00
+     42 -1.994E-01 -7.843E-03 -2.000E+00     3      0  0.000E+00  0.000E+00  1.000E+00  1.000E+01  5.000E-01  0.000E+00
+     43 -1.255E-01  7.025E-02 -2.000E+00     3      0  0.000E+00  0.000E+00  1.000E+00  1.000E+01  5.000E-01  0.000E+00
+     44  6.240E-02 -2.000E+00 -4.681E-02     3      0  0.000E+00  1.000E+00  0.000E+00  1.000E+01  1.500E+00  0.000E+00
+     45 -1.266E-01 -2.000E+00 -1.068E-01     3      0  0.000E+00  1.000E+00  0.000E+00  1.000E+01  1.500E+00  0.000E+00
+     46 -2.000E+00 -1.768E-01 -1.811E-02     3      0  1.000E+00  0.000E+00  0.000E+00  1.000E+01  1.000E+00  0.000E+00
+     47 -2.000E+00 -1.808E-01  2.561E-02     3      0  1.000E+00  0.000E+00  0.000E+00  1.000E+01  1.000E+00  0.000E+00
+     48 -2.000E+00  4.425E-02  4.919E-02     3      0  1.000E+00  0.000E+00  0.000E+00  1.000E+01  1.000E+00  0.000E+00
+     49 -2.000E+00 -5.160E-02 -4.129E-02     3      0  1.000E+00  0.000E+00  0.000E+00  1.000E+01  1.000E+00  0.000E+00
+     50  1.423E-04 -3.462E-03 -2.000E+00     3      0  0.000E+00  0.000E+00  1.000E+00  1.000E+01  5.000E-01  0.000E+00
+1problem summary                                                                                                           
+
+      run terminated when      100000  particle histories were done.
+0
+ neutron creation    tracks      weight        energy            neutron loss        tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source              100000    9.9702E-01    1.0000E+01          escape              100000    9.9702E-01    1.0000E+01
+                                                                 energy cutoff            0    0.            0.        
+                                                                 time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ upscattering             0    0.            0.                  downscattering           0    0.            0.        
+ photonuclear             0    0.            0.                  capture                  0    0.            0.        
+ (n,xn)                   0    0.            0.                  loss to (n,xn)           0    0.            0.        
+ prompt fission           0    0.            0.                  loss to fission          0    0.            0.        
+ delayed fission          0    0.            0.                                                                        
+     total           100000    9.9702E-01    1.0000E+01              total           100000    9.9702E-01    1.0000E+01
+
+   number of neutrons banked                       0        average time of (shakes)              cutoffs
+   neutron tracks per source particle     1.0000E+00          escape            9.7087E+00          tco   1.0000E+33
+   neutron collisions per source particle 0.0000E+00          capture           0.0000E+00          eco   0.0000E+00
+   total neutron collisions                        0          capture or escape 9.7087E+00          wc1  -5.0000E-01
+   net multiplication              1.0000E+00 0.0000          any termination   9.7087E+00          wc2  -2.5000E-01
+
+ computer time so far in this run     0.00 minutes            maximum number ever in bank         0
+ computer time in mcrun               0.00 minutes            bank overflows to backup file       0
+ source particles per minute            0.0000E+00
+ random numbers generated                  1398276            most random numbers used was         141 in history       21317
+
+ range of sampled source weights = 5.0000E-01 to 1.5000E+00
+
+ source efficiency = 0.3928  in cell     6
+1source distribution frequency tables                                                                   print table 170
+
+ the expected values below do not include the effect of the rejection loop which samples position.
+
+
+ source distribution  88  for tr 
+
+                                         number                                       weight
+             source
+   n          value         sampled      expected  sampled/expected      sampled      expected  sampled/expected
+
+   1      2.00000E+00      3.3668E-01   3.3333E-01   1.0100E+00         1.6834E-01   1.6667E-01   1.0100E+00
+   2      3.00000E+00      3.3260E-01   3.3333E-01   9.9780E-01         3.3260E-01   3.3333E-01   9.9780E-01
+   3      4.00000E+00      3.3072E-01   3.3333E-01   9.9216E-01         4.9608E-01   5.0000E-01   9.9216E-01
+ total                     1.0000E+00   1.0000E+00   1.0000E+00         9.9702E-01   1.0000E+00   9.9702E-01
+1neutron  activity in each cell                                                                         print table 126
+
+                 tracks     population   collisions   collisions     number        flux        average      average
+        cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                    (per history)    energy       energy     (relative)      (cm)
+
+     2     2      100000       100000            0    0.0000E+00   1.0000E+01   1.0000E+01   9.9702E-01   0.0000E+00
+     3     3      200000       100000            0    0.0000E+00   1.0000E+01   1.0000E+01   9.9702E-01   0.0000E+00
+     4     4      100000       100000            0    0.0000E+00   1.0000E+01   1.0000E+01   9.9702E-01   0.0000E+00
+     5     6           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
+     6     7      100000       100000            0    0.0000E+00   1.0000E+01   1.0000E+01   9.8322E-01   0.0000E+00
+
+     total        500000       400000            0    0.0000E+00
+
+1tally   1        nps =      100000
+           tally type 1    number of particles crossing a surface.                        
+           tally for  neutrons 
+ 
+ surface  13                                                                                                           
+ cosine bin:  -1.          to  0.00000E+00                                                                             
+                 1.68340E-01 0.0044
+ 
+ surface  13                                                                                                           
+ cosine bin:   0.00000E+00 to  1.00000E+00                                                                             
+                 0.00000E+00 0.0000
+ 
+ surface  14                                                                                                           
+ cosine bin:  -1.          to  0.00000E+00                                                                             
+                 3.32600E-01 0.0045
+ 
+ surface  14                                                                                                           
+ cosine bin:   0.00000E+00 to  1.00000E+00                                                                             
+                 0.00000E+00 0.0000
+ 
+ surface  15                                                                                                           
+ cosine bin:  -1.          to  0.00000E+00                                                                             
+                 4.96080E-01 0.0045
+ 
+ surface  15                                                                                                           
+ cosine bin:   0.00000E+00 to  1.00000E+00                                                                             
+                 0.00000E+00 0.0000
+ 
+ surface  16                                                                                                           
+ cosine bin:  -1.          to  0.00000E+00                                                                             
+                 0.00000E+00 0.0000
+ 
+ surface  16                                                                                                           
+ cosine bin:   0.00000E+00 to  1.00000E+00                                                                             
+                 1.68340E-01 0.0044
+ 
+ surface  17                                                                                                           
+ cosine bin:  -1.          to  0.00000E+00                                                                             
+                 0.00000E+00 0.0000
+ 
+ surface  17                                                                                                           
+ cosine bin:   0.00000E+00 to  1.00000E+00                                                                             
+                 3.32600E-01 0.0045
+ 
+ surface  18                                                                                                           
+ cosine bin:  -1.          to  0.00000E+00                                                                             
+                 0.00000E+00 0.0000
+ 
+ surface  18                                                                                                           
+ cosine bin:   0.00000E+00 to  1.00000E+00                                                                             
+                 4.96080E-01 0.0045
+ 
+ surface union total                                                                                                   
+ cosine bin:  -1.          to  0.00000E+00                                                                             
+                 9.97020E-01 0.0013
+ 
+ surface union total                                                                                                   
+ cosine bin:   0.00000E+00 to  1.00000E+00                                                                             
+                 9.97020E-01 0.0013
+
+ there are no nonzero tallies in the tally fluctuation chart bin for tally   1
+
+1status of the statistical checks used to form confidence intervals for the mean for each tally bin
+
+
+ tally   result of statistical checks for the tfc bin (the first check not passed is listed) and error magnitude check for all bins
+
+     1   no nonzero tallies were made in the tally fluctuation chart bin                           
+         passed all bin error check:    14 tally bins had     6 bins with zeros and     0 bins with relative errors exceeding 0.10
+
+
+ the 10 statistical checks are only for the tally fluctuation chart bin and do not apply to other tally bins.
+
+ the tally bins with zeros may or may not be correct: compare the source, cutoffs, multipliers, et cetera with the tally bins.
+
+ warning.     1 of the   1 tally fluctuation chart bins did not pass all 10 statistical checks.
+1tally fluctuation charts                         
+
+                       tally    1
+          nps      mean     error   vov  slope    fom
+        10000   0.0000E+00 0.0000 0.0000  0.0        
+        20000   0.0000E+00 0.0000 0.0000  0.0        
+        30000   0.0000E+00 0.0000 0.0000  0.0        
+        40000   0.0000E+00 0.0000 0.0000  0.0        
+        50000   0.0000E+00 0.0000 0.0000  0.0        
+        60000   0.0000E+00 0.0000 0.0000  0.0        
+        70000   0.0000E+00 0.0000 0.0000  0.0        
+        80000   0.0000E+00 0.0000 0.0000  0.0        
+        90000   0.0000E+00 0.0000 0.0000  0.0        
+       100000   0.0000E+00 0.0000 0.0000  0.0        
+ surface-source file inp33w with nps =      100000 and      100000 tracks was written for
+     surface(s)     16     17     18
+ tally data written to file inp33m
+
+         3 warning messages so far.
+
+
+ run terminated when      100000  particle histories were done.
