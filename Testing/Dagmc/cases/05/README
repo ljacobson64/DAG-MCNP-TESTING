@@ -1,0 +1,3 @@
+05: Beam grazing a cylinder A.  A beam is fired 0.001 cm within the edge of an H2O cylinder.  A flux tally on the cylinder is made.
+
+(Default faceting tolerance 1e-5.  See also subcases 05a and 05b for results with finer tolerances.)

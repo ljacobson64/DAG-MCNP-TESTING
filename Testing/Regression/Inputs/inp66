@@ -1,0 +1,12 @@
+CAD ON 
+nps 100
+sdef x d1 y d2 z 0 cel 1
+si1 l -4 0
+sp1   1  1
+si2 l -4 0
+sp2   1  1
+m1 1001 2 8016 1
+f4:n 1
+dagmc use_cad=on
+print
+prdmp 2j -1 

@@ -1,0 +1,21 @@
+ Jezebel-233  U233-MET-FAST-001 solid bare U-233 sphere  ENDF/B-VI
+c 1         1        0.047602        -1        $ U-233 Sphere
+c 2         0                         1
+c 
+c 1         so       5.9838
+c 
+kcode     5000  1.0  50   250
+c imp:n     1.0    0.0
+sdef   cel=2  erg=d1
+sp1    -3
+vol        0.0 897.47      0.0 0.0
+area       0.0 11r 449.95
+totnu
+m1        92233.66c     4.6712e-2
+          92234.66c     5.9026e-4
+          92235.66c     1.4281e-5
+          92238.66c     2.8561e-4
+prdmp    j    275 -1
+print
+
+ end of input

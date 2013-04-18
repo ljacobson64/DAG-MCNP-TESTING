@@ -1,0 +1,14 @@
+Beams in z-direction at spherical surface
+nps 10000
+mode p
+sdef pos=d1 vec=fpos=d2 dir=1
+si1  L  0 0 0  -1 0 0  -2 0 0  -3 0 0  -4 0 0
+sp1     0.2  0.2  0.2  0.2  0.2
+ds2  L  0 0 1   0.19612 0 0.98058   0.37139 0 0.92848  
+        0.51450 0 0.85749   0.62470 0 0.78087
+f1:p 1
+c1   0.75 0.8 0.9 0.95 0.99 1.0 T
+dagmc 
+prdmp 2j -1
+print
+

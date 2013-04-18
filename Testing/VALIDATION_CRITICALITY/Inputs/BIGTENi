@@ -1,0 +1,28 @@
+Big Ten Two-Zone Homogenized Benchmark  IEU-MET-FAST-007  ENDF/B-VI
+c 1     1   4.806192e-02      -1                   $ Central Core
+c 2     2   4.777901e-02       1   -2              $ Reflector
+c 3     0                      2
+c
+c 1    rcc     0.0  0.0  -28.8169    0.0  0.0  57.6338   26.67  $ Core
+c 2    rcc     0.0  0.0  -48.2600    0.0  0.0  96.5200   41.91  $ Reflector
+c 
+mode    n
+kcode   5000   1.00   50   250
+c imp:n   1.0   1.0   0.0
+c sdef   cel=1  erg=d1
+sdef cel=2 erg=d1
+sp1    -3
+vol   0 128787.3    403814.3         0.0   0.0
+area       0.0 11r    9657.8      2234.6      2234.6
+               25416.4      5518.0      5518.0
+c  Central Core (10 wt.%)
+m1    92234.66c   4.8416e-05     92235.66c   4.8151e-03
+      92236.66c   1.7407e-05     92238.66c   4.3181e-02
+c  Depleted Uranium
+m2    92234.66c   2.8672e-07     92235.66c   1.0058e-04
+      92236.66c   1.1468e-06     92238.66c   4.7677e-02
+totnu
+prdmp    j    275 -1
+print
+
+ end of input

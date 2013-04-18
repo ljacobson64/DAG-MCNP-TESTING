@@ -1,0 +1,21 @@
+ Jezebel  PU-MET-FAST-001  solid bare Pu sphere  ENDF/B-VI
+c 1         1        0.040290        -1        $ Pu Sphere
+c 2         0                         1
+c  
+c 1         so       6.3849
+c 
+kcode     5000   1.0  50   250
+c imp:n     1.0    0.0
+sdef   cel=2  erg=d1
+sp1    -3
+vol       0.0 1090.31      0.0 0.0
+area      0.0 11r  512.29
+totnu
+m1        31000.66c     1.3752e-3
+          94239.66c     3.7047e-2
+          94240.66c     1.7512e-3
+          94241.66c     1.1674e-4
+prdmp    j    275 -1
+print
+
+ end of input

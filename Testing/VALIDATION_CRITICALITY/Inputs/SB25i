@@ -1,0 +1,97 @@
+ BAPL SB Criticals  Core 2 1/2  Full Core  U-233 Core  RN2  ENDF/B-VI
+c    U233-COMP-THERM-001  Case 3
+c     Universe 1:  Fuel Pin Cell
+c 1     5   0.080898    -2     7    -9               u=1      $ Fuel Pin
+c 2     1   0.042537    -2    -7                     u=1      $ Bottom End Plug
+c 3     1   0.042537    -2     9                     u=1      $ Top End Plug
+c 4     0                2    -3                     u=1      $ Void
+c 5     1   0.042537     3    -4                     u=1      $ Cladding
+c 6     3   0.100103     4                           u=1      $ Water
+c 7     4   0.088821     8   -11    13   -16    19   -20      $ Control Blade D
+c 8     4   0.088821     8   -11    13   -16    21   -22      $ Control Blade C
+c 9     4   0.088821     8   -11    13   -16    25   -26      $ Control Blade B
+c 10    4   0.088821     8   -11    13   -16    27   -28      $ Control Blade A
+c 11    0              -15    14   -24    23  lat=1  u=2
+c                      fill=-8:7 -9:8 0:0   1  287r           $ Fuel Pin Array
+c 12    0               12   -17    18   -29     6   -10
+c                       #7    #8    #9   #10    fill=2        $ Core
+c 13    3   0.100103    -1    10   -11                   
+c                       #7    #8    #9   #10                  $ Top Reflector
+c 14    3   0.100103    -1     5    -6                        $ Bottom Reflector
+c 15    3   0.100103    -1     6   -10   -12                  $ Left Reflector
+c 16    3   0.100103    -1     6   -10    17                  $ Right Reflector
+c 17    3   0.100103    -1     6   -10    12   -17   -18      $ Front Reflector
+c 18    3   0.100103    -1     6   -10    12   -17    29      $ Back Reflector
+c 19    0                1:-5:11
+c
+c 1     cz     42.18                               $ Reflector Outer Radius
+c 2     c/z     0.45974   0.45974   0.26797        $ Fuel Outer Radius
+c 3     c/z     0.45974   0.45974   0.27940        $ Clad Inner Radius
+c 4     c/z     0.45974   0.45974   0.32385        $ Clad Outer Radius
+c 5     pz    -56.2991                             $ Bottom of Relector
+c 6     pz    -25.8191                             $ Bottom of End Plug
+c 7     pz    -19.05                               $ Bottom of Fuel
+c 8     pz     16.05                               $ Bottom of Control Blades
+c 9     pz     19.05                               $ Top of Fuel
+c 10    pz     25.8191                             $ Top of End Plug
+c 11    pz     56.2991                             $ Top of Reflector
+c 12    px     -7.13766                            $ Left Edge of Core
+c 13    px     -3.81                               $ Left Edge of Control Blades
+c 14    px      0.0                                $ Left Edge of Cell
+c 15    px      0.91948                            $ Right Edge of Cell
+c 16    px      3.81                               $ Right Edge of Control Blades
+c 17    px      7.13766                            $ Right Edge of Core
+c 18    py     -8.27532                            $ Front Edge of Core
+c 19    py     -5.60578                            $ Front Edge of Control Blade D
+c 20    py     -5.42798                            $ Back Edge of Control Blade D
+c 21    py     -1.92786                            $ Front Edge of Control Blade C
+c 22    py     -1.75006                            $ Back Edge of Control Blade C
+c 23    py      0.0                                $ Front Edge of Cell
+c 24    py      0.91948                            $ Back Edge of Cell
+c 25    py      1.75006                            $ Front Edge of Control Blade B
+c 26    py      1.92786                            $ Back Edge of Control Blade B
+c 27    py      5.42798                            $ Front Edge of Control Blade A
+c 28    py      5.60578                            $ Back Edge of Control Blade A
+c 29    py      8.27532                            $ Back Edge of Core
+c
+mode      n
+kcode   5000  1.0  50  250
+dbcn       7j 3147300
+c imp:n    1.0  17r  0.0
+totnu
+sdef     x=d1  y=d2  z=d3
+si1      -7.1      7.1
+sp1        0        1
+si2      -8.2      8.2 
+sp2        0        1
+si3     -19.0     19.0
+sp3        0        1
+c         Zircaloy-2 Cladding(Sn Omitted)
+m1        40000.66c   4.2537e-2
+c         Polyethylene  (0.9183 g/cc)  N-tot=0.11828
+m2         1001.62c   7.8854e-2
+           6000.66c   3.9427e-2
+mt2        poly.60t
+c         Water at 20 Degrees C  (0.9982 g/cc)  N-tot=0.100103
+m3         1001.62c   6.6735e-2
+           8016.62c   3.3368e-2
+mt3        lwtr.60t
+c         Borated Steel for Control Blade  N-tot=0.088821
+m4         5010.66c   3.7488e-3
+          24050.62c   7.5725e-4         24052.62c   1.4603e-2
+          24053.62c   1.6557e-3         24054.62c   4.1217e-4
+          25055.62c   8.6816e-4
+          26054.62c   3.4963e-3         26056.62c   5.4352e-2
+          26057.62c   1.2444e-3         26058.62c   1.6593e-4
+          28058.62c   5.1319e-3         28060.62c   1.9620e-3
+          28061.62c   8.4943e-5         28062.62c   2.6986e-4
+          28064.62c   6.8406e-5
+c        UO2-ZrO2 Seed Fuel (97.19 w/o U-233)  N-tot=0.080898
+m5         8016.62c   5.3932e-2
+          40000.66c   2.2867e-2
+          92233.66c   3.9891e-3         92234.66c   6.3690e-5
+          92238.66c   4.5759e-5
+prdmp     j    275 -1
+print
+
+ end of input

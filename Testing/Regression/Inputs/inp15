@@ -1,0 +1,42 @@
+testprob15 -- test filled lattice and skewed lattice.
+1     1  -.6 -1                                         imp:n=1
+2     0  1 -2 -4  fill=1 (-6 -6.5 0)                    imp:n=1
+3     0  2 -3 -4  *fill=2 (-7 5 0 30 60 90 120 30 90)   imp:n=2
+4     0  2 3 -4   *fill=2 (4 8 0 15 105 90 75 15 90)    imp:n=2
+5     0  4                                              imp:n=0
+6     0  -5                   fill=3  u=1   lat=1       imp:n=1
+7     3  -2.7  -11 12 -13 14 -15 16   u=2   lat=1       imp:n=1
+8     2  -.8   -17                    u=3               imp:n=1
+9     0  17                           u=3               imp:n=1
+ 
+1     sy -5 3
+2     py  0
+3     px  0
+4     so  15
+5     box  -1.5 -1 -3  3 0 0  0 2 0  0 0 6
+11    p  1 -.5 0 1.3
+12    p  1 -.5 0 -1.3
+13    py  .5
+14    py  -.5
+15    pz  3
+16    pz  -3
+c 17    sq  1 2 0 0 0 0 -1 .2 0 0
+17    so 0.8
+ 
+sdef  pos 0 -5 0 erg d1 rad d2
+si1   0 10
+sp1   0 1
+si2   3
+sp2   -21
+f2:n  3
+sd2   1
+f4:n  8 9
+sd4   1 1
+m1    4009.60c 1
+m2    6012.40c 1
+m3    13027.40c 1
+drxs
+nps   2000
+print 72 128 160 161 162
+prdmp 2j -1
+ 

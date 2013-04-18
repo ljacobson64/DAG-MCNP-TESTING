@@ -1,0 +1,16 @@
+Verification Test Problem: 02
+Feature Testing: gradient flux 
+Brief Description: rectangular prism with vacuum boundaries filled with water
+
+Input files:
+-----------
+gradient_flux.inp - mesh tally input file using native geometry
+mcnp_mesh.h5m - orthogonal mesh for KDE tallies
+tet_mesh.h5m - tetrahedral mesh for TET track tally
+
+Reference files:
+---------------
+ref/outp - MCNP outp file for this test case
+ref/kde_coll.vtk - KDE collision tally results
+ref/kde_track.vtk - KDE track tally results
+ref/tracklen.vtk - TET track tally results

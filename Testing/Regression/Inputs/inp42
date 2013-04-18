@@ -1,0 +1,25 @@
+inp42 - godiva -pert test from Jeff Favorite
+c 2 1    1  -18.74  -20      imp:n=1
+c 3 2    1  -18.74  -10  20  imp:n=1
+c   999  0               10  imp:n=0
+c 
+c 14 10  so  8.7774
+c 13 20  so  0.5
+c 
+kcode 1000 1.  5 30
+ksrc 0 0 0
+m1 92235.50d -94.73  92238.40c -5.27
+pert1:n cell 2 rho=-0. method=1
+pert2:n cell 2 rho=-0. method=2
+pert3:n cell 2 rho=-0. method=3
+c
+pert4:n cell 2 3 rho=-15.
+pert5:n cell 2 3 rho=-15. method=1
+pert6:n cell 2 3 rho=-15. method=2
+pert7:n cell 2 3 rho=-15. method=3
+c
+c   use new mcnp rn generator
+dbcn 1234567 11j 123  1
+rand gen=3 seed=123456789 stride=12345 hist=1
+c
+prdmp 2j -1

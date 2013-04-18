@@ -1,0 +1,43 @@
+Title - water cube with point source
+c read file=squares2.cgm
+c #############################
+c Water
+m1
+      1001  2  $ H
+      8016  1  $ O1
+c #############################
+sdef erg=14.1 vec 1 0 0 dir 1
+c
+mode n                $ type of particle
+nps 1e6           $ number of particles
+c void
+prdmp 100000 100000 -1 1 $ save only the last dump, written with output every 5000
+c  dbcn 2j 1 10       $ debug line
+c
+c tmesh
+c     cmesh21:n
+c     cora21 0 100i 10
+c     corb21 0 100i 10
+c     corc21 100i 360
+c endmd
+rdum 29j 1e-6 1e-6
+fmesh24:n origin -10 -10 -10 imesh -9 -6 -3 -1 1 3 6 9 10 
+                             jmesh -9 -6 -3 -1 1 3 6 9 10
+                             kmesh -9 -6 -3 -1 1 3 6 9 10
+c                             emesh 0, .1, 1, 20, 1e36
+fm24 2 0 
+fc24 Mesh comment line the first
+        Mesh comment line the second
+fmesh34:n geom=dag 
+fm34 2 0 
+fc34 A tally with a lot of needless comment in the fc card,
+      with the dag-mc data starting thus: dagmc inp=cylinder.h5m 
+      out=test_meshtal34.vtk convex=true -dagmc 
+      (further words ignored)
+fmesh44:n geom=dag
+fc44 dagmc inp=twospheres.h5m out=test_meshtal44.vtk
+fmesh54:n geom=dag emesh 1 4 6 14
+fc54 dagmc inp=cylinder.h5m out=test_meshtal54.vtk convex=true 
+dagmc usecad=no distlimit=on
+print 32
+

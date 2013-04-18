@@ -1,0 +1,7 @@
+These files are a for a very simple mesh tallying test run. Brandon
+Smith provided the original squares2 DAGMC problem.
+
+squares.inp: Input file (modified from Brandon's original to 
+             have a mesh tally) 
+squares.sat: Problem geometry
+cylinder.h5m and twospheres.h5m: overlay mesh inputs

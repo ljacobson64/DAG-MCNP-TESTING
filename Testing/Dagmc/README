@@ -1,0 +1,117 @@
+These files are used to run the benchmarking of DAGMC when it is a newly 
+installed software and when a new version of DAGMC has been made.
+
+This directory comes with the files wscript, benchmark_results.ods, and 
+the cases directory. 
+
+wscript - waf build description file.  The test suite can be run by first 
+          invoking ./waf configure, then ./waf {options}.  Help for the options
+          is available with ./waf --help.  ./waf summary will summarize results
+          from a previously run test.
+
+benchmark_results.ods - a spreadsheet with all of the results for the 
+                        benchmarked cases compared to the results from native
+                        MCNP.
+
+The cases directory has the benchmark input and output files of the test cases.
+In each case directory there are several files, described below; descriptions
+of individual cases are below that.
+
+FILES:
+    README - the description of the problem and any extra notes on the way
+                 the problem was tested
+    
+    DAGMC FILES (ones used to test DAGMC on your machine):
+        ref.dag.inp - the MCNP portion of the input for the reference 
+                      DAGMC run.
+        ref.dag.mctal - the mctal file outputted from the reference 
+                        DAGMC run.
+        ref.dag.out - the output from the reference DAGMC run.
+        ref.geom.h5m - the facet h5m file produced by a reference 
+                       DAGMC run.
+        ref.geom.sat - the geometry input file used by the reference
+                       DAGMC run.
+    
+    MCNP FILES (supplied for reference and not tested on your machine):
+        ref.native.inp - the MCNP input file that is just the MCNP 
+                         version of the same geometry in ref.geom.sat.
+        ref.native.out - the MCNP out from this geometry.  Used to show
+                         how close DAGMC is the the answer MCNP gets.
+
+CASES:
+    01: Godiva sphere - This is an HEU sphere based on the Godiva benchmark.
+                        Calculates keff.
+    02: Beam on a plane - A beam is fired at the center of a plane.  A 
+                          surface current tally is made on the other side.
+    03: Beam along a surface - The beam is fired directly at the 
+                               intersection of two cubes.  A surface current
+                               tally is made on the other side.
+    04: Beam along a curve/line - The beam is fired directly at the 
+                                  intersection of four cubes, a line segment.
+                                  A surface current tally is made on the 
+                                  other side.
+    05: Beam grazing a cylinder 1 - A beam is fired 0.001 cm within the edge
+                                    of an H2O cylinder.  A flux tally on the
+                                    cylinder is made.
+
+    06: Beam grazing a cylinder 2 - Identical to 05 except the distance 
+                                    tolerance is larger.
+
+        NOTE: that the tallies for this case and case 05 are the same.
+
+    07: Two fissile spheres in a vacuum 1 -  Calculates keff.
+    08: Two fissile spheres in a vacuum 2 -  Calculates keff, uses implicit
+                                             complement.  There currently is
+                                             a statistically significant 
+                                             difference in keff if run 
+                                             sufficiently long.
+    09: Thin spherical shell - Thermal neutron beam originating at the 
+                               center of a void region (implicit complement)
+                               upon a three layered H20 sphere with layers 
+                               0.001 cm thick each.  Surface current tally 
+                               on the reflected side.  Note that it 
+                               currently has two lost particles and a high
+                               run time.
+    10: Beams on a plane - Five beams (axis in the z-direction) are fired at
+                           the center of a disk with mu = 1, 0.98058, 
+                           0.92848, 0.85749, 0.78087.  The surface current 
+                           is tallied and each should have a score of 
+                           around 1/5.
+    11: Beams along a sphere - Same as 10 except instead of a plane, a 
+                               sphere is used.  Note that tallies in 10 and
+                               11 should be completely identical, and 
+                               they are.
+    12: Beam grazing a surface - A beam is fired grazing a surface at an 
+                                 angle.  Tallies check to see if neutrons
+                                 transport through correctly.
+    13: Beam traveling down a small vent surrounded by iron - The vent is 
+                                            the intersetion of two cylinders.
+
+        NOTE: That the problem was run with two different nps values.  
+              The 5E8 nps value was to reduce the statistical errors of
+              the tallies and the 5E6 nps value is used to reduce run 
+              time for testing purposes and is the default nps value.
+
+ 14: 3x3x3 Pu array of cylinders - 9 pillars with 3 cylinders each are on top 
+                                   of a table and keff is calculated.  This
+                                   can be compared to an experimental
+                                   benchmark.
+
+    15: 3 uranium cylinders - A solution of UO2F2 and water are in three aluminum
+                              cylinders that are arranged in an equilateral
+                              triangle. Keff is calculated.
+
+
+UPDATING:
+    If DAGMC is updated then the suite will have to be run again and the 
+        ref.dag.out, ref.dag.mctal, and ref.geom.h5m file will have to be
+    replaced for every case where the answers changed significantly as
+        well as the result spreadsheet.
+
+ADDING A CASE:
+    This is done by creating a directory in the cases directory with a 8 
+    files mentioned above.  The wiki page, result spreadsheet, wscript, 
+    this README file should be updated appropiately as well.
+
+
+

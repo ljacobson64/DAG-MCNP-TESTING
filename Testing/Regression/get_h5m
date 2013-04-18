@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Downloading the original h5m collection requires 3.4 GB of disk space"
+echo "and access to the CNERG archive.  Export geom_h5m from archive? (y/n)"
+read response
+case "$response" in 
+    y|Y) 
+        echo "Downloading..."
+        svn export file:///filespace/groups/cnerg/archive/dag_vv/dag_test_suites/Regression/geom_h5m geom_h5m_c10 ;;
+    *) echo "Taking no action" ;;
+esac
+echo "Downloaded cubit10-based h5m files to ./geom_h5m_c10"
+echo "You should now reset the geom_h5m symlink to point to geom_h5m_c10"
+

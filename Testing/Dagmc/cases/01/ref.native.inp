@@ -1,0 +1,9 @@
+MCNP godiva sphere benchmark for DAGMC 
+1 1 -18.74 -1 imp:n=1
+2 0         1 imp:n=0
+
+1 so 8.74
+
+kcode  1000 1.0 10 50                                                           
+ksrc 0.0 0.0 0.0                                                                
+m1  92235.66c  -0.93   92238.66c  -0.07  

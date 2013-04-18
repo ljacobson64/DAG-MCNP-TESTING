@@ -1,0 +1,270 @@
+      1-       inp41 - test. f1=1, f4=50/( 4/3 pi 50**3) = 9.54930e-5                          
+      2-       1 0 imp:n=0                                                                     
+      3-       2 0 imp:n=1                                                                     
+      4-       3 0 imp:n=1                                                                     
+      5-       4 0 imp:n=1   $ implicit complement                                             
+      6-                                                                                       
+      7-       1                                                                               
+      8-       2                                                                               
+      9-       3                                                                               
+     10-       4                                                                               
+     11-       5                                                                               
+     12-       6                                                                               
+     13-       7                                                                               
+     14-       8                                                                               
+     15-       9                                                                               
+     16-       10                                                                              
+     17-       11                                                                              
+     18-       12                                                                              
+     19-       13                                                                              
+     20-       14                                                                              
+     21-       15                                                                              
+     22-       16                                                                              
+     23-       17                                                                              
+     24-       18                                                                              
+     25-       19                                                                              
+     26-                                                                                       
+     27-       c 2 1 0 -1 imp:n=1                                                              
+     28-       c 3 2 0  1 imp:n=0                                                              
+     29-       c                                                                               
+     30-       c 13 1 so 50.                                                                   
+     31-       c                                                                               
+     32-       nps 500000                                                                      
+     33-       mode n                                                                          
+     34-       sdef                                                                            
+     35-       f1:n 13                                                                         
+     36-       f4:n 2                                                                          
+     37-       prdmp j -.1 -1 j 9999999                                                        
+     38-       c                                                                               
+     39-       c   use new rn generator                                                        
+     40-       rand  gen 2  seed 12345  stride 1234                                            
+ 
+  warning.  no cross-section tables are called for in this problem.                        
+1cells                                                                                                  print table 60
+
+                      atom        gram                                     neutron                                     
+        cell  mat    density     density     volume       mass     pieces importance                                   
+
+     1     1    0  0.00000E+00 0.00000E+00 1.05767E+05 0.00000E+00     0  0.0000E+00                                   
+     2     2    0  0.00000E+00 0.00000E+00 5.23581E+05 0.00000E+00     0  1.0000E+00                                   
+     3     3    0  0.00000E+00 0.00000E+00 1.20442E+06 0.00000E+00     0  1.0000E+00                                   
+     4     4    0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00     0  1.0000E+00                                   
+
+ total                                     1.83377E+06 0.00000E+00
+
+    minimum source weight = 1.0000E+00    maximum source weight = 1.0000E+00
+
+ ***************************************************
+ * Random Number Generator  =                    2 *
+ * Random Number Seed       =                12345 *
+ * Random Number Multiplier =  9219741426499971445 *
+ * Random Number Adder      =                    1 *
+ * Random Number Bits Used  =                   63 *
+ * Random Number Stride     =                 1234 *
+ ***************************************************
+
+
+          1 warning message so far.
+
+          1 warning message so far.
+1problem summary                                                                                                           
+
+      run terminated when      500000  particle histories were done.
+0
+ neutron creation    tracks      weight        energy            neutron loss        tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source              500000    1.0000E+00    1.4000E+01          escape              500000    1.0000E+00    1.4000E+01
+                                                                 energy cutoff            0    0.            0.        
+                                                                 time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ upscattering             0    0.            0.                  downscattering           0    0.            0.        
+ photonuclear             0    0.            0.                  capture                  0    0.            0.        
+ (n,xn)                   0    0.            0.                  loss to (n,xn)           0    0.            0.        
+ prompt fission           0    0.            0.                  loss to fission          0    0.            0.        
+ delayed fission          0    0.            0.                                                                        
+     total           500000    1.0000E+00    1.4000E+01              total           500000    1.0000E+00    1.4000E+01
+
+   number of neutrons banked                       0        average time of (shakes)              cutoffs
+   neutron tracks per source particle     1.0000E+00          escape            1.4318E+00          tco   1.0000E+33
+   neutron collisions per source particle 0.0000E+00          capture           0.0000E+00          eco   0.0000E+00
+   total neutron collisions                        0          capture or escape 1.4318E+00          wc1  -5.0000E-01
+   net multiplication              1.0000E+00 0.0000          any termination   1.4318E+00          wc2  -2.5000E-01
+
+ computer time so far in this run     0.00 minutes            maximum number ever in bank         0
+ computer time in mcrun               0.00 minutes            bank overflows to backup file       0
+ source particles per minute            0.0000E+00
+ random numbers generated                  1273590            most random numbers used was          18 in history      301781
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+1neutron  activity in each cell                                                                         print table 126
+
+                 tracks     population   collisions   collisions     number        flux        average      average
+        cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                    (per history)    energy       energy     (relative)      (cm)
+
+     2     2      500000       500000            0    0.0000E+00   1.4000E+01   1.4000E+01   1.0000E+00   0.0000E+00
+     3     3      500000       500000            0    0.0000E+00   1.4000E+01   1.4000E+01   1.0000E+00   0.0000E+00
+     4     4      500000       500000            0    0.0000E+00   1.4000E+01   1.4000E+01   1.0000E+00   0.0000E+00
+
+     total       1500000      1500000            0    0.0000E+00
+
+1tally   1        nps =      500000
+           tally type 1    number of particles crossing a surface.                        
+           tally for  neutrons 
+ 
+ surface  13                                                                                                           
+                 1.00000E+00 0.0000
+
+
+ ***** the nps-dependent tfc bin check results are suspect because there are only  1 nps tally values to analyze *****
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally   1
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.00      yes          yes            0.00      yes         yes                                    10.00
+ passed?        yes          yes      yes          yes             yes      yes         yes                                      yes
+
+ ===================================================================================================================================
+
+
+ this tally meets the statistical criteria used to form confidence intervals: check the tally fluctuation chart to verify.
+ the results in other bins associated with this tally may not meet these statistical criteria.
+
+ ----- estimated confidence intervals:  -----
+
+ estimated asymmetric confidence interval(1,2,3 sigma): 1.0000E+00 to 1.0000E+00; 1.0000E+00 to 1.0000E+00; 1.0000E+00 to 1.0000E+00
+ estimated  symmetric confidence interval(1,2,3 sigma): 1.0000E+00 to 1.0000E+00; 1.0000E+00 to 1.0000E+00; 1.0000E+00 to 1.0000E+00
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally   1 with nps =      500000  print table 160
+
+
+ normed average tally per history  = 1.00000E+00          unnormed average tally per history  = 1.00000E+00
+ estimated tally relative error    = 0.0000               estimated variance of the variance  = 0.0000
+ relative error from zero tallies  = 0.0000               relative error from nonzero scores  = 0.0000
+
+ number of nonzero history tallies =      500000          efficiency for the nonzero tallies  = 1.0000
+ history number of largest  tally  =           1          largest  unnormalized history tally = 1.00000E+00
+ (largest  tally)/(average tally)  = 1.00000E+00          (largest  tally)/(avg nonzero tally)= 1.00000E+00
+
+ (confidence interval shift)/mean  = 0.0000               shifted confidence interval center  = 1.00000E+00
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            1.00000E+00             1.00000E+00                     0.000000
+      relative error                  0.00000E+00             0.00000E+00                     0.000000
+      variance of the variance        0.00000E+00             0.00000E+00                     0.000000
+      shifted center                  1.00000E+00             1.00000E+00                     0.000000
+      figure of merit                 0.00000E+00             0.00000E+00                     0.000000
+
+ the 100 largest  history tallies appear to have a  maximum value of about 1.00000E+00
+ the large score tail of the empirical history score probability density function appears to have no unsampled regions.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 1.000E+15)**2 = (0.000E+00)*(1.000E+30) = 0.000E+00
+
+1tally   4        nps =      500000
+           tally type 4    track length estimate of particle flux.      units   1/cm**2   
+           tally for  neutrons 
+
+           volumes 
+                   cell:       2                                                                                   
+                         5.23581E+05
+ 
+ cell  2                                                                                                               
+                 9.54952E-05 0.0000
+
+
+ ***** the nps-dependent tfc bin check results are suspect because there are only  1 nps tally values to analyze *****
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally   4
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.00      yes          yes            0.00      yes         yes                                    10.00
+ passed?        yes          yes      yes          yes             yes      yes         yes                                      yes
+
+ ===================================================================================================================================
+
+
+ this tally meets the statistical criteria used to form confidence intervals: check the tally fluctuation chart to verify.
+ the results in other bins associated with this tally may not meet these statistical criteria.
+
+ ----- estimated confidence intervals:  -----
+
+ estimated asymmetric confidence interval(1,2,3 sigma): 9.5495E-05 to 9.5495E-05; 9.5495E-05 to 9.5495E-05; 9.5495E-05 to 9.5495E-05
+ estimated  symmetric confidence interval(1,2,3 sigma): 9.5495E-05 to 9.5495E-05; 9.5495E-05 to 9.5495E-05; 9.5495E-05 to 9.5495E-05
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally   4 with nps =      500000  print table 160
+
+
+ normed average tally per history  = 9.54952E-05          unnormed average tally per history  = 4.99994E+01
+ estimated tally relative error    = 0.0000               estimated variance of the variance  = 0.0000
+ relative error from zero tallies  = 0.0000               relative error from nonzero scores  = 0.0000
+
+ number of nonzero history tallies =      500000          efficiency for the nonzero tallies  = 1.0000
+ history number of largest  tally  =      117053          largest  unnormalized history tally = 5.00000E+01
+ (largest  tally)/(average tally)  = 1.00001E+00          (largest  tally)/(avg nonzero tally)= 1.00001E+00
+
+ (confidence interval shift)/mean  = 0.0000               shifted confidence interval center  = 9.54952E-05
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            9.54952E-05             9.54952E-05                     0.000000
+      relative error                  0.00000E+00             0.00000E+00                     0.000000
+      variance of the variance        0.00000E+00             0.00000E+00                     0.000000
+      shifted center                  9.54952E-05             9.54952E-05                    -0.000000
+      figure of merit                 0.00000E+00             0.00000E+00                     0.000000
+
+ the 100 largest  history tallies appear to have a  maximum value of about 5.00000E+01
+ the large score tail of the empirical history score probability density function appears to have no unsampled regions.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 1.000E+15)**2 = (0.000E+00)*(1.000E+30) = 0.000E+00
+
+1status of the statistical checks used to form confidence intervals for the mean for each tally bin
+
+
+ tally   result of statistical checks for the tfc bin (the first check not passed is listed) and error magnitude check for all bins
+
+     1   passed the 10 statistical checks for the tally fluctuation chart bin result               
+         passed all bin error check:     1 tally bins all have relative errors less than 0.10 with no zero bins
+
+     4   passed the 10 statistical checks for the tally fluctuation chart bin result               
+         passed all bin error check:     1 tally bins all have relative errors less than 0.10 with no zero bins
+
+
+ the 10 statistical checks are only for the tally fluctuation chart bin and do not apply to other tally bins.
+
+1tally fluctuation charts                         
+
+                       tally    1                                tally    4
+          nps      mean     error   vov  slope    fom      mean     error   vov  slope    fom
+       500000   1.0000E+00 0.0000 0.0000 10.0           9.5495E-05 0.0000 0.0000 10.0        
+ tally data written to file inp41m
+
+          1 warning message so far.
+
+
+ run terminated when      500000  particle histories were done.

@@ -1,0 +1,11 @@
+Gammas in an iron box with duct
+m1    26054.04p  0.0580 26056.04p  0.9172   26057.04p  0.0220
+      26058.04p  0.0028
+nps 5e6
+mode p
+f5:p 5.01 0 0  0.5  -5.01 0 0 0.5 
+sdef erg=0.05
+dagmc 
+prdmp 2j -1
+print
+lost 200

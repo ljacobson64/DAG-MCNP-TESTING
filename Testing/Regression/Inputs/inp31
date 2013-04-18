@@ -1,0 +1,24 @@
+photonuclear physics 
+c 2 1   1  -2.7       -1
+c 3 2   0          1  -2
+c 3   0          2
+c
+c 13 1  so   40
+c 14 2  so  200
+c
+m1  13027  1
+mode n p
+sdef par=2 erg=100
+phys:p j 1 j 1
+cut:n 2j 1.e-20 1.e-21
+print
+nps 10000
+prdmp 2j -1
+c imp:n,p 1 1 0
+f11:n  13
+f21:p  13
+f14:n  2
+f24:p  2
+f5:n 0 0 100 0
+
+

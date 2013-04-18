@@ -1,0 +1,21 @@
+URRb-H2Oa(1)-2-0-SL
+c  CELL CARDS
+c 1  1    1.0    -1  2         $SEMI-INFINITE SLAB
+c 2  2    1.0   (-3 1):(4 -2)  $REFLECTOR
+c 3  0            3:-4         $OUTSIDE WORLD
+c
+c  SURFACE CARDS
+c 1  px  6.696802
+c 2  px -6.696802
+c 3  px  7.822954
+c 4  px -7.822954
+c
+c  DATA CARDS
+c imp:n   1  1  0
+kcode   20000  1.0  100  2100
+ksrc    0.1    0.0  0.0
+m1      92250.27m 1.0
+m2      92250.29m 1.0
+mgopt f 2
+phys:n  j 100
+prdmp   2j -1 2

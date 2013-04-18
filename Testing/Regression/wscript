@@ -1,0 +1,115 @@
+#! /usr/bin/env python
+# encoding: utf-8
+
+top = '.'
+out = 'results'
+
+from waflib.Configure import conf
+from waflib import Logs
+import os.path, sys
+
+sys.path.append('..')
+from dagmctesting import *
+
+
+DagmcTestContext.intcases = \
+                [  1,  2,  3,  4,      6,  7,  8,  9, 10,
+                     12,                         19, 20,
+                 21, 22, 23,         26, 27, 28, 29, 30,
+                 31, 32, 33, 34, 35, 36, 37,     39,    
+                 41, 42,                 47,            
+                 61, 62, 63, 64, 65, 66, 67, 68,        
+                                     86,             90,
+                         93, 94, 95,         98, 99     ]
+
+def setup_testcases( self ):
+    self.env.XSDIR='../../testdir1'
+    self.allcases = ['{0:02d}'.format( c ) for c in self.intcases ]
+
+
+DagmcTestContext.setup_testcases = setup_testcases
+
+def get_case_definition( self, casename ):
+    case = DagmcTestContext.CaseDefn()
+    case.name = casename
+    case.runname = 'inp'+casename   
+
+    def output_template( t ):
+        return 'Templates/Linux/{0}{1}'.format(t, casename)
+
+    def subcase_defn( subcase, suffixes ):
+        subcase_name = casename + 'sub' + subcase
+        return (self.get_case_definition( subcase ), subcase_name, [subcase_name + s for s in suffixes] )
+
+    # Defaults for all cases
+    case.inputs['inp'] = 'Inputs/inp'+casename
+    
+    if self.options.facet_inputs: 
+        #case.inputs['gcad'] = 'geom_h5m2/geom{0}.h5m'.format( casename )
+        case.inputs['gcad'] = 'geom_h5m/1E-4_inp{0}.h5m'.format( casename )
+    else:
+        case.inputs['gcad'] = 'geom_sat/geom{0}.sat'.format( casename )
+        case.flags.append( 'ftol=1e-4' )
+    
+    case.outputs['m'] = output_template( 'mctl' )
+    case.outputs['o'] = output_template( 'outp' ) 
+
+    # subcases is empty by default
+
+    # special cases
+    
+    # The original Makefile runs the following cases with the fatal flag,
+    # though in some cases I'm not sure this is needed
+    if casename in  ['01','02','07','11','12','18','19','20',
+                     '21','22','23','26','30','77','89']:
+        case.flags.append( 'fatal' )
+
+    if casename == '08':
+       case.inputs ['wwinp'] = 'Inputs/wwinp08'
+       case.inputs ['rssa' ] = '08sub07w'
+       case.outputs['e'] = output_template( 'wout' )
+       case.subcases.append( subcase_defn( '07', ['w'] ) )
+
+    if casename == '10':
+        case.inputs['wwinp'] = 'Inputs/wwinp10'
+        case.outputs['e'] = output_template( 'wout' )
+
+    if casename == '12' or casename == '14':
+        case.outputs['e'] = output_template( 'wout' )
+
+    if casename == '22':
+        case.inputs[ 'rssa' ] = '22sub21w'
+        case.subcases.append( subcase_defn( '21', 'w' ) )
+
+    if casename == '26':
+        case.inputs['wss'] = '26sub09w'
+        case.inputs['run'] = '26sub09r'
+        case.flags.append('CN')
+        case.subcases.append( subcase_defn( '09', 'wr') )
+
+    if casename == '27':
+        case.inputs['rssa'] = '27sub09w'
+        case.subcases.append( subcase_defn( '09', 'w' ) )
+
+    if casename == '29':
+        case.inputs['rssa'] = '29sub07w'
+        case.subcases.append( subcase_defn( '07', 'w' ) )
+
+    if casename == '34':
+        case.inputs['rssa'] = '34sub33w'
+        case.subcases.append( subcase_defn( '33', 'w' ) )
+
+    if casename == '62': 
+        case.inputs['lcad'] = 'Inputs/lcad62'
+        # case 62 needs the i flag because it only reads in input without doing simulation
+        case.flags.append( 'i' )
+        # and is only produces an outp file, no mctal
+        del case.outputs['m']
+
+    if casename == '93':
+        case.inputs['wwinp'] = 'Inputs/wwinp93'
+
+    return case
+
+DagmcTestContext.get_case_definition = get_case_definition
+

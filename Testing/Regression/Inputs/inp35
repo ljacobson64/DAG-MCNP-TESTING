@@ -1,0 +1,22 @@
+test of volume source and pinhole image tallies
+c 2 1    1 -7.85 -1
+c 3 2    0  1  -2
+c   3    0  2
+c  
+c 13 1    so 10
+c 14 2    so 1000
+c 
+sdef   pos 0 0 0 rad d1 erg 1.
+si1    9 10
+m1   26000 1.
+*fip5:n  100 0 0 0 0 0 0 1000 0.1 100
+fip15:n 100 0 0 0 0 0 0 1000 0.1 100
+fs15   -11 50i 11
+c5    -11 50i 11
+fs5   -11 50i 11
+c15    -11 50i 11
+talnp
+nps   200000
+c imp:n   1 1 0
+prdmp   2j -1
+print

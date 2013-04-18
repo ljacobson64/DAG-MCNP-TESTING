@@ -1,0 +1,10 @@
+Beam in z-direction at two layered water spherical shell
+nps 10000
+mode n
+sdef pos=0 0 0 vec=0 0 1 dir=1 erg=0.025e-6
+m1   1001.66c 0.6667   8016.66c 0.3333
+dagmc 
+prdmp 2j -1
+rand hist=10000
+print
+

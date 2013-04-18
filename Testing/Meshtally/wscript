@@ -1,0 +1,166 @@
+#! /usr/bin/env python
+# encoding: utf-8
+
+top = '.'
+out = 'results'
+
+import os.path, sys
+
+sys.path.append('..')
+from dagmctesting import *
+
+
+def setup_testcases( self ):
+    self.allcases = [ 'squares', 'metroid', 'stu_cyl', 'stu_cyl2',
+                      'uniform_flux', 'gradient_flux', 'energy_groups',
+                      'reflecting_boundaries', 'material_discontinuity',
+                      'tally_multipliers', 'uniform_vol_source',
+                      'conformal_cyl1', 'conformal_cyl2' ] 
+
+DagmcTestContext.setup_testcases = setup_testcases
+
+def get_case_definition( self, casename ):
+    case = DagmcTestContext.CaseDefn()
+    case.name = casename
+    case.runname = 'test_'.format(casename)
+
+    meshes = []
+
+    def mesh_tally_output( t ):
+        case.outputs[os.path.basename(t)] = 'cases/{1}/{0}'.format(t,casename)
+
+    # Defaults for all cases
+    case.inputs['inp'] = 'cases/{0}/{0}.inp'.format(casename)
+    
+    if self.options.facet_inputs: 
+        case.inputs['gcad'] = 'cases/{0}/{0}.h5m'.format( casename )
+    else:
+        case.inputs['gcad'] = 'cases/{0}/{0}.sat'.format( casename )
+        case.flags.append( 'ftol=1e-4' )
+
+    # case.outputs['o'] = output_template( 'out' ) 
+    if casename == 'squares':
+        meshes = ['cylinder.h5m','twospheres.h5m'] 
+        mesh_tally_output('ref/meshtal34.vtk')
+        mesh_tally_output('ref/meshtal44.vtk')
+        mesh_tally_output('ref/meshtal54.vtk')
+        case.outputs['o'] = 'cases/squares/ref/outp'
+        case.outputs['meshtal'] = 'cases/squares/ref/meshtal'
+
+    if casename == 'metroid':
+        meshes = ['meshes/vol2345.h5m']
+        mesh_tally_output('ref/meshtal14.vtk')
+        case.outputs['o'] = 'cases/metroid/ref/outp'
+        case.inputs['inp'] = 'cases/metroid/dagmc.inp'
+        case.inputs['gcad'] = 'cases/metroid/geom23456.h5m'
+    
+    if casename == 'stu_cyl':
+        meshes = ['tallyTetMesh.h5m']
+        for i in range(24,65,10):
+            mesh_tally_output( 'ref/meshtal{0}.vtk'.format(i) )
+        case.outputs['o'] = 'cases/stu_cyl/ref/outp'
+        case.inputs['inp']= 'cases/stu_cyl/meshtalTest.i'
+        case.inputs['gcad'] = 'cases/stu_cyl/meshtalTest.sat'
+
+    if casename == 'stu_cyl2':
+        meshes = ['tallyTetMesh.h5m']
+        mesh_tally_output( 'ref/meshtal4.vtk' )
+        mesh_tally_output( 'ref/meshtal64.vtk' )
+        case.outputs['o'] = 'cases/stu_cyl2/ref/outp'
+        case.inputs['inp'] = 'cases/stu_cyl2/meshtalTest2Tal.i'
+        case.inputs['gcad'] = 'cases/stu_cyl2/meshtalTest.sat'
+
+    if casename == 'uniform_flux':
+        del case.inputs['gcad']
+        case.flags = []
+        meshes = ['mcnp_mesh.h5m', 'tet_mesh.h5m']
+        mesh_tally_output( 'ref/kde_track.vtk' )
+        mesh_tally_output( 'ref/tracklen.vtk' )
+        case.outputs['o'] = 'cases/uniform_flux/ref/outp'
+
+    if casename == 'gradient_flux':
+        del case.inputs['gcad']
+        case.flags = []
+        meshes = ['mcnp_mesh.h5m', 'tet_mesh.h5m']
+        mesh_tally_output( 'ref/kde_coll.vtk' )
+        mesh_tally_output( 'ref/kde_track.vtk' )
+        mesh_tally_output( 'ref/tracklen.vtk' )
+        case.outputs['o'] = 'cases/gradient_flux/ref/outp'
+
+    if casename == 'energy_groups':
+        del case.inputs['gcad']
+        case.flags = []
+        meshes = ['mcnp_mesh.h5m', 'boron_tet_mesh.h5m', 'water_tet_mesh.h5m']
+        mesh_tally_output( 'ref/kde_coll.vtk' )
+        mesh_tally_output( 'ref/kde_track.vtk' )
+        mesh_tally_output( 'ref/boron_tracklen.vtk' )
+        mesh_tally_output( 'ref/water_tracklen.vtk' )
+        case.outputs['o'] = 'cases/energy_groups/ref/outp'
+
+    if casename == 'reflecting_boundaries':
+        del case.inputs['gcad']
+        case.flags = []
+        meshes = ['mcnp_mesh.h5m', 'tet_mesh.h5m']
+        mesh_tally_output( 'ref/kde_coll.vtk' )
+        mesh_tally_output( 'ref/kde_track.vtk' )
+        mesh_tally_output( 'ref/tracklen.vtk' )
+        case.outputs['o'] = 'cases/reflecting_boundaries/ref/outp'
+
+    if casename == 'material_discontinuity':
+        del case.inputs['gcad']
+        case.flags = []
+        meshes = ['mcnp_mesh.h5m', 'steel_tet_mesh.h5m', 'water_tet_mesh.h5m']
+        mesh_tally_output( 'ref/kde_coll.vtk' )
+        mesh_tally_output( 'ref/kde_track.vtk' )
+        mesh_tally_output( 'ref/steel_tracklen.vtk' )
+        mesh_tally_output( 'ref/water_tracklen.vtk' )
+        case.outputs['o'] = 'cases/material_discontinuity/ref/outp'
+
+    if casename == 'tally_multipliers':
+        del case.inputs['gcad']
+        case.flags = []
+        meshes = ['mcnp_mesh.h5m', 'steel_tet_mesh.h5m', 'water_tet_mesh.h5m']
+        mesh_tally_output( 'ref/kde_coll.vtk' )
+        mesh_tally_output( 'ref/kde_track.vtk' )
+        mesh_tally_output( 'ref/steel_tracklen.vtk' )
+        mesh_tally_output( 'ref/water_tracklen.vtk' )
+        case.outputs['o'] = 'cases/tally_multipliers/ref/outp'
+
+    if casename == 'uniform_vol_source':
+        del case.inputs['gcad']
+        case.flags = []
+        meshes = ['tet_mesh.h5m']
+        mesh_tally_output( 'ref/kde_coll.vtk' )
+        mesh_tally_output( 'ref/kde_track.vtk' )
+        mesh_tally_output( 'ref/tracklen.vtk' )
+        case.outputs['o'] = 'cases/uniform_vol_source/ref/outp'
+
+    if casename == 'conformal_cyl1':
+        meshes = ['left_cylinder.h5m']
+        case.inputs['inp'] = 'cases/conformal_cyl1/left_conformal_mesh.inp'
+        case.inputs['gcad'] = 'cases/conformal_cyl1/' + \
+                              'dagmc_preproc_left_cylinder.h5m'
+        mesh_tally_output( 'ref/left_kde_coll.vtk' )
+        mesh_tally_output( 'ref/left_kde_track.vtk' )
+        mesh_tally_output( 'ref/left_tracklen.vtk' )
+        case.outputs['meshtal'] = 'cases/conformal_cyl1/ref/left_meshtal'
+        case.outputs['o'] = 'cases/conformal_cyl1/ref/left_outp'
+
+    if casename == 'conformal_cyl2':
+        meshes = ['right_cylinder.h5m']
+        case.inputs['inp'] = 'cases/conformal_cyl2/right_conformal_mesh.inp'
+        case.inputs['gcad'] = 'cases/conformal_cyl2/' + \
+                              'dagmc_preproc_right_cylinder.h5m'
+        mesh_tally_output( 'ref/right_kde_coll.vtk' )
+        mesh_tally_output( 'ref/right_kde_track.vtk' )
+        mesh_tally_output( 'ref/right_tracklen.vtk' )
+        case.outputs['meshtal'] = 'cases/conformal_cyl2/ref/right_meshtal'
+        case.outputs['o'] = 'cases/conformal_cyl2/ref/right_outp'
+
+    for m in meshes:
+        case.inputs['EXTRA'+os.path.basename(m)] = 'cases/{0}/{1}'.format(casename,m)
+
+    return case
+
+DagmcTestContext.get_case_definition = get_case_definition
+

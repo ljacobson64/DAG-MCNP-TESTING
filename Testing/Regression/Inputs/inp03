@@ -1,0 +1,83 @@
+message: datapath=\user\trash
+
+testprob03 -- many features of the general source
+c 2 3     1 -7  -10              $ source on surface of this cell
+c 3 4    2 -.9  -90 #3 #8 #30   $ carbon between sources and tally
+c 4 8    3 -3.7  -14 15 -16     $ tally here
+c 5 30   4 -1.2  (-21 22 -23 24:-27) -25 26   $ volume source here
+c 40    0  90                  $ zero-importance outside world
+c 
+c 13 10    sx -50 12
+c 23 14    p 0 31 0 16 31 21 18 31 27 
+c 25 15    py 0
+c 24 16    cy 15
+c 18 21    py 30
+c 17 22    py -16
+c 16 23    px 30
+c 19 24    px 25
+c 21 25    pz 9
+c 22 26    pz -9
+c 20 27    c/z 25 30 4
+c 14 90    so 80
+c 
+sc6   a surface source on sphere 10 and a cell source in cell 30.
+sdef  cel 5  x d73  y d74
+      z d75  vec -3 1 0 dir d77  erg d88
+c     biased sampling between the surface and cell sources
+si6   l 13 0
+sp6   .8 .2
+sb6   .3 .7
+c     axs for position bias on the surface
+ds61  t 13 4 2 0
+c     the name of the cell
+ds62  l 0 5
+c     sample x for the cell cover
+ds63  s 0 73
+si73  20 30
+sp73  0 1
+c     sample y for the cell cover
+ds64  s 0 74
+si74  -17 36
+sp74  0 1
+c     sample z for the cell cover
+ds65  s 0 75
+si75  -10 10
+sp75  0 1
+c     reference vector for directional biasing in the cell
+ds66  t 0 -3 1 0
+c     exponential biasing in the cell
+ds67  s 0 77
+sb77  -31 1.5
+c     the surface and cell sources have different energy spectra
+ds68  s 78 88
+si78  a 7 10 13
+sp78  0 1 0
+sp88  -3
+c     position biasing on the surface
+ds69  s 79 0
+si79  -1 .5 .9 1
+sp79  c 0 1.5 1.9 2
+sb79  c 0 .5 1.2 2
+c     materials
+m1    92238 1 nlib=.50m
+m2    6012 1  nlib=50m
+m3    8016 1 
+m4    1001 2  8016 1  92235 3 nlib .50m
+c     tally
+nonu 0 0 0 0 1 0 0
+f4:n  4
+e4    1 2 4 6 8 12 14
+c     miscellaneous
+cut:n   j .0001 .18 .09
+nps     5000
+prdmp 2j -1
+print 200
+f14:n 4
+f24:n 4
+fq14 u e
+fq24 u e
+ft14 scx 79
+ft24 scd
+fu24 73 74 75 79 78 77
+mgopt f 30
+ptrac file=asc event=src 

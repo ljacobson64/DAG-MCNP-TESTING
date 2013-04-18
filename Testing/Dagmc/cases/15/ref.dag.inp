@@ -1,0 +1,22 @@
+title - Three Uranium Cylinders Criticality Benchmark
+c ##################
+c Aluminum cylinder
+m1 
+     13027    1.0
+c ##################
+c UO2F2 water solution
+m2
+      92235    .000383
+      92238    .0000276
+      9019     .000821
+      1001     .1183
+      8016     .05990
+KCODE 10000 .7 30 90
+SDEF axs 0 0 1 pos d1 rad d2 ext d3
+sp1 0.33 0.33 0.34
+si1 L 0 0 0  20.98 0 0  10.49 18.169 0
+si2 8
+si3 15
+prdmp 2j -1
+dagmc distlimit=on
+

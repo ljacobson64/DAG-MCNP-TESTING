@@ -1,0 +1,71 @@
+testprob06 -- cutoffs, flagging, and variance reduction features
+c     energy importance, exponential transform, forced collisions
+c 9   1     1 .11  -1                    $ carbon ball
+c 4,3 2     2 .08  (-2 1 5):(-2 1 -6)    $ copper polar caps
+c 5   4     1 .05  -3 -4                 $ carbon lens
+c 6   3     1 .05  -3 2 4                $ carbon shell, minus lens
+c 7   5     0      3                     $ zero-importance outside world
+c 8   6     2 .08  1 -2 -5 6             $ copper belt
+c 
+c 21         4     sy  20  12
+c 17,14,35   2     sy  .1  7.5
+c            3     sy  .1  10
+c 36         1     sy  .1  5
+c            5     pz 3   $ 2 parallel planes
+c            6     pz -3
+c
+esplt:n 2 7 2 3   $ 2-for-1 splits at 7 and 3 mev
+c imp:n 0 1 3r 0 .5 1 1 1
+wwp:n 5 3 5 1 .4
+c    source on spherical surface with position and energy bias
+c sdef  sur 36  ext d1  axs 0 1 0  erg=fdir=d2 dir=d4
+sdef pos=0 .1 0 rad=4.9  
+si1   -1 .2 1
+sp1   0 .6 .4
+sb1   0 .4 .6
+si4  a -1 0 .5 .8 .9 1
+sp4   .5 4i 1
+c    ds q and detector combo fail in mcnp4.2
+ds2  q  .1 11  .4 12  .7 13  1. 14
+si11 h 1 5
+sp11 d 0 1
+si12 h 5 10
+sp12 d 0 1
+si13 h 10 14
+sp13 d 0 1
+si14 h 14 16
+sp14 d 0 1
+c
+m1    6012.40c  1 nlib 60
+m2    29000.02c 1 plib .01
+f1:n  36
+e1    .183 .498 .821 1.353 3.679 12.0 13.5 14.2
+c1    -.866 -.5 0 .5 .866 1 t
+c    f5/f15 with different time bins are erroneously
+c    master/slave in mcnp4.2
+f5:n 5 5 5 1
+f15:n 5 5 5 1
+fq5  t d
+fq15 t d
+t15   2 3i 10
+t5    2
+fq1   c e
+f2:n  17 14 35 T
+e2    1  14.2
+t2    5 10
+f4:n  3 4 T
+e4    1 14.2
+t4    5 10
+sf4   21
+f14:n 3 4 T
+de14 LIN 1 10 100
+df14 LIN 0.8 0.9 1.0
+ext:n 0 -SV2 -SV2 0 0 0 0 .2y 0 0   $ exponential transform in the y direction
+VECT V2 0 0 0
+fcl:n 0  0  0  0 .2 0 0 0 0 0  $ forced collisions in cell 3
+cut:n 10 .02 .01
+nps   5000
+print 170 110
+prdmp 2j -1
+c
+ 

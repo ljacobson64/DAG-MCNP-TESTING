@@ -1,0 +1,20 @@
+UD20-H20(1)-1.0.CY
+c  CELL CARDS
+c 1  1   1.0    -1           $SEMI-INFINITE CYLINDER
+c 2  2   1.0     1   -2      $REFLECTOR
+c 3  0           2           $OUTSIDE WORLD
+c
+c  SURFACE CARDS
+c 1  rcc 0 0 0   0 0 1e12  15.396916
+c 2  rcc 0 0 0   0 0 1e12  17.227479
+c
+c  DATA CARDS
+c imp:n   1  1  0
+kcode   20000  1.0  50  2050
+c ksrc    0.0   0.0  1.0e6
+ksrc 0 0 0
+m1      92250.08m 1.0
+m2      92250.09m 1.0
+mgopt f 1
+phys:n  j 100
+prdmp   2j -1 2

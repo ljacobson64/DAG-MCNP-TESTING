@@ -1,0 +1,19 @@
+Spheres test for meshtal 
+c  --------------------
+c material 1: Water
+m1
+      1001  2  $ H
+      8016  1  $ O1
+c  --------------------
+c source: point source at origin
+sdef erg=14.1 
+c
+mode n    $ type of particle
+nps 1e6   $ number of particles
+prdmp 1e5 1e5 -1 1 
+dagmc $ overlap_thickness=.1
+fmesh14:n geom=dag
+fc14 dagmc inp=vol2345.h5m conformal=2-5
+           out=test_meshtal14.vtk
+
+

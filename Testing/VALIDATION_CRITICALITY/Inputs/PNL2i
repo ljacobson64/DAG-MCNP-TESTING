@@ -1,0 +1,36 @@
+ PNL-2  PU-SOL-THERM-021 Case 3  15.2-inch Sphere  RN2  ENDF/B-VI
+c 1    1  0.099270         -1            $ Plutonium Nitrate Solution
+c 2    2  0.086240         -2   1        $ Stainless Steel Container
+c 3    0                    2
+c
+c 1   so  19.3163
+c 2   so  19.4382
+c
+kcode   5000    1.0    50   250
+dbcn       7j 3147300
+c imp:n   1.0  1.0  0.0
+sdef   cel=2  erg=d1
+sp1    -3
+vol    0.0 30189.81    575.17       0.0 0.0
+area   0.0 11 r 4688.76   4748.12
+c    Plutonium Nitrate Solution
+m1    1001.62c  5.4377e-02
+      7014.62c  4.6867e-03
+      8016.62c  3.9757e-02      8017.66c  1.5909e-05
+     94239.66c  4.1249e-04     94240.66c  2.0181e-05
+     94241.66c  1.2181e-06     94242.66c  3.8579e-08
+c    Stainless Steel
+m2   24050.62c  7.5725e-04    24052.62c  1.4603e-02
+     24053.62c  1.6557e-03    24054.62c  4.1217e-04
+     25055.62c  1.7363e-03
+     26054.62c  3.5019e-03    26056.62c  5.4440e-02
+     26057.62c  1.2465e-03    26058.62c  1.6619e-04
+     28058.62c  5.2706e-03    28060.62c  2.0150e-03
+     28061.62c  8.7239e-05    28062.62c  2.7716e-04
+     28064.62c  7.0255e-05
+mt1  lwtr.60t
+totnu
+prdmp    j     250 -1
+print
+
+ end of input
