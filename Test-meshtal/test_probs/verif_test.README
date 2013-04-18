@@ -1,0 +1,25 @@
+A summary of the Verification Tests
+
+1: single rectangular prism with uniform materials and reflecting boundaries
+2: single rectangular prism with uniform materials and vacuum boundaries
+3: rectangular prism divided by a plane orthogonal to the long axis
+   reflecting boundaries
+   same materials on both sides of plane
+4: rectangular prism divided by a plane orthogonal to the long axis
+   reflecting boundaries
+   different materials on each sided of plane
+5: rectangular prism divided by a plane at 45 degrees to the long axis
+   reflecting boundaries
+   same materials on both sides of plane
+6: rectangular prism divided by a plane at 45 degrees to the long axis
+   reflecting boundaries
+   different materials on each sided of plane
+
+In each directory is a results_90min directory containing results for 
+running the tally problems for 90 minutes.  These runs used DAG-MCNP
+r265 and the CNERG installation of MOAB r4437.  They were run on 
+26 January 2011 on machine syme.
+
+Visualization files from these six benchmarks were used in the ANS
+summary submission on January 31.  These visualization files are 
+available in ANS11_vis.tar.gz.

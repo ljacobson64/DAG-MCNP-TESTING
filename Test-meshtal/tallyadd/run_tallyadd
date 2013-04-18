@@ -1,0 +1,5 @@
+#!/bin/sh
+
+export PYTHONPATH=/filespace/groups/cnerg/opt/PyTAPS/lib/python
+LD_LIBRARY_PATH=/filespace/groups/cnerg/opt/MOAB/opt-nocgm-shared/lib
+/filespace/groups/cnerg/opt/python2.6 ./tallyadd.py $*
