@@ -1,4 +1,0 @@
-ref.in - native MCNP input (+ dag mesh tallies)
-tallymesh_volN.h5m - input file for dag mesh tally, conforming to vol N.
-inputs/geom.sat - mcnp2cad output from ref.in
-inputs/mesh_volN.cub - CUBIT 12 mesh of MCNP vol N
