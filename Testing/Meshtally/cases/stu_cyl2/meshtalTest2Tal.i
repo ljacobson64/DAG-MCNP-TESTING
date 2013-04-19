@@ -15,12 +15,12 @@ fc4 dagmc inp=tallyTetMesh.h5m  tag=abaqus_set_name
            tagval= heatTest-1-1 tagval=heatTest-2-1 
            tagval= heatTest-3-1 tagval=heatTest-4-1
            out=test_meshtal4.vtk
-fm4 -4 1
+fm4 -1 0 -4 -1
 c
 fmesh64:n geom=dag
 fc64 dagmc inp=tallyTetMesh.h5m tag=abaqus_set_name tagval=heatTest-5-1
            out=test_meshtal64.vtk
-fm64 -4 1
+fm64 -1 0 -4 -1
 c
 print 110 126
 nps 1e5

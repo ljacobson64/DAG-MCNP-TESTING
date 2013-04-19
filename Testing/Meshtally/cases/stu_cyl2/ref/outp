@@ -4,8 +4,8 @@
       4-       3 1 -1 imp:n=1                                                                  
       5-       4 1 -1 imp:n=1                                                                  
       6-       5 1 -1 imp:n=1                                                                  
-      7-       8 0 imp:n=0                                                                     
-      8-       9 0 imp:n=1   $ implicit complement                                             
+      7-       8  0 imp:n=0                                                                    
+      8-       9 0 imp:n=1 $ implicit complement                                               
       9-                                                                                       
      10-       1                                                                               
      11-       2                                                                               
@@ -56,12 +56,12 @@
      56-                  tagval= heatTest-1-1 tagval=heatTest-2-1                             
      57-                  tagval= heatTest-3-1 tagval=heatTest-4-1                             
      58-                  out=test_meshtal4.vtk                                                
-     59-       fm4 -4 1                                                                        
+     59-       fm4 -1 0 -4 -1                                                                  
      60-       c                                                                               
      61-       fmesh64:n geom=dag                                                              
      62-       fc64 dagmc inp=tallyTetMesh.h5m tag=abaqus_set_name tagval=heatTest-5-1         
      63-                  out=test_meshtal64.vtk                                               
-     64-       fm64 -4 1                                                                       
+     64-       fm64 -1 0 -4 -1                                                                 
      65-       c                                                                               
      66-       print 110 126                                                                   
      67-       nps 1e5                                                                         
@@ -103,10 +103,10 @@
 
                         tables from file c00740/endf70a                                                  
 
-   1001.70c    3652   1-H -  1 at 293.6K from endf/b-vii.0 njoy99.248                             mat 125      03/27/08
-   8016.70c  170922   8-O - 16 at 293.6K from endf/b-vii.0 njoy99.248                             mat 825      08/25/07
+   1001.70c    4242   1-H -  1 at 293.6K from endf/b-vii.0 njoy99.248                             mat 125      03/27/08
+   8016.70c  173771   8-O - 16 at 293.6K from endf/b-vii.0 njoy99.248                             mat 825      08/25/07
 
-  total      174574
+  total      178013
 
           1 warning message so far.
 1   starting mcrun.      cp0 =  0.00         print table 110
