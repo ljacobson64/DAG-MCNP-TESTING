@@ -1,10 +1,10 @@
       1-       input file (right cylinder) for verification problem #07: conformal mesh        
-      2-       1 0 imp:n=0                                                                     
+      2-       1  0 imp:n=0                                                                    
       3-       2 2 -8 imp:n=1                                                                  
       4-       3 2 -8 imp:n=1                                                                  
       5-       4 1 -1 imp:n=1                                                                  
       6-       5 0 imp:n=1                                                                     
-      7-       6 0 imp:n=1   $ implicit complement                                             
+      7-       6 0 imp:n=1 $ implicit complement                                               
       8-                                                                                       
       9-       1                                                                               
      10-       2                                                                               
@@ -48,28 +48,33 @@
      48-       si2 H -1 1                                                                      
      49-       sp2  0  1                                                                       
      50-       c native MCNP cylindrical mesh tally for volume 3                               
-     51-       fmesh14:n geom=cyl   origin=3.25 0 0  axs=1 0 0  vec=0 0 1                      
-     52-                 imesh=0.2236 0.3162 0.3873 0.4472 0.5                                 
-     53-                 jmesh=1     jints=10                                                  
-     54-                 kmesh=1     kints=24                                                  
+     51-       fmesh4:n geom=cyl   origin=3.25 0 0  axs=1 0 0  vec=0 0 1                       
+     52-                imesh=0.2236 0.3162 0.3873 0.4472 0.5                                  
+     53-                jmesh=1     jints=10                                                   
+     54-                kmesh=1     kints=24                                                   
      55-       c TET track length mesh tally for volume 3                                      
      56-       fmesh24:n geom=dag                                                              
      57-       fc24 dagmc type=tracklen inp=right_cylinder.h5m                                 
-     58-                  out=test_right_tracklen.vtk                                          
+     58-                  out=test_meshtal24.vtk                                               
      59-                  conformal=3 -dagmc                                                   
-     60-       c KDE collision mesh tally for volume 3                                         
+     60-       c KDE integral-track mesh tally for volume 3                                    
      61-       fmesh34:n geom=dag                                                              
-     62-       fc34 dagmc type=kde_coll inp=right_cylinder.h5m                                 
-     63-                  out=test_right_kde_coll.vtk                                          
+     62-       fc34 dagmc type=kde_track inp=right_cylinder.h5m                                
+     63-                  out=test_meshtal34.vtk                                               
      64-                  hx=0.198 hy=0.0663 hz=0.0662 -dagmc                                  
-     65-       c KDE track length mesh tally for volume 3                                      
+     65-       c KDE sub-track mesh tally for volume 3                                         
      66-       fmesh44:n geom=dag                                                              
-     67-       fc44 dagmc type=kde_track inp=right_cylinder.h5m                                
-     68-                  out=test_right_kde_track.vtk                                         
+     67-       fc44 dagmc type=kde_subtrack inp=right_cylinder.h5m                             
+     68-                  out=test_meshtal44.vtk subtracks=3                                   
      69-                  hx=0.198 hy=0.0663 hz=0.0662 -dagmc                                  
-     70-       c                                                                               
-     71-       nps 1e5                                                                         
-     72-       prdmp 2j -1                                                                     
+     70-       c KDE collision mesh tally for volume 3                                         
+     71-       fmesh54:n geom=dag                                                              
+     72-       fc54 dagmc type=kde_coll inp=right_cylinder.h5m                                 
+     73-                  out=test_meshtal54.vtk                                               
+     74-                  hx=0.198 hy=0.0663 hz=0.0662 -dagmc                                  
+     75-       c                                                                               
+     76-       nps 1e5                                                                         
+     77-       prdmp 2j -1                                                                     
  
   warning.    1 materials had unnormalized fractions. print table 40.                      
 1cells                                                                                                  print table 60

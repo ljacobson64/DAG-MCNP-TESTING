@@ -20,18 +20,22 @@
      20-       sp1  -21  2                                                                     
      21-       c TET track length mesh tally for cell 1                                        
      22-       fmesh24:n geom=dag                                                              
-     23-       fc24 dagmc type=tracklen inp=tet_mesh.h5m out=test_tracklen.vtk -dagmc          
-     24-       c KDE collision mesh tally for cell 1                                           
+     23-       fc24 dagmc type=tracklen inp=tet_mesh.h5m out=test_meshtal24.vtk -dagmc         
+     24-       c KDE integral-track mesh tally for cell 1                                      
      25-       fmesh34:n geom=dag                                                              
-     26-       fc34 dagmc type=kde_coll inp=tet_mesh.h5m out=test_kde_coll.vtk                 
+     26-       fc34 dagmc type=kde_track inp=tet_mesh.h5m out=test_meshtal34.vtk               
      27-                  hx=0.00722668 hy=0.00721741 hz=0.00722104 -dagmc                     
-     28-       c KDE track length mesh tally for cell 1                                        
+     28-       c KDE sub-track mesh tally for cell 1                                           
      29-       fmesh44:n geom=dag                                                              
-     30-       fc44 dagmc type=kde_track inp=tet_mesh.h5m out=test_kde_track.vtk               
-     31-                  hx=0.00722668 hy=0.00721741 hz=0.00722104 -dagmc                     
-     32-       c                                                                               
-     33-       nps 1e6                                                                         
-     34-       prdmp 2j -1                                                                     
+     30-       fc44 dagmc type=kde_subtrack inp=tet_mesh.h5m out=test_meshtal44.vtk            
+     31-                  hx=0.00722668 hy=0.00721741 hz=0.00722104 subtracks=3 -dagmc         
+     32-       c KDE collision mesh tally for cell 1                                           
+     33-       fmesh54:n geom=dag                                                              
+     34-       fc54 dagmc type=kde_coll inp=tet_mesh.h5m out=test_meshtal54.vtk                
+     35-                  hx=0.00722668 hy=0.00721741 hz=0.00722104 -dagmc                     
+     36-       c                                                                               
+     37-       nps 1e6                                                                         
+     38-       prdmp 2j -1                                                                     
 1cells                                                                                                  print table 60
 
                       atom        gram                                     neutron                                     

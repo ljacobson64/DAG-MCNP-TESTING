@@ -74,65 +74,72 @@ def get_case_definition( self, casename ):
         del case.inputs['gcad']
         case.flags = []
         meshes = ['mcnp_mesh.h5m', 'tet_mesh.h5m']
-        mesh_tally_output( 'ref/kde_track.vtk' )
-        mesh_tally_output( 'ref/tracklen.vtk' )
+        mesh_tally_output( 'ref/meshtal24.vtk' )
+        mesh_tally_output( 'ref/meshtal34.vtk' )
+        mesh_tally_output( 'ref/meshtal44.vtk' )
         case.outputs['o'] = 'cases/uniform_flux/ref/outp'
 
     if casename == 'gradient_flux':
         del case.inputs['gcad']
         case.flags = []
         meshes = ['mcnp_mesh.h5m', 'tet_mesh.h5m']
-        mesh_tally_output( 'ref/kde_coll.vtk' )
-        mesh_tally_output( 'ref/kde_track.vtk' )
-        mesh_tally_output( 'ref/tracklen.vtk' )
+        mesh_tally_output( 'ref/meshtal24.vtk' )
+        mesh_tally_output( 'ref/meshtal34.vtk' )
+        mesh_tally_output( 'ref/meshtal44.vtk' )
+        mesh_tally_output( 'ref/meshtal54.vtk' )
         case.outputs['o'] = 'cases/gradient_flux/ref/outp'
 
     if casename == 'energy_groups':
         del case.inputs['gcad']
         case.flags = []
         meshes = ['mcnp_mesh.h5m', 'boron_tet_mesh.h5m', 'water_tet_mesh.h5m']
-        mesh_tally_output( 'ref/kde_coll.vtk' )
-        mesh_tally_output( 'ref/kde_track.vtk' )
-        mesh_tally_output( 'ref/boron_tracklen.vtk' )
-        mesh_tally_output( 'ref/water_tracklen.vtk' )
+        mesh_tally_output( 'ref/meshtal14.vtk' )
+        mesh_tally_output( 'ref/meshtal24.vtk' )
+        mesh_tally_output( 'ref/meshtal34.vtk' )
+        mesh_tally_output( 'ref/meshtal44.vtk' )
+        mesh_tally_output( 'ref/meshtal54.vtk' )
         case.outputs['o'] = 'cases/energy_groups/ref/outp'
 
     if casename == 'reflecting_boundaries':
         del case.inputs['gcad']
         case.flags = []
         meshes = ['mcnp_mesh.h5m', 'tet_mesh.h5m']
-        mesh_tally_output( 'ref/kde_coll.vtk' )
-        mesh_tally_output( 'ref/kde_track.vtk' )
-        mesh_tally_output( 'ref/tracklen.vtk' )
+        mesh_tally_output( 'ref/meshtal24.vtk' )
+        mesh_tally_output( 'ref/meshtal34.vtk' )
+        mesh_tally_output( 'ref/meshtal44.vtk' )
+        mesh_tally_output( 'ref/meshtal54.vtk' )
         case.outputs['o'] = 'cases/reflecting_boundaries/ref/outp'
 
     if casename == 'material_discontinuity':
         del case.inputs['gcad']
         case.flags = []
         meshes = ['mcnp_mesh.h5m', 'steel_tet_mesh.h5m', 'water_tet_mesh.h5m']
-        mesh_tally_output( 'ref/kde_coll.vtk' )
-        mesh_tally_output( 'ref/kde_track.vtk' )
-        mesh_tally_output( 'ref/steel_tracklen.vtk' )
-        mesh_tally_output( 'ref/water_tracklen.vtk' )
+        mesh_tally_output( 'ref/meshtal14.vtk' )
+        mesh_tally_output( 'ref/meshtal24.vtk' )
+        mesh_tally_output( 'ref/meshtal34.vtk' )
+        mesh_tally_output( 'ref/meshtal44.vtk' )
+        mesh_tally_output( 'ref/meshtal54.vtk' )
         case.outputs['o'] = 'cases/material_discontinuity/ref/outp'
 
     if casename == 'tally_multipliers':
         del case.inputs['gcad']
         case.flags = []
         meshes = ['mcnp_mesh.h5m', 'steel_tet_mesh.h5m', 'water_tet_mesh.h5m']
-        mesh_tally_output( 'ref/kde_coll.vtk' )
-        mesh_tally_output( 'ref/kde_track.vtk' )
-        mesh_tally_output( 'ref/steel_tracklen.vtk' )
-        mesh_tally_output( 'ref/water_tracklen.vtk' )
+        mesh_tally_output( 'ref/meshtal14.vtk' )
+        mesh_tally_output( 'ref/meshtal24.vtk' )
+        mesh_tally_output( 'ref/meshtal34.vtk' )
+        mesh_tally_output( 'ref/meshtal44.vtk' )
+        mesh_tally_output( 'ref/meshtal54.vtk' )
         case.outputs['o'] = 'cases/tally_multipliers/ref/outp'
 
     if casename == 'uniform_vol_source':
         del case.inputs['gcad']
         case.flags = []
         meshes = ['tet_mesh.h5m']
-        mesh_tally_output( 'ref/kde_coll.vtk' )
-        mesh_tally_output( 'ref/kde_track.vtk' )
-        mesh_tally_output( 'ref/tracklen.vtk' )
+        mesh_tally_output( 'ref/meshtal24.vtk' )
+        mesh_tally_output( 'ref/meshtal34.vtk' )
+        mesh_tally_output( 'ref/meshtal44.vtk' )
+        mesh_tally_output( 'ref/meshtal54.vtk' )
         case.outputs['o'] = 'cases/uniform_vol_source/ref/outp'
 
     if casename == 'conformal_cyl1':
@@ -140,9 +147,10 @@ def get_case_definition( self, casename ):
         case.inputs['inp'] = 'cases/conformal_cyl1/left_conformal_mesh.inp'
         case.inputs['gcad'] = 'cases/conformal_cyl1/' + \
                               'dagmc_preproc_left_cylinder.h5m'
-        mesh_tally_output( 'ref/left_kde_coll.vtk' )
-        mesh_tally_output( 'ref/left_kde_track.vtk' )
-        mesh_tally_output( 'ref/left_tracklen.vtk' )
+        mesh_tally_output( 'ref/meshtal24.vtk' )
+        mesh_tally_output( 'ref/meshtal34.vtk' )
+        mesh_tally_output( 'ref/meshtal44.vtk' )
+        mesh_tally_output( 'ref/meshtal54.vtk' )
         case.outputs['meshtal'] = 'cases/conformal_cyl1/ref/left_meshtal'
         case.outputs['o'] = 'cases/conformal_cyl1/ref/left_outp'
 
@@ -151,9 +159,10 @@ def get_case_definition( self, casename ):
         case.inputs['inp'] = 'cases/conformal_cyl2/right_conformal_mesh.inp'
         case.inputs['gcad'] = 'cases/conformal_cyl2/' + \
                               'dagmc_preproc_right_cylinder.h5m'
-        mesh_tally_output( 'ref/right_kde_coll.vtk' )
-        mesh_tally_output( 'ref/right_kde_track.vtk' )
-        mesh_tally_output( 'ref/right_tracklen.vtk' )
+        mesh_tally_output( 'ref/meshtal24.vtk' )
+        mesh_tally_output( 'ref/meshtal34.vtk' )
+        mesh_tally_output( 'ref/meshtal44.vtk' )
+        mesh_tally_output( 'ref/meshtal54.vtk' )
         case.outputs['meshtal'] = 'cases/conformal_cyl2/ref/right_meshtal'
         case.outputs['o'] = 'cases/conformal_cyl2/ref/right_outp'
 
