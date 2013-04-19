@@ -4,8 +4,8 @@
       4-       3 1 -1 imp:n=1                                                                  
       5-       4 1 -1 imp:n=1                                                                  
       6-       5 1 -1 imp:n=1                                                                  
-      7-       8 0 imp:n=0                                                                     
-      8-       9 0 imp:n=1   $ implicit complement                                             
+      7-       8  0 imp:n=0                                                                    
+      8-       9 0 imp:n=1 $ implicit complement                                               
       9-                                                                                       
      10-       1                                                                               
      11-       2                                                                               
@@ -54,27 +54,27 @@
      54-       fmesh24:n geom=dag                                                              
      55-       fc24 dagmc inp=tallyTetMesh.h5m  tag=abaqus_set_name tagval=heatTest-1-1        
      56-                  convex  = true out=test_meshtal24.vtk                                
-     57-       fm24 -4 1                                                                       
+     57-       fm24 -1 0 -4 -1                                                                 
      58-       c                                                                               
      59-       fmesh34:n geom=dag                                                              
      60-       fc34 dagmc inp=tallyTetMesh.h5m tag=abaqus_set_name tagval=heatTest-2-1         
      61-                  convex  = true out=test_meshtal34.vtk                                
-     62-       fm34 -4 1                                                                       
+     62-       fm34 -1 0 -4 -1                                                                 
      63-       c                                                                               
      64-       fmesh44:n geom=dag                                                              
      65-       fc44 dagmc inp=tallyTetMesh.h5m tag=abaqus_set_name tagval=heatTest-3-1         
      66-                  convex  = true out=test_meshtal44.vtk                                
-     67-       fm44 -4 1                                                                       
+     67-       fm44 -1 0 -4 -1                                                                 
      68-       c                                                                               
      69-       fmesh54:n geom=dag                                                              
      70-       fc54 dagmc inp=tallyTetMesh.h5m tag=abaqus_set_name tagval=heatTest-4-1         
      71-                  convex  = true out=test_meshtal54.vtk                                
-     72-       fm54 -4 1                                                                       
+     72-       fm54 -1 0 -4 -1                                                                 
      73-       c                                                                               
      74-       fmesh64:n geom=dag                                                              
      75-       fc64 dagmc inp=tallyTetMesh.h5m tag=abaqus_set_name tagval=heatTest-5-1         
      76-               out=test_meshtal64.vtk                                                  
-     77-       fm64 -4 1                                                                       
+     77-       fm64 -1 0 -4 -1                                                                 
      78-       c                                                                               
      79-       print 110 126                                                                   
      80-       nps 1e5                                                                         
@@ -116,10 +116,10 @@
 
                         tables from file c00740/endf70a                                                  
 
-   1001.70c    3652   1-H -  1 at 293.6K from endf/b-vii.0 njoy99.248                             mat 125      03/27/08
-   8016.70c  170922   8-O - 16 at 293.6K from endf/b-vii.0 njoy99.248                             mat 825      08/25/07
+   1001.70c    4242   1-H -  1 at 293.6K from endf/b-vii.0 njoy99.248                             mat 125      03/27/08
+   8016.70c  173771   8-O - 16 at 293.6K from endf/b-vii.0 njoy99.248                             mat 825      08/25/07
 
-  total      174574
+  total      178013
 
           1 warning message so far.
 1   starting mcrun.      cp0 =  0.00         print table 110
