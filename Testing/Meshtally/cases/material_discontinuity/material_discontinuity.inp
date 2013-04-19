@@ -38,20 +38,24 @@ sp1  0  1
 si2 H -1 1
 sp2  0  1
 c TET track length mesh tally for cell 1
-fmesh24:n geom=dag
-fc24 dagmc type=tracklen inp=water_tet_mesh.h5m out=test_water_tracklen.vtk
+fmesh14:n geom=dag
+fc14 dagmc type=tracklen inp=water_tet_mesh.h5m out=test_meshtal14.vtk
            conformal=1 -dagmc
 c TET track length mesh tally for cell 2
-fmesh34:n geom=dag
-fc34 dagmc type=tracklen inp=steel_tet_mesh.h5m out=test_steel_tracklen.vtk
+fmesh24:n geom=dag
+fc24 dagmc type=tracklen inp=steel_tet_mesh.h5m out=test_meshtal24.vtk
            conformal=2 -dagmc
-c KDE collision mesh tally for cells 1 and 2
-fmesh44:n geom=dag
-fc44 dagmc type=kde_coll inp=mcnp_mesh.h5m out=test_kde_coll.vtk
+c KDE integral-track mesh tally for cells 1 and 2
+fmesh34:n geom=dag
+fc34 dagmc type=kde_track inp=mcnp_mesh.h5m out=test_meshtal34.vtk
            hx=0.1042 hy=0.0833 hz=0.0833 -dagmc
-c KDE track length mesh tally for cells 1 and 2
+c KDE sub-track mesh tally for cells 1 and 2
+fmesh44:n geom=dag
+fc44 dagmc type=kde_subtrack inp=mcnp_mesh.h5m out=test_meshtal44.vtk
+           hx=0.1042 hy=0.0833 hz=0.0833 subtracks=3 -dagmc
+c KDE collision mesh tally for cells 1 and 2
 fmesh54:n geom=dag
-fc54 dagmc type=kde_track inp=mcnp_mesh.h5m out=test_kde_track.vtk
+fc54 dagmc type=kde_coll inp=mcnp_mesh.h5m out=test_meshtal54.vtk
            hx=0.1042 hy=0.0833 hz=0.0833 -dagmc
 c
 nps 1e5

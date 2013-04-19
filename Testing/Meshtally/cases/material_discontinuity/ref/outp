@@ -38,24 +38,28 @@
      38-       si2 H -1 1                                                                      
      39-       sp2  0  1                                                                       
      40-       c TET track length mesh tally for cell 1                                        
-     41-       fmesh24:n geom=dag                                                              
-     42-       fc24 dagmc type=tracklen inp=water_tet_mesh.h5m out=test_water_tracklen.vtk     
+     41-       fmesh14:n geom=dag                                                              
+     42-       fc14 dagmc type=tracklen inp=water_tet_mesh.h5m out=test_meshtal14.vtk          
      43-                  conformal=1 -dagmc                                                   
      44-       c TET track length mesh tally for cell 2                                        
-     45-       fmesh34:n geom=dag                                                              
-     46-       fc34 dagmc type=tracklen inp=steel_tet_mesh.h5m out=test_steel_tracklen.vtk     
+     45-       fmesh24:n geom=dag                                                              
+     46-       fc24 dagmc type=tracklen inp=steel_tet_mesh.h5m out=test_meshtal24.vtk          
      47-                  conformal=2 -dagmc                                                   
-     48-       c KDE collision mesh tally for cells 1 and 2                                    
-     49-       fmesh44:n geom=dag                                                              
-     50-       fc44 dagmc type=kde_coll inp=mcnp_mesh.h5m out=test_kde_coll.vtk                
+     48-       c KDE integral-track mesh tally for cells 1 and 2                               
+     49-       fmesh34:n geom=dag                                                              
+     50-       fc34 dagmc type=kde_track inp=mcnp_mesh.h5m out=test_meshtal34.vtk              
      51-                  hx=0.1042 hy=0.0833 hz=0.0833 -dagmc                                 
-     52-       c KDE track length mesh tally for cells 1 and 2                                 
-     53-       fmesh54:n geom=dag                                                              
-     54-       fc54 dagmc type=kde_track inp=mcnp_mesh.h5m out=test_kde_track.vtk              
-     55-                  hx=0.1042 hy=0.0833 hz=0.0833 -dagmc                                 
-     56-       c                                                                               
-     57-       nps 1e5                                                                         
-     58-       prdmp 2j -1                                                                     
+     52-       c KDE sub-track mesh tally for cells 1 and 2                                    
+     53-       fmesh44:n geom=dag                                                              
+     54-       fc44 dagmc type=kde_subtrack inp=mcnp_mesh.h5m out=test_meshtal44.vtk           
+     55-                  hx=0.1042 hy=0.0833 hz=0.0833 subtracks=3 -dagmc                     
+     56-       c KDE collision mesh tally for cells 1 and 2                                    
+     57-       fmesh54:n geom=dag                                                              
+     58-       fc54 dagmc type=kde_coll inp=mcnp_mesh.h5m out=test_meshtal54.vtk               
+     59-                  hx=0.1042 hy=0.0833 hz=0.0833 -dagmc                                 
+     60-       c                                                                               
+     61-       nps 1e5                                                                         
+     62-       prdmp 2j -1                                                                     
  
   warning.    2 materials had unnormalized fractions. print table 40.                      
 1cells                                                                                                  print table 60
