@@ -41,7 +41,7 @@ fc34 dagmc type=kde_track inp=mcnp_mesh.h5m out=test_meshtal34.vtk
 c KDE sub-track mesh tally for cell 1
 fmesh44:n geom=dag
 fc44 dagmc type=kde_subtrack inp=mcnp_mesh.h5m out=test_meshtal44.vtk
-           hx=0.1042 hy=0.0625 hz=0.0624 subtracks=3 -dagmc
+           hx=0.1042 hy=0.0625 hz=0.0624 subtracks=3 seed=11699913 -dagmc
 c
 nps 1e5
 prdmp 2j -1

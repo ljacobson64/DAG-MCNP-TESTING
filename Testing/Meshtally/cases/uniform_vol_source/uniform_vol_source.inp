@@ -28,7 +28,8 @@ fc34 dagmc type=kde_track inp=tet_mesh.h5m out=test_meshtal34.vtk
 c KDE sub-track mesh tally for cell 1
 fmesh44:n geom=dag
 fc44 dagmc type=kde_subtrack inp=tet_mesh.h5m out=test_meshtal44.vtk
-           hx=0.00722668 hy=0.00721741 hz=0.00722104 subtracks=3 -dagmc
+           hx=0.00722668 hy=0.00721741 hz=0.00722104
+           subtracks=3 seed=11699913 -dagmc
 c KDE collision mesh tally for cell 1
 fmesh54:n geom=dag
 fc54 dagmc type=kde_coll inp=tet_mesh.h5m out=test_meshtal54.vtk
