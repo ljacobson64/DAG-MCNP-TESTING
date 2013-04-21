@@ -33,7 +33,7 @@ fc34 dagmc type=kde_track inp=left_cylinder.h5m
 c KDE sub-track mesh tally for volume 2 
 fmesh44:n geom=dag
 fc44 dagmc type=kde_subtrack inp=left_cylinder.h5m
-           out=test_meshtal44.vtk subtracks=3
+           out=test_meshtal44.vtk subtracks=3 seed=11699913
            hx=0.198 hy=0.0663 hz=0.0662 -dagmc
 c KDE collision mesh tally for volume 2 
 fmesh54:n geom=dag

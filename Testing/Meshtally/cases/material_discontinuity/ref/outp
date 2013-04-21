@@ -1,79 +1,79 @@
-      1-       Input file for verification problem #04: material discontinuity                 
-      2-       c Cell Cards                                                                    
-      3-       1  1  -1   1 -15 3 -4 5 -6    imp:n=1                                           
-      4-       2  2  -8   15 -2 3 -4 5 -6    imp:n=1                                           
-      5-       c These cells are needed to avoid KDE boundary issues                           
-      6-       3  1  -1   7 -15 9 -10 11 -12 (-1:15:-3:4:-5:6)    imp:n=1                      
-      7-       4  2  -8   15 -8 9 -10 11 -12 (-15:2:-3:4:-5:6)    imp:n=1                      
-      8-       5  0      -7:8:-9:10:-11:12    imp:n=0                                          
-      9-                                                                                       
-     10-       c Surface Cards                                                                 
-     11-       1  px 0                                                                         
-     12-       15 px 2.5                                                                       
-     13-       2  px 5                                                                         
-     14-       3  py -0.5                                                                      
-     15-       4  py  0.5                                                                      
-     16-       5  pz -0.5                                                                      
-     17-       6  pz  0.5                                                                      
-     18-       *7  px -0.5                                                                     
-     19-       *8  px  5.5                                                                     
-     20-       *9  py -1                                                                       
-     21-       *10 py  1                                                                       
-     22-       *11 pz -1                                                                       
-     23-       *12 pz  1                                                                       
-     24-                                                                                       
-     25-       mode n                                                                          
-     26-       c water                                                                         
-     27-       m1 1001 2 8016 1                                                                
-     28-       c steel                                                                         
-     29-       m2 26000 74 24000 18 28000 8                                                    
-     30-       c planar surface source                                                         
-     31-       c * mono-directional: x-direction                                               
-     32-       c * mono-energetic: 0.05 MeV                                                    
-     33-       c * uniform distribution on -1 < (y,z) < 1                                      
-     34-       c NOTE: source size and placement avoids KDE boundary issues                    
-     35-       sdef x=-0.5 y=d1 z=d2 vec=1 0 0 dir=1 erg=0.05                                  
-     36-       si1 H -1 1                                                                      
-     37-       sp1  0  1                                                                       
-     38-       si2 H -1 1                                                                      
-     39-       sp2  0  1                                                                       
-     40-       c TET track length mesh tally for cell 1                                        
-     41-       fmesh14:n geom=dag                                                              
-     42-       fc14 dagmc type=tracklen inp=water_tet_mesh.h5m out=test_meshtal14.vtk          
-     43-                  conformal=1 -dagmc                                                   
-     44-       c TET track length mesh tally for cell 2                                        
-     45-       fmesh24:n geom=dag                                                              
-     46-       fc24 dagmc type=tracklen inp=steel_tet_mesh.h5m out=test_meshtal24.vtk          
-     47-                  conformal=2 -dagmc                                                   
-     48-       c KDE integral-track mesh tally for cells 1 and 2                               
-     49-       fmesh34:n geom=dag                                                              
-     50-       fc34 dagmc type=kde_track inp=mcnp_mesh.h5m out=test_meshtal34.vtk              
-     51-                  hx=0.1042 hy=0.0833 hz=0.0833 -dagmc                                 
-     52-       c KDE sub-track mesh tally for cells 1 and 2                                    
-     53-       fmesh44:n geom=dag                                                              
-     54-       fc44 dagmc type=kde_subtrack inp=mcnp_mesh.h5m out=test_meshtal44.vtk           
-     55-                  hx=0.1042 hy=0.0833 hz=0.0833 subtracks=3 -dagmc                     
-     56-       c KDE collision mesh tally for cells 1 and 2                                    
-     57-       fmesh54:n geom=dag                                                              
-     58-       fc54 dagmc type=kde_coll inp=mcnp_mesh.h5m out=test_meshtal54.vtk               
-     59-                  hx=0.1042 hy=0.0833 hz=0.0833 -dagmc                                 
-     60-       c                                                                               
-     61-       nps 1e5                                                                         
-     62-       prdmp 2j -1                                                                     
+         1-       Input file for verification problem #04: material discontinuity                 
+         2-       c Cell Cards                                                                    
+         3-       1  1  -1   1 -15 3 -4 5 -6    imp:n=1                                           
+         4-       2  2  -8   15 -2 3 -4 5 -6    imp:n=1                                           
+         5-       c These cells are needed to avoid KDE boundary issues                           
+         6-       3  1  -1   7 -15 9 -10 11 -12 (-1:15:-3:4:-5:6)    imp:n=1                      
+         7-       4  2  -8   15 -8 9 -10 11 -12 (-15:2:-3:4:-5:6)    imp:n=1                      
+         8-       5  0      -7:8:-9:10:-11:12    imp:n=0                                          
+         9-                                                                                       
+        10-       c Surface Cards                                                                 
+        11-       1  px 0                                                                         
+        12-       15 px 2.5                                                                       
+        13-       2  px 5                                                                         
+        14-       3  py -0.5                                                                      
+        15-       4  py  0.5                                                                      
+        16-       5  pz -0.5                                                                      
+        17-       6  pz  0.5                                                                      
+        18-       *7  px -0.5                                                                     
+        19-       *8  px  5.5                                                                     
+        20-       *9  py -1                                                                       
+        21-       *10 py  1                                                                       
+        22-       *11 pz -1                                                                       
+        23-       *12 pz  1                                                                       
+        24-                                                                                       
+        25-       mode n                                                                          
+        26-       c water                                                                         
+        27-       m1 1001 2 8016 1                                                                
+        28-       c steel                                                                         
+        29-       m2 26000 74 24000 18 28000 8                                                    
+        30-       c planar surface source                                                         
+        31-       c * mono-directional: x-direction                                               
+        32-       c * mono-energetic: 0.05 MeV                                                    
+        33-       c * uniform distribution on -1 < (y,z) < 1                                      
+        34-       c NOTE: source size and placement avoids KDE boundary issues                    
+        35-       sdef x=-0.5 y=d1 z=d2 vec=1 0 0 dir=1 erg=0.05                                  
+        36-       si1 H -1 1                                                                      
+        37-       sp1  0  1                                                                       
+        38-       si2 H -1 1                                                                      
+        39-       sp2  0  1                                                                       
+        40-       c TET track length mesh tally for cell 1                                        
+        41-       fmesh14:n geom=dag                                                              
+        42-       fc14 dagmc type=tracklen inp=water_tet_mesh.h5m out=test_meshtal14.vtk          
+        43-                  conformal=1 -dagmc                                                   
+        44-       c TET track length mesh tally for cell 2                                        
+        45-       fmesh24:n geom=dag                                                              
+        46-       fc24 dagmc type=tracklen inp=steel_tet_mesh.h5m out=test_meshtal24.vtk          
+        47-                  conformal=2 -dagmc                                                   
+        48-       c KDE integral-track mesh tally for cells 1 and 2                               
+        49-       fmesh34:n geom=dag                                                              
+        50-       fc34 dagmc type=kde_track inp=mcnp_mesh.h5m out=test_meshtal34.vtk              
+        51-                  hx=0.1042 hy=0.0833 hz=0.0833 -dagmc                                 
+        52-       c KDE sub-track mesh tally for cells 1 and 2                                    
+        53-       fmesh44:n geom=dag                                                              
+        54-       fc44 dagmc type=kde_subtrack inp=mcnp_mesh.h5m out=test_meshtal44.vtk           
+        55-                  hx=0.1042 hy=0.0833 hz=0.0833 subtracks=3 seed=11699913 -dagmc       
+        56-       c KDE collision mesh tally for cells 1 and 2                                    
+        57-       fmesh54:n geom=dag                                                              
+        58-       fc54 dagmc type=kde_coll inp=mcnp_mesh.h5m out=test_meshtal54.vtk               
+        59-                  hx=0.1042 hy=0.0833 hz=0.0833 -dagmc                                 
+        60-       c                                                                               
+        61-       nps 1e5                                                                         
+        62-       prdmp 2j -1                                                                     
  
-  warning.    2 materials had unnormalized fractions. print table 40.                      
+  warning.    2 materials had unnormalized fractions. print table 40.
 1cells                                                                                                  print table 60
 
-                      atom        gram                                     neutron                                     
-        cell  mat    density     density     volume       mass     pieces importance                                   
+                               atom        gram                                            neutron                                     
+              cell     mat    density     density     volume       mass            pieces importance                                   
 
-     1     1    1  1.00309E-01 1.00000E+00 2.50000E+00 2.50000E+00     0  1.0000E+00                                   
-     2     2    2  8.69901E-02 8.00000E+00 2.50000E+00 2.00000E+01     0  1.0000E+00                                   
-     3     3    1  1.00309E-01 1.00000E+00 9.50000E+00 9.50000E+00     0  1.0000E+00                                   
-     4     4    2  8.69901E-02 8.00000E+00 9.50000E+00 7.60000E+01     0  1.0000E+00                                   
-     5     5    0  0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00     0  0.0000E+00                                   
+        1        1        1  1.00309E-01 1.00000E+00 2.50000E+00 2.50000E+00           0  1.0000E+00                                   
+        2        2        2  8.69901E-02 8.00000E+00 2.50000E+00 2.00000E+01           0  1.0000E+00                                   
+        3        3        1  1.00309E-01 1.00000E+00 9.50000E+00 9.50000E+00           0  1.0000E+00                                   
+        4        4        2  8.69901E-02 8.00000E+00 9.50000E+00 7.60000E+01           0  1.0000E+00                                   
+        5        5        0  0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00           0  0.0000E+00                                   
 
- total                                     2.40000E+01 1.08000E+02
+ total                                               2.40000E+01 1.08000E+02
 
     minimum source weight = 1.0000E+00    maximum source weight = 1.0000E+00
 
@@ -144,16 +144,16 @@
  range of sampled source weights = 1.0000E+00 to 1.0000E+00
 1neutron  activity in each cell                                                                         print table 126
 
-                 tracks     population   collisions   collisions     number        flux        average      average
-        cell    entering                               * weight     weighted     weighted   track weight   track mfp
-                                                    (per history)    energy       energy     (relative)      (cm)
+                       tracks     population   collisions   collisions     number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                          (per history)    energy       energy     (relative)      (cm)
 
-     1     1      838376        99409      1341360    9.0944E+00   6.1134E-06   3.0069E-03   7.0539E-01   5.8201E-01
-     2     2      440118        92301       347098    2.2550E+00   1.9785E-05   4.3225E-03   6.8520E-01   1.2595E+00
-     3     3      994880       100000      5318341    3.6131E+01   6.6223E-06   3.5701E-03   7.0696E-01   5.8284E-01
-     4     4      567611        98944      1247279    8.1441E+00   2.2182E-05   4.5192E-03   6.8904E-01   1.2783E+00
+        1        1      838376        99409      1341360    9.0944E+00   6.1134E-06   3.0069E-03   7.0539E-01   5.8201E-01
+        2        2      440118        92301       347098    2.2550E+00   1.9785E-05   4.3225E-03   6.8520E-01   1.2595E+00
+        3        3      994880       100000      5318341    3.6131E+01   6.6223E-06   3.5701E-03   7.0696E-01   5.8284E-01
+        4        4      567611        98944      1247279    8.1441E+00   2.2182E-05   4.5192E-03   6.8904E-01   1.2783E+00
 
-     total       2840985       390654      8254078    5.5624E+01
+           total       2840985       390654      8254078    5.5624E+01
 
  Mesh tallies written to file meshtal
  tally data written to file test_m
