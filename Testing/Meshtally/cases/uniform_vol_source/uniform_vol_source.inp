@@ -20,7 +20,7 @@ si1 0 0.12
 sp1  -21  2
 c TET track length mesh tally for cell 1
 fmesh24:n geom=dag
-fc24 dagmc type=tracklen inp=tet_mesh.h5m out=test_meshtal24.vtk -dagmc
+fc24 dagmc type=unstr_track inp=tet_mesh.h5m out=test_meshtal24.vtk -dagmc
 c KDE integral-track mesh tally for cell 1
 fmesh34:n geom=dag
 fc34 dagmc type=kde_track inp=tet_mesh.h5m out=test_meshtal34.vtk

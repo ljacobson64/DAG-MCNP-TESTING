@@ -27,11 +27,7 @@ def detect_mcnp(ctx):
             progname = 'mcnp5'
             if ctx.options.use_mpi:
                 progname = 'mcnp5.mpi'
-<<<<<<< HEAD
             ctx.find_program(progname, path_list='../../../Source/src', var='DAGEXE' )
-=======
-            ctx.find_program(progname, path_list='../../Source/src', var='DAGEXE' )
->>>>>>> origin/meshtally_refactor
         except ctx.errors.ConfigurationError as e:
             print e
             raise ctx.errors.ConfigurationError("Use -e to specify path to "+progname)

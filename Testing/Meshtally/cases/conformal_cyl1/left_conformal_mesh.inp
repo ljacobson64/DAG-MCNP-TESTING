@@ -22,7 +22,7 @@ fmesh4:n geom=cyl   origin=1.25 0 -0.5  axs=0 0 1  vec=1 0 0
          kmesh=1     kints=24
 c TET track length mesh tally for volume 2
 fmesh24:n geom=dag
-fc24 dagmc type=tracklen inp=left_cylinder.h5m
+fc24 dagmc type=unstr_track inp=left_cylinder.h5m
            out=test_meshtal24.vtk
            conformal=2 -dagmc
 c KDE integral-track mesh tally for volume 2 
