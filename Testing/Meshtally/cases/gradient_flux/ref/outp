@@ -34,7 +34,7 @@
         34-       sp2  0  1                                                                       
         35-       c TET track length mesh tally for cell 1                                        
         36-       fmesh24:n geom=dag                                                              
-        37-       fc24 dagmc type=tracklen inp=tet_mesh.h5m out=test_meshtal24.vtk                
+        37-       fc24 dagmc type=unstr_track inp=tet_mesh.h5m out=test_meshtal24.vtk                
         38-                  conformal=1 -dagmc                                                   
         39-       c KDE integral-track mesh tally for cell 1                                      
         40-       fmesh34:n geom=dag                                                              
