@@ -1,90 +1,95 @@
-      1-       input file (right cylinder) for verification problem #07: conformal mesh        
-      2-       1 0 imp:n=0                                                                     
-      3-       2 2 -8 imp:n=1                                                                  
-      4-       3 2 -8 imp:n=1                                                                  
-      5-       4 1 -1 imp:n=1                                                                  
-      6-       5 0 imp:n=1                                                                     
-      7-       6 0 imp:n=1   $ implicit complement                                             
-      8-                                                                                       
-      9-       1                                                                               
-     10-       2                                                                               
-     11-       3                                                                               
-     12-       4                                                                               
-     13-       5                                                                               
-     14-       6                                                                               
-     15-       7                                                                               
-     16-       8                                                                               
-     17-       9                                                                               
-     18-       10                                                                              
-     19-       11                                                                              
-     20-       12                                                                              
-     21-       13                                                                              
-     22-       14                                                                              
-     23-       15                                                                              
-     24-       16                                                                              
-     25-       17                                                                              
-     26-       18                                                                              
-     27-       *19                                                                             
-     28-       *20                                                                             
-     29-       *21                                                                             
-     30-       *22                                                                             
-     31-       *23                                                                             
-     32-       *24                                                                             
-     33-                                                                                       
-     34-       c using DAGMC geometry input dagmc_preproc_right.cylinder.h5m                   
-     35-       mode n                                                                          
-     36-       c water                                                                         
-     37-       m1 1001 2 8016 1                                                                
-     38-       c cadmium                                                                       
-     39-       m2 48000 1                                                                      
-     40-       c planar surface source                                                         
-     41-       c * mono-directional: x-direction                                               
-     42-       c * mono-energetic: 0.05 MeV                                                    
-     43-       c * uniform distribution on -1 < (y,z) < 1                                      
-     44-       c NOTE: source size and placement avoids KDE boundary issues                    
-     45-       sdef x=-0.499999 y=d1 z=d2 vec=1 0 0 dir=1 erg=0.05                             
-     46-       si1 H -1 1                                                                      
-     47-       sp1  0  1                                                                       
-     48-       si2 H -1 1                                                                      
-     49-       sp2  0  1                                                                       
-     50-       c native MCNP cylindrical mesh tally for volume 3                               
-     51-       fmesh14:n geom=cyl   origin=3.25 0 0  axs=1 0 0  vec=0 0 1                      
-     52-                 imesh=0.2236 0.3162 0.3873 0.4472 0.5                                 
-     53-                 jmesh=1     jints=10                                                  
-     54-                 kmesh=1     kints=24                                                  
-     55-       c TET track length mesh tally for volume 3                                      
-     56-       fmesh24:n geom=dag                                                              
-     57-       fc24 dagmc type=tracklen inp=right_cylinder.h5m                                 
-     58-                  out=test_right_tracklen.vtk                                          
-     59-                  conformal=3 -dagmc                                                   
-     60-       c KDE collision mesh tally for volume 3                                         
-     61-       fmesh34:n geom=dag                                                              
-     62-       fc34 dagmc type=kde_coll inp=right_cylinder.h5m                                 
-     63-                  out=test_right_kde_coll.vtk                                          
-     64-                  hx=0.198 hy=0.0663 hz=0.0662 -dagmc                                  
-     65-       c KDE track length mesh tally for volume 3                                      
-     66-       fmesh44:n geom=dag                                                              
-     67-       fc44 dagmc type=kde_track inp=right_cylinder.h5m                                
-     68-                  out=test_right_kde_track.vtk                                         
-     69-                  hx=0.198 hy=0.0663 hz=0.0662 -dagmc                                  
-     70-       c                                                                               
-     71-       nps 1e5                                                                         
-     72-       prdmp 2j -1                                                                     
+         1-       input file (right cylinder) for verification problem #07: conformal mesh        
+         2-       1  0 imp:n=0                                                                    
+         3-       2 2 -8 imp:n=1                                                                  
+         4-       3 2 -8 imp:n=1                                                                  
+         5-       4 1 -1 imp:n=1                                                                  
+         6-       5 0 imp:n=1                                                                     
+         7-       6 0 imp:n=1 $ implicit complement                                               
+         8-                                                                                       
+         9-       1                                                                               
+        10-       2                                                                               
+        11-       3                                                                               
+        12-       4                                                                               
+        13-       5                                                                               
+        14-       6                                                                               
+        15-       7                                                                               
+        16-       8                                                                               
+        17-       9                                                                               
+        18-       10                                                                              
+        19-       11                                                                              
+        20-       12                                                                              
+        21-       13                                                                              
+        22-       14                                                                              
+        23-       15                                                                              
+        24-       16                                                                              
+        25-       17                                                                              
+        26-       18                                                                              
+        27-       *19                                                                             
+        28-       *20                                                                             
+        29-       *21                                                                             
+        30-       *22                                                                             
+        31-       *23                                                                             
+        32-       *24                                                                             
+        33-                                                                                       
+        34-       c using DAGMC geometry input dagmc_preproc_right.cylinder.h5m                   
+        35-       mode n                                                                          
+        36-       c water                                                                         
+        37-       m1 1001 2 8016 1                                                                
+        38-       c cadmium                                                                       
+        39-       m2 48000 1                                                                      
+        40-       c planar surface source                                                         
+        41-       c * mono-directional: x-direction                                               
+        42-       c * mono-energetic: 0.05 MeV                                                    
+        43-       c * uniform distribution on -1 < (y,z) < 1                                      
+        44-       c NOTE: source size and placement avoids KDE boundary issues                    
+        45-       sdef x=-0.499999 y=d1 z=d2 vec=1 0 0 dir=1 erg=0.05                             
+        46-       si1 H -1 1                                                                      
+        47-       sp1  0  1                                                                       
+        48-       si2 H -1 1                                                                      
+        49-       sp2  0  1                                                                       
+        50-       c native MCNP cylindrical mesh tally for volume 3                               
+        51-       fmesh4:n geom=cyl   origin=3.25 0 0  axs=1 0 0  vec=0 0 1                       
+        52-                imesh=0.2236 0.3162 0.3873 0.4472 0.5                                  
+        53-                jmesh=1     jints=10                                                   
+        54-                kmesh=1     kints=24                                                   
+        55-       c TET track length mesh tally for volume 3                                      
+        56-       fmesh24:n geom=dag                                                              
+        57-       fc24 dagmc type=unstr_track inp=right_cylinder.h5m                                 
+        58-                  out=test_meshtal24.vtk                                               
+        59-                  conformal=3 -dagmc                                                   
+        60-       c KDE integral-track mesh tally for volume 3                                    
+        61-       fmesh34:n geom=dag                                                              
+        62-       fc34 dagmc type=kde_track inp=right_cylinder.h5m                                
+        63-                  out=test_meshtal34.vtk                                               
+        64-                  hx=0.198 hy=0.0663 hz=0.0662 -dagmc                                  
+        65-       c KDE sub-track mesh tally for volume 3                                         
+        66-       fmesh44:n geom=dag                                                              
+        67-       fc44 dagmc type=kde_subtrack inp=right_cylinder.h5m                             
+        68-                  out=test_meshtal44.vtk subtracks=3 seed=11699913                     
+        69-                  hx=0.198 hy=0.0663 hz=0.0662 -dagmc                                  
+        70-       c KDE collision mesh tally for volume 3                                         
+        71-       fmesh54:n geom=dag                                                              
+        72-       fc54 dagmc type=kde_coll inp=right_cylinder.h5m                                 
+        73-                  out=test_meshtal54.vtk                                               
+        74-                  hx=0.198 hy=0.0663 hz=0.0662 -dagmc                                  
+        75-       c                                                                               
+        76-       nps 1e5                                                                         
+        77-       prdmp 2j -1                                                                     
  
-  warning.    1 materials had unnormalized fractions. print table 40.                      
+  warning.    1 materials had unnormalized fractions. print table 40.
 1cells                                                                                                  print table 60
 
-                      atom        gram                                     neutron                                     
-        cell  mat    density     density     volume       mass     pieces importance                                   
+                               atom        gram                                            neutron                                     
+              cell     mat    density     density     volume       mass            pieces importance                                   
 
-     1     1    0  0.00000E+00 0.00000E+00 7.31496E+02 0.00000E+00     0  0.0000E+00                                   
-     2     2    2  4.28571E-02 8.00000E+00 7.85191E-01 6.28153E+00     0  1.0000E+00                                   
-     3     3    2  4.28571E-02 8.00000E+00 7.70365E-01 6.16292E+00     0  1.0000E+00                                   
-     4     4    1  1.00309E-01 1.00000E+00 2.24444E+01 2.24444E+01     0  1.0000E+00                                   
-     5     5    0  0.00000E+00 0.00000E+00 1.19270E+04 0.00000E+00     0  1.0000E+00                                   
-     6     6    0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00     0  1.0000E+00                                   
+        1        1        0  0.00000E+00 0.00000E+00 7.31496E+02 0.00000E+00           0  0.0000E+00                                   
+        2        2        2  4.28571E-02 8.00000E+00 7.85191E-01 6.28153E+00           0  1.0000E+00                                   
+        3        3        2  4.28571E-02 8.00000E+00 7.70365E-01 6.16292E+00           0  1.0000E+00                                   
+        4        4        1  1.00309E-01 1.00000E+00 2.24444E+01 2.24444E+01           0  1.0000E+00                                   
+        5        5        0  0.00000E+00 0.00000E+00 1.19270E+04 0.00000E+00           0  1.0000E+00                                   
+        6        6        0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00           0  1.0000E+00                                   
 
- total                                     1.26835E+04 3.48889E+01
+ total                                               1.26835E+04 3.48889E+01
 
     minimum source weight = 1.0000E+00    maximum source weight = 1.0000E+00
 
@@ -153,17 +158,17 @@
  range of sampled source weights = 1.0000E+00 to 1.0000E+00
 1neutron  activity in each cell                                                                         print table 126
 
-                 tracks     population   collisions   collisions     number        flux        average      average
-        cell    entering                               * weight     weighted     weighted   track weight   track mfp
-                                                    (per history)    energy       energy     (relative)      (cm)
+                       tracks     population   collisions   collisions     number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                          (per history)    energy       energy     (relative)      (cm)
 
-     2     2      122973        77849        70726    5.9961E-01   3.5376E-04   1.1099E-02   9.6600E-01   3.5583E+00
-     3     3       71800        51097        50396    4.1609E-01   1.1973E-04   4.8681E-03   9.5387E-01   3.5636E+00
-     4     4      195088       100000      3354482    2.9415E+01   1.3203E-05   5.0642E-03   8.9490E-01   6.1865E-01
-     5     5           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
-     6     6           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
+        2        2      122973        77849        70726    5.9961E-01   3.5376E-04   1.1099E-02   9.6600E-01   3.5583E+00
+        3        3       71800        51097        50396    4.1609E-01   1.1973E-04   4.8681E-03   9.5387E-01   3.5636E+00
+        4        4      195088       100000      3354482    2.9415E+01   1.3203E-05   5.0642E-03   8.9490E-01   6.1865E-01
+        5        5           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
+        6        6           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
 
-     total        389861       228946      3475604    3.0430E+01
+           total        389861       228946      3475604    3.0430E+01
 
  Mesh tallies written to file meshtal
  tally data written to file test_m

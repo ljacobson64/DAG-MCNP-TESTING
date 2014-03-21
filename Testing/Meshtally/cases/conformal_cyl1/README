@@ -15,12 +15,7 @@ Reference files for left cylinder:
 ---------------------------------
 ref/left_outp - MCNP outp file for this test case
 ref/left_meshtal - MCNP fmesh tally results (based on dagmc geometry)
-*ref/left_kde_coll.vtk - KDE collision tally results
-*ref/left_kde_track.vtk - KDE track tally results
-ref/left_tracklen.vtk - TET track tally results
-
-* NOTE: the KDE results for this test case are included solely for regression
-testing purposes as they are not statistically comparable to MCNP for the
-global bandwidth value that was used.  The cause of the bias in the KDE results
-is currently under investigation and is expected to be related to the choice of
-bandwidth.
+ref/meshtal24.vtk - TET track tally results
+ref/meshtal34.vtk - KDE integral-track tally results
+ref/meshtal44.vtk - KDE sub-track tally results
+ref/meshtal54.vtk - KDE collision tally results

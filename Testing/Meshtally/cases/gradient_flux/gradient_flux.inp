@@ -34,15 +34,19 @@ si2 H -1 1
 sp2  0  1
 c TET track length mesh tally for cell 1
 fmesh24:n geom=dag
-fc24 dagmc type=tracklen inp=tet_mesh.h5m out=test_tracklen.vtk
+fc24 dagmc type=unstr_track inp=tet_mesh.h5m out=test_meshtal24.vtk
            conformal=1 -dagmc
-c KDE collision mesh tally for cell 1
+c KDE integral-track mesh tally for cell 1
 fmesh34:n geom=dag
-fc34 dagmc type=kde_coll inp=mcnp_mesh.h5m out=test_kde_coll.vtk
+fc34 dagmc type=kde_track inp=mcnp_mesh.h5m out=test_meshtal34.vtk
            hx=0.1042 hy=0.0833 hz=0.0833 -dagmc
-c KDE track length mesh tally for cell 1
+c KDE sub-track mesh tally for cell 1
 fmesh44:n geom=dag
-fc44 dagmc type=kde_track inp=mcnp_mesh.h5m out=test_kde_track.vtk
+fc44 dagmc type=kde_subtrack inp=mcnp_mesh.h5m out=test_meshtal44.vtk
+           hx=0.1042 hy=0.0833 hz=0.0833 subtracks=3 seed=11699913 -dagmc
+c KDE collision mesh tally for cell 1
+fmesh54:n geom=dag
+fc54 dagmc type=kde_coll inp=mcnp_mesh.h5m out=test_meshtal54.vtk
            hx=0.1042 hy=0.0833 hz=0.0833 -dagmc
 c
 nps 1e5

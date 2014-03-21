@@ -16,24 +16,29 @@ sp1  0  1
 si2 H -1 1
 sp2  0  1
 c native MCNP cylindrical mesh tally for volume 3
-fmesh14:n geom=cyl   origin=3.25 0 0  axs=1 0 0  vec=0 0 1
-          imesh=0.2236 0.3162 0.3873 0.4472 0.5
-          jmesh=1     jints=10
-          kmesh=1     kints=24
+fmesh4:n geom=cyl   origin=3.25 0 0  axs=1 0 0  vec=0 0 1
+         imesh=0.2236 0.3162 0.3873 0.4472 0.5
+         jmesh=1     jints=10
+         kmesh=1     kints=24
 c TET track length mesh tally for volume 3
 fmesh24:n geom=dag
-fc24 dagmc type=tracklen inp=right_cylinder.h5m
-           out=test_right_tracklen.vtk
+fc24 dagmc type=unstr_track inp=right_cylinder.h5m
+           out=test_meshtal24.vtk
            conformal=3 -dagmc
-c KDE collision mesh tally for volume 3
+c KDE integral-track mesh tally for volume 3 
 fmesh34:n geom=dag
-fc34 dagmc type=kde_coll inp=right_cylinder.h5m
-           out=test_right_kde_coll.vtk
+fc34 dagmc type=kde_track inp=right_cylinder.h5m
+           out=test_meshtal34.vtk
            hx=0.198 hy=0.0663 hz=0.0662 -dagmc
-c KDE track length mesh tally for volume 3 
+c KDE sub-track mesh tally for volume 3 
 fmesh44:n geom=dag
-fc44 dagmc type=kde_track inp=right_cylinder.h5m
-           out=test_right_kde_track.vtk
+fc44 dagmc type=kde_subtrack inp=right_cylinder.h5m
+           out=test_meshtal44.vtk subtracks=3 seed=11699913
+           hx=0.198 hy=0.0663 hz=0.0662 -dagmc
+c KDE collision mesh tally for volume 3
+fmesh54:n geom=dag
+fc54 dagmc type=kde_coll inp=right_cylinder.h5m
+           out=test_meshtal54.vtk
            hx=0.198 hy=0.0663 hz=0.0662 -dagmc
 c
 nps 1e5

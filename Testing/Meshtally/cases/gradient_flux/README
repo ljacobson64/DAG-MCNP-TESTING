@@ -11,6 +11,7 @@ tet_mesh.h5m - tetrahedral mesh for TET track tally
 Reference files:
 ---------------
 ref/outp - MCNP outp file for this test case
-ref/kde_coll.vtk - KDE collision tally results
-ref/kde_track.vtk - KDE track tally results
-ref/tracklen.vtk - TET track tally results
+ref/meshtal24.vtk - TET track tally results
+ref/meshtal34.vtk - KDE integral-track tally results
+ref/meshtal44.vtk - KDE sub-track tally results
+ref/meshtal54.vtk - KDE collision tally results
