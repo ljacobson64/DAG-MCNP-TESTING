@@ -1,0 +1,70 @@
+Input file for verification problem #09: "mode n p"
+c Cell Cards
+1  1  -1   1 -15 3 -4 5 -6    imp:n=1
+2  2  -8   15 -2 3 -4 5 -6    imp:n=1
+c These cells are needed to avoid KDE boundary issues
+3  1  -1   7 -15 9 -10 11 -12 (-1:15:-3:4:-5:6)    imp:n=1
+4  2  -8   15 -8 9 -10 11 -12 (-15:2:-3:4:-5:6)    imp:n=1
+5  0      -7:8:-9:10:-11:12    imp:n=0
+
+c Surface Cards
+1  px 0
+15 px 2.5
+2  px 5 
+3  py -0.5
+4  py  0.5
+5  pz -0.5
+6  pz  0.5
+*7  px -0.5
+*8  px  5.5
+*9  py -1
+*10 py  1
+*11 pz -1
+*12 pz  1
+
+mode n p
+c water
+m1 1001 2 8016 1
+c steel 
+m2 26000 74 24000 18 28000 8
+c planar surface source
+c * mono-directional: x-direction
+c * mono-energetic: 0.05 MeV
+c * uniform distribution on -1 < (y,z) < 1
+c NOTE: source size and placement avoids KDE boundary issues
+sdef x=-0.5 y=d1 z=d2 vec=1 0 0 dir=1 erg=0.05
+si1 H -1 1
+sp1  0  1  
+si2 H -1 1
+sp2  0  1
+c TET track length mesh tallies for cell 1
+fmesh4:n geom=dag
+fc4 dagmc type=unstr_track inp=water_tet_mesh.h5m out=test_meshtal4.vtk
+          conformal=1 -dagmc
+fmesh14:p geom=dag
+fc14 dagmc type=unstr_track inp=water_tet_mesh.h5m out=test_meshtal14.vtk
+           conformal=1 -dagmc
+c TET track length mesh tallies for cell 2
+fmesh24:n geom=dag
+fc24 dagmc type=unstr_track inp=steel_tet_mesh.h5m out=test_meshtal24.vtk
+           conformal=2 -dagmc
+fmesh34:p geom=dag
+fc34 dagmc type=unstr_track inp=steel_tet_mesh.h5m out=test_meshtal34.vtk
+           conformal=2 -dagmc
+c KDE integral-track mesh tallies for cells 1 and 2
+fmesh44:n geom=dag
+fc44 dagmc type=kde_track inp=mcnp_mesh.h5m out=test_meshtal44.vtk
+           hx=0.1042 hy=0.0833 hz=0.0833 -dagmc
+fmesh54:p geom=dag
+fc54 dagmc type=kde_track inp=mcnp_mesh.h5m out=test_meshtal54.vtk
+           hx=0.1042 hy=0.0833 hz=0.0833 -dagmc
+c adding heating neutron and photon tally multipliers
+fm4  123.5 1 -1 -4
+fm14 123.5 1 -5 -6
+fm24 123.5 2 -1 -4
+fm34 123.5 2 -5 -6
+fm44 123.5 0 -1 -4
+fm54 123.5 0 -5 -6
+c
+nps 1e5
+prdmp 2j -1
