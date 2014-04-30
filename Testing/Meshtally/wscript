@@ -15,7 +15,7 @@ def setup_testcases( self ):
                       'uniform_flux', 'gradient_flux', 'energy_groups',
                       'reflecting_boundaries', 'material_discontinuity',
                       'tally_multipliers', 'uniform_vol_source',
-                      'conformal_cyl1', 'conformal_cyl2' ] 
+                      'conformal_cyl1', 'conformal_cyl2', 'mode_np' ] 
 
 DagmcTestContext.setup_testcases = setup_testcases
 
@@ -166,10 +166,21 @@ def get_case_definition( self, casename ):
         case.outputs['meshtal'] = 'cases/conformal_cyl2/ref/right_meshtal'
         case.outputs['o'] = 'cases/conformal_cyl2/ref/right_outp'
 
+    if casename == 'mode_np':
+        del case.inputs['gcad']
+        case.flags = []
+        meshes = ['mcnp_mesh.h5m', 'steel_tet_mesh.h5m', 'water_tet_mesh.h5m']
+        mesh_tally_output( 'ref/meshtal4.vtk' )
+        mesh_tally_output( 'ref/meshtal14.vtk' )
+        mesh_tally_output( 'ref/meshtal24.vtk' )
+        mesh_tally_output( 'ref/meshtal34.vtk' )
+        mesh_tally_output( 'ref/meshtal44.vtk' )
+        mesh_tally_output( 'ref/meshtal54.vtk' )
+        case.outputs['o'] = 'cases/mode_np/ref/outp'
+
     for m in meshes:
         case.inputs['EXTRA'+os.path.basename(m)] = 'cases/{0}/{1}'.format(casename,m)
 
     return case
 
 DagmcTestContext.get_case_definition = get_case_definition
-

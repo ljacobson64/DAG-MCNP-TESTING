@@ -1,0 +1,21 @@
+Verification Test Problem: 09
+Feature Testing: "mode n p" 
+Brief Description: rectangular prism with reflecting boundaries split into equal
+                   water and steel regions by a plane orthogonal to the x-axis
+
+Input files:
+-----------
+mode_np.inp - mesh tally input file using native geometry
+mcnp_mesh.h5m - orthogonal mesh for KDE tallies
+steel_tet_mesh.h5m - tetrahedral mesh for TET track tally (steel region)
+water_tet_mesh.h5m - tetrahedral mesh for TET track tally (water region)
+
+Reference files:
+---------------
+ref/outp - MCNP outp file for this test case
+ref/meshtal4.vtk - TET track n-tally results (water region)
+ref/meshtal14.vtk - TET track p-tally results (water region)
+ref/meshtal24.vtk - TET track n-tally results (steel region)
+ref/meshtal34.vtk - TET track p-tally results (steel region)
+ref/meshtal44.vtk - KDE integral-track n-tally results
+ref/meshtal44.vtk - KDE integral-track p-tally results

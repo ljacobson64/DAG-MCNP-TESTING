@@ -1,0 +1,278 @@
+         1-       Input file for verification problem #09: "mode n p"                             
+         2-       c Cell Cards                                                                    
+         3-       1  1  -1   1 -15 3 -4 5 -6    imp:n=1                                           
+         4-       2  2  -8   15 -2 3 -4 5 -6    imp:n=1                                           
+         5-       c These cells are needed to avoid KDE boundary issues                           
+         6-       3  1  -1   7 -15 9 -10 11 -12 (-1:15:-3:4:-5:6)    imp:n=1                      
+         7-       4  2  -8   15 -8 9 -10 11 -12 (-15:2:-3:4:-5:6)    imp:n=1                      
+         8-       5  0      -7:8:-9:10:-11:12    imp:n=0                                          
+         9-                                                                                       
+        10-       c Surface Cards                                                                 
+        11-       1  px 0                                                                         
+        12-       15 px 2.5                                                                       
+        13-       2  px 5                                                                         
+        14-       3  py -0.5                                                                      
+        15-       4  py  0.5                                                                      
+        16-       5  pz -0.5                                                                      
+        17-       6  pz  0.5                                                                      
+        18-       *7  px -0.5                                                                     
+        19-       *8  px  5.5                                                                     
+        20-       *9  py -1                                                                       
+        21-       *10 py  1                                                                       
+        22-       *11 pz -1                                                                       
+        23-       *12 pz  1                                                                       
+        24-                                                                                       
+        25-       mode n p                                                                        
+  comment.  photonuclear physics may be needed (phys:p).
+        26-       c water                                                                         
+        27-       m1 1001 2 8016 1                                                                
+        28-       c steel                                                                         
+        29-       m2 26000 74 24000 18 28000 8                                                    
+        30-       c planar surface source                                                         
+        31-       c * mono-directional: x-direction                                               
+        32-       c * mono-energetic: 0.05 MeV                                                    
+        33-       c * uniform distribution on -1 < (y,z) < 1                                      
+        34-       c NOTE: source size and placement avoids KDE boundary issues                    
+        35-       sdef x=-0.5 y=d1 z=d2 vec=1 0 0 dir=1 erg=0.05                                  
+        36-       si1 H -1 1                                                                      
+        37-       sp1  0  1                                                                       
+        38-       si2 H -1 1                                                                      
+        39-       sp2  0  1                                                                       
+        40-       c TET track length mesh tallies for cell 1                                      
+        41-       fmesh4:n geom=dag                                                               
+        42-       fc4 dagmc type=unstr_track inp=water_tet_mesh.h5m out=test_meshtal4.vtk         
+        43-                 conformal=1 -dagmc                                                    
+        44-       fmesh14:p geom=dag                                                              
+        45-       fc14 dagmc type=unstr_track inp=water_tet_mesh.h5m out=test_meshtal14.vtk       
+        46-                  conformal=1 -dagmc                                                   
+        47-       c TET track length mesh tallies for cell 2                                      
+        48-       fmesh24:n geom=dag                                                              
+        49-       fc24 dagmc type=unstr_track inp=steel_tet_mesh.h5m out=test_meshtal24.vtk       
+        50-                  conformal=2 -dagmc                                                   
+        51-       fmesh34:p geom=dag                                                              
+        52-       fc34 dagmc type=unstr_track inp=steel_tet_mesh.h5m out=test_meshtal34.vtk       
+        53-                  conformal=2 -dagmc                                                   
+        54-       c KDE integral-track mesh tallies for cells 1 and 2                             
+        55-       fmesh44:n geom=dag                                                              
+        56-       fc44 dagmc type=kde_track inp=mcnp_mesh.h5m out=test_meshtal44.vtk              
+        57-                  hx=0.1042 hy=0.0833 hz=0.0833 -dagmc                                 
+        58-       fmesh54:p geom=dag                                                              
+        59-       fc54 dagmc type=kde_track inp=mcnp_mesh.h5m out=test_meshtal54.vtk              
+        60-                  hx=0.1042 hy=0.0833 hz=0.0833 -dagmc                                 
+        61-       c adding heating neutron and photon tally multipliers                           
+        62-       fm4  123.5 1 -1 -4                                                              
+        63-       fm14 123.5 1 -5 -6                                                              
+        64-       fm24 123.5 2 -1 -4                                                              
+        65-       fm34 123.5 2 -5 -6                                                              
+        66-       fm44 123.5 0 -1 -4                                                              
+        67-       fm54 123.5 0 -5 -6                                                              
+        68-       c                                                                               
+        69-       nps 1e5                                                                         
+        70-       prdmp 2j -1                                                                     
+ 
+  comment.  photon   importances have been set equal to 1.
+ 
+  warning.   FM card uses material         1 cross sections over all of mesh tally         4
+ 
+  warning.   FM card uses material         1 cross sections over all of mesh tally        14
+ 
+  warning.   FM card uses material         2 cross sections over all of mesh tally        24
+ 
+  warning.   FM card uses material         2 cross sections over all of mesh tally        34
+ 
+  warning.    2 materials had unnormalized fractions. print table 40.
+1cells                                                                                                  print table 60
+
+                               atom        gram                                            neutron    photon     photon wt             
+              cell     mat    density     density     volume       mass            pieces importance importance generation             
+
+        1        1        1  1.00309E-01 1.00000E+00 2.50000E+00 2.50000E+00           0  1.0000E+00 1.0000E+00 -1.000E+00             
+        2        2        2  8.69901E-02 8.00000E+00 2.50000E+00 2.00000E+01           0  1.0000E+00 1.0000E+00 -1.000E+00             
+        3        3        1  1.00309E-01 1.00000E+00 9.50000E+00 9.50000E+00           0  1.0000E+00 1.0000E+00 -1.000E+00             
+        4        4        2  8.69901E-02 8.00000E+00 9.50000E+00 7.60000E+01           0  1.0000E+00 1.0000E+00 -1.000E+00             
+        5        5        0  0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00           0  0.0000E+00 0.0000E+00 -1.000E+00             
+
+ total                                               2.40000E+01 1.08000E+02
+
+    minimum source weight = 1.0000E+00    maximum source weight = 1.0000E+00
+
+ ***************************************************
+ * Random Number Generator  =                    1 *
+ * Random Number Seed       =       19073486328125 *
+ * Random Number Multiplier =       19073486328125 *
+ * Random Number Adder      =                    0 *
+ * Random Number Bits Used  =                   48 *
+ * Random Number Stride     =               152917 *
+ ***************************************************
+
+
+         5 warning messages so far.
+1cross-section tables                                                                                   print table 100
+
+     table    length
+
+                        tables from file c00740/endf70a                                                  
+
+   1001.70c    6123   1-H -  1 at 293.6K from endf/b-vii.0 njoy99.248                             mat 125      03/27/08
+   8016.70c  266972   8-O - 16 at 293.6K from endf/b-vii.0 njoy99.248                             mat 825      08/25/07
+
+                        tables from file c00740/rmccs                                                    
+
+  24000.50c  128311  njoy                                                                       (  1324)      79/06/21.
+  26000.55c  149342  njoy                                                                       ( 260)       10/21/82  
+  28000.50c  114574  njoy                                                                       (  1328)      79/06/21.
+
+                        tables from file c00740/mcplib04                                                 
+
+   1000.04p    1898  ENDF/B-VI Release 8 Photoatomic Data for 1-H                                 mat 100      02/07/03
+   8000.04p    3272  ENDF/B-VI Release 8 Photoatomic Data for 8-O                                 mat 800      02/07/03
+  24000.04p    5682  ENDF/B-VI Release 8 Photoatomic Data for 24-CR                               mat2400      02/07/03
+  26000.04p    5718  ENDF/B-VI Release 8 Photoatomic Data for 26-FE                               mat2600      02/07/03
+  28000.04p    5826  ENDF/B-VI Release 8 Photoatomic Data for 28-NI                               mat2800      02/07/03
+
+  total      687718
+
+ maximum photon energy set to  100.0 mev (maximum electron energy)
+
+                        tables from file c00740/el03                                                     
+
+   1000.03e    2329                                                                                          6/6/98    
+   8000.03e    2333                                                                                          6/6/98    
+  24000.03e    2345                                                                                          6/6/98    
+  26000.03e    2345                                                                                          6/6/98    
+  28000.03e    2347                                                                                          6/6/98    
+ 
+  warning.  material        2 has been set to a conductor.
+
+         6 warning messages so far.
+1problem summary                                                                                                           
+
+      run terminated when      100000  particle histories were done.
+0
+ neutron creation    tracks      weight        energy            neutron loss        tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source              100000    1.0000E+00    5.0000E-02          escape                   0    0.            0.        
+                                                                 energy cutoff            0    0.            0.        
+                                                                 time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    2.2369E-01    1.8133E-07          weight cutoff       100000    2.2378E-01    2.0719E-07
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ upscattering             0    0.            3.8873E-07          downscattering           0    0.            4.9927E-02
+ photonuclear             0    0.            0.                  capture                  0    9.9990E-01    7.3591E-05
+ (n,xn)                   0    0.            0.                  loss to (n,xn)           0    0.            0.        
+ prompt fission           0    0.            0.                  loss to fission          0    0.            0.        
+ delayed fission          0    0.            0.                                                                        
+     total           100000    1.2237E+00    5.0001E-02              total           100000    1.2237E+00    5.0001E-02
+
+   number of neutrons banked                       0        average time of (shakes)              cutoffs
+   neutron tracks per source particle     1.0000E+00          escape            0.0000E+00          tco   1.0000E+33
+   neutron collisions per source particle 8.2626E+01          capture           7.4438E+03          eco   0.0000E+00
+   total neutron collisions                  8262574          capture or escape 7.4438E+03          wc1  -5.0000E-01
+   net multiplication              1.0000E+00 0.0000          any termination   8.4572E+03          wc2  -2.5000E-01
+0
+ photon creation     tracks      weight        energy            photon loss         tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source                   0    0.            0.                  escape                   0    0.            0.        
+                                                                 energy cutoff            0    0.            4.8905E-04
+                                                                 time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ from neutrons       182946    1.8258E+00    6.4032E+00          compton scatter          0    0.            4.5319E+00
+ bremsstrahlung      252379    2.5190E+00    3.2228E-01          capture             591532    5.9039E+00    3.9668E-01
+ p-annihilation       65150    6.5020E-01    3.3226E-01          pair production      32575    3.2510E-01    2.1365E+00
+ photonuclear             0    0.            0.                  photonuclear abs         0    0.            0.        
+ electron x-rays          0    0.            0.                                                                        
+ 1st fluorescence    123632    1.2340E+00    7.8420E-03                                                                
+ 2nd fluorescence         0    0.            0.                                                                        
+     total           624107    6.2290E+00    7.0656E+00              total           624107    6.2290E+00    7.0656E+00
+
+   number of photons banked                   500475        average time of (shakes)              cutoffs
+   photon tracks per source particle      6.2411E+00          escape            0.0000E+00          tco   1.0000E+33
+   photon collisions per source particle  1.7963E+01          capture           5.9414E+03          eco   1.0000E-03
+   total photon collisions                   1796258          capture or escape 5.9414E+03          wc1  -5.0000E-01
+                                                              any termination   6.0275E+03          wc2  -2.5000E-01
+
+ computer time so far in this run     0.00 minutes            maximum number ever in bank        18
+ computer time in mcrun               0.00 minutes            bank overflows to backup file       0
+ source particles per minute            0.0000E+00
+ random numbers generated                176101749            most random numbers used was       13029 in history       10278
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+1neutron  activity in each cell                                                                         print table 126
+
+                       tracks     population   collisions   collisions     number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                          (per history)    energy       energy     (relative)      (cm)
+
+        1        1      838347        99475      1340833    9.0708E+00   6.0667E-06   2.9839E-03   7.0390E-01   5.8183E-01
+        2        2      440269        92447       349846    2.2712E+00   1.9467E-05   4.2070E-03   6.8457E-01   1.2552E+00
+        3        3      994565       100000      5316843    3.6119E+01   6.6329E-06   3.5735E-03   7.0686E-01   5.8293E-01
+        4        4      567520        98890      1255052    8.2027E+00   2.1889E-05   4.4070E-03   6.8894E-01   1.2729E+00
+
+           total       2840701       390812      8262574    5.5663E+01
+1photon   activity in each cell                                                                         print table 126
+
+                       tracks     population   collisions   collisions     number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                          (per history)    energy       energy     (relative)      (cm)
+
+        1        1      508153       122130        41960    4.1889E-01   1.7403E+00   1.7403E+00   9.9838E-01   1.5708E+01
+        2        2      409333       261754       339786    3.3916E+00   1.9586E+00   1.9586E+00   9.9822E-01   2.0700E+00
+        3        3      576516       135568       160678    1.6042E+00   1.7358E+00   1.7358E+00   9.9836E-01   1.5689E+01
+        4        4      498368       443581      1253834    1.2515E+01   1.9487E+00   1.9487E+00   9.9823E-01   2.0617E+00
+
+           total       1992370       963033      1796258    1.7930E+01
+1summary of photons produced in neutron collisions
+
+              cell      number of      weight per     energy per     avg photon      mev/gm per    weight/neut    energy/neut
+                         photons       source neut    source neut      energy       source neut     collision      collision
+
+        1        1          6110       6.11000E-02    1.35830E-01    2.22308E+00    5.43320E-02    6.73589E-03    1.49744E-02
+        2        2         34811       3.47182E-01    1.29617E+00    3.73340E+00    6.48085E-02    1.52864E-01    5.70702E-01
+        3        3         24195       2.41950E-01    5.37759E-01    2.22260E+00    5.66062E-02    6.69875E-03    1.48887E-02
+        4        4        117830       1.17561E+00    4.43341E+00    3.77117E+00    5.83344E-02    1.43320E-01    5.40482E-01
+        5        5             0       0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00
+             total        182946       1.82584E+00    6.40317E+00    3.50698E+00
+
+
+
+  energy      number of        number       cum number      weight of       weight       cum weight
+ interval      photons        frequency    distribution      photons       frequency    distribution
+ 
+   20.000             0      0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00
+   15.000             0      0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00
+   10.000             0      0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00    0.00000E+00
+    9.000          3398      1.85738E-02    1.85738E-02    3.39211E-02    1.85783E-02    1.85783E-02
+    8.000         11129      6.08322E-02    7.94059E-02    1.11365E-01    6.09940E-02    7.95723E-02
+    7.000         30602      1.67273E-01    2.46679E-01    3.05040E-01    1.67068E-01    2.46640E-01
+    6.000          7191      3.93067E-02    2.85986E-01    7.18113E-02    3.93306E-02    2.85971E-01
+    5.000          7388      4.03835E-02    3.26370E-01    7.36972E-02    4.03634E-02    3.26334E-01
+    4.000          7485      4.09137E-02    3.67283E-01    7.46425E-02    4.08812E-02    3.67216E-01
+    3.000          8916      4.87357E-02    4.16019E-01    8.88890E-02    4.86839E-02    4.15900E-01
+    2.000         40716      2.22557E-01    6.38576E-01    4.06934E-01    2.22875E-01    6.38774E-01
+    1.000         13378      7.31254E-02    7.11702E-01    1.33354E-01    7.30370E-02    7.11811E-01
+    0.500         13624      7.44701E-02    7.86172E-01    1.36279E-01    7.46393E-02    7.86451E-01
+    0.100         10727      5.86348E-02    8.44807E-01    1.07004E-01    5.86053E-02    8.45056E-01
+    0.010         23165      1.26622E-01    9.71429E-01    2.30812E-01    1.26414E-01    9.71470E-01
+    0.000          5227      2.85713E-02    1.00000E+00    5.20908E-02    2.85298E-02    1.00000E+00
+
+   total         182946      1.00000E+00                   1.82584E+00    1.00000E+00
+
+ Mesh tallies written to file meshtal
+ tally data written to file test_m
+
+         6 warning messages so far.
+
+
+ run terminated when      100000  particle histories were done.
