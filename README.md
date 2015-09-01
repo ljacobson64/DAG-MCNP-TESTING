@@ -2,9 +2,9 @@
 
 ## Introduction ##
 
-The directories underneath this one contain groups of test problems
-for DAG-MCNP.  To run the tests in a subdirectory, enter the directory
-and run the following commands:
+The directories underneath this one contain groups of test problems for
+DAG-MCNP. To run the tests in a subdirectory, enter the directory and run the
+following commands:
 
     $ ./waf configure
     $ ./waf
@@ -19,30 +19,23 @@ More details on the use of these test suites are given below.
 
  `/Dagmc`: Regression tests of unusual dagmc-specific geometries
 
- `/Meshtally`: Regression tests of dag-mcnp mesh tallies (tetrahedral
-               track-length tallies and KDE tallies)
+ `/Meshtally`: Regression tests of dag-mcnp mesh tallies (tetrahedral track-
+    length tallies and KDE tallies)
 
- `/Regression`: General MCNP5 regression tests adapted for DAG-MCNP5.
-                The 60-series numbered problems are DAG-MCNP5 specific
-                regression tests (and ought, perhaps, to move to the
-                DAGMC suite)
+ `/Regression`: General MCNP5 regression tests adapted for DAG-MCNP5. The 60-
+    series numbered problems are DAG-MCNP5 specific regression tests (and
+    perhaps ought move to the DAGMC suite)
 
-Other MCNP5-derived subdirectories:
- `/VALIDATION_CRITICALITY`
- `/VALIDATION_SHIELDING`
- `/VERIFICATION_KEFF`
-
-The all-caps directories contain longer-running problems,
-and may take substantial computational resources to run to completion.
-
+ `/VALIDATION_CRITICALITY`, `/VALIDATION_SHIELDING`, `/VERIFICATION_KEFF`:
+    Longer-running problems whichmay take substantial computational resources to
+    run to completion.
 
 ## Testing details ##
 
-The test suites are run using the open-source [waf] tool, which is kept in its
-entirety in the top-level Testing directory.  Each subdirectory contains a
-symlink to this file.  `waf configure` is usually the first command issued in each
-test suite.  `waf help` gives details on available options.  These options are
-relevant to dag-mcnp users:
+The test suites are run using the open-source [waf] tool. Each subdirectory
+contains a symlink to this file. `waf configure` is usually the first command
+issued in each test suite. `waf help` gives details on available options. The
+following options are relevant to dag-mcnp users:
 
 * waf -e [path] : Give the path to the dag-mcnp5 executable to use.  A default
                   path of ../../Source/src will be used if omitted.
