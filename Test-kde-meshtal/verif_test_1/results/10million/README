@@ -1,9 +1,0 @@
-These are the results for Verification Test #1 using 10 million particles and an
-optimal bandwidth of (0.231477, 0.0511845, 0.0511853).
-
-meshtal/meshtal.vtk: 
-  MCNP tally results
-kde_coll_mcnp.vtk:
-  KDE collision tally results using mcnp_mesh.h5m
-kde_coll_tet.vtk:
-  KDE collision tally results using tet_mesh.h5m
