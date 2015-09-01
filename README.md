@@ -6,31 +6,31 @@ The directories underneath this one contain groups of test problems
 for DAG-MCNP.  To run the tests in a subdirectory, enter the directory
 and run the following commands:
 
-    `$ ./waf configure`
-    `$ ./waf`
+    $ ./waf configure
+    $ ./waf
 
 To see the results of a previously-run set of tests, run
 
-    `$ ./waf summary`
+    $ ./waf summary
 
 More details on the use of these test suites are given below.
 
 ## Subdirectories ##
 
- /Dagmc: Regression tests of unusual dagmc-specific geometries
+ `/Dagmc`: Regression tests of unusual dagmc-specific geometries
 
- /Meshtally: Regression tests of dag-mcnp mesh tallies (tetrahedral
-             track-length tallies and KDE tallies)
+ `/Meshtally`: Regression tests of dag-mcnp mesh tallies (tetrahedral
+               track-length tallies and KDE tallies)
 
- /Regression: General MCNP5 regression tests adapted for dag-mcnp5.
-              The 60-series numbered problems are dag-mcnp5 specific
-              regression tests (and ought, perhaps, to move to the
-              Dagmc suite)
+ `/Regression`: General MCNP5 regression tests adapted for DAG-MCNP5.
+                The 60-series numbered problems are DAG-MCNP5 specific
+                regression tests (and ought, perhaps, to move to the
+                DAGMC suite)
 
 Other MCNP5-derived subdirectories:
- /VALIDATION_CRITICALITY
- /VALIDATION_SHIELDING
- /VERIFICATION_KEFF
+ `/VALIDATION_CRITICALITY`
+ `/VALIDATION_SHIELDING`
+ `/VERIFICATION_KEFF`
 
 The all-caps directories contain longer-running problems,
 and may take substantial computational resources to run to completion.
