@@ -17,16 +17,16 @@ More details on the use of these test suites are given below.
 
 ## Subdirectories ##
 
-*   `/Dagmc`: Regression tests of unusual dagmc-specific geometries
+*   `/Dagmc` : Regression tests of unusual dagmc-specific geometries
 
-*   `/Meshtally`: Regression tests of dag-mcnp mesh tallies (tetrahedral track-
+*   `/Meshtally` : Regression tests of dag-mcnp mesh tallies (tetrahedral track-
     length tallies and KDE tallies)
 
-*   `/Regression`: General MCNP5 regression tests adapted for DAG-MCNP5. The 60-
-    series numbered problems are DAG-MCNP5 specific regression tests (and
+*   `/Regression` : General MCNP5 regression tests adapted for DAG-MCNP5. The
+    60-series numbered problems are DAG-MCNP5 specific regression tests (and
     perhaps ought move to the DAGMC suite)
 
-*   `/VALIDATION_CRITICALITY`, `/VALIDATION_SHIELDING`, `/VERIFICATION_KEFF`:
+*   `/VALIDATION_CRITICALITY`, `/VALIDATION_SHIELDING`, `/VERIFICATION_KEFF` :
     Longer-running problems which may take substantial computational resources
     to run to completion.
 
