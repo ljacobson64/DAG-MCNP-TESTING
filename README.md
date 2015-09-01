@@ -123,6 +123,6 @@ old `trunk/Test-dagmc` directory was removed in r357.
 The `Regression` and `VALIDATION_*` suites are derived from MCNP5 and were
 created by Patrick Snouffer as part of his 2011 Master's thesis. His original
 files (including the old Makefile-based testing harness) can be found at
-`/filespace/groups/cnerg/archive/dag_vv`.
+`/groupspace/cnerg/archive/dag_vv`.
 
 [waf]: https://code.google.com/p/waf
