@@ -14,4 +14,4 @@ MCNP_BIN=`which mcnp5.mpi`
 #SBATCH --mail-user=ljjacobson@wisc.edu
 
 ./waf configure -e $MCNP_BIN
-./waf -e $MCNP_BIN --mpi -j 16
+./waf -e $MCNP_BIN -j 16
