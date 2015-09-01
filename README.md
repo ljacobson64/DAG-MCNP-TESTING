@@ -27,8 +27,8 @@ More details on the use of these test suites are given below.
     perhaps ought move to the DAGMC suite)
 
  `/VALIDATION_CRITICALITY`, `/VALIDATION_SHIELDING`, `/VERIFICATION_KEFF`:
-    Longer-running problems whichmay take substantial computational resources to
-    run to completion.
+    Longer-running problems which may take substantial computational resources
+    to run to completion.
 
 ## Testing details ##
 
@@ -37,22 +37,19 @@ contains a symlink to this file. `waf configure` is usually the first command
 issued in each test suite. `waf help` gives details on available options. The
 following options are relevant to dag-mcnp users:
 
-* waf -e [path] : Give the path to the dag-mcnp5 executable to use.  A default
-                  path of ../../Source/src will be used if omitted.
-* waf -f : Use pre-faceted geometry (instead of CAD files) when available.
-           This option usually saves time, and is compatible with nocgm
-           versions of dag-mcnp.
-* waf -c [cases] : Specify a test case to run.  In test suites where cases are
-                   numbered, such as the Regression suite, a hyphen-separated
-                   group of numbers may be given, e.g. 1-10 to run cases 01 to
-                   10.
-* waf -j [jobs] : Specify the number of parallel jobs to run during testing.
-* waf --mpi : Use mpiexec to run dag-mcnp5 in parallel.  This changes the meaning
-              of the -j option, which will specify the number of mpi tasks.  Be
-              sure to use an mpi-enabled executable with this option.  (If -e
-              is not specified, the default path will be searched for
-              mcnp5.mpi)
-
+* `waf -e [path]` : Give the path to the DAG-MCNP executable to use. If omitted,
+    a default path of `../../Source/src` will be used.
+* `waf -f` : Use pre-faceted geometry (instead of CAD files) when available.
+    This option usually saves time, and is compatible with non-CGM versions of
+    DAG-MCNP.
+* `waf -c [cases]` : Specify a test case to run.  In test suites where cases are
+    numbered, such as the Regression suite, a hyphen-separated group of numbers
+    may be given, e.g. `1-10` to run cases 01 to 10.
+* `waf -j [jobs]` : Specify the number of parallel jobs to run during testing.
+* `waf --mpi` : Use mpiexec to run dag-mcnp5 in parallel.  This changes the
+    meaning of the `-j` option, which will specify the number of mpi tasks. Be
+    sure to use an mpi-enabled executable with this option. (If `-e` is not
+    specified, the default path will be searched for `mcnp5.mpi`)
 
 ## Creating new tests ##
 
