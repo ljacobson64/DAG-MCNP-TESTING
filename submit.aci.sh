@@ -15,3 +15,4 @@ MCNP_BIN=`which mcnp5.mpi`
 
 ./waf configure -e $MCNP_BIN
 ./waf -e $MCNP_BIN -j 16
+./waf summary > summary 2>&1
