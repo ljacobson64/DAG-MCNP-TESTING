@@ -14,5 +14,13 @@ MCNP_BIN=`which mcnp5.mpi`
 #SBATCH --mail-user=ljjacobson@wisc.edu
 
 ./waf configure -e $MCNP_BIN
+
+TIME_START=$(date +%s)
+echo Start time: $(date) > time
 ./waf -e $MCNP_BIN -j 16
+TIME_END=$(date +%s)
+echo End time: $(date) >> time
+ELAPSED=$(($TIME_END - $TIME_START))
+echo Elapsed: $ELAPSED seconds >> time
+
 ./waf summary > summary 2>&1
