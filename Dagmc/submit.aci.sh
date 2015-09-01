@@ -1,1 +1,1 @@
-../submit.aci.sh
+../submit_parallel.aci.sh

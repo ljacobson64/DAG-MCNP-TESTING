@@ -1,1 +1,1 @@
-../submit.aci.sh
+../submit_serial.aci.sh
