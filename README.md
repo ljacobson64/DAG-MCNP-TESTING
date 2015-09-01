@@ -6,12 +6,12 @@ The directories underneath this one contain groups of test problems for
 DAG-MCNP. To run the tests in a subdirectory, enter the directory and run the
 following commands:
 
-    $ ./waf configure
-    $ ./waf
+ `$ ./waf configure`
+ `$ ./waf`
 
 To see the results of a previously-run set of tests, run
 
-    $ ./waf summary
+ `$ ./waf summary`
 
 More details on the use of these test suites are given below.
 
@@ -85,12 +85,11 @@ the following two functions:
         results directory before DAG-MCNP runs. DAG-MCNP will be invoked with
         `key=value` for each entry in this dictionary.
         
-        *   Exception: if the dictionary key starts with `EXTRA`, the input
-            file will be symlinked but will not be passed on the DAG-MCNP
-            command line. This is used to specify inputs for tetrahedral
-            mesh tallies.
+        *   Exception: if the dictionary key starts with `EXTRA`, the input file
+            will be symlinked but will not be passed on the DAG-MCNP command
+            line. This is used to specify inputs for tetrahedral mesh tallies.
 
-            example: case.inputs['inp'] = 'my_test_problem/dag.inp'
+ `example: case.inputs['inp'] = 'my_test_problem/dag.inp'`
 
     *   `self.outputs` : A dictionary of expected output files from DAG-MCNP.
         The keys of the dictionary are the runname suffixes of the output files,
@@ -98,7 +97,7 @@ the following two functions:
         paths to the reference files against which the DAG-MCNP outputs should
         be compared.
 
-            example: case.outputs['o'] = 'my_test_problem/reference_outp'
+ `example: case.outputs['o'] = 'my_test_problem/reference_outp'`
 
     *   `self.subcases` : A list of sub-cases that must be run to generate
         output files that are to be used as input files for this test. Each
@@ -120,6 +119,6 @@ old `trunk/Test-dagmc` directory was removed in r357.
 The `Regression` and `VALIDATION_*` suites are derived from MCNP5 and were
 created by Patrick Snouffer as part of his 2011 Master's thesis. His original
 files (including the old Makefile-based testing harness) can be found at
-`/filespace/groups/cnerg/archive/dag_vv.`
+`/filespace/groups/cnerg/archive/dag_vv`.
 
 [waf]: https://code.google.com/p/waf
