@@ -6,12 +6,16 @@ The directories underneath this one contain groups of test problems for
 DAG-MCNP. To run the tests in a subdirectory, enter the directory and run the
 following commands:
 
- `$ ./waf configure`
- `$ ./waf`
+```
+$ ./waf configure
+$ ./waf
+```
 
 To see the results of a previously-run set of tests, run
 
- `$ ./waf summary`
+```
+$ ./waf summary
+```
 
 More details on the use of these test suites are given below.
 
@@ -89,7 +93,7 @@ the following two functions:
             will be symlinked but will not be passed on the DAG-MCNP command
             line. This is used to specify inputs for tetrahedral mesh tallies.
 
- `example: case.inputs['inp'] = 'my_test_problem/dag.inp'`
+        > example: case.inputs['inp'] = 'my_test_problem/dag.inp'
 
     *   `self.outputs` : A dictionary of expected output files from DAG-MCNP.
         The keys of the dictionary are the runname suffixes of the output files,
@@ -97,7 +101,7 @@ the following two functions:
         paths to the reference files against which the DAG-MCNP outputs should
         be compared.
 
- `example: case.outputs['o'] = 'my_test_problem/reference_outp'`
+        > example: case.outputs['o'] = 'my_test_problem/reference_outp'
 
     *   `self.subcases` : A list of sub-cases that must be run to generate
         output files that are to be used as input files for this test. Each
@@ -108,7 +112,7 @@ the following two functions:
         *   C = the output files from the subcase that should be used as inputs
             to this test case.
 
-        See the `Regression/wscript` for examples of the use of `self.subcases`;
+        See `Regression/wscript` for examples of the use of `self.subcases`;
         other test suites do not currently use this feature.
 
 ## Test suite history ##
