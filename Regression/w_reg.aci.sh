@@ -1,1 +1,1 @@
-../submit.aci.sh
+../scripts/submit.aci.sh

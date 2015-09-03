@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd Dagmc
+cd ../Dagmc
 sbatch w_dagmc.aci.sh
 cd ../Meshtally
 sbatch w_meshtal.aci.sh
@@ -12,4 +12,4 @@ cd ../VALIDATION_SHIELDING
 sbatch w_vshield.aci.sh
 cd ../VERIFICATION_KEFF
 sbatch w_vkeff.aci.sh
-cd ..
+cd ../scripts
