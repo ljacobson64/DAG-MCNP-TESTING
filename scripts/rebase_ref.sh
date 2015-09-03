@@ -1,10 +1,53 @@
 #!/bin/bash
 
+# Dagmc test suite
 cd ../Dagmc
 
 for i in $(seq -f "%02g" 1 15); do
   cp results/$i/test$i.o cases/$i/ref.dag.out
   cp results/$i/test$i.m cases/$i/ref.dag.mctal
 done
+
+# Meshtally test suite
+cd ../Meshtally
+
+cases_Meshtally[ 1]=conformal_cyl1
+cases_Meshtally[ 2]=conformal_cyl2
+cases_Meshtally[ 3]=energy_groups
+cases_Meshtally[ 4]=gradient_flux
+cases_Meshtally[ 5]=material_discontinuity
+cases_Meshtally[ 6]=metroid
+cases_Meshtally[ 7]=mode_np
+cases_Meshtally[ 8]=reflecting_boundaries
+cases_Meshtally[ 9]=squares
+cases_Meshtally[10]=stu_cyl
+cases_Meshtally[11]=stu_cyl2
+cases_Meshtally[12]=tally_multipliers
+cases_Meshtally[13]=uniform_flux
+cases_Meshtally[14]=uniform_vol_source
+
+for i in "${cases_Meshtally[@]}"; do
+  if [ -a cases/$i/ref/outp ];          do cp results/$i/test_o        cases/$i/ref/outp;          done
+  if [ -a cases/$i/ref/left_outp ];     do cp results/$i/test_o        cases/$i/ref/left_outp;     done
+  if [ -a cases/$i/ref/right_outp ];    do cp results/$i/test_o        cases/$i/ref/right_outp;    done
+  if [ -a cases/$i/ref/meshtal ];       do cp results/$i/meshtal       cases/$i/ref/meshtal;       done
+  if [ -a cases/$i/ref/left_meshtal ];  do cp results/$i/meshtal       cases/$i/ref/left_meshtal;  done
+  if [ -a cases/$i/ref/right_meshtal ]; do cp results/$i/meshtal       cases/$i/ref/right_meshtal; done
+  if [ -a cases/$i/ref/meshtal4.vtk ];  do cp results/$i/meshtal4.vtk  cases/$i/ref/meshtal4.vtk;  done
+  if [ -a cases/$i/ref/meshtal14.vtk ]; do cp results/$i/meshtal14.vtk cases/$i/ref/meshtal14.vtk; done
+  if [ -a cases/$i/ref/meshtal24.vtk ]; do cp results/$i/meshtal24.vtk cases/$i/ref/meshtal24.vtk; done
+  if [ -a cases/$i/ref/meshtal34.vtk ]; do cp results/$i/meshtal34.vtk cases/$i/ref/meshtal34.vtk; done
+  if [ -a cases/$i/ref/meshtal44.vtk ]; do cp results/$i/meshtal44.vtk cases/$i/ref/meshtal44.vtk; done
+  if [ -a cases/$i/ref/meshtal54.vtk ]; do cp results/$i/meshtal54.vtk cases/$i/ref/meshtal54.vtk; done
+  if [ -a cases/$i/ref/meshtal64.vtk ]; do cp results/$i/meshtal64.vtk cases/$i/ref/meshtal64.vtk; done
+done
+
+# Regression test suite
+
+# VALIDATION_CRITICALITY test suite
+
+# VALIDATION_SHIELDING test suite
+
+# VERIFICATION_KEFF test suite
 
 cd ../scripts
