@@ -4,8 +4,8 @@
 cd ../Dagmc
 
 for i in $(seq -f "%02g" 1 15); do
-  cp results/$i/test$i.o cases/$i/ref.dag.out
-  cp results/$i/test$i.m cases/$i/ref.dag.mctal
+  if [ -a cases/$i/ref.dag.out ];   then cp results/$i/test$i.o cases/$i/ref.dag.out;   fi
+  if [ -a cases/$i/ref.dag.mctal ]; then cp results/$i/test$i.m cases/$i/ref.dag.mctal; fi
 done
 
 # Meshtally test suite
@@ -43,11 +43,52 @@ for i in "${cases_Meshtally[@]}"; do
 done
 
 # Regression test suite
+cd ../Regression
 
 # VALIDATION_CRITICALITY test suite
+cd ../VALIDATION_CRITICALITY
+
+cases_VC[ 1]=BAWXI2
+cases_VC[ 2]=BIGTEN
+cases_VC[ 3]=FLAT23
+cases_VC[ 4]=FLAT25
+cases_VC[ 5]=FLATPU
+cases_VC[ 6]=FLSTF1
+cases_VC[ 7]=GODIVA
+cases_VC[ 8]=GODIVR
+cases_VC[ 9]=HISHPG
+cases_VC[10]=ICT2C3
+cases_VC[11]=IMF03
+cases_VC[12]=IMF04
+cases_VC[13]=JEZ233
+cases_VC[14]=JEZ240
+cases_VC[15]=JEZPU
+cases_VC[16]=LST2C2
+cases_VC[17]=ORNL10
+cases_VC[18]=ORNL11
+cases_VC[19]=PNL2
+cases_VC[20]=PNL33
+cases_VC[21]=PUBTNS
+cases_VC[22]=PUSH2O
+cases_VC[23]=SB25
+cases_VC[24]=SB5RN3
+cases_VC[25]=STACY36
+cases_VC[26]=THOR
+cases_VC[27]=TT2C11
+cases_VC[28]=UH3C6
+cases_VC[29]=UMF5C2
+cases_VC[30]=ZEBR8H
+cases_VC[31]=ZEUS2
+
+for i in "${cases_VC[@]}"; do
+  if [ -a Templates/Linux/1e-4/outp$i ]; then cp results/$i/"$i"test.o Templates/Linux/1e-4/outp$i; fi
+done
 
 # VALIDATION_SHIELDING test suite
+cd ../VALIDATION_SHIELDING
 
 # VERIFICATION_KEFF test suite
+cd ../VERIFICATION_KEFF
 
+# Done
 cd ../scripts
