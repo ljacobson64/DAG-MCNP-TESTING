@@ -2,3 +2,5 @@ results/
 .waf-*/
 .lock*
 screen*
+summary
+time
