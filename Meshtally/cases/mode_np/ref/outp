@@ -200,13 +200,13 @@
    number of photons banked                   500475        average time of (shakes)              cutoffs
    photon tracks per source particle      6.2411E+00          escape            0.0000E+00          tco   1.0000E+33
    photon collisions per source particle  1.7963E+01          capture           5.9414E+03          eco   1.0000E-03
-   total photon collisions                   1796258          capture or escape 5.9414E+03          wc1  -5.0000E-01
+   total photon collisions                   1796260          capture or escape 5.9414E+03          wc1  -5.0000E-01
                                                               any termination   6.0275E+03          wc2  -2.5000E-01
 
  computer time so far in this run     0.00 minutes            maximum number ever in bank        18
  computer time in mcrun               0.00 minutes            bank overflows to backup file       0
  source particles per minute            0.0000E+00
- random numbers generated                176101749            most random numbers used was       13029 in history       10278
+ random numbers generated                176101754            most random numbers used was       13029 in history       10278
 
  range of sampled source weights = 1.0000E+00 to 1.0000E+00
 1neutron  activity in each cell                                                                         print table 126
@@ -227,12 +227,12 @@
               cell    entering                               * weight     weighted     weighted   track weight   track mfp
                                                           (per history)    energy       energy     (relative)      (cm)
 
-        1        1      508153       122130        41960    4.1889E-01   1.7403E+00   1.7403E+00   9.9838E-01   1.5708E+01
-        2        2      409333       261754       339786    3.3916E+00   1.9586E+00   1.9586E+00   9.9822E-01   2.0700E+00
-        3        3      576516       135568       160678    1.6042E+00   1.7358E+00   1.7358E+00   9.9836E-01   1.5689E+01
-        4        4      498368       443581      1253834    1.2515E+01   1.9487E+00   1.9487E+00   9.9823E-01   2.0617E+00
+        1        1      508150       122129        41960    4.1889E-01   1.7403E+00   1.7403E+00   9.9838E-01   1.5708E+01
+        2        2      409333       261755       339787    3.3916E+00   1.9586E+00   1.9586E+00   9.9822E-01   2.0700E+00
+        3        3      576513       135567       160677    1.6042E+00   1.7358E+00   1.7358E+00   9.9836E-01   1.5689E+01
+        4        4      498367       443581      1253836    1.2515E+01   1.9487E+00   1.9487E+00   9.9823E-01   2.0617E+00
 
-           total       1992370       963033      1796258    1.7930E+01
+           total       1992363       963032      1796260    1.7930E+01
 1summary of photons produced in neutron collisions
 
               cell      number of      weight per     energy per     avg photon      mev/gm per    weight/neut    energy/neut

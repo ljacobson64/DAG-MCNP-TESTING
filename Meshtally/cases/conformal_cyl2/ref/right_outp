@@ -54,7 +54,7 @@
         54-                kmesh=1     kints=24                                                   
         55-       c TET track length mesh tally for volume 3                                      
         56-       fmesh24:n geom=dag                                                              
-        57-       fc24 dagmc type=unstr_track inp=right_cylinder.h5m                                 
+        57-       fc24 dagmc type=unstr_track inp=right_cylinder.h5m                              
         58-                  out=test_meshtal24.vtk                                               
         59-                  conformal=3 -dagmc                                                   
         60-       c KDE integral-track mesh tally for volume 3                                    

@@ -1,7 +1,7 @@
  input file (left cylinder) for verification problem #07: conformal mesh         
  Number of histories used for normalizing tallies =        100000.00
 
- Mesh Tally Number   4
+ Mesh Tally Number         4
  This is a neutron mesh tally.
 
  Tally bin boundaries:

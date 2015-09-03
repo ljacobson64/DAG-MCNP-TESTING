@@ -39,11 +39,11 @@
         39-       sp2  0  1                                                                       
         40-       c TET track length mesh tally for cell 1                                        
         41-       fmesh14:n geom=dag                                                              
-        42-       fc14 dagmc type=unstr_track inp=water_tet_mesh.h5m out=test_meshtal14.vtk          
+        42-       fc14 dagmc type=unstr_track inp=water_tet_mesh.h5m out=test_meshtal14.vtk       
         43-                  conformal=1 -dagmc                                                   
         44-       c TET track length mesh tally for cell 2                                        
         45-       fmesh24:n geom=dag                                                              
-        46-       fc24 dagmc type=unstr_track inp=steel_tet_mesh.h5m out=test_meshtal24.vtk          
+        46-       fc24 dagmc type=unstr_track inp=steel_tet_mesh.h5m out=test_meshtal24.vtk       
         47-                  conformal=2 -dagmc                                                   
         48-       c KDE integral-track mesh tally for cells 1 and 2                               
         49-       fmesh34:n geom=dag                                                              

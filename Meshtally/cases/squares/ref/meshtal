@@ -1,7 +1,7 @@
  title - water cube with point source                                            
  Number of histories used for normalizing tallies =       1000000.00
 
- Mesh Tally Number  24
+ Mesh Tally Number        24
      Mesh comment line the first                                                
         mesh comment line the second                                            
  This is a neutron mesh tally.
