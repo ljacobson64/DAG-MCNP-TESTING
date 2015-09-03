@@ -1,86 +1,86 @@
-      1-       title - Three Uranium Cylinders Criticality Benchmark                           
-      2-       1 2 -1.131 imp:n=1                                                              
-      3-       3 1 -2.71 imp:n=1                                                               
-      4-       4 2 -1.131 imp:n=1                                                              
-      5-       6 1 -2.71 imp:n=1                                                               
-      6-       7 2 -1.131 imp:n=1                                                              
-      7-       9 1 -2.71 imp:n=1                                                               
-      8-       12 0 imp:n=0                                                                    
-      9-       15 0 imp:n=1                                                                    
-     10-       16 0 imp:n=1   $ implicit complement                                            
-     11-                                                                                       
-     12-       1                                                                               
-     13-       2                                                                               
-     14-       3                                                                               
-     15-       7                                                                               
-     16-       8                                                                               
-     17-       9                                                                               
-     18-       13                                                                              
-     19-       14                                                                              
-     20-       15                                                                              
-     21-       19                                                                              
-     22-       20                                                                              
-     23-       21                                                                              
-     24-       25                                                                              
-     25-       26                                                                              
-     26-       27                                                                              
-     27-       31                                                                              
-     28-       32                                                                              
-     29-       33                                                                              
-     30-       49                                                                              
-     31-       50                                                                              
-     32-       51                                                                              
-     33-       52                                                                              
-     34-       53                                                                              
-     35-       54                                                                              
-     36-       55                                                                              
-     37-       56                                                                              
-     38-       57                                                                              
-     39-       58                                                                              
-     40-       59                                                                              
-     41-       60                                                                              
-     42-                                                                                       
-     43-       c ##################                                                            
-     44-       c Aluminum cylinder                                                             
-     45-       m1                                                                              
-     46-            13027    1.0                                                               
-     47-       c ##################                                                            
-     48-       c UO2F2 water solution                                                          
-     49-       m2                                                                              
-     50-             92235    .000383                                                          
-     51-             92238    .0000276                                                         
-     52-             9019     .000821                                                          
-     53-             1001     .1183                                                            
-     54-             8016     .05990                                                           
-     55-       KCODE 10000 .7 30 90                                                            
-     56-       SDEF axs 0 0 1 pos d1 rad d2 ext d3                                             
-     57-       sp1 0.33 0.33 0.34                                                              
-     58-       si1 L 0 0 0  20.98 0 0  10.49 18.169 0                                          
-     59-       si2 8                                                                           
-     60-       si3 15                                                                          
-     61-       prdmp 2j -1                                                                     
-     62-       dagmc distlimit=on                                                              
-     63-                                                                                       
+         1-       title - Three Uranium Cylinders Criticality Benchmark                           
+         2-       1 2 -1.131 imp:n=1                                                              
+         3-       3 1 -2.71 imp:n=1                                                               
+         4-       4 2 -1.131 imp:n=1                                                              
+         5-       6 1 -2.71 imp:n=1                                                               
+         6-       7 2 -1.131 imp:n=1                                                              
+         7-       9 1 -2.71 imp:n=1                                                               
+         8-       12  0 imp:n=0                                                                   
+         9-       15 0 imp:n=1                                                                    
+        10-       16 0 imp:n=1 $ implicit complement                                              
+        11-                                                                                       
+        12-       1                                                                               
+        13-       2                                                                               
+        14-       3                                                                               
+        15-       7                                                                               
+        16-       8                                                                               
+        17-       9                                                                               
+        18-       13                                                                              
+        19-       14                                                                              
+        20-       15                                                                              
+        21-       19                                                                              
+        22-       20                                                                              
+        23-       21                                                                              
+        24-       25                                                                              
+        25-       26                                                                              
+        26-       27                                                                              
+        27-       31                                                                              
+        28-       32                                                                              
+        29-       33                                                                              
+        30-       49                                                                              
+        31-       50                                                                              
+        32-       51                                                                              
+        33-       52                                                                              
+        34-       53                                                                              
+        35-       54                                                                              
+        36-       55                                                                              
+        37-       56                                                                              
+        38-       57                                                                              
+        39-       58                                                                              
+        40-       59                                                                              
+        41-       60                                                                              
+        42-                                                                                       
+        43-       c ##################                                                            
+        44-       c Aluminum cylinder                                                             
+        45-       m1                                                                              
+        46-            13027    1.0                                                               
+        47-       c ##################                                                            
+        48-       c UO2F2 water solution                                                          
+        49-       m2                                                                              
+        50-             92235    .000383                                                          
+        51-             92238    .0000276                                                         
+        52-             9019     .000821                                                          
+        53-             1001     .1183                                                            
+        54-             8016     .05990                                                           
+        55-       KCODE 10000 .7 30 90                                                            
+        56-       SDEF axs 0 0 1 pos d1 rad d2 ext d3                                             
+        57-       sp1 0.33 0.33 0.34                                                              
+        58-       si1 L 0 0 0  20.98 0 0  10.49 18.169 0                                          
+        59-       si2 8                                                                           
+        60-       si3 15                                                                          
+        61-       prdmp 2j -1                                                                     
+        62-       dagmc distlimit=on                                                              
+        63-                                                                                       
  
-  comment.  total fission nubar data are being used.                                       
+  comment.  total fission nubar data are being used.
  
-  warning.    1 materials had unnormalized fractions. print table 40.                      
+  warning.    1 materials had unnormalized fractions. print table 40.
 1cells                                                                                                  print table 60
 
-                      atom        gram                                     neutron                                     
-        cell  mat    density     density     volume       mass     pieces importance                                   
+                               atom        gram                                            neutron                                     
+              cell     mat    density     density     volume       mass            pieces importance                                   
 
-     1     1    2  1.02739E-01 1.13100E+00 1.33993E+04 1.51546E+04     0  1.0000E+00                                   
-     2     3    1  6.04848E-02 2.71000E+00 4.98952E+02 1.35216E+03     0  1.0000E+00                                   
-     3     4    2  1.02739E-01 1.13100E+00 1.33993E+04 1.51546E+04     0  1.0000E+00                                   
-     4     6    1  6.04848E-02 2.71000E+00 4.98952E+02 1.35216E+03     0  1.0000E+00                                   
-     5     7    2  1.02739E-01 1.13100E+00 1.33993E+04 1.51546E+04     0  1.0000E+00                                   
-     6     9    1  6.04848E-02 2.71000E+00 4.98952E+02 1.35216E+03     0  1.0000E+00                                   
-     7    12    0  0.00000E+00 0.00000E+00 1.10900E+04 0.00000E+00     0  0.0000E+00                                   
-     8    15    0  0.00000E+00 0.00000E+00 3.22653E+04 0.00000E+00     0  1.0000E+00                                   
-     9    16    0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00     0  1.0000E+00                                   
+        1        1        2  1.02739E-01 1.13100E+00 1.33993E+04 1.51546E+04           0  1.0000E+00                                   
+        2        3        1  6.04848E-02 2.71000E+00 4.98952E+02 1.35216E+03           0  1.0000E+00                                   
+        3        4        2  1.02739E-01 1.13100E+00 1.33993E+04 1.51546E+04           0  1.0000E+00                                   
+        4        6        1  6.04848E-02 2.71000E+00 4.98952E+02 1.35216E+03           0  1.0000E+00                                   
+        5        7        2  1.02739E-01 1.13100E+00 1.33993E+04 1.51546E+04           0  1.0000E+00                                   
+        6        9        1  6.04848E-02 2.71000E+00 4.98952E+02 1.35216E+03           0  1.0000E+00                                   
+        7       12        0  0.00000E+00 0.00000E+00 1.10900E+04 0.00000E+00           0  0.0000E+00                                   
+        8       15        0  0.00000E+00 0.00000E+00 3.22653E+04 0.00000E+00           0  1.0000E+00                                   
+        9       16        0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00           0  1.0000E+00                                   
 
- total                                     8.50510E+04 4.95203E+04
+ total                                               8.50510E+04 4.95203E+04
 
  ***************************************************
  * Random Number Generator  =                    1 *
@@ -114,10 +114,25 @@
   total     2339784
 
           1 warning message so far.
+
+ comment.
+ comment. entropy of the fission source distribution will be computed
+ comment.
+ comment. the mesh for source entropy is based on the site coordinates
+ comment.   using  7 x  7 x  7 =   343  mesh cells
+ comment.
+ comment.     Xmin= -1.8162E+01     Xmax=  3.9087E+01
+ comment.     Ymin= -1.7786E+01     Ymax=  3.5703E+01
+ comment.     Zmin= -2.8935E+01     Zmax=  2.8950E+01
+ comment.
+ comment. the mesh will be automatically expanded if necessary to
+ comment.   encompass the entire fission source distribution
+ comment.
+
 1estimated keff results by cycle                                                                        print table 175
 
  cycle     1    k(collision)  1.012814    prompt removal lifetime(abs)  1.7493E+03    source points generated  14501
-                                          source_entropy =     6.4055E+00
+                                          source_entropy =     6.4066E+00
 
  cycle     2    k(collision)  0.964220    prompt removal lifetime(abs)  1.6821E+03    source points generated   9418
                                           source_entropy =     6.3694E+00
@@ -253,7 +268,7 @@
  k(collision)      0.999857       0.992357 0.0039     k(col/abs)          0.994507 0.0019     0.995733 0.0016  -0.2613
  k(absorption)     0.997220       0.996657 0.0017     k(abs/tk ln)        0.994718 0.0022     0.996025 0.0018  -0.0898
  k(trk length)     1.003338       0.992779 0.0042     k(tk ln/col)        0.992568 0.0040     0.992246 0.0043   0.9561
- rem life(col)   1.7333E+03     1.7334E+03 0.0042     k(col/abs/tk ln)    0.993931 0.0027     0.995554 0.0015
+ rem life(col)   1.7333E+03     1.7334E+03 0.0042     k(col/abs/tk ln)    0.993931 0.0027     0.995553 0.0015
  rem life(abs)   1.7501E+03     1.7368E+03 0.0051     life(col/abs/tl)  1.7357E+03 0.0048   1.7344E+03 0.0043
  source points generated   9874                source_entropy  6.3344E+00
 
@@ -580,7 +595,7 @@
   estimator     cycle    78   ave of    48 cycles      combination         simple average    combined average     corr
  k(collision)      1.025374       0.996982 0.0020     k(col/abs)          0.996305 0.0016     0.996039 0.0015   0.4825
  k(absorption)     1.002026       0.995627 0.0016     k(abs/tk ln)        0.996520 0.0015     0.996185 0.0015   0.4864
- k(trk length)     1.023896       0.997413 0.0020     k(tk ln/col)        0.997198 0.0020     0.997297 0.0020   0.9752
+ k(trk length)     1.023896       0.997414 0.0020     k(tk ln/col)        0.997198 0.0020     0.997297 0.0020   0.9752
  rem life(col)   1.7774E+03     1.7454E+03 0.0027     k(col/abs/tk ln)    0.996674 0.0016     0.996158 0.0016
  rem life(abs)   1.7834E+03     1.7439E+03 0.0020     life(col/abs/tl)  1.7445E+03 0.0022   1.7434E+03 0.0020
  source points generated   9903                source_entropy  6.3508E+00
@@ -709,31 +724,31 @@
    number of neutrons banked                      28        average time of (shakes)              cutoffs
    neutron tracks per source particle     1.0022E+00          escape            6.7343E+02          tco   1.0000E+33
    neutron collisions per source particle 2.2470E+01          capture           2.4118E+03          eco   0.0000E+00
-   total neutron collisions                 13482092          capture or escape 1.1363E+03          wc1  -5.0000E-01
+   total neutron collisions                 13482093          capture or escape 1.1363E+03          wc1  -5.0000E-01
    net multiplication              1.0000E+00 0.0000          any termination   1.7486E+03          wc2  -2.5000E-01
 
  computer time so far in this run     0.00 minutes            maximum number ever in bank         1
  computer time in mcrun               0.00 minutes            bank overflows to backup file       0
  source particles per minute            0.0000E+00
- random numbers generated                368508403            most random numbers used was        4348 in history      645740
+ random numbers generated                368508419            most random numbers used was        4348 in history      645740
 
  range of sampled source weights = 6.8961E-01 to 1.0618E+00
 1neutron  activity in each cell                                                                         print table 126
 
-                 tracks     population   collisions   collisions     number        flux        average      average
-        cell    entering                               * weight     weighted     weighted   track weight   track mfp
-                                                    (per history)    energy       energy     (relative)      (cm)
+                       tracks     population   collisions   collisions     number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                          (per history)    energy       energy     (relative)      (cm)
 
-     1     1      287725       260858      4519240    6.9310E+00   5.0280E-04   8.0208E-01   9.5361E-01   1.7907E+00
-     2     3      261114       184691        11805    1.9153E-02   6.9234E-04   9.0842E-01   9.5937E-01   8.4355E+00
-     3     4      284468       257758      4468619    6.8552E+00   5.0437E-04   8.0033E-01   9.5377E-01   1.7871E+00
-     4     6      258869       182458        11443    1.8521E-02   6.8476E-04   9.0051E-01   9.5881E-01   8.4598E+00
-     5     7      283939       257238      4459409    6.8361E+00   5.0297E-04   8.0079E-01   9.5346E-01   1.7893E+00
-     6     9      258881       182361        11576    1.8758E-02   6.8529E-04   8.9925E-01   9.5934E-01   8.4425E+00
-     8    15      523987       367726            0    0.0000E+00   8.6439E-04   9.8047E-01   9.6479E-01   0.0000E+00
-     9    16           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
+        1        1      287725       260858      4519240    6.9310E+00   5.0280E-04   8.0208E-01   9.5361E-01   1.7907E+00
+        2        3      261114       184691        11805    1.9153E-02   6.9234E-04   9.0842E-01   9.5937E-01   8.4355E+00
+        3        4      284468       257758      4468620    6.8552E+00   5.0437E-04   8.0033E-01   9.5377E-01   1.7871E+00
+        4        6      258869       182458        11443    1.8521E-02   6.8476E-04   9.0051E-01   9.5881E-01   8.4598E+00
+        5        7      283939       257238      4459409    6.8361E+00   5.0297E-04   8.0079E-01   9.5346E-01   1.7893E+00
+        6        9      258881       182361        11576    1.8758E-02   6.8529E-04   8.9925E-01   9.5934E-01   8.4425E+00
+        8       15      523987       367726            0    0.0000E+00   8.6439E-04   9.8047E-01   9.6479E-01   0.0000E+00
+        9       16           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
 
-     total       2158983      1693090     13482092    2.0679E+01
+           total       2158983      1693090     13482093    2.0679E+01
 
  the initial fission neutron source distribution was generated from a general sdef source description.
  the criticality problem was scheduled to skip  30 cycles and run a total of   90 cycles with nominally    10000 neutrons per cycle.
@@ -744,6 +759,18 @@
  all cells with fissionable material were sampled and had fission neutron source points.
 
 
+ comment.
+ comment. Average fission-source entropy for the last half of cycles:
+ comment.      H=  6.33E+00  with population std.dev.=  1.77E-02
+ comment.
+ comment.
+ comment. Cycle    4 is the first cycle having fission-source
+ comment.   entropy within 1 std.dev. of the average
+ comment.   entropy for the last half of cycles.
+ comment.   At least this many cycles should be discarded.
+ comment.
+ comment. Source entropy convergence check passed. 
+ comment.
  the results of the w test for normality applied to the individual collision, absorption, and track-length keff cycle values are:
 
            the k( collision) cycle values appear normally distributed at the 95 percent confidence level                       
@@ -802,8 +829,8 @@
 
        collision   1.74083E-05   4.18870E-08    1.7366E-05 to 1.7450E-05 1.7325E-05 to 1.7492E-05 1.7297E-05 to 1.7520E-05
       absorption   1.74255E-05   3.07603E-08    1.7395E-05 to 1.7456E-05 1.7364E-05 to 1.7487E-05 1.7344E-05 to 1.7507E-05
-    track length   1.74282E-05   3.08103E-08    1.7397E-05 to 1.7459E-05 1.7367E-05 to 1.7490E-05 1.7346E-05 to 1.7510E-05
-      col/absorp   1.74313E-05   3.02554E-08    1.7401E-05 to 1.7462E-05 1.7371E-05 to 1.7492E-05 1.7351E-05 to 1.7512E-05    0.8612
+    track length   1.74282E-05   3.08104E-08    1.7397E-05 to 1.7459E-05 1.7367E-05 to 1.7490E-05 1.7346E-05 to 1.7510E-05
+      col/absorp   1.74313E-05   3.02555E-08    1.7401E-05 to 1.7462E-05 1.7371E-05 to 1.7492E-05 1.7351E-05 to 1.7512E-05    0.8612
      abs/trk len   1.74265E-05   3.11692E-08    1.7395E-05 to 1.7458E-05 1.7364E-05 to 1.7489E-05 1.7343E-05 to 1.7509E-05    0.9939
      col/trk len   1.74335E-05   3.06414E-08    1.7403E-05 to 1.7464E-05 1.7372E-05 to 1.7495E-05 1.7352E-05 to 1.7515E-05    0.8447
  col/abs/trk len   1.74311E-05   3.06297E-08    1.7400E-05 to 1.7462E-05 1.7370E-05 to 1.7492E-05 1.7349E-05 to 1.7513E-05
@@ -941,67 +968,6 @@
                    collision 1.03051 on cycle  77                                                  collision 0.96951 on cycle  54
                   absorption 1.02197 on cycle  74                                                 absorption 0.96830 on cycle  54
                 track length 1.02752 on cycle  77                                               track length 0.96407 on cycle  54
-1plot of the estimated col/abs/track-length keff one standard deviation interval versus cycle number (| = final keff =  0.99622)
-
-    cycle   active 0.99                                             1.00                                              1.01  
-   number   cycles  |------------------------------------------------|-------------------------------------------------|
-       36        6  |                (--------k---|-----)                                                              |
-       37        7  |                  (------k---|---)                                                                |
-       38        8  |                 (------k----|-)                                                                  |
-       39        9  |                         (---|-----------k---------------)                                        |
-       40       10  |                          (--|-----------k-------------)                                          |
-       41       11  |                   (---------|---k-------------)                                                  |
-       42       12  |                     (-------|-----k-------------)                                                |
-       43       13  |                      (------|-----k------------)                                                 |
-       44       14  |                        (----|------k----------)                                                  |
-       45       15  +                            (|---------k----------)                                               +
-       46       16  |                         (---|------k----------)                                                  |
-       47       17  |                          (--|------k--------)                                                    |
-       48       18  |                             |--------k--------)                                                  |
-       49       19  |                        (----|----k--------)                                                      |
-       50       20  |                      (------|--k--------)                                                        |
-       51       21  |                    (--------k---------)                                                          |
-       52       22  |                   (--------k|-------)                                                            |
-       53       23  |                (--------k---|----)                                                               |
-       54       24  |         (----------k--------|-)                                                                  |
-       55       25  +          (---------k--------|)                                                                   +
-       56       26  |           (--------k--------|)                                                                   |
-       57       27  |        (--------k---------) |                                                                    |
-       58       28  |       (---------k--------)  |                                                                    |
-       59       29  |      (--------k--------)    |                                                                    |
-       60       30  |     (--------k--------)     |                                                                    |
-       61       31  |        (---------k--------) |                                                                    |
-       62       32  |          (--------k--------)|                                                                    |
-       63       33  |          (--------k---------|                                                                    |
-       64       34  |         (--------k--------) |                                                                    |
-       65       35  +         (--------k-------)  |                                                                    +
-       66       36  |         (--------k-------)  |                                                                    |
-       67       37  |          (-------k--------) |                                                                    |
-       68       38  |          (-------k-------)  |                                                                    |
-       69       39  |            (-------k-------)|                                                                    |
-       70       40  |            (-------k-------)|                                                                    |
-       71       41  |            (-------k-------)|                                                                    |
-       72       42  |             (-------k------)|                                                                    |
-       73       43  |              (-------k------|                                                                    |
-       74       44  |                 (------k----|--)                                                                 |
-       75       45  +                (-------k----|-)                                                                  +
-       76       46  |                 (------k----|--)                                                                 |
-       77       47  |                   (-------k-|-----)                                                              |
-       78       48  |                    (-------k|------)                                                             |
-       79       49  |                    (------k-|-----)                                                              |
-       80       50  |                    (------k-|-----)                                                              |
-       81       51  |                  (-------k--|---)                                                                |
-       82       52  |                 (-------k---|--)                                                                 |
-       83       53  |                  (------k---|--)                                                                 |
-       84       54  |                  (------k---|---)                                                                |
-       85       55  +                   (------k--|---)                                                                +
-       86       56  |                   (------k--|---)                                                                |
-       87       57  |                    (------k-|---)                                                                |
-       88       58  |                     (------k|-----)                                                              |
-       89       59  |                      (------k-----)                                                              |
-       90       60  |                      (------k-----)                                                              |
-                    |------------------------------------------------|-------------------------------------------------|
-                   0.99                                             1.00                                              1.01  
 1individual and collision/absorption/track-length keffs for different numbers of inactive cycles skipped for fission source settling
 
    skip  active     active    average keff estimators and deviations     normality average k(c/a/t)   k(c/a/t) confidence intervals
@@ -1119,93 +1085,6 @@
           final result     0.99622         0.00133           0.99489 to 0.99755     0.99357 to 0.99888     0.99269 to 0.99976
 
  the first and second half values of k(collision/absorption/track length) appear to be the same at the 99 percent confidence level.
-1plot of the estimated col/abs/track-length keff one standard deviation interval by active cycle number (| = final keff =  0.99622)
-
- inactive   active 0.99                                             1.00                                              1.01  
-   cycles   cycles  |------------------------------------------------|-------------------------------------------------|
-        0       90  |                    (-----k--|-)                                                                  |
-        1       89  |                   (----k----|)                                                                   |
-        2       88  |                     (----k--|--)                                                                 |
-        3       87  |                       (----k|---)                                                                |
-        4       86  |                       (-----k----)                                                               |
-        5       85  |                        (----|k----)                                                              |
-        6       84  |                         (---|k-----)                                                             |
-        7       83  |                         (---|k-----)                                                             |
-        8       82  |                        (----|k----)                                                              |
-        9       81  +                         (---|k-----)                                                             +
-       10       80  |                         (---|k-----)                                                             |
-       11       79  |                         (---|-k----)                                                             |
-       12       78  |                         (---|k-----)                                                             |
-       13       77  |                        (----|k-----)                                                             |
-       14       76  |                         (---|-k-----)                                                            |
-       15       75  |                         (---|-k-----)                                                            |
-       16       74  |                        (----|k-----)                                                             |
-       17       73  |                         (---|-k-----)                                                            |
-       18       72  |                          (--|--k-----)                                                           |
-       19       71  +                          (--|--k-----)                                                           +
-       20       70  |                          (--|--k------)                                                          |
-       21       69  |                          (--|--k-----)                                                           |
-       22       68  |                         (---|--k-----)                                                           |
-       23       67  |                          (--|--k-----)                                                           |
-       24       66  |                         (---|-k------)                                                           |
-       25       65  |                         (---|-k------)                                                           |
-       26       64  |                        (----|k-----)                                                             |
-       27       63  |                       (-----k------)                                                             |
-       28       62  |                      (-----k|-----)                                                              |
-       29       61  +                      (-----k|-----)                                                              +
-       30       60  *                      (------k-----)                                                              *
-       31       59  |                      (------k------)                                                             |
-       32       58  |                      (------k------)                                                             |
-       33       57  |                      (------k------)                                                             |
-       34       56  |                      (------k------)                                                             |
-       35       55  |                       (-----|k------)                                                            |
-       36       54  |                      (------|k------)                                                            |
-       37       53  |                      (------k-------)                                                            |
-       38       52  |                      (------|k-------)                                                           |
-       39       51  +                    (-------k|-----)                                                              +
-       40       50  |                    (------k-|-----)                                                              |
-       41       49  |                    (-------k|------)                                                             |
-       42       48  |                  (-------k--|----)                                                               |
-       43       47  |                  (-------k--|----)                                                               |
-       44       46  |                  (-------k--|----)                                                               |
-       45       45  |                (--------k---|---)                                                                |
-       46       44  |                 (-------k---|----)                                                               |
-       47       43  |                 (-------k---|----)                                                               |
-       48       42  |                (-------k----|---)                                                                |
-       49       41  +                 (--------k--|-----)                                                              +
-       50       40  |                   (-------k-|------)                                                             |
-       51       39  |                    (--------k--------)                                                           |
-       52       38  |                    (--------k---------)                                                          |
-       53       37  |                     (-------|-k--------)                                                         |
-       54       36  |                             |--------k-------)                                                   |
-       55       35  |                             |(--------k-------)                                                  |
-       56       34  |                             |(--------k--------)                                                 |
-       57       33  |                             |  (--------k--------)                                               |
-       58       32  |                             |  (--------k--------)                                               |
-       59       31  +                             |     (--------k--------)                                            +
-       60       30  |                             |       (--------k--------)                                          |
-       61       29  |                             |    (--------k--------)                                             |
-       62       28  |                             |   (--------k--------)                                              |
-       63       27  |                             |     (---------k--------)                                           |
-       64       26  |                             |       (--------k---------)                                         |
-       65       25  |                             |       (---------k--------)                                         |
-       66       24  |                             |       (---------k----------)                                       |
-       67       23  |                             |       (---------k----------)                                       |
-       68       22  |                             |        (----------k----------)                                     |
-       69       21  +                             |     (-----------k----------)                                       +
-       70       20  |                             |      (----------k-----------)                                      |
-       71       19  |                             |      (-----------k------------)                                    |
-       72       18  |                             |    (------------k------------)                                     |
-       73       17  |                             | (-------------k-------------)                                      |
-       74       16  |                         (---|--------k------------)                                              |
-       75       15  |                             |------------k------------)                                          |
-       76       14  |                      (------|--k--------)                                                        |
-       77       13  |                   (---------k---------)                                                          |
-       78       12  |               (-----------k-|--------)                                                           |
-       79       11  +            (--------------k-|-------------)                                                      +
-       80       10  |          (---------------k--|-------------)                                                      |
-                    |------------------------------------------------|-------------------------------------------------|
-                   0.99                                             1.00                                              1.01  
  tally data written to file test15.m
 
           1 warning message so far.
