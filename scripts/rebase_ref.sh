@@ -4,6 +4,7 @@
 cd ../Dagmc
 
 for i in $(seq -f "%02g" 1 15); do
+  echo Dagmc/$i
   if [ -a cases/$i/ref.dag.out ];   then cp results/$i/test$i.o cases/$i/ref.dag.out;   fi
   if [ -a cases/$i/ref.dag.mctal ]; then cp results/$i/test$i.m cases/$i/ref.dag.mctal; fi
 done
@@ -27,6 +28,7 @@ cases_Meshtally[13]=uniform_flux
 cases_Meshtally[14]=uniform_vol_source
 
 for i in "${cases_Meshtally[@]}"; do
+  echo Meshtally/$i
   if [ -a cases/$i/ref/outp ];          then cp results/$i/test_o             cases/$i/ref/outp;          fi
   if [ -a cases/$i/ref/left_outp ];     then cp results/$i/test_o             cases/$i/ref/left_outp;     fi
   if [ -a cases/$i/ref/right_outp ];    then cp results/$i/test_o             cases/$i/ref/right_outp;    fi
@@ -81,6 +83,7 @@ cases_VC[30]=ZEBR8H
 cases_VC[31]=ZEUS2
 
 for i in "${cases_VC[@]}"; do
+  echo VALIDATION_CRITICALITY/$i
   if [ -a Templates/Linux/1e-4/outp$i ]; then cp results/$i/"$i"test.o Templates/Linux/1e-4/outp$i; fi
 done
 
@@ -108,6 +111,7 @@ cases_VS[18]=SMAIR
 cases_VS[19]=SMTEF
 
 for i in "${cases_VS[@]}"; do
+  echo VALIDATION_SHIELDING/$i
   if [ -a Templates/Linux/1e-4/outp_$i ]; then cp results/$i/"$i"test.o Templates/Linux/1e-4/outp_$i; fi
   if [ -a Templates/Linux/1e-4/mctl_$i ]; then cp results/$i/"$i"test.m Templates/Linux/1e-4/mctl_$i; fi
 done
