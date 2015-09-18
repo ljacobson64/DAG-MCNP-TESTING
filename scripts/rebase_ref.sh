@@ -87,6 +87,31 @@ done
 # VALIDATION_SHIELDING test suite
 cd ../VALIDATION_SHIELDING
 
+cases_VS[ 1]=BE08
+cases_VS[ 2]=C29
+cases_VS[ 3]=CCR20
+cases_VS[ 4]=COAIR
+cases_VS[ 5]=COTEF
+cases_VS[ 6]=FE09
+cases_VS[ 7]=FS1ONN
+cases_VS[ 8]=FS3OFN
+cases_VS[ 9]=FS3ONP
+cases_VS[10]=FS7OFP
+cases_VS[11]=FS7ONN
+cases_VS[12]=H2O19
+cases_VS[13]=KERMIN
+cases_VS[14]=LI616
+cases_VS[15]=N31
+cases_VS[16]=PB14
+cases_VS[17]=SKYINP
+cases_VS[18]=SMAIR
+cases_VS[19]=SMTEF
+
+for i in "${cases_VS[@]}"; do
+  if [ -a Templates/Linux/1e-4/outp_$i ]; then cp results/$i/"$i"test.o Templates/Linux/1e-4/outp_$i; fi
+  if [ -a Templates/Linux/1e-4/mctl_$i ]; then cp results/$i/"$i"test.m Templates/Linux/1e-4/mctl_$i; fi
+done
+
 # VERIFICATION_KEFF test suite
 cd ../VERIFICATION_KEFF
 
