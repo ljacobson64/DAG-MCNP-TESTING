@@ -1,128 +1,128 @@
-      1-       testprob09 -- kcode in complicated cells and sdef                               
-      2-       1 0 imp:n=0                                                                     
-      3-       2 1 -14.1 imp:n=1                                                               
-      4-       3 2 -7.58 imp:n=1                                                               
-      5-       4 2 -7.58 imp:n=1                                                               
-      6-       5 3 -0.01 imp:n=1                                                               
-      7-       6 0 imp:n=1                                                                     
-      8-       7 0 imp:n=1   $ implicit complement                                             
-      9-                                                                                       
-     10-       1                                                                               
-     11-       2                                                                               
-     12-       3                                                                               
-     13-       4                                                                               
-     14-       5                                                                               
-     15-       6                                                                               
-     16-       7                                                                               
-     17-       8                                                                               
-     18-       9                                                                               
-     19-       10                                                                              
-     20-       11                                                                              
-     21-       12                                                                              
-     22-       13                                                                              
-     23-       14                                                                              
-     24-       15                                                                              
-     25-       16                                                                              
-     26-       17                                                                              
-     27-       18                                                                              
-     28-       19                                                                              
-     29-       20                                                                              
-     30-       21                                                                              
-     31-       22                                                                              
-     32-       23                                                                              
-     33-       24                                                                              
-     34-       25                                                                              
-     35-       26                                                                              
-     36-       27                                                                              
-     37-       28                                                                              
-     38-       30                                                                              
-     39-       33                                                                              
-     40-       36                                                                              
-     41-       39                                                                              
-     42-       40                                                                              
-     43-       49                                                                              
-     44-       50                                                                              
-     45-       51                                                                              
-     46-       52                                                                              
-     47-       53                                                                              
-     48-       54                                                                              
-     49-                                                                                       
-     50-       c 2   1     1 -14.1   -1 2 3(-4:-16)5 -6(12:13:-14)(10:-9:-11:-7:6)15           
-     51-       c 3,4 2     2 -7.58   -10 9 11 7 -6 -1:2 -12 14 -6 -13 3                        
-     52-       c 5   3     3 -.01    -17(1:-2:-5:6:-3:-15:16 4)                                
-     53-       c     4     0 17                                                                
-     54-       c                                                                               
-     55-       c 1     pz 10                                                                   
-     56-       c 2     pz -10                                                                  
-     57-       c 3     py -10                                                                  
-     58-       c 4     py 10                                                                   
-     59-       c 5     px -10                                                                  
-     60-       c 6     px 10                                                                   
-     61-       c 7     px -1                                                                   
-     62-       c 9     py -2                                                                   
-     63-       c 10    py 0                                                                    
-     64-       c 11    pz 5                                                                    
-     65-       c 12    pz -8                                                                   
-     66-       c 13    py -3                                                                   
-     67-       c 14    px 2                                                                    
-     68-       c 15    3 kx  1 .3 1 $ MCNP4.2 cone rotation bug (X-6:HGH-92-337)               
-     69-       c 16    2 kz 13 1 -1 $ MCNP4.2 cone rotation bug (X-6:HGH-92-337)               
-     70-       c 17    so 20                                                                   
-     71-       c                                                                               
-     72-       nonu 0 2 0 0 0 0 0                                                              
-  warning.  tallies with nonu card do not include any fission neutrons.                    
-     73-       tr3   0 0 0  0 -1 0  1 0 0  0 0 1                                               
-     74-       tr2   0 0 0  1 0 0  0 0 -1  0 1 0                                               
-     75-       kcode 150 1 10 51                                                               
-     76-       sdef  cel=2 x=d3 y=d2 z=d1 erg=d6                                               
-     77-       si1   -10 10                                                                    
-     78-       sp1    0  1                                                                     
-     79-       si3   -10 10                                                                    
-     80-       sp3    0  3                                                                     
-     81-       si2   -10 10                                                                    
-     82-       sp2 0 2                                                                         
-     83-       si6 1 2                                                                         
-     84-       sp6 -5                                                                          
-     85-       m1    92235 1   nlib=50d                                                        
-     86-       m2    29000.02c -1                                                              
-     87-       m3    8016.40c 1  7014.000 1 nlib .50                                           
-  comment.  zeros after the period will be dropped from 7014.000                           
-     88-       drxs 7014                                                                       
-     89-       print 178                                                                       
-     90-       prdmp 2j -1                                                                     
-     91-       f7:n   2 (3 4) 5                                                                
-     92-       vol  1 1 2j 1 1 1                                                               
-     93-       fq0   e f                                                                       
-     94-       f4:n   2 (3 4) 5                                                                
-     95-       e0               .162524  .266043  .358425  .445672  .530293  .613680           
-     96-               .696783  .780264  .864702  .950540 1.038286 1.128326 1.221111           
-     97-              1.317206 1.417070 1.521302 1.630646 1.745929 1.868073 1.998282           
-     98-              2.138046 2.289259 2.454356 2.636707 2.840830 3.073518 3.344965           
-     99-              3.672134 4.086420 4.656234 5.588725 9.000000                             
-    100-       ssw  cel 2                                                                      
-    101-                                                                                       
+         1-       testprob09 -- kcode in complicated cells and sdef                               
+         2-       1  0 imp:n=0                                                                    
+         3-       2 1 -14.1 imp:n=1                                                               
+         4-       3 2 -7.58 imp:n=1                                                               
+         5-       4 2 -7.58 imp:n=1                                                               
+         6-       5 3 -0.01 imp:n=1                                                               
+         7-       6 0 imp:n=1                                                                     
+         8-       7 0 imp:n=1 $ implicit complement                                               
+         9-                                                                                       
+        10-       1                                                                               
+        11-       2                                                                               
+        12-       3                                                                               
+        13-       4                                                                               
+        14-       5                                                                               
+        15-       6                                                                               
+        16-       7                                                                               
+        17-       8                                                                               
+        18-       9                                                                               
+        19-       10                                                                              
+        20-       11                                                                              
+        21-       12                                                                              
+        22-       13                                                                              
+        23-       14                                                                              
+        24-       15                                                                              
+        25-       16                                                                              
+        26-       17                                                                              
+        27-       18                                                                              
+        28-       19                                                                              
+        29-       20                                                                              
+        30-       21                                                                              
+        31-       22                                                                              
+        32-       23                                                                              
+        33-       24                                                                              
+        34-       25                                                                              
+        35-       26                                                                              
+        36-       27                                                                              
+        37-       28                                                                              
+        38-       30                                                                              
+        39-       33                                                                              
+        40-       36                                                                              
+        41-       39                                                                              
+        42-       40                                                                              
+        43-       49                                                                              
+        44-       50                                                                              
+        45-       51                                                                              
+        46-       52                                                                              
+        47-       53                                                                              
+        48-       54                                                                              
+        49-                                                                                       
+        50-       c 2   1     1 -14.1   -1 2 3(-4:-16)5 -6(12:13:-14)(10:-9:-11:-7:6)15           
+        51-       c 3,4 2     2 -7.58   -10 9 11 7 -6 -1:2 -12 14 -6 -13 3                        
+        52-       c 5   3     3 -.01    -17(1:-2:-5:6:-3:-15:16 4)                                
+        53-       c     4     0 17                                                                
+        54-       c                                                                               
+        55-       c 1     pz 10                                                                   
+        56-       c 2     pz -10                                                                  
+        57-       c 3     py -10                                                                  
+        58-       c 4     py 10                                                                   
+        59-       c 5     px -10                                                                  
+        60-       c 6     px 10                                                                   
+        61-       c 7     px -1                                                                   
+        62-       c 9     py -2                                                                   
+        63-       c 10    py 0                                                                    
+        64-       c 11    pz 5                                                                    
+        65-       c 12    pz -8                                                                   
+        66-       c 13    py -3                                                                   
+        67-       c 14    px 2                                                                    
+        68-       c 15    3 kx  1 .3 1 $ MCNP4.2 cone rotation bug (X-6:HGH-92-337)               
+        69-       c 16    2 kz 13 1 -1 $ MCNP4.2 cone rotation bug (X-6:HGH-92-337)               
+        70-       c 17    so 20                                                                   
+        71-       c                                                                               
+        72-       nonu 0 2 0 0 0 0 0                                                              
+  warning.  tallies with nonu card do not include any fission neutrons.
+        73-       tr3   0 0 0  0 -1 0  1 0 0  0 0 1                                               
+        74-       tr2   0 0 0  1 0 0  0 0 -1  0 1 0                                               
+        75-       kcode 150 1 10 51                                                               
+        76-       sdef  cel=2 x=d3 y=d2 z=d1 erg=d6                                               
+        77-       si1   -10 10                                                                    
+        78-       sp1    0  1                                                                     
+        79-       si3   -10 10                                                                    
+        80-       sp3    0  3                                                                     
+        81-       si2   -10 10                                                                    
+        82-       sp2 0 2                                                                         
+        83-       si6 1 2                                                                         
+        84-       sp6 -5                                                                          
+        85-       m1    92235 1   nlib=50d                                                        
+        86-       m2    29000.02c -1                                                              
+        87-       m3    8016.40c 1  7014.000 1 nlib .50                                           
+  comment.  zeros after the period will be dropped from 7014.000
+        88-       drxs 7014                                                                       
+        89-       print 178                                                                       
+        90-       prdmp 2j -1                                                                     
+        91-       f7:n   2 (3 4) 5                                                                
+        92-       vol  1 1 2j 1 1 1                                                               
+        93-       fq0   e f                                                                       
+        94-       f4:n   2 (3 4) 5                                                                
+        95-       e0               .162524  .266043  .358425  .445672  .530293  .613680           
+        96-               .696783  .780264  .864702  .950540 1.038286 1.128326 1.221111           
+        97-              1.317206 1.417070 1.521302 1.630646 1.745929 1.868073 1.998282           
+        98-              2.138046 2.289259 2.454356 2.636707 2.840830 3.073518 3.344965           
+        99-              3.672134 4.086420 4.656234 5.588725 9.000000                             
+       100-       ssw  cel 2                                                                      
+       101-                                                                                       
  
-  comment.  total fission nubar data are being used.                                       
+  comment.  total fission nubar data are being used.
  
-  warning.  tr  3 card unused.                                                             
+  warning.  tr        3 card unused.
  
-  warning.  tr  2 card unused.                                                             
+  warning.  tr        2 card unused.
  
-  warning.    1 materials had unnormalized fractions. print table 40.                      
+  warning.    1 materials had unnormalized fractions. print table 40.
 1cells                                                                                                  print table 60
 
-                      atom        gram                                     neutron                                     
-        cell  mat    density     density     volume       mass     pieces importance                                   
+                               atom        gram                                            neutron                                     
+              cell     mat    density     density     volume       mass            pieces importance                                   
 
-     1     1    0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00     0  0.0000E+00                                   
-     2     2    1  3.61255E-02 1.41000E+01 1.00000E+00 1.41000E+01     0  1.0000E+00                                   
-     3     3    2  7.18335E-02 7.58000E+00 1.12000E+02 8.48960E+02     0  1.0000E+00                                   
-     4     4    2  7.18335E-02 7.58000E+00 1.10000E+02 8.33800E+02     0  1.0000E+00                                   
-     5     5    3  4.01496E-04 1.00000E-02 1.00000E+00 1.00000E-02     0  1.0000E+00                                   
-     6     6    0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00     0  1.0000E+00                                   
-     7     7    0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00     0  1.0000E+00                                   
+        1        1        0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00           0  0.0000E+00                                   
+        2        2        1  3.61255E-02 1.41000E+01 1.00000E+00 1.41000E+01           0  1.0000E+00                                   
+        3        3        2  7.18335E-02 7.58000E+00 1.12000E+02 8.48960E+02           0  1.0000E+00                                   
+        4        4        2  7.18335E-02 7.58000E+00 1.10000E+02 8.33800E+02           0  1.0000E+00                                   
+        5        5        3  4.01496E-04 1.00000E-02 1.00000E+00 1.00000E-02           0  1.0000E+00                                   
+        6        6        0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00           0  1.0000E+00                                   
+        7        7        0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00           0  1.0000E+00                                   
 
- total                                     2.27000E+02 1.69687E+03
+ total                                               2.27000E+02 1.69687E+03
 
  ***************************************************
  * Random Number Generator  =                    1 *
@@ -148,15 +148,30 @@
    7014.50d   15517  njoy                                                                       (  1275)      79/09/08.
   92235.50d    6819  njoy                                               total nu                (  1395)      79/09/12.
  
-  warning.   92235.50d lacks delayed neutron cross sections.                               
+  warning.   92235.50d lacks delayed neutron cross sections.
 
   total       31781
  
-  warning.  neutron energy cutoff is below some cross-section tables.                      
+  warning.  neutron energy cutoff is below some cross-section tables.
  
-  comment.     2 cross sections modified by free gas thermal treatment.                    
+  comment.     2 cross sections modified by free gas thermal treatment.
 
          6 warning messages so far.
+
+ comment.
+ comment. entropy of the fission source distribution will be computed
+ comment.
+ comment. the mesh for source entropy is based on the site coordinates
+ comment.   using  4 x  4 x  4 =    64  mesh cells
+ comment.
+ comment.     Xmin= -1.3188E+01     Xmax=  1.3607E+01
+ comment.     Ymin= -1.4007E+01     Ymax=  1.4067E+01
+ comment.     Zmin= -1.3441E+01     Zmax=  1.3251E+01
+ comment.
+ comment. the mesh will be automatically expanded if necessary to
+ comment.   encompass the entire fission source distribution
+ comment.
+
 1estimated keff results by cycle                                                                        print table 175
  warning.  tally not scored beyond last energy bin.                    
  nps =        2244     nrn =                   5 tal =    4     erg = 9.0056E+00      
@@ -241,21 +256,21 @@
 
  range of sampled source weights = 2.7667E-01 to 3.6585E+00
 
- source efficiency = 0.9317  in cell     2
+ source efficiency = 0.9317  in cell        2
 1neutron  activity in each cell                                                                         print table 126
 
-                 tracks     population   collisions   collisions     number        flux        average      average
-        cell    entering                               * weight     weighted     weighted   track weight   track mfp
-                                                    (per history)    energy       energy     (relative)      (cm)
+                       tracks     population   collisions   collisions     number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                          (per history)    energy       energy     (relative)      (cm)
 
-     2     2        6730         6142        22507    2.4316E+00   9.9901E-01   1.5993E+00   6.7724E-01   3.5923E+00
-     3     3         203          187          143    1.5501E-02   9.5498E-01   1.5412E+00   6.4873E-01   3.7257E+00
-     4     4         340          300          239    2.5078E-02   8.8978E-01   1.3445E+00   6.6756E-01   3.7017E+00
-     5     5        5584         5377           56    6.3755E-03   1.0565E+00   1.6600E+00   6.6921E-01   1.1279E+03
-     6     6        5328         5328            0    0.0000E+00   1.0750E+00   1.6940E+00   6.6994E-01   0.0000E+00
-     7     7        5328         5328            0    0.0000E+00   1.0776E+00   1.6657E+00   6.7612E-01   0.0000E+00
+        2        2        6730         6142        22507    2.4316E+00   9.9901E-01   1.5993E+00   6.7724E-01   3.5923E+00
+        3        3         203          187          143    1.5501E-02   9.5498E-01   1.5412E+00   6.4873E-01   3.7257E+00
+        4        4         340          300          239    2.5078E-02   8.8978E-01   1.3445E+00   6.6756E-01   3.7017E+00
+        5        5        5584         5377           56    6.3755E-03   1.0565E+00   1.6600E+00   6.6921E-01   1.1279E+03
+        6        6        5328         5328            0    0.0000E+00   1.0750E+00   1.6940E+00   6.6994E-01   0.0000E+00
+        7        7        5328         5328            0    0.0000E+00   1.0945E+00   1.6887E+00   6.7222E-01   0.0000E+00
 
-     total         23513        22662        22945    2.4786E+00
+           total         23513        22662        22945    2.4786E+00
 
  the initial fission neutron source distribution was generated from a general sdef source description.
  the criticality problem was scheduled to skip  10 cycles and run a total of   51 cycles with nominally      150 neutrons per cycle.
@@ -266,6 +281,18 @@
  all cells with fissionable material were sampled and had fission neutron source points.
 
 
+ comment.
+ comment. Average fission-source entropy for the last half of cycles:
+ comment.      H=  4.89E+00  with population std.dev.=  1.52E-01
+ comment.
+ comment.
+ comment. Cycle    3 is the first cycle having fission-source
+ comment.   entropy within 1 std.dev. of the average
+ comment.   entropy for the last half of cycles.
+ comment.   At least this many cycles should be discarded.
+ comment.
+ comment. Source entropy convergence check passed. 
+ comment.
  the results of the w test for normality applied to the individual collision, absorption, and track-length keff cycle values are:
 
            the k( collision) cycle values appear normally distributed at the 95 percent confidence level                       
@@ -335,7 +362,7 @@
                              escape        capture        fission        removal
 
             fraction    5.77643E-01    3.98922E-02    3.82465E-01    1.00000E+00
-       lifetime(abs)    2.82360E-08    4.08859E-07    4.26451E-08    1.63103E-08
+       lifetime(abs)    2.82359E-08    4.08859E-07    4.26451E-08    1.63103E-08
      lifetime(c/a/t)    2.83294E-08    4.10213E-07    4.27863E-08    1.63643E-08
 
 
@@ -408,48 +435,6 @@
                    collision 1.12108 on cycle  11                                                  collision 0.85118 on cycle  22
                   absorption 1.12108 on cycle  11                                                 absorption 0.85118 on cycle  22
                 track length 1.11683 on cycle  29                                               track length 0.87928 on cycle  25
-1plot of the estimated col/abs/track-length keff one standard deviation interval versus cycle number (| = final keff =  0.99842)
-
-    cycle   active 0.96      0.97       0.98       0.99       1.00       1.01       1.02       1.03       1.04        1.05  
-   number   cycles  |---------|----------|----------|----------|----------|----------|----------|----------|-----------|
-       16        6  |                                        |          (--------------k--------------)                |
-       17        7  |                                        |                   (-------------k-------------)         |
-       18        8  |                                        |               (------------k------------)               |
-       19        9  |                                        |         (------------k------------)                     |
-       20       10  |                                        |      (-----------k------------)                         |
-       21       11  |                                        |    (-----------k-----------)                            |
-       22       12  |                           (------------|---k---------------)                                     |
-       23       13  |                       (--------------k-|-------------)                                           |
-       24       14  |                  (--------------k------|-------)                                                 |
-       25       15  +           (---------------k------------|--)                                                      +
-       26       16  |       (---------------k--------------) |                                                         |
-       27       17  |           (---------------k------------|-)                                                       |
-       28       18  |              (-------------k-----------|--)                                                      |
-       29       19  |                    (--------------k----|--------)                                                |
-       30       20  |                        (-------------k-|-----------)                                             |
-       31       21  |                          (-------------k------------)                                            |
-       32       22  |                           (------------k------------)                                            |
-       33       23  |                            (-----------|k-----------)                                            |
-       34       24  |                              (---------|-k-----------)                                           |
-       35       25  +                            (-----------k----------)                                              +
-       36       26  |                         (-----------k--|-------)                                                 |
-       37       27  |                        (----------k----|-----)                                                   |
-       38       28  |                         (---------k----|-----)                                                   |
-       39       29  |                         (----------k---|-----)                                                   |
-       40       30  |                          (---------k---|-----)                                                   |
-       41       31  |                             (----------k---------)                                               |
-       42       32  |                               (--------|k----------)                                             |
-       43       33  |                                (-------|-k---------)                                             |
-       44       34  |                                  (-----|--k---------)                                            |
-       45       35  +                                 (------|-k---------)                                             +
-       46       36  |                                 (------|--k--------)                                             |
-       47       37  |                                 (------|-k--------)                                              |
-       48       38  |                                (-------|k--------)                                               |
-       49       39  |                                  (-----|--k--------)                                             |
-       50       40  |                                  (-----|-k--------)                                              |
-       51       41  |                                (-------k--------)                                                |
-                    |---------|----------|----------|----------|----------|----------|----------|----------|-----------|
-                   0.96      0.97       0.98       0.99       1.00       1.01       1.02       1.03       1.04        1.05  
 1individual and collision/absorption/track-length keffs for different numbers of inactive cycles skipped for fission source settling
 
    skip  active     active    average keff estimators and deviations     normality average k(c/a/t)   k(c/a/t) confidence intervals
@@ -524,56 +509,8 @@
           final result     0.99842         0.00776           0.99059 to 1.00624     0.98270 to 1.01413     0.97737 to 1.01946
 
  the first and second half values of k(collision/absorption/track length) appear to be the same at the 68 percent confidence level.
-1plot of the estimated col/abs/track-length keff one standard deviation interval by active cycle number (| = final keff =  0.99842)
 
- inactive   active 0.96         0.97          0.98          0.99           1.00          1.01          1.02           1.03  
-   cycles   cycles  |------------|-------------|-------------|--------------|-------------|-------------|--------------|
-        0       51  |------------------------k-----------------------)   |                                             |
-        1       50  |                                 (-----------k------|----)                                        |
-        2       49  |                                          (---------k---------)                                   |
-        3       48  |                                           (--------|k---------)                                  |
-        4       47  |                                             (------|--k--------)                                 |
-        5       46  |                                            (-------|-k---------)                                 |
-        6       45  |                                             (------|---k---------)                               |
-        7       44  |                                            (-------|-k---------)                                 |
-        8       43  |                                           (--------|k----------)                                 |
-        9       42  +                                          (---------|k----------)                                 +
-       10       41  *                                         (----------k----------)                                  *
-       11       40  |                                       (----------k-|--------)                                    |
-       12       39  |                                       (----------k-|--------)                                    |
-       13       38  |                                       (----------k-|---------)                                   |
-       14       37  |                                      (-----------k-|---------)                                   |
-       15       36  |                                   (-----------k----|------)                                      |
-       16       35  |                                   (-----------k----|-------)                                     |
-       17       34  |                                (-----------k-------|----)                                        |
-       18       33  |                               (------------k-------|---)                                         |
-       19       32  +                               (------------k-------|----)                                        +
-       20       31  |                               (------------k-------|-----)                                       |
-       21       30  |                              (-------------k-------|-----)                                       |
-       22       29  |                                    (-------------k-|----------)                                  |
-       23       28  |                                        (-----------|k-------------)                              |
-       24       27  |                                            (-------|----k------------)                           |
-       25       26  |                                                (---|--------k------------)                       |
-       26       25  |                                                    |(------------k------------)                  |
-       27       24  |                                                   (|-----------k------------)                    |
-       28       23  |                                                  (-|----------k-------------)                    |
-       29       22  +                                             (------|-----k------------)                          +
-       30       21  |                                         (----------|--k-------------)                            |
-       31       20  |                                       (------------|k-------------)                              |
-       32       19  |                                     (--------------k--------------)                              |
-       33       18  |                                   (---------------k|-------------)                               |
-       34       17  |                                (---------------k---|------------)                                |
-       35       16  |                                    (---------------k----------------)                            |
-       36       15  |                                          (---------|-------k----------------)                    |
-       37       14  |                                               (----|------------k----------------)               |
-       38       13  |                                              (-----|------------k------------------)             |
-       39       12  +                                             (------|-------------k-------------------)           +
-       40       11  |                                             (------|--------------k----------------------)       |
-       41       10  |                              (------------------k--|----------------)                            |
-                    |------------|-------------|-------------|--------------|-------------|-------------|--------------|
-                   0.96         0.97          0.98          0.99           1.00          1.01          1.02           1.03  
-
-1tally   4        nps =        7843
+1tally        4        nps =        7843
            tally type 4    track length estimate of particle flux.      units   1/cm**2   
            tally for  neutrons 
  number of histories used for normalizing tallies =         6150.00
@@ -621,7 +558,7 @@
 
  ===================================================================================================================================
 
-           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally   4
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally        4
 
  tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
  behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
@@ -643,7 +580,7 @@
 
  fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 1.620E+00)**2 = (0.000E+00)*(2.625E+00) = 0.000E+00
 
-1tally   7        nps =        7843
+1tally        7        nps =        7843
            tally type 7    track length estimate of fission heating.    units   mev/gram  
            tally for  neutrons 
  number of histories used for normalizing tallies =         6150.00
@@ -691,7 +628,7 @@
 
  ===================================================================================================================================
 
-           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally   7
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally        7
 
  tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
  behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
@@ -725,10 +662,10 @@
 
  tally   result of statistical checks for the tfc bin (the first check not passed is listed) and error magnitude check for all bins
 
-     4   passed the 10 statistical checks for the tally fluctuation chart bin result               
+        4   passed the 10 statistical checks for the tally fluctuation chart bin result               
          missed all bin error check:    99 tally bins had     0 bins with zeros and    36 bins with relative errors exceeding 0.10
 
-     7   passed the 10 statistical checks for the tally fluctuation chart bin result               
+        7   passed the 10 statistical checks for the tally fluctuation chart bin result               
          passed all bin error check:    99 tally bins had    66 bins with zeros and     0 bins with relative errors exceeding 0.10
 
 
@@ -736,10 +673,10 @@
 
  the tally bins with zeros may or may not be correct: compare the source, cutoffs, multipliers, et cetera with the tally bins.
 
- warning.     1 of the   2 tallies had bins with relative errors greater than recommended.
-1tally fluctuation charts                         
+ warning.       1 of the     2 tallies had bins with relative errors greater than recommended.
+1tally fluctuation charts                              
 
-                       tally    4                                tally    7
+                            tally        4                          tally        7
           nps      mean     error   vov  slope    fom      mean     error   vov  slope    fom
          1000   0.0000E+00 0.0000 0.0000  0.0           0.0000E+00 0.0000 0.0000  0.0        
          2000   8.9060E+00 0.0313 0.0148  0.0           5.1334E+00 0.0314 0.0133  0.0        

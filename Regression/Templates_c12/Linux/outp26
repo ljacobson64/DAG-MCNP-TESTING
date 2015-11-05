@@ -1,8 +1,8 @@
  testprob09 -- kcode in complicated cells and sdef                               
 
       1-       CONTINUE    testprob26                                                          
-      2-       kcode 200 1 10 55                                                               
-      3-                                                                                       
+         2-       kcode 200 1 10 55                                                               
+         3-                                                                                       
 
  ***************************************************
  * Random Number Generator  =                    1 *
@@ -86,21 +86,21 @@
 
  range of sampled source weights = 2.7667E-01 to 3.6585E+00
 
- source efficiency = 0.9317  in cell     2
+ source efficiency = 0.9317  in cell        2
 1neutron  activity in each cell                                                                         print table 126
 
-                 tracks     population   collisions   collisions     number        flux        average      average
-        cell    entering                               * weight     weighted     weighted   track weight   track mfp
-                                                    (per history)    energy       energy     (relative)      (cm)
+                       tracks     population   collisions   collisions     number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                          (per history)    energy       energy     (relative)      (cm)
 
-     2     2        7377         6725        24559    2.4230E+00   9.9922E-01   1.5991E+00   6.7892E-01   3.5916E+00
-     3     3         219          203          157    1.5305E-02   9.6305E-01   1.5251E+00   6.5414E-01   3.7390E+00
-     4     4         378          332          257    2.4765E-02   8.8791E-01   1.3534E+00   6.7147E-01   3.6954E+00
-     5     5        6120         5890           61    6.2387E-03   1.0610E+00   1.6620E+00   6.7209E-01   1.1268E+03
-     6     6        5830         5830            0    0.0000E+00   1.0808E+00   1.6976E+00   6.7271E-01   0.0000E+00
-     7     7        5830         5830            0    0.0000E+00   1.0780E+00   1.6658E+00   6.7991E-01   0.0000E+00
+        2        2        7377         6725        24559    2.4230E+00   9.9922E-01   1.5991E+00   6.7892E-01   3.5916E+00
+        3        3         219          203          157    1.5305E-02   9.6305E-01   1.5251E+00   6.5414E-01   3.7390E+00
+        4        4         378          332          257    2.4765E-02   8.8791E-01   1.3534E+00   6.7147E-01   3.6954E+00
+        5        5        6120         5890           61    6.2387E-03   1.0610E+00   1.6620E+00   6.7209E-01   1.1268E+03
+        6        6        5830         5830            0    0.0000E+00   1.0808E+00   1.6976E+00   6.7271E-01   0.0000E+00
+        7        7        5830         5830            0    0.0000E+00   1.0953E+00   1.6870E+00   6.7458E-01   0.0000E+00
 
-     total         25754        24810        25034    2.4693E+00
+           total         25754        24810        25034    2.4693E+00
 
  the initial fission neutron source distribution was generated from a general sdef source description.
  the criticality problem was scheduled to skip  10 cycles and run a total of   55 cycles with nominally      150 neutrons per cycle.
@@ -111,6 +111,18 @@
  all cells with fissionable material were sampled and had fission neutron source points.
 
 
+ comment.
+ comment. Average fission-source entropy for the last half of cycles:
+ comment.      H=  4.87E+00  with population std.dev.=  1.49E-01
+ comment.
+ comment.
+ comment. Cycle    3 is the first cycle having fission-source
+ comment.   entropy within 1 std.dev. of the average
+ comment.   entropy for the last half of cycles.
+ comment.   At least this many cycles should be discarded.
+ comment.
+ comment. Source entropy convergence check passed. 
+ comment.
  the results of the w test for normality applied to the individual collision, absorption, and track-length keff cycle values are:
 
            the k( collision) cycle values appear normally distributed at the 95 percent confidence level                       
@@ -326,52 +338,6 @@
                    collision 1.12108 on cycle  11                                                  collision 0.85118 on cycle  22
                   absorption 1.12108 on cycle  11                                                 absorption 0.85118 on cycle  22
                 track length 1.11683 on cycle  29                                               track length 0.87928 on cycle  25
-1plot of the estimated col/abs/track-length keff one standard deviation interval versus cycle number (| = final keff =  0.99644)
-
-    cycle   active 0.96      0.97       0.98       0.99       1.00       1.01       1.02       1.03       1.04        1.05  
-   number   cycles  |---------|----------|----------|----------|----------|----------|----------|----------|-----------|
-       16        6  |                                      |            (--------------k--------------)                |
-       17        7  |                                      |                     (-------------k-------------)         |
-       18        8  |                                      |                 (------------k------------)               |
-       19        9  |                                      |           (------------k------------)                     |
-       20       10  |                                      |        (-----------k------------)                         |
-       21       11  |                                      |      (-----------k-----------)                            |
-       22       12  |                           (----------|-----k---------------)                                     |
-       23       13  |                       (--------------k---------------)                                           |
-       24       14  |                  (--------------k----|---------)                                                 |
-       25       15  +           (---------------k----------|----)                                                      +
-       26       16  |       (---------------k--------------|                                                           |
-       27       17  |           (---------------k----------|---)                                                       |
-       28       18  |              (-------------k---------|----)                                                      |
-       29       19  |                    (--------------k--|----------)                                                |
-       30       20  |                        (-------------k-------------)                                             |
-       31       21  |                          (-----------|-k------------)                                            |
-       32       22  |                           (----------|-k------------)                                            |
-       33       23  |                            (---------|--k-----------)                                            |
-       34       24  |                              (-------|---k-----------)                                           |
-       35       25  +                            (---------|-k----------)                                              +
-       36       26  |                         (-----------k|---------)                                                 |
-       37       27  |                        (----------k--|-------)                                                   |
-       38       28  |                         (---------k--|-------)                                                   |
-       39       29  |                         (----------k-|-------)                                                   |
-       40       30  |                          (---------k-|-------)                                                   |
-       41       31  |                             (--------|-k---------)                                               |
-       42       32  |                               (------|--k----------)                                             |
-       43       33  |                                (-----|---k---------)                                             |
-       44       34  |                                  (---|----k---------)                                            |
-       45       35  +                                 (----|---k---------)                                             +
-       46       36  |                                 (----|----k--------)                                             |
-       47       37  |                                 (----|---k--------)                                              |
-       48       38  |                                (-----|--k--------)                                               |
-       49       39  |                                  (---|----k--------)                                             |
-       50       40  |                                  (---|---k--------)                                              |
-       51       41  |                                (-----|-k--------)                                                |
-       52       42  |                               (------|-k-------)                                                 |
-       53       43  |                               (------|k-------)                                                  |
-       54       44  |                               (------|k-------)                                                  |
-       55       45  +                              (-------k-------)                                                   +
-                    |---------|----------|----------|----------|----------|----------|----------|----------|-----------|
-                   0.96      0.97       0.98       0.99       1.00       1.01       1.02       1.03       1.04        1.05  
 1individual and collision/absorption/track-length keffs for different numbers of inactive cycles skipped for fission source settling
 
    skip  active     active    average keff estimators and deviations     normality average k(c/a/t)   k(c/a/t) confidence intervals
@@ -451,60 +417,8 @@
           final result     0.99644         0.00712           0.98926 to 1.00361     0.98205 to 1.01082     0.97721 to 1.01567
 
  the first and second half values of k(collision/absorption/track length) appear to be the same at the 68 percent confidence level.
-1plot of the estimated col/abs/track-length keff one standard deviation interval by active cycle number (| = final keff =  0.99644)
 
- inactive   active 0.96           0.97             0.98            0.99             1.00             1.01            1.02   
-   cycles   cycles  |--------------|----------------|---------------|----------------|----------------|---------------|
-        0       55  |  (-------------------------k-------------------------)   |                                      |
-        1       54  |                                       (-----------k------|-----)                                |
-        2       53  |                                                (---------k----------)                           |
-        3       52  |                                                 (--------|k----------)                          |
-        4       51  |                                                  (-------|--k----------)                        |
-        5       50  |                                                  (-------|--k----------)                        |
-        6       49  |                                                   (------|---k----------)                       |
-        7       48  |                                                 (--------|-k----------)                         |
-        8       47  |                                                (---------|k-----------)                         |
-        9       46  +                                               (----------|k----------)                          +
-       10       45  *                                              (-----------k-----------)                          *
-       11       44  |                                            (-----------k-|---------)                            |
-       12       43  |                                           (------------k-|---------)                            |
-       13       42  |                                           (------------k-|---------)                            |
-       14       41  |                                          (------------k--|---------)                            |
-       15       40  |                                       (------------k-----|------)                               |
-       16       39  |                                       (------------k-----|------)                               |
-       17       38  |                                    (------------k--------|---)                                  |
-       18       37  |                                   (------------k---------|---)                                  |
-       19       36  +                                   (-------------k--------|---)                                  +
-       20       35  |                                   (-------------k--------|----)                                 |
-       21       34  |                                  (--------------k--------|----)                                 |
-       22       33  |                                        (-------------k---|---------)                            |
-       23       32  |                                           (-------------k|------------)                         |
-       24       31  |                                               (----------|--k-------------)                     |
-       25       30  |                                                    (-----|-------k------------)                 |
-       26       29  |                                                         (|-----------k------------)             |
-       27       28  |                                                      (---|---------k-------------)              |
-       28       27  |                                                     (----|--------k-------------)               |
-       29       26  +                                                 (--------|---k------------)                     +
-       30       25  |                                             (------------|k------------)                        |
-       31       24  |                                           (-------------k|-----------)                          |
-       32       23  |                                         (-------------k--|-----------)                          |
-       33       22  |                                       (--------------k---|----------)                           |
-       34       21  |                                    (--------------k------|--------)                             |
-       35       20  |                                        (--------------k--|------------)                         |
-       36       19  |                                            (-------------|-k---------------)                    |
-       37       18  |                                               (----------|-----k---------------)                |
-       38       17  |                                                (---------|------k----------------)              |
-       39       16  +                                               (----------|------k------------------)            +
-       40       15  |                                             (------------|------k-------------------)           |
-       41       14  |                                     (--------------k-----|---------)                            |
-       42       13  |                             (-----------k-----------)    |                                      |
-       43       12  |                          (------------k-----------)      |                                      |
-       44       11  |                      (------------k------------)         |                                      |
-       45       10  |                       (--------------k-------------)     |                                      |
-                    |--------------|----------------|---------------|----------------|----------------|---------------|
-                   0.96           0.97             0.98            0.99             1.00             1.01            1.02   
-
-1tally   4        nps =        8425
+1tally        4        nps =        8425
            tally type 4    track length estimate of particle flux.      units   1/cm**2   
            tally for  neutrons 
  number of histories used for normalizing tallies =         6750.00
@@ -552,7 +466,7 @@
 
  ===================================================================================================================================
 
-           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally   4
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally        4
 
  tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
  behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
@@ -574,7 +488,7 @@
 
  fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 1.614E+00)**2 = (0.000E+00)*(2.603E+00) = 0.000E+00
 
-1tally   7        nps =        8425
+1tally        7        nps =        8425
            tally type 7    track length estimate of fission heating.    units   mev/gram  
            tally for  neutrons 
  number of histories used for normalizing tallies =         6750.00
@@ -622,7 +536,7 @@
 
  ===================================================================================================================================
 
-           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally   7
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally        7
 
  tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
  behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
@@ -656,10 +570,10 @@
 
  tally   result of statistical checks for the tfc bin (the first check not passed is listed) and error magnitude check for all bins
 
-     4   passed the 10 statistical checks for the tally fluctuation chart bin result               
+        4   passed the 10 statistical checks for the tally fluctuation chart bin result               
          missed all bin error check:    99 tally bins had     0 bins with zeros and    34 bins with relative errors exceeding 0.10
 
-     7   passed the 10 statistical checks for the tally fluctuation chart bin result               
+        7   passed the 10 statistical checks for the tally fluctuation chart bin result               
          passed all bin error check:    99 tally bins had    66 bins with zeros and     0 bins with relative errors exceeding 0.10
 
 
@@ -667,10 +581,10 @@
 
  the tally bins with zeros may or may not be correct: compare the source, cutoffs, multipliers, et cetera with the tally bins.
 
- warning.     1 of the   2 tallies had bins with relative errors greater than recommended.
-1tally fluctuation charts                         
+ warning.       1 of the     2 tallies had bins with relative errors greater than recommended.
+1tally fluctuation charts                              
 
-                       tally    4                                tally    7
+                            tally        4                          tally        7
           nps      mean     error   vov  slope    fom      mean     error   vov  slope    fom
          1000   0.0000E+00 0.0000 0.0000  0.0           0.0000E+00 0.0000 0.0000  0.0        
          2000   8.9060E+00 0.0313 0.0148  0.0           5.1334E+00 0.0314 0.0133  0.0        

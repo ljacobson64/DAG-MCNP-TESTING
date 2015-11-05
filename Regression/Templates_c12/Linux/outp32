@@ -1,73 +1,73 @@
-      1-       testprob32 -- Modified 2-Zone BIG TEN to test del n's, URR                      
-      2-       1 0 imp:n=0                                                                     
-      3-       2 1 0.0480619 imp:n=1                                                           
-      4-       3 2 0.0477776 imp:n=1                                                           
-      5-       4 0 imp:n=1                                                                     
-      6-       5 0 imp:n=1   $ implicit complement                                             
-      7-                                                                                       
-      8-       1                                                                               
-      9-       2                                                                               
-     10-       3                                                                               
-     11-       4                                                                               
-     12-       5                                                                               
-     13-       6                                                                               
-     14-       7                                                                               
-     15-       8                                                                               
-     16-       9                                                                               
-     17-       10                                                                              
-     18-       11                                                                              
-     19-       12                                                                              
-     20-       13                                                                              
-     21-       14                                                                              
-     22-       15                                                                              
-     23-       16                                                                              
-     24-       17                                                                              
-     25-       18                                                                              
-     26-       22                                                                              
-     27-       23                                                                              
-     28-       24                                                                              
-     29-       25                                                                              
-     30-       26                                                                              
-     31-       27                                                                              
-     32-                                                                                       
-     33-       c 2 1     1   4.806192e-02      -1                   $ Core                     
-     34-       c 3 2     2   4.777758e-02       1    2   -3   -4    $ Reflector                
-     35-       c 3     0                     -2:3:4                                            
-     36-       c                                                                               
-     37-       c 1     rcc     0.0 0.0 -28.8169   0.0 0.0 57.6338  26.67    $ Core             
-     38-       c 2     pz    -48.26                          $ Bottom of Reflector             
-     39-       c 3     pz     48.26                          $ Top of Reflector                
-     40-       c 4     cz     41.91                          $ Reflector OR                    
-     41-       c                                                                               
-     42-       mode    n                                                                       
-     43-       kcode   500   1.00    1   10                                                    
-     44-       c imp:n   1.0   1.0   0.0                                                       
-     45-       sdef   cel=2  erg=d1                                                            
-     46-       sp1    -3                                                                       
-     47-       vol   0 128787.3    403814.4    0.0     0                                       
-     48-       c area   14127.0      9657.8      2234.6      2234.6                            
-     49-       c        5518.0      5518.0     25416.4                                         
-     50-       c  Central Core (12 wt.%)                                                       
-     51-       m1    92235.50d   5.7781e-03     92238.40c   4.2218e-02                         
-     52-             92232.49c   1.7407e-05     92234.61c   4.8416e-05                         
-     53-       c  Depleted Uranium                                                             
-     54-       m2    92235.50d   1.0058e-04     92238.40c   4.7677e-02                         
-     55-       totnu                                                                           
-     56-       prdmp  2j -1                                                                    
+         1-       testprob32 -- Modified 2-Zone BIG TEN to test del n's, URR                      
+         2-       1  0 imp:n=0                                                                    
+         3-       2 1 0.0480619 imp:n=1                                                           
+         4-       3 2 0.0477776 imp:n=1                                                           
+         5-       4 0 imp:n=1                                                                     
+         6-       5 0 imp:n=1 $ implicit complement                                               
+         7-                                                                                       
+         8-       1                                                                               
+         9-       2                                                                               
+        10-       3                                                                               
+        11-       4                                                                               
+        12-       5                                                                               
+        13-       6                                                                               
+        14-       7                                                                               
+        15-       8                                                                               
+        16-       9                                                                               
+        17-       10                                                                              
+        18-       11                                                                              
+        19-       12                                                                              
+        20-       13                                                                              
+        21-       14                                                                              
+        22-       15                                                                              
+        23-       16                                                                              
+        24-       17                                                                              
+        25-       18                                                                              
+        26-       22                                                                              
+        27-       23                                                                              
+        28-       24                                                                              
+        29-       25                                                                              
+        30-       26                                                                              
+        31-       27                                                                              
+        32-                                                                                       
+        33-       c 2 1     1   4.806192e-02      -1                   $ Core                     
+        34-       c 3 2     2   4.777758e-02       1    2   -3   -4    $ Reflector                
+        35-       c 3     0                     -2:3:4                                            
+        36-       c                                                                               
+        37-       c 1     rcc     0.0 0.0 -28.8169   0.0 0.0 57.6338  26.67    $ Core             
+        38-       c 2     pz    -48.26                          $ Bottom of Reflector             
+        39-       c 3     pz     48.26                          $ Top of Reflector                
+        40-       c 4     cz     41.91                          $ Reflector OR                    
+        41-       c                                                                               
+        42-       mode    n                                                                       
+        43-       kcode   500   1.00    1   10                                                    
+        44-       c imp:n   1.0   1.0   0.0                                                       
+        45-       sdef   cel=2  erg=d1                                                            
+        46-       sp1    -3                                                                       
+        47-       vol   0 128787.3    403814.4    0.0     0                                       
+        48-       c area   14127.0      9657.8      2234.6      2234.6                            
+        49-       c        5518.0      5518.0     25416.4                                         
+        50-       c  Central Core (12 wt.%)                                                       
+        51-       m1    92235.50d   5.7781e-03     92238.40c   4.2218e-02                         
+        52-             92232.49c   1.7407e-05     92234.61c   4.8416e-05                         
+        53-       c  Depleted Uranium                                                             
+        54-       m2    92235.50d   1.0058e-04     92238.40c   4.7677e-02                         
+        55-       totnu                                                                           
+        56-       prdmp  2j -1                                                                    
  
-  comment.  total fission nubar data are being used.                                       
+  comment.  total fission nubar data are being used.
 1cells                                                                                                  print table 60
 
-                      atom        gram                                     neutron                                     
-        cell  mat    density     density     volume       mass     pieces importance                                   
+                               atom        gram                                            neutron                                     
+              cell     mat    density     density     volume       mass            pieces importance                                   
 
-     1     1    0  0.00000E+00 0.00000E+00 1.22481E+06 0.00000E+00     0  0.0000E+00                                   
-     2     2    1  4.80619E-02 1.89695E+01 1.28787E+05 2.44303E+06     0  1.0000E+00                                   
-     3     3    2  4.77776E-02 1.88859E+01 4.03814E+05 7.62641E+06     0  1.0000E+00                                   
-     4     4    0  0.00000E+00 0.00000E+00 1.94780E+07 0.00000E+00     0  1.0000E+00                                   
-     5     5    0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00     0  1.0000E+00                                   
+        1        1        0  0.00000E+00 0.00000E+00 1.22481E+06 0.00000E+00           0  0.0000E+00                                   
+        2        2        1  4.80619E-02 1.89695E+01 1.28787E+05 2.44303E+06           0  1.0000E+00                                   
+        3        3        2  4.77776E-02 1.88859E+01 4.03814E+05 7.62641E+06           0  1.0000E+00                                   
+        4        4        0  0.00000E+00 0.00000E+00 1.94780E+07 0.00000E+00           0  1.0000E+00                                   
+        5        5        0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00           0  1.0000E+00                                   
 
- total                                     2.12354E+07 1.00694E+07
+ total                                               2.12354E+07 1.00694E+07
 
  ***************************************************
  * Random Number Generator  =                    1 *
@@ -88,27 +88,43 @@
                      probability tables used from 5.3000E-05 to 1.0000E-03 mev.
                      temperature = 2.5852E-08 adjusted to 2.5300E-08
  
-  warning.   92232.49c lacks delayed neutron cross sections.                               
+  warning.   92232.49c lacks delayed neutron cross sections.
   92234.61c   71371  92-u-234 from endf-vi                              total nu                  mat9225      11/27/93
   92238.40c   40834   ENDL library name:  nd901118  MCNP translation:  9total nu 56:49                       901119    
                      temperature = 2.5860E-08 adjusted to 2.5300E-08
  
-  warning.   92238.40c lacks delayed neutron cross sections.                               
+  warning.   92238.40c lacks delayed neutron cross sections.
   92235.50d    6819  njoy                                               total nu                (  1395)      79/09/12.
  
-  warning.   92235.50d lacks delayed neutron cross sections.                               
+  warning.   92235.50d lacks delayed neutron cross sections.
 
   total      138005
  
-  warning.  neutron energy cutoff is below some cross-section tables.                      
+  warning.  neutron energy cutoff is below some cross-section tables.
  
-  comment.     2 cross sections modified by free gas thermal treatment.                    
+  comment.     2 cross sections modified by free gas thermal treatment.
 
          4 warning messages so far.
+
+ comment.
+ comment. entropy of the fission source distribution will be computed
+ comment.
+ comment. the mesh for source entropy is based on the site coordinates
+ comment.   using  4 x  4 x  4 =    64  mesh cells
+ comment.
+ comment.     Xmin= -3.2765E+01     Xmax=  3.5766E+01
+ comment.     Ymin= -5.1149E+01     Ymax=  4.6810E+01
+ comment.     Zmin= -3.3862E+01     Zmax=  3.8416E+01
+ comment.
+ comment. the mesh will be automatically expanded if necessary to
+ comment.   encompass the entire fission source distribution
+ comment.
+
 1estimated keff results by cycle                                                                        print table 175
 
- cycle     1    k(collision)  1.324722    prompt removal lifetime(abs)  9.8514E+00    source points generated    677
+ cycle     1    k(collision)  1.324721    prompt removal lifetime(abs)  9.8514E+00    source points generated    677
                                           source_entropy =     3.3026E+00
+        expanding auto-mesh for entropy, dir= Z      -5.9121E+01  3.8416E+01
 
  cycle     2    k(collision)  1.252396    prompt removal lifetime(abs)  9.7113E+00    source points generated    502
                                           source_entropy =     3.6174E+00
@@ -120,6 +136,8 @@
  rem life(col)   1.0035E+01     9.8815E+00 0.0155
  rem life(abs)   9.9923E+00     9.8518E+00 0.0143     life(col/abs)     0.0000E+00 0.0000   0.0000E+00 0.0000   0.0000
  source points generated    461                source_entropy  3.9330E+00
+        expanding auto-mesh for entropy, dir= X      -4.6447E+01  3.5766E+01
+        expanding auto-mesh for entropy, dir= Z      -5.9121E+01  5.2205E+01
 
   estimator     cycle     4   ave of     3 cycles      combination         simple average    combined average     corr
  k(collision)      1.184351       1.206228 0.0191     k(col/abs)          1.213329 0.0150     1.238933 0.0067   0.9915
@@ -136,6 +154,7 @@
  rem life(col)   1.0796E+01     1.0192E+01 0.0220     k(col/abs/tk ln)    1.185470 0.0234     1.213591 0.0497
  rem life(abs)   1.0803E+01     1.0175E+01 0.0228     life(col/abs/tl)  1.0262E+01 0.0223   1.2084E+01 0.0203
  source points generated    471                source_entropy  3.8883E+00
+        expanding auto-mesh for entropy, dir= X      -4.6447E+01  5.0112E+01
 
   estimator     cycle     6   ave of     5 cycles      combination         simple average    combined average     corr
  k(collision)      1.078013       1.159776 0.0270     k(col/abs)          1.163653 0.0281     1.152925 0.0334   0.9701
@@ -216,16 +235,16 @@
  range of sampled source weights = 7.3855E-01 to 1.0846E+00
 1neutron  activity in each cell                                                                         print table 126
 
-                 tracks     population   collisions   collisions     number        flux        average      average
-        cell    entering                               * weight     weighted     weighted   track weight   track mfp
-                                                    (per history)    energy       energy     (relative)      (cm)
+                       tracks     population   collisions   collisions     number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                          (per history)    energy       energy     (relative)      (cm)
 
-     2     2        7685         4536       165392    1.8851E+01   3.0709E-01   6.2496E-01   5.3791E-01   2.2047E+00
-     3     3        4971         2547        77437    7.9225E+00   1.8836E-01   3.8522E-01   4.7825E-01   2.0365E+00
-     4     4         685          685            0    0.0000E+00   2.0410E-01   4.0440E-01   4.7230E-01   0.0000E+00
-     5     5         685          685            0    0.0000E+00   1.9440E-01   3.8367E-01   4.6092E-01   0.0000E+00
+        2        2        7685         4536       165392    1.8851E+01   3.0709E-01   6.2496E-01   5.3791E-01   2.2047E+00
+        3        3        4971         2547        77437    7.9225E+00   1.8836E-01   3.8522E-01   4.7825E-01   2.0365E+00
+        4        4         685          685            0    0.0000E+00   2.0410E-01   4.0440E-01   4.7230E-01   0.0000E+00
+        5        5         685          685            0    0.0000E+00   1.5623E-01   2.9930E-01   4.3942E-01   0.0000E+00
 
-     total         14026         8453       242829    2.6773E+01
+           total         14026         8453       242829    2.6773E+01
 1      number of discrete reaction rejections in acecol.
 
       92235.50d         1
@@ -322,16 +341,6 @@
                    collision 1.25240 on cycle   2                                                  collision 1.05723 on cycle  10
                   absorption 1.24708 on cycle   2                                                 absorption 1.05883 on cycle   6
                 track length 1.23997 on cycle   2                                               track length 1.05529 on cycle   6
-1plot of the estimated col/abs/track-length keff one standard deviation interval versus cycle number (| = final keff =  1.12306)
-
-    cycle   active 1.09     1.10      1.11      1.12      1.13      1.14      1.15      1.16      1.17      1.18      1.19  
-   number   cycles  |--------|---------|---------|---------|---------|---------|---------|---------|---------|---------|
-        7        6  |       (-----------------------|------------------k-----------------------------------------)     |
-        8        7  |        (----------------------|-----------k----------------------------------)                   |
-        9        8  |                (--------------|----------k-------------------------)                             |
-       10        9  |      (------------------------k-----------------------)                                          |
-                    |--------|---------|---------|---------|---------|---------|---------|---------|---------|---------|
-                   1.09     1.10      1.11      1.12      1.13      1.14      1.15      1.16      1.17      1.18      1.19  
 1individual and collision/absorption/track-length keffs for different numbers of inactive cycles skipped for fission source settling
 
    skip  active     active    average keff estimators and deviations     normality average k(c/a/t)   k(c/a/t) confidence intervals

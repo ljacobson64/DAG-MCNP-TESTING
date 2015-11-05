@@ -1,166 +1,166 @@
-      1-       testprob03 -- many features of the general source                               
-      2-       1 0 imp:n=0                                                                     
-      3-       2 1 -7 imp:n=1                                                                  
-      4-       3 2 -0.9 imp:n=1                                                                
-      5-       4 3 -3.7 imp:n=1                                                                
-      6-       5 4 -1.2 imp:n=1                                                                
-      7-       6 0 imp:n=1                                                                     
-      8-       7 0 imp:n=1   $ implicit complement                                             
-      9-                                                                                       
-     10-       1                                                                               
-     11-       2                                                                               
-     12-       3                                                                               
-     13-       4                                                                               
-     14-       5                                                                               
-     15-       6                                                                               
-     16-       7                                                                               
-     17-       8                                                                               
-     18-       9                                                                               
-     19-       10                                                                              
-     20-       11                                                                              
-     21-       12                                                                              
-     22-       13                                                                              
-     23-       14                                                                              
-     24-       16                                                                              
-     25-       17                                                                              
-     26-       18                                                                              
-     27-       19                                                                              
-     28-       20                                                                              
-     29-       21                                                                              
-     30-       22                                                                              
-     31-       23                                                                              
-     32-       24                                                                              
-     33-       25                                                                              
-     34-       36                                                                              
-     35-       37                                                                              
-     36-       38                                                                              
-     37-       39                                                                              
-     38-       40                                                                              
-     39-       41                                                                              
-     40-                                                                                       
-     41-       c 2 3     1 -7  -10              $ source on surface of this cell               
-     42-       c 3 4    2 -.9  -90 #3 #8 #30   $ carbon between sources and tally              
-     43-       c 4 8    3 -3.7  -14 15 -16     $ tally here                                    
-     44-       c 5 30   4 -1.2  (-21 22 -23 24:-27) -25 26   $ volume source here              
-     45-       c 40    0  90                  $ zero-importance outside world                  
-     46-       c                                                                               
-     47-       c 13 10    sx -50 12                                                            
-     48-       c 23 14    p 0 31 0 16 31 21 18 31 27                                           
-     49-       c 25 15    py 0                                                                 
-     50-       c 24 16    cy 15                                                                
-     51-       c 18 21    py 30                                                                
-     52-       c 17 22    py -16                                                               
-     53-       c 16 23    px 30                                                                
-     54-       c 19 24    px 25                                                                
-     55-       c 21 25    pz 9                                                                 
-     56-       c 22 26    pz -9                                                                
-     57-       c 20 27    c/z 25 30 4                                                          
-     58-       c 14 90    so 80                                                                
-     59-       c                                                                               
-     60-       sc6   a surface source on sphere 10 and a cell source in cell 30.               
-     61-       sdef  cel 5  x d73  y d74                                                       
-     62-             z d75  vec -3 1 0 dir d77  erg d88                                        
-     63-       c     biased sampling between the surface and cell sources                      
-     64-       si6   l 13 0                                                                    
-     65-       sp6   .8 .2                                                                     
-     66-       sb6   .3 .7                                                                     
-     67-       c     axs for position bias on the surface                                      
-     68-       ds61  t 13 4 2 0                                                                
-     69-       c     the name of the cell                                                      
-     70-       ds62  l 0 5                                                                     
-     71-       c     sample x for the cell cover                                               
-     72-       ds63  s 0 73                                                                    
-     73-       si73  20 30                                                                     
-     74-       sp73  0 1                                                                       
-     75-       c     sample y for the cell cover                                               
-     76-       ds64  s 0 74                                                                    
-     77-       si74  -17 36                                                                    
-     78-       sp74  0 1                                                                       
-     79-       c     sample z for the cell cover                                               
-     80-       ds65  s 0 75                                                                    
-     81-       si75  -10 10                                                                    
-     82-       sp75  0 1                                                                       
-     83-       c     reference vector for directional biasing in the cell                      
-     84-       ds66  t 0 -3 1 0                                                                
-     85-       c     exponential biasing in the cell                                           
-     86-       ds67  s 0 77                                                                    
-     87-       sb77  -31 1.5                                                                   
-     88-       c     the surface and cell sources have different energy spectra                
-     89-       ds68  s 78 88                                                                   
-     90-       si78  a 7 10 13                                                                 
-     91-       sp78  0 1 0                                                                     
-     92-       sp88  -3                                                                        
-     93-       c     position biasing on the surface                                           
-     94-       ds69  s 79 0                                                                    
-     95-       si79  -1 .5 .9 1                                                                
-     96-       sp79  c 0 1.5 1.9 2                                                             
-     97-       sb79  c 0 .5 1.2 2                                                              
-     98-       c     materials                                                                 
-     99-       m1    92238 1 nlib=.50m                                                         
-    100-       m2    6012 1  nlib=50m                                                          
-    101-       m3    8016 1                                                                    
-    102-       m4    1001 2  8016 1  92235 3 nlib .50m                                         
-    103-       c     tally                                                                     
-    104-       nonu 0 0 0 0 1 0 0                                                              
-  warning.  tallies with nonu card do not include any fission neutrons.                    
-    105-       f4:n  4                                                                         
-    106-       e4    1 2 4 6 8 12 14                                                           
-    107-       c     miscellaneous                                                             
-    108-       cut:n   j .0001 .18 .09                                                         
-    109-       nps     5000                                                                    
-    110-       prdmp 2j -1                                                                     
-    111-       print 200                                                                       
-    112-       f14:n 4                                                                         
-    113-       f24:n 4                                                                         
-    114-       fq14 u e                                                                        
-    115-       fq24 u e                                                                        
-    116-       ft14 scx 79                                                                     
-    117-       ft24 scd                                                                        
-    118-       fu24 73 74 75 79 78 77                                                          
-    119-       mgopt f 30                                                                      
-    120-       ptrac file=asc event=src                                                        
+         1-       testprob03 -- many features of the general source                               
+         2-       1  0 imp:n=0                                                                    
+         3-       2 1 -7 imp:n=1                                                                  
+         4-       3 2 -0.9 imp:n=1                                                                
+         5-       4 3 -3.7 imp:n=1                                                                
+         6-       5 4 -1.2 imp:n=1                                                                
+         7-       6 0 imp:n=1                                                                     
+         8-       7 0 imp:n=1 $ implicit complement                                               
+         9-                                                                                       
+        10-       1                                                                               
+        11-       2                                                                               
+        12-       3                                                                               
+        13-       4                                                                               
+        14-       5                                                                               
+        15-       6                                                                               
+        16-       7                                                                               
+        17-       8                                                                               
+        18-       9                                                                               
+        19-       10                                                                              
+        20-       11                                                                              
+        21-       12                                                                              
+        22-       13                                                                              
+        23-       14                                                                              
+        24-       16                                                                              
+        25-       17                                                                              
+        26-       18                                                                              
+        27-       19                                                                              
+        28-       20                                                                              
+        29-       21                                                                              
+        30-       22                                                                              
+        31-       23                                                                              
+        32-       24                                                                              
+        33-       25                                                                              
+        34-       36                                                                              
+        35-       37                                                                              
+        36-       38                                                                              
+        37-       39                                                                              
+        38-       40                                                                              
+        39-       41                                                                              
+        40-                                                                                       
+        41-       c 2 3     1 -7  -10              $ source on surface of this cell               
+        42-       c 3 4    2 -.9  -90 #3 #8 #30   $ carbon between sources and tally              
+        43-       c 4 8    3 -3.7  -14 15 -16     $ tally here                                    
+        44-       c 5 30   4 -1.2  (-21 22 -23 24:-27) -25 26   $ volume source here              
+        45-       c 40    0  90                  $ zero-importance outside world                  
+        46-       c                                                                               
+        47-       c 13 10    sx -50 12                                                            
+        48-       c 23 14    p 0 31 0 16 31 21 18 31 27                                           
+        49-       c 25 15    py 0                                                                 
+        50-       c 24 16    cy 15                                                                
+        51-       c 18 21    py 30                                                                
+        52-       c 17 22    py -16                                                               
+        53-       c 16 23    px 30                                                                
+        54-       c 19 24    px 25                                                                
+        55-       c 21 25    pz 9                                                                 
+        56-       c 22 26    pz -9                                                                
+        57-       c 20 27    c/z 25 30 4                                                          
+        58-       c 14 90    so 80                                                                
+        59-       c                                                                               
+        60-       sc6   a surface source on sphere 10 and a cell source in cell 30.               
+        61-       sdef  cel 5  x d73  y d74                                                       
+        62-             z d75  vec -3 1 0 dir d77  erg d88                                        
+        63-       c     biased sampling between the surface and cell sources                      
+        64-       si6   l 13 0                                                                    
+        65-       sp6   .8 .2                                                                     
+        66-       sb6   .3 .7                                                                     
+        67-       c     axs for position bias on the surface                                      
+        68-       ds61  t 13 4 2 0                                                                
+        69-       c     the name of the cell                                                      
+        70-       ds62  l 0 5                                                                     
+        71-       c     sample x for the cell cover                                               
+        72-       ds63  s 0 73                                                                    
+        73-       si73  20 30                                                                     
+        74-       sp73  0 1                                                                       
+        75-       c     sample y for the cell cover                                               
+        76-       ds64  s 0 74                                                                    
+        77-       si74  -17 36                                                                    
+        78-       sp74  0 1                                                                       
+        79-       c     sample z for the cell cover                                               
+        80-       ds65  s 0 75                                                                    
+        81-       si75  -10 10                                                                    
+        82-       sp75  0 1                                                                       
+        83-       c     reference vector for directional biasing in the cell                      
+        84-       ds66  t 0 -3 1 0                                                                
+        85-       c     exponential biasing in the cell                                           
+        86-       ds67  s 0 77                                                                    
+        87-       sb77  -31 1.5                                                                   
+        88-       c     the surface and cell sources have different energy spectra                
+        89-       ds68  s 78 88                                                                   
+        90-       si78  a 7 10 13                                                                 
+        91-       sp78  0 1 0                                                                     
+        92-       sp88  -3                                                                        
+        93-       c     position biasing on the surface                                           
+        94-       ds69  s 79 0                                                                    
+        95-       si79  -1 .5 .9 1                                                                
+        96-       sp79  c 0 1.5 1.9 2                                                             
+        97-       sb79  c 0 .5 1.2 2                                                              
+        98-       c     materials                                                                 
+        99-       m1    92238 1 nlib=.50m                                                         
+       100-       m2    6012 1  nlib=50m                                                          
+       101-       m3    8016 1                                                                    
+       102-       m4    1001 2  8016 1  92235 3 nlib .50m                                         
+       103-       c     tally                                                                     
+       104-       nonu 0 0 0 0 1 0 0                                                              
+  warning.  tallies with nonu card do not include any fission neutrons.
+       105-       f4:n  4                                                                         
+       106-       e4    1 2 4 6 8 12 14                                                           
+       107-       c     miscellaneous                                                             
+       108-       cut:n   j .0001 .18 .09                                                         
+       109-       nps     5000                                                                    
+       110-       prdmp 2j -1                                                                     
+       111-       print 200                                                                       
+       112-       f14:n 4                                                                         
+       113-       f24:n 4                                                                         
+       114-       fq14 u e                                                                        
+       115-       fq24 u e                                                                        
+       116-       ft14 scx 79                                                                     
+       117-       ft24 scd                                                                        
+       118-       fu24 73 74 75 79 78 77                                                          
+       119-       mgopt f 30                                                                      
+       120-       ptrac file=asc event=src                                                        
  
-  warning.  source distribution   6 is not used in this problem.                           
+  warning.  source distribution        6 is not used in this problem.
  
-  warning.  source distribution  61 is not used in this problem.                           
+  warning.  source distribution       61 is not used in this problem.
  
-  warning.  source distribution  62 is not used in this problem.                           
+  warning.  source distribution       62 is not used in this problem.
  
-  warning.  source distribution  63 is not used in this problem.                           
+  warning.  source distribution       63 is not used in this problem.
  
-  warning.  source distribution  64 is not used in this problem.                           
+  warning.  source distribution       64 is not used in this problem.
  
-  warning.  source distribution  65 is not used in this problem.                           
+  warning.  source distribution       65 is not used in this problem.
  
-  warning.  source distribution  66 is not used in this problem.                           
+  warning.  source distribution       66 is not used in this problem.
  
-  warning.  source distribution  67 is not used in this problem.                           
+  warning.  source distribution       67 is not used in this problem.
  
-  warning.  source distribution  68 is not used in this problem.                           
+  warning.  source distribution       68 is not used in this problem.
  
-  warning.  source distribution  78 is not used in this problem.                           
+  warning.  source distribution       78 is not used in this problem.
  
-  warning.  source distribution  69 is not used in this problem.                           
+  warning.  source distribution       69 is not used in this problem.
  
-  warning.  source distribution  79 is not used in this problem.                           
+  warning.  source distribution       79 is not used in this problem.
  
-  warning.    8016.  m and   8016.50m are both called for.                                 
+  warning.    8016.  m and   8016.50m are both called for.
  
-  warning.    1 materials had unnormalized fractions. print table 40.                      
+  warning.    1 materials had unnormalized fractions. print table 40.
 1cells                                                                                                  print table 60
 
-                      atom        gram                                     neutron                                     
-        cell  mat    density     density     volume       mass     pieces importance                                   
+                               atom        gram                                            neutron                                     
+              cell     mat    density     density     volume       mass            pieces importance                                   
 
-     1     1    0  0.00000E+00 0.00000E+00 4.33223E+05 0.00000E+00     0  0.0000E+00                                   
-     2     2    1  1.77081E-02 7.00000E+00 7.23796E+03 5.06657E+04     0  1.0000E+00                                   
-     3     3    2  4.51653E-02 9.00000E-01 2.11062E+06 1.89956E+06     0  1.0000E+00                                   
-     4     4    3  1.39304E-01 3.70000E+00 2.19124E+04 8.10759E+04     0  1.0000E+00                                   
-     5     5    4  5.99588E-03 1.20000E+00 4.81856E+03 5.78227E+03     0  1.0000E+00                                   
-     6     6    0  0.00000E+00 0.00000E+00 4.93330E+06 0.00000E+00     0  1.0000E+00                                   
-     7     7    0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00     0  1.0000E+00                                   
+        1        1        0  0.00000E+00 0.00000E+00 4.33223E+05 0.00000E+00           0  0.0000E+00                                   
+        2        2        1  1.77081E-02 7.00000E+00 7.23796E+03 5.06657E+04           0  1.0000E+00                                   
+        3        3        2  4.51653E-02 9.00000E-01 2.11062E+06 1.89956E+06           0  1.0000E+00                                   
+        4        4        3  1.39304E-01 3.70000E+00 2.19124E+04 8.10759E+04           0  1.0000E+00                                   
+        5        5        4  5.99588E-03 1.20000E+00 4.81856E+03 5.78227E+03           0  1.0000E+00                                   
+        6        6        0  0.00000E+00 0.00000E+00 4.93330E+06 0.00000E+00           0  1.0000E+00                                   
+        7        7        0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00           0  1.0000E+00                                   
 
- total                                     7.51111E+06 2.03708E+06
+ total                                               7.51111E+06 2.03708E+06
 
     minimum source weight = 3.1674E-01    maximum source weight = 6.3618E+00
 
@@ -227,23 +227,23 @@
 
  range of sampled source weights = 3.1680E-01 to 6.3521E+00
 
- source efficiency = 0.4655  in cell     5
+ source efficiency = 0.4655  in cell        5
 1neutron  activity in each cell                                                                         print table 126
 
-                 tracks     population   collisions   collisions     number        flux        average      average
-        cell    entering                               * weight     weighted     weighted   track weight   track mfp
-                                                    (per history)    energy       energy     (relative)      (cm)
+                       tracks     population   collisions   collisions     number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                          (per history)    energy       energy     (relative)      (cm)
 
-     2     2          75           38          295    3.5703E-02   2.1040E-02   1.8760E-01   6.4487E-01   3.9739E+00
-     3     3       13371         5626       243210    4.6264E+01   2.8485E-02   4.7967E-01   9.5435E-01   6.1880E+00
-     4     4        3537         1855        31305    4.8168E+00   2.0657E-02   3.8136E-01   7.6505E-01   2.1850E+00
-     5     5        9399         5626         3035    5.9222E-01   2.5915E-01   1.3414E+00   9.8138E-01   2.6243E+01
-     6     6        2431         2431            0    0.0000E+00   2.5603E-02   5.6870E-01   1.0100E+00   0.0000E+00
-     7     7        2431         2431            0    0.0000E+00   2.6190E-02   6.4984E-01   1.0486E+00   0.0000E+00
+        2        2          75           38          295    3.5703E-02   2.1040E-02   1.8760E-01   6.4487E-01   3.9739E+00
+        3        3       13371         5626       243210    4.6264E+01   2.8485E-02   4.7967E-01   9.5435E-01   6.1880E+00
+        4        4        3537         1855        31305    4.8168E+00   2.0657E-02   3.8136E-01   7.6505E-01   2.1850E+00
+        5        5        9399         5626         3035    5.9222E-01   2.5915E-01   1.3414E+00   9.8138E-01   2.6243E+01
+        6        6        2431         2431            0    0.0000E+00   2.5603E-02   5.6870E-01   1.0100E+00   0.0000E+00
+        7        7        2431         2431            0    0.0000E+00   2.6190E-02   6.4984E-01   1.0486E+00   0.0000E+00
 
-     total         31244        18007       277845    5.1709E+01
+           total         31244        18007       277845    5.1709E+01
 
-1tally   4        nps =        5000
+1tally        4        nps =        5000
            tally type 4    track length estimate of particle flux.      units   1/cm**2   
            tally for  neutrons 
 
@@ -251,7 +251,7 @@
                    cell:       4                                                                                   
                          2.19124E+04
  
- cell  4                                                                                                               
+ cell  4                                                                                                                               
       energy
     1.0000E+00   3.79944E-04 0.0566
     2.0000E+00   3.54973E-05 0.0831
@@ -265,7 +265,7 @@
 
  ===================================================================================================================================
 
-           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally   4
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally        4
 
  tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
  behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
@@ -281,7 +281,7 @@
 
  fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 2.713E-01)**2 = (0.000E+00)*(7.358E-02) = 0.000E+00
 
-1tally  14        nps =        5000
+1tally       14        nps =        5000
            tally type 4    track length estimate of particle flux.      units   1/cm**2   
            tally for  neutrons 
            this tally is modified by   ft  scx
@@ -290,15 +290,15 @@
                    cell:       4                                                                                   
                          2.19124E+04
  
- cell  4                                                                                                               
+ cell  4                                                                                                                               
                  0.00000E+00 0.0000
                  0.00000E+00 0.0000
                  0.00000E+00 0.0000
                  0.00000E+00 0.0000
 
- there are no nonzero tallies in the tally fluctuation chart bin for tally  14
+ there are no nonzero tallies in the tally fluctuation chart bin for tally       14
 
-1tally  24        nps =        5000
+1tally       24        nps =        5000
            tally type 4    track length estimate of particle flux.      units   1/cm**2   
            tally for  neutrons 
            this tally is modified by   ft  scd
@@ -307,7 +307,7 @@
                    cell:       4                                                                                   
                          2.19124E+04
  
- cell  4                                                                                                               
+ cell  4                                                                                                                               
     user bin
     7.3000E+01   4.36717E-04 0.0521
     7.4000E+01   0.00000E+00 0.0000
@@ -320,7 +320,7 @@
 
  ===================================================================================================================================
 
-           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally  24
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally       24
 
  tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
  behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
@@ -341,13 +341,13 @@
 
  tally   result of statistical checks for the tfc bin (the first check not passed is listed) and error magnitude check for all bins
 
-     4   missed  2 of 10 tfc bin checks: the variance of the variance does not monotonically decrease over the last half of problem
+        4   missed  2 of 10 tfc bin checks: the variance of the variance does not monotonically decrease over the last half of problem
          missed all bin error check:     8 tally bins had     1 bins with zeros and     4 bins with relative errors exceeding 0.10
 
-    14   no nonzero tallies were made in the tally fluctuation chart bin                           
+       14   no nonzero tallies were made in the tally fluctuation chart bin                           
          no nonzero tallies were made in any one of the      4 tally bins
 
-    24   missed  2 of 10 tfc bin checks: the variance of the variance does not monotonically decrease over the last half of problem
+       24   missed  2 of 10 tfc bin checks: the variance of the variance does not monotonically decrease over the last half of problem
          passed all bin error check:     7 tally bins had     5 bins with zeros and     0 bins with relative errors exceeding 0.10
 
 
@@ -355,12 +355,12 @@
 
  the tally bins with zeros may or may not be correct: compare the source, cutoffs, multipliers, et cetera with the tally bins.
 
- warning.     3 of the   3 tally fluctuation chart bins did not pass all 10 statistical checks.
- warning.     1 of the   3 tallies were all zeros.
- warning.     1 of the   3 tallies had bins with relative errors greater than recommended.
-1tally fluctuation charts                         
+ warning.       3 of the     3 tally fluctuation chart bins did not pass all 10 statistical checks.
+ warning.       1 of the     3 tallies were all zeros.
+ warning.       1 of the     3 tallies had bins with relative errors greater than recommended.
+1tally fluctuation charts                              
 
-                       tally    4                                tally   14                                tally   24
+                            tally        4                          tally       14                          tally       24
           nps      mean     error   vov  slope    fom      mean     error   vov  slope    fom      mean     error   vov  slope    fom
          1000   4.3640E-04 0.1049 0.1431  0.0           0.0000E+00 0.0000 0.0000  0.0           4.3640E-04 0.1049 0.1431  0.0        
          2000   4.2271E-04 0.0735 0.0559  4.8           0.0000E+00 0.0000 0.0000  0.0           4.2271E-04 0.0735 0.0559  4.8        

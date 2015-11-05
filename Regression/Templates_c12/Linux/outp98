@@ -1,78 +1,78 @@
-      1-       cd-109 (88keV) source inside of silicon                                         
-      2-       1 0 imp:n=0                                                                     
-      3-       2 1 -2.33 imp:n=1                                                               
-      4-       3 0 imp:n=1                                                                     
-      5-       4 0 imp:n=1   $ implicit complement                                             
-      6-                                                                                       
-      7-       1                                                                               
-      8-       2                                                                               
-      9-       3                                                                               
-     10-       4                                                                               
-     11-       5                                                                               
-     12-       6                                                                               
-     13-       7                                                                               
-     14-       8                                                                               
-     15-       9                                                                               
-     16-       10                                                                              
-     17-       11                                                                              
-     18-       12                                                                              
-     19-       13                                                                              
-     20-       14                                                                              
-     21-       15                                                                              
-     22-       16                                                                              
-     23-       17                                                                              
-     24-       18                                                                              
-     25-       19                                                                              
-     26-       20                                                                              
-     27-       21                                                                              
-     28-                                                                                       
-     29-       c                                                                               
-     30-       c            Cells                                                              
-     31-       c                                                                               
-     32-       c 1  1  -2.33   -1    $Silicon cylinder                                         
-     33-       c 2  0           1    $Outside world                                            
-     34-       c                                                                               
-     35-       c                                                                               
-     36-       c            Surfaces                                                           
-     37-       c                                                                               
-     38-       c 1  rcc 0.0 0.0 -0.5   0.0 0.0 1.0  0.5  $H=1 cm, r=0.5 cm cylinder            
-     39-       c                                                                               
-     40-       c                                                                               
-     41-       c            Data                                                               
-     42-       c                                                                               
-     43-       mode p                                                                          
-     44-       imp:p  0 1  0 1                                                                 
-     45-       c                                                                               
-     46-       c            Materials                                                          
-     47-       c                                                                               
-     48-       m1  14000.04p 0.5  1001.04p 0.5 elib=03e $Silicon, Hydrogen                     
-     49-       c                                                                               
-     50-       c            Source                                                             
-     51-       c                                                                               
-     52-       sdef   erg=0.088 pos = 0.0 0.0 0.0                                              
-     53-       c                                                                               
-     54-       c            Tallies                                                            
-     55-       c                                                                               
-     56-       f18:p    2                                                                      
-     57-       e18     0.0 1e-10  0.02  0.025   0.1                                            
-     58-       f14:p     2                                                                     
-     59-       e14     0.0  0.0625  0.0675 0.1                                                 
-     60-       c                                                                               
-     61-       nps 1.0e6                                                                       
-     62-       prdmp 2j -1 j 100000                                                            
+         1-       cd-109 (88keV) source inside of silicon                                         
+         2-       1  0 imp:n=0                                                                    
+         3-       2 1 -2.33 imp:n=1                                                               
+         4-       3 0 imp:n=1                                                                     
+         5-       4 0 imp:n=1 $ implicit complement                                               
+         6-                                                                                       
+         7-       1                                                                               
+         8-       2                                                                               
+         9-       3                                                                               
+        10-       4                                                                               
+        11-       5                                                                               
+        12-       6                                                                               
+        13-       7                                                                               
+        14-       8                                                                               
+        15-       9                                                                               
+        16-       10                                                                              
+        17-       11                                                                              
+        18-       12                                                                              
+        19-       13                                                                              
+        20-       14                                                                              
+        21-       15                                                                              
+        22-       16                                                                              
+        23-       17                                                                              
+        24-       18                                                                              
+        25-       19                                                                              
+        26-       20                                                                              
+        27-       21                                                                              
+        28-                                                                                       
+        29-       c                                                                               
+        30-       c            Cells                                                              
+        31-       c                                                                               
+        32-       c 1  1  -2.33   -1    $Silicon cylinder                                         
+        33-       c 2  0           1    $Outside world                                            
+        34-       c                                                                               
+        35-       c                                                                               
+        36-       c            Surfaces                                                           
+        37-       c                                                                               
+        38-       c 1  rcc 0.0 0.0 -0.5   0.0 0.0 1.0  0.5  $H=1 cm, r=0.5 cm cylinder            
+        39-       c                                                                               
+        40-       c                                                                               
+        41-       c            Data                                                               
+        42-       c                                                                               
+        43-       mode p                                                                          
+        44-       imp:p  0 1  0 1                                                                 
+        45-       c                                                                               
+        46-       c            Materials                                                          
+        47-       c                                                                               
+        48-       m1  14000.04p 0.5  1001.04p 0.5 elib=03e $Silicon, Hydrogen                     
+        49-       c                                                                               
+        50-       c            Source                                                             
+        51-       c                                                                               
+        52-       sdef   erg=0.088 pos = 0.0 0.0 0.0                                              
+        53-       c                                                                               
+        54-       c            Tallies                                                            
+        55-       c                                                                               
+        56-       f18:p    2                                                                      
+        57-       e18     0.0 1e-10  0.02  0.025   0.1                                            
+        58-       f14:p     2                                                                     
+        59-       e14     0.0  0.0625  0.0675 0.1                                                 
+        60-       c                                                                               
+        61-       nps 1.0e6                                                                       
+        62-       prdmp 2j -1 j 100000                                                            
  
-  warning.     1 energy bins of tally  14 are below energy cutoff.                         
+  warning.     1 energy bins of tally       14 are below energy cutoff.
 1cells                                                                                                  print table 60
 
-                      atom        gram                                     neutron    photon                           
-        cell  mat    density     density     volume       mass     pieces importance importance                        
+                               atom        gram                                            neutron    photon                           
+              cell     mat    density     density     volume       mass            pieces importance importance                        
 
-     1     1    0  0.00000E+00 0.00000E+00 6.76912E+00 0.00000E+00     0  0.0000E+00 0.0000E+00                        
-     2     2    1  9.64576E-02 2.33000E+00 7.85396E-01 1.82997E+00     0  1.0000E+00 1.0000E+00                        
-     3     3    0  0.00000E+00 0.00000E+00 1.09807E+02 0.00000E+00     0  0.0000E+00 0.0000E+00                        
-     4     4    0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00     0  1.0000E+00 1.0000E+00                        
+        1        1        0  0.00000E+00 0.00000E+00 6.76912E+00 0.00000E+00           0  0.0000E+00 0.0000E+00                        
+        2        2        1  9.64576E-02 2.33000E+00 7.85191E-01 1.82950E+00           0  1.0000E+00 1.0000E+00                        
+        3        3        0  0.00000E+00 0.00000E+00 1.09807E+02 0.00000E+00           0  0.0000E+00 0.0000E+00                        
+        4        4        0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00           0  1.0000E+00 1.0000E+00                        
 
- total                                     1.18361E+02 1.82997E+00
+ total                                               1.18361E+02 1.82950E+00
 
     minimum source weight = 1.0000E+00    maximum source weight = 1.0000E+00
 
@@ -113,8 +113,8 @@
  photon creation     tracks      weight        energy            photon loss         tracks      weight        energy
                                  (per source particle)                                           (per source particle)
 
- source             1000000    1.0000E+00    8.8000E-02          escape              943418    9.4342E-01    8.1005E-02
-                                                                 energy cutoff            0    0.            3.0756E-07
+ source             1000000    1.0000E+00    8.8000E-02          escape              943431    9.4343E-01    8.1006E-02
+                                                                 energy cutoff            0    0.            3.0755E-07
                                                                  time cutoff              0    0.            0.        
  weight window            0    0.            0.                  weight window            0    0.            0.        
  cell importance          0    0.            0.                  cell importance          0    0.            0.        
@@ -123,8 +123,8 @@
  dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
  forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
  exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
- from neutrons            0    0.            0.                  compton scatter          0    0.            2.2730E-03
- bremsstrahlung         785    7.8500E-04    5.8626E-06          capture              59846    5.9846E-02    4.7319E-03
+ from neutrons            0    0.            0.                  compton scatter          0    0.            2.2727E-03
+ bremsstrahlung         785    7.8500E-04    5.8625E-06          capture              59833    5.9833E-02    4.7309E-03
  p-annihilation           0    0.            0.                  pair production          0    0.            0.        
  photonuclear             0    0.            0.                  photonuclear abs         0    0.            0.        
  electron x-rays          0    0.            0.                                                                        
@@ -133,48 +133,48 @@
      total          1003264    1.0033E+00    8.8010E-02              total          1003264    1.0033E+00    8.8010E-02
 
    number of photons banked                      785        average time of (shakes)              cutoffs
-   photon tracks per source particle      1.0033E+00          escape            2.0009E-03          tco   1.0000E+33
-   photon collisions per source particle  2.9526E-01          capture           1.1480E-03          eco   1.0000E-03
-   total photon collisions                    295264          capture or escape 1.9500E-03          wc1   0.0000E+00
-                                                              any termination   1.9500E-03          wc2   0.0000E+00
+   photon tracks per source particle      1.0033E+00          escape            2.0007E-03          tco   1.0000E+33
+   photon collisions per source particle  2.9523E-01          capture           1.1477E-03          eco   1.0000E-03
+   total photon collisions                    295226          capture or escape 1.9498E-03          wc1   0.0000E+00
+                                                              any termination   1.9498E-03          wc2   0.0000E+00
 
  computer time so far in this run     0.00 minutes            maximum number ever in bank         1
  computer time in mcrun               0.00 minutes            bank overflows to backup file       0
  source particles per minute            0.0000E+00
- random numbers generated                  7507004            most random numbers used was         125 in history      685138
+ random numbers generated                  7506547            most random numbers used was         125 in history      685138
 
  range of sampled source weights = 1.0000E+00 to 1.0000E+00
 1photon   activity in each cell                                                                         print table 126
 
-                 tracks     population   collisions   collisions     number        flux        average      average
-        cell    entering                               * weight     weighted     weighted   track weight   track mfp
-                                                    (per history)    energy       energy     (relative)      (cm)
+                       tracks     population   collisions   collisions     number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                          (per history)    energy       energy     (relative)      (cm)
 
-     2     2     1000000      1000785       295264    2.9526E-01   8.5826E-02   8.5826E-02   1.0000E+00   2.0222E+00
-     4     4           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
+        2        2     1000000      1000785       295226    2.9523E-01   8.5826E-02   8.5826E-02   1.0000E+00   2.0223E+00
+        4        4           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
 
-     total       1000000      1000785       295264    2.9526E-01
+           total       1000000      1000785       295226    2.9523E-01
 
-1tally  14        nps =     1000000
+1tally       14        nps =     1000000
            tally type 4    track length estimate of particle flux.      units   1/cm**2   
            tally for  photons  
 
            volumes 
                    cell:       2                                                                                   
-                         7.85396E-01
+                         7.85191E-01
  
- cell  2                                                                                                               
+ cell  2                                                                                                                               
       energy
     0.0000E+00   0.00000E+00 0.0000
-    6.2500E-02   8.22033E-03 0.0102
-    6.7500E-02   2.08729E-02 0.0065
-    1.0000E-01   7.17347E-01 0.0002
-      total      7.46441E-01 0.0003
+    6.2500E-02   8.22093E-03 0.0102
+    6.7500E-02   2.08745E-02 0.0065
+    1.0000E-01   7.17471E-01 0.0002
+      total      7.46566E-01 0.0003
 
 
  ===================================================================================================================================
 
-           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally  14
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally       14
 
  tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
  behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
@@ -191,55 +191,55 @@
 
  ----- estimated confidence intervals:  -----
 
- estimated asymmetric confidence interval(1,2,3 sigma): 7.4624E-01 to 7.4664E-01; 7.4603E-01 to 7.4685E-01; 7.4583E-01 to 7.4705E-01
- estimated  symmetric confidence interval(1,2,3 sigma): 7.4624E-01 to 7.4664E-01; 7.4603E-01 to 7.4685E-01; 7.4583E-01 to 7.4705E-01
+ estimated asymmetric confidence interval(1,2,3 sigma): 7.4636E-01 to 7.4677E-01; 7.4616E-01 to 7.4697E-01; 7.4596E-01 to 7.4718E-01
+ estimated  symmetric confidence interval(1,2,3 sigma): 7.4636E-01 to 7.4677E-01; 7.4616E-01 to 7.4697E-01; 7.4596E-01 to 7.4718E-01
 
-1analysis of the results in the tally fluctuation chart bin (tfc) for tally  14 with nps =     1000000  print table 160
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally       14 with nps=     1000000 print table 160
 
 
- normed average tally per history  = 7.46441E-01          unnormed average tally per history  = 5.86251E-01
+ normed average tally per history  = 7.46566E-01          unnormed average tally per history  = 5.86197E-01
  estimated tally relative error    = 0.0003               estimated variance of the variance  = 0.0000
  relative error from zero tallies  = 0.0000               relative error from nonzero scores  = 0.0003
 
  number of nonzero history tallies =     1000000          efficiency for the nonzero tallies  = 1.0000
- history number of largest  tally  =      551819          largest  unnormalized history tally = 3.11072E+00
- (largest  tally)/(average tally)  = 5.30611E+00          (largest  tally)/(avg nonzero tally)= 5.30611E+00
+ history number of largest  tally  =      551819          largest  unnormalized history tally = 3.11058E+00
+ (largest  tally)/(average tally)  = 5.30637E+00          (largest  tally)/(avg nonzero tally)= 5.30637E+00
 
- (confidence interval shift)/mean  = 0.0000               shifted confidence interval center  = 7.46441E-01
+ (confidence interval shift)/mean  = 0.0000               shifted confidence interval center  = 7.46566E-01
 
 
  if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
 
       estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
 
-      mean                            7.46441E-01             7.46444E-01                     0.000004
-      relative error                  2.71975E-04             2.72008E-04                     0.000120
-      variance of the variance        1.67497E-05             1.68034E-05                     0.003210
-      shifted center                  7.46441E-01             7.46441E-01                     0.000000
+      mean                            7.46566E-01             7.46569E-01                     0.000004
+      relative error                  2.71977E-04             2.72009E-04                     0.000120
+      variance of the variance        1.67521E-05             1.68059E-05                     0.003210
+      shifted center                  7.46566E-01             7.46566E-01                     0.000000
       figure of merit                 0.00000E+00             0.00000E+00                     0.000000
 
- the estimated slope of the 200 largest  tallies starting at  2.04947E+00 appears to be decreasing at least exponentially.
+ the estimated slope of the 200 largest  tallies starting at  2.04945E+00 appears to be decreasing at least exponentially.
  the large score tail of the empirical history score probability density function appears to have no unsampled regions.
 
  fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 3.677E+00)**2 = (0.000E+00)*(1.352E+01) = 0.000E+00
 
-1tally  18        nps =     1000000
+1tally       18        nps =     1000000
            tally type 8    pulse height distribution.                   units   number    
            tally for  photons  
  
- cell  2                                                                                                               
+ cell  2                                                                                                                               
       energy
     0.0000E+00   0.00000E+00 0.0000
-    1.0000E-10   7.80555E-01 0.0005
-    2.0000E-02   1.30042E-01 0.0026
-    2.5000E-02   2.20370E-02 0.0067
-    1.0000E-01   6.73660E-02 0.0037
+    1.0000E-10   7.80579E-01 0.0005
+    2.0000E-02   1.30034E-01 0.0026
+    2.5000E-02   2.20340E-02 0.0067
+    1.0000E-01   6.73530E-02 0.0037
       total      1.00000E+00 0.0000
 
 
  ===================================================================================================================================
 
-           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally  18
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally       18
 
  tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
  behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
@@ -259,7 +259,7 @@
  estimated asymmetric confidence interval(1,2,3 sigma): 1.0000E+00 to 1.0000E+00; 1.0000E+00 to 1.0000E+00; 1.0000E+00 to 1.0000E+00
  estimated  symmetric confidence interval(1,2,3 sigma): 1.0000E+00 to 1.0000E+00; 1.0000E+00 to 1.0000E+00; 1.0000E+00 to 1.0000E+00
 
-1analysis of the results in the tally fluctuation chart bin (tfc) for tally  18 with nps =     1000000  print table 160
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally       18 with nps=     1000000 print table 160
 
 
  normed average tally per history  = 1.00000E+00          unnormed average tally per history  = 1.00000E+00
@@ -293,10 +293,10 @@
 
  tally   result of statistical checks for the tfc bin (the first check not passed is listed) and error magnitude check for all bins
 
-    14   passed the 10 statistical checks for the tally fluctuation chart bin result               
+       14   passed the 10 statistical checks for the tally fluctuation chart bin result               
          passed all bin error check:     5 tally bins had     1 bins with zeros and     0 bins with relative errors exceeding 0.10
 
-    18   passed the 10 statistical checks for the tally fluctuation chart bin result               
+       18   passed the 10 statistical checks for the tally fluctuation chart bin result               
          passed all bin error check:     6 tally bins had     1 bins with zeros and     0 bins with relative errors exceeding 0.10
 
 
@@ -304,20 +304,20 @@
 
  the tally bins with zeros may or may not be correct: compare the source, cutoffs, multipliers, et cetera with the tally bins.
 
-1tally fluctuation charts                         
+1tally fluctuation charts                              
 
-                       tally   14                                tally   18
+                            tally       14                          tally       18
           nps      mean     error   vov  slope    fom      mean     error   vov  slope    fom
-       100000   7.4643E-01 0.0009 0.0002 10.0           1.0000E+00 0.0000 0.0000 10.0        
-       200000   7.4579E-01 0.0006 0.0001 10.0           1.0000E+00 0.0000 0.0000 10.0        
-       300000   7.4600E-01 0.0005 0.0001 10.0           1.0000E+00 0.0000 0.0000 10.0        
-       400000   7.4622E-01 0.0004 0.0000 10.0           1.0000E+00 0.0000 0.0000 10.0        
-       500000   7.4636E-01 0.0004 0.0000 10.0           1.0000E+00 0.0000 0.0000 10.0        
-       600000   7.4630E-01 0.0004 0.0000 10.0           1.0000E+00 0.0000 0.0000 10.0        
-       700000   7.4646E-01 0.0003 0.0000 10.0           1.0000E+00 0.0000 0.0000 10.0        
-       800000   7.4649E-01 0.0003 0.0000 10.0           1.0000E+00 0.0000 0.0000 10.0        
-       900000   7.4644E-01 0.0003 0.0000 10.0           1.0000E+00 0.0000 0.0000 10.0        
-      1000000   7.4644E-01 0.0003 0.0000 10.0           1.0000E+00 0.0000 0.0000 10.0        
+       100000   7.4656E-01 0.0009 0.0002 10.0           1.0000E+00 0.0000 0.0000 10.0        
+       200000   7.4591E-01 0.0006 0.0001 10.0           1.0000E+00 0.0000 0.0000 10.0        
+       300000   7.4612E-01 0.0005 0.0001 10.0           1.0000E+00 0.0000 0.0000 10.0        
+       400000   7.4634E-01 0.0004 0.0000 10.0           1.0000E+00 0.0000 0.0000 10.0        
+       500000   7.4648E-01 0.0004 0.0000 10.0           1.0000E+00 0.0000 0.0000 10.0        
+       600000   7.4642E-01 0.0004 0.0000 10.0           1.0000E+00 0.0000 0.0000 10.0        
+       700000   7.4658E-01 0.0003 0.0000 10.0           1.0000E+00 0.0000 0.0000 10.0        
+       800000   7.4662E-01 0.0003 0.0000 10.0           1.0000E+00 0.0000 0.0000 10.0        
+       900000   7.4657E-01 0.0003 0.0000 10.0           1.0000E+00 0.0000 0.0000 10.0        
+      1000000   7.4657E-01 0.0003 0.0000 10.0           1.0000E+00 0.0000 0.0000 10.0        
  tally data written to file inp98m
 
           1 warning message so far.

@@ -1,131 +1,131 @@
-      1-       testprob20 - continuous energy electron version of problem prob19.              
-      2-       1 0 imp:n=0                                                                     
-      3-       2 1 -19.3 imp:n=1                                                               
-      4-       3 0 imp:n=1                                                                     
-      5-       4 1 -19.3 imp:n=1                                                               
-      6-       5 1 -19.3 imp:n=1                                                               
-      7-       6 1 -19.3 imp:n=1                                                               
-      8-       7 0 imp:n=1                                                                     
-      9-       8 1 -19.3 imp:n=1                                                               
-     10-       9 0 imp:n=1                                                                     
-     11-       10 0 imp:n=1   $ implicit complement                                            
-     12-                                                                                       
-     13-       1                                                                               
-     14-       2                                                                               
-     15-       3                                                                               
-     16-       4                                                                               
-     17-       5                                                                               
-     18-       6                                                                               
-     19-       7                                                                               
-     20-       8                                                                               
-     21-       9                                                                               
-     22-       10                                                                              
-     23-       11                                                                              
-     24-       12                                                                              
-     25-       13                                                                              
-     26-       14                                                                              
-     27-       15                                                                              
-     28-       16                                                                              
-     29-       17                                                                              
-     30-       18                                                                              
-     31-       19                                                                              
-     32-       26                                                                              
-     33-       28                                                                              
-     34-       30                                                                              
-     35-       32                                                                              
-     36-       33                                                                              
-     37-       34                                                                              
-     38-       37                                                                              
-     39-       38                                                                              
-     40-       39                                                                              
-     41-                                                                                       
-     42-       c message:  fatal                                                               
-     43-       c 13  1    1 -19.3  1 -2 3 -4 5 -6                                              
-     44-       c 15  2    0  #1 -12                                                            
-     45-       c 4  3    1 -19.3  12 -16                                                       
-     46-       c 5  4    1 -19.3  16 -17                                                       
-     47-       c 6  5    1 -19.3  17 -18                                                       
-     48-       c 7  6    0  18 -13 -14 15                                                      
-     49-       c 8  7    1 -19.3  13 -19 -14 15                                                
-     50-       c    8    0  19:14:-15                                                          
-     51-       c                                                                               
-     52-       c      99 9 cx 15 $ test of tr card. XTM:95-51                                  
-     53-       c      98 8 cx 15 $ test of tr card. XTM:95-51                                  
-     54-       c 61   1 z 0 2                                                                  
-     55-       c 60   2 pz .00635                                                              
-     56-       c 3 px -10                                                                      
-     57-       c 4 x 10 0                                                                      
-     58-       c 5 y -10 3                                                                     
-     59-       c 6 p  0 10 0   1 10 0   0 10 1                                                 
-     60-       c 12 s  0.01 0.01 0 15                                                          
-     61-       c 13 cz 16                                                                      
-     62-       c 14 pz 16                                                                      
-     63-       c 15 pz -16                                                                     
-     64-       c 16 sx 0.01 15.2                                                               
-     65-       c 17 sy 0.01 15.4                                                               
-     66-       c 18 sz 0.01 15.6                                                               
-     67-       c 19 c/z 0.01 0 16.2                                                            
-     68-       c                                                                               
-     69-       tr20  5 6 7  1 0 0  0 0 1  0 0 0                                                
+         1-       testprob20 - continuous energy electron version of problem prob19.              
+         2-       1  0 imp:n=0                                                                    
+         3-       2 1 -19.3 imp:n=1                                                               
+         4-       3 0 imp:n=1                                                                     
+         5-       4 1 -19.3 imp:n=1                                                               
+         6-       5 1 -19.3 imp:n=1                                                               
+         7-       6 1 -19.3 imp:n=1                                                               
+         8-       7 0 imp:n=1                                                                     
+         9-       8 1 -19.3 imp:n=1                                                               
+        10-       9 0 imp:n=1                                                                     
+        11-       10 0 imp:n=1 $ implicit complement                                              
+        12-                                                                                       
+        13-       1                                                                               
+        14-       2                                                                               
+        15-       3                                                                               
+        16-       4                                                                               
+        17-       5                                                                               
+        18-       6                                                                               
+        19-       7                                                                               
+        20-       8                                                                               
+        21-       9                                                                               
+        22-       10                                                                              
+        23-       11                                                                              
+        24-       12                                                                              
+        25-       13                                                                              
+        26-       14                                                                              
+        27-       15                                                                              
+        28-       16                                                                              
+        29-       17                                                                              
+        30-       18                                                                              
+        31-       19                                                                              
+        32-       26                                                                              
+        33-       28                                                                              
+        34-       30                                                                              
+        35-       32                                                                              
+        36-       33                                                                              
+        37-       34                                                                              
+        38-       37                                                                              
+        39-       38                                                                              
+        40-       39                                                                              
+        41-                                                                                       
+        42-       c message:  fatal                                                               
+        43-       c 13  1    1 -19.3  1 -2 3 -4 5 -6                                              
+        44-       c 15  2    0  #1 -12                                                            
+        45-       c 4  3    1 -19.3  12 -16                                                       
+        46-       c 5  4    1 -19.3  16 -17                                                       
+        47-       c 6  5    1 -19.3  17 -18                                                       
+        48-       c 7  6    0  18 -13 -14 15                                                      
+        49-       c 8  7    1 -19.3  13 -19 -14 15                                                
+        50-       c    8    0  19:14:-15                                                          
+        51-       c                                                                               
+        52-       c      99 9 cx 15 $ test of tr card. XTM:95-51                                  
+        53-       c      98 8 cx 15 $ test of tr card. XTM:95-51                                  
+        54-       c 61   1 z 0 2                                                                  
+        55-       c 60   2 pz .00635                                                              
+        56-       c 3 px -10                                                                      
+        57-       c 4 x 10 0                                                                      
+        58-       c 5 y -10 3                                                                     
+        59-       c 6 p  0 10 0   1 10 0   0 10 1                                                 
+        60-       c 12 s  0.01 0.01 0 15                                                          
+        61-       c 13 cz 16                                                                      
+        62-       c 14 pz 16                                                                      
+        63-       c 15 pz -16                                                                     
+        64-       c 16 sx 0.01 15.2                                                               
+        65-       c 17 sy 0.01 15.4                                                               
+        66-       c 18 sz 0.01 15.6                                                               
+        67-       c 19 c/z 0.01 0 16.2                                                            
+        68-       c                                                                               
+        69-       tr20  5 6 7  1 0 0  0 0 1  0 0 0                                                
  
-  fatal error.  surface transformation   20 is incorrectly defined.                        
-     70-       m1   estep=13 74184. 1                                                          
-     71-       sdef erg=10 sur=13  vec=0 0 1  par=3                                            
-     72-       imp:p,e 0 1 1 1 2r 0 1 1 1                                                      
-     73-       mode  p  e                                                                      
-     74-       *f1:p  13 14                                                                    
-     75-       e0   .1 .191 .282 .373 .464 .555 .645 .736 .827 .918  1.1                       
-     76-       *f11:e  13 14                                                                   
-     77-       tr9   0 0 0    1 1 0   -1 1 0    0 0 1    1                                     
-     78-       tr8   0 0 0    1 1 0                                                            
-     79-       fq   e f                                                                        
-     80-       f21:e  13 14                                                                    
-     81-       *f28:p  2                                                                       
-     82-       e28   -.001 0 1.e-6 .1 .191 .282 .373 .464 .555 .645 .736 .827 .918  1.1        
-     83-       e58   -.001 0 1.e-6 .1 .191 .282 .373 .464 .555 .645 .736 .827 .918  1.1        
-     84-       f58:e 2                                                                         
-     85-       f6:p 2                                                                          
-     86-       f31:e  13 14                                                                    
-     87-       ft31 elc 1                                                                      
-     88-       f41:e  13 14                                                                    
-     89-       ft41 elc 2                                                                      
-     90-       f51:e  13 14                                                                    
-     91-       ft51 elc 3                                                                      
-     92-       e8   1000 nt                                                                    
-     93-       *f8:p,e  2                                                                      
-     94-         nps  1000                                                                     
-     95-       ctme  30                                                                        
-     96-       prdmp  2j -1                                                                    
-     97-       cut:p  1j  .5                                                                   
-     98-       cut:e  1j  .25                                                                  
-     99-       print 85                                                                        
+  fatal error.  surface transformation       20 is incorrectly defined.
+        70-       m1   estep=13 74184. 1                                                          
+        71-       sdef erg=10 sur=13  vec=0 0 1  par=3                                            
+        72-       imp:p,e 0 1 1 1 2r 0 1 1 1                                                      
+        73-       mode  p  e                                                                      
+        74-       *f1:p  13 14                                                                    
+        75-       e0   .1 .191 .282 .373 .464 .555 .645 .736 .827 .918  1.1                       
+        76-       *f11:e  13 14                                                                   
+        77-       tr9   0 0 0    1 1 0   -1 1 0    0 0 1    1                                     
+        78-       tr8   0 0 0    1 1 0                                                            
+        79-       fq   e f                                                                        
+        80-       f21:e  13 14                                                                    
+        81-       *f28:p  2                                                                       
+        82-       e28   -.001 0 1.e-6 .1 .191 .282 .373 .464 .555 .645 .736 .827 .918  1.1        
+        83-       e58   -.001 0 1.e-6 .1 .191 .282 .373 .464 .555 .645 .736 .827 .918  1.1        
+        84-       f58:e 2                                                                         
+        85-       f6:p 2                                                                          
+        86-       f31:e  13 14                                                                    
+        87-       ft31 elc 1                                                                      
+        88-       f41:e  13 14                                                                    
+        89-       ft41 elc 2                                                                      
+        90-       f51:e  13 14                                                                    
+        91-       ft51 elc 3                                                                      
+        92-       e8   1000 nt                                                                    
+        93-       *f8:p,e  2                                                                      
+        94-         nps  1000                                                                     
+        95-       ctme  30                                                                        
+        96-       prdmp  2j -1                                                                    
+        97-       cut:p  1j  .5                                                                   
+        98-       cut:e  1j  .25                                                                  
+        99-       print 85                                                                        
  
-  warning.  tr 20 card unused.                                                             
+  warning.  tr       20 card unused.
  
-  warning.  tr  9 card unused.                                                             
+  warning.  tr        9 card unused.
  
-  warning.  tr  8 card unused.                                                             
+  warning.  tr        8 card unused.
  
-  warning.     5 energy bins of tally   1 are below energy cutoff.                         
+  warning.     5 energy bins of tally        1 are below energy cutoff.
  
-  warning.  tally   8 needs zero energy bin for negative f8 scores.                        
+  warning.  tally   8 needs zero energy bin for negative f8 scores.
 1cells                                                                                                  print table 60
 
-                      atom        gram                                     neutron    photon     electron              
-        cell  mat    density     density     volume       mass     pieces importance importance importance             
+                               atom        gram                                            neutron    photon     electron              
+              cell     mat    density     density     volume       mass            pieces importance importance importance             
 
-     1     1    0  0.00000E+00 0.00000E+00 4.71696E+04 0.00000E+00     0  0.0000E+00 0.0000E+00 0.0000E+00             
-     2     2    1  6.31828E-02 1.93000E+01 2.54000E+00 4.90220E+01     0  1.0000E+00 1.0000E+00 1.0000E+00             
-     3     3    0  0.00000E+00 0.00000E+00 1.41341E+04 0.00000E+00     0  1.0000E+00 1.0000E+00 1.0000E+00             
-     4     4    1  6.31828E-02 1.93000E+01 5.73041E+02 1.10597E+04     0  1.0000E+00 1.0000E+00 1.0000E+00             
-     5     5    1  6.31828E-02 1.93000E+01 5.88321E+02 1.13546E+04     0  1.0000E+00 1.0000E+00 1.0000E+00             
-     6     6    1  6.31828E-02 1.93000E+01 6.03802E+02 1.16534E+04     0  1.0000E+00 1.0000E+00 1.0000E+00             
-     7     7    0  0.00000E+00 0.00000E+00 9.83387E+03 0.00000E+00     0  0.0000E+00 0.0000E+00 0.0000E+00             
-     8     8    1  6.31828E-02 1.93000E+01 6.47417E+02 1.24951E+04     0  1.0000E+00 1.0000E+00 1.0000E+00             
-     9     9    0  0.00000E+00 0.00000E+00 7.44262E+05 0.00000E+00     0  1.0000E+00 1.0000E+00 1.0000E+00             
-    10    10    0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00     0  1.0000E+00 1.0000E+00 1.0000E+00             
+        1        1        0  0.00000E+00 0.00000E+00 4.71696E+04 0.00000E+00           0  0.0000E+00 0.0000E+00 0.0000E+00             
+        2        2        1  6.31828E-02 1.93000E+01 2.54000E+00 4.90220E+01           0  1.0000E+00 1.0000E+00 1.0000E+00             
+        3        3        0  0.00000E+00 0.00000E+00 1.41341E+04 0.00000E+00           0  1.0000E+00 1.0000E+00 1.0000E+00             
+        4        4        1  6.31828E-02 1.93000E+01 5.73041E+02 1.10597E+04           0  1.0000E+00 1.0000E+00 1.0000E+00             
+        5        5        1  6.31828E-02 1.93000E+01 5.88321E+02 1.13546E+04           0  1.0000E+00 1.0000E+00 1.0000E+00             
+        6        6        1  6.31828E-02 1.93000E+01 6.03802E+02 1.16534E+04           0  1.0000E+00 1.0000E+00 1.0000E+00             
+        7        7        0  0.00000E+00 0.00000E+00 9.83387E+03 0.00000E+00           0  0.0000E+00 0.0000E+00 0.0000E+00             
+        8        8        1  6.31828E-02 1.93000E+01 6.47417E+02 1.24951E+04           0  1.0000E+00 1.0000E+00 1.0000E+00             
+        9        9        0  0.00000E+00 0.00000E+00 7.44262E+05 0.00000E+00           0  1.0000E+00 1.0000E+00 1.0000E+00             
+       10       10        0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00           0  1.0000E+00 1.0000E+00 1.0000E+00             
 
- total                                     8.17816E+05 4.66118E+04
+ total                                               8.17816E+05 4.66118E+04
 
     minimum source weight = 1.0000E+00    maximum source weight = 1.0000E+00
 
@@ -150,7 +150,7 @@
 
   74000.02p     755                                                                                            01/15/93
  
-  comment.   74000.02p lacks Compton profile data for photon energy broadening.            
+  comment.   74000.02p lacks Compton profile data for photon energy broadening.
 
   total         755
 
@@ -159,7 +159,7 @@
                         tables from file testlib1                                                        
 
   74000.01e     478                                                                                          11/16/88  
-1range table for material    1 (condensed)                                                              print table 85
+1range table for material        1 (condensed)                                                          print table 85
 
  electron substeps per energy step =  13,  default =  12.  mean ionization energy = 7.27000E+02 ev.
 
@@ -394,38 +394,38 @@
  range of sampled source weights = 1.0000E+00 to 1.0000E+00
 1photon   activity in each cell                                                                         print table 126
 
-                 tracks     population   collisions   collisions     number        flux        average      average
-        cell    entering                               * weight     weighted     weighted   track weight   track mfp
-                                                    (per history)    energy       energy     (relative)      (cm)
+                       tracks     population   collisions   collisions     number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                          (per history)    energy       energy     (relative)      (cm)
 
-     2     2          62          162            4    4.0000E-03   1.9861E+00   1.9861E+00   1.0000E+00   9.3314E-01
-     3     3         480          409            0    0.0000E+00   1.4002E+00   1.4002E+00   1.0000E+00   0.0000E+00
-     4     4         458         1690          704    7.0400E-01   1.5998E+00   1.5998E+00   1.0000E+00   8.7503E-01
-     5     5        1244         1295          498    4.9800E-01   1.6585E+00   1.6585E+00   1.0000E+00   8.9286E-01
-     6     6         952          989          349    3.4900E-01   1.7123E+00   1.7123E+00   1.0000E+00   9.0358E-01
-     8     8           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
-     9     9           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
-    10    10           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
+        2        2          62          162            4    4.0000E-03   1.9861E+00   1.9861E+00   1.0000E+00   9.3314E-01
+        3        3         480          409            0    0.0000E+00   1.4002E+00   1.4002E+00   1.0000E+00   0.0000E+00
+        4        4         458         1690          704    7.0400E-01   1.5998E+00   1.5998E+00   1.0000E+00   8.7503E-01
+        5        5        1244         1295          498    4.9800E-01   1.6585E+00   1.6585E+00   1.0000E+00   8.9286E-01
+        6        6         952          989          349    3.4900E-01   1.7123E+00   1.7123E+00   1.0000E+00   9.0358E-01
+        8        8           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
+        9        9           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
+       10       10           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
 
-     total          3196         4545         1555    1.5550E+00
+           total          3196         4545         1555    1.5550E+00
 1electron activity in each cell                                                                         print table 126
 
-                 tracks     population    substeps     substeps      number        flux        average      average
-        cell    entering                               * weight     weighted     weighted   track weight   track mfp
-                                                    (per history)    energy       energy     (relative)      (cm)
+                       tracks     population    substeps     substeps      number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                          (per history)    energy       energy     (relative)      (cm)
 
-     2     2        1086         1085        14910    1.4910E+01   8.6343E+00   8.7144E+00   1.0000E+00   1.3534E-03
-     3     3        2438         1065            0    0.0000E+00   7.0810E+00   7.2194E+00   1.0000E+00   0.0000E+00
-     4     4        1406         2960       809652    8.0965E+02   4.0830E+00   4.2015E+00   1.0000E+00   8.2441E-04
-     5     5          97          493        85822    8.5822E+01   1.2160E+00   1.2799E+00   1.0000E+00   3.4488E-04
-     6     6          11          310        50503    5.0503E+01   9.4888E-01   9.9792E-01   1.0000E+00   2.7885E-04
-     8     8           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
-     9     9           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
-    10    10           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
+        2        2        1086         1085        14910    1.4910E+01   8.6343E+00   8.7144E+00   1.0000E+00   1.3534E-03
+        3        3        2438         1065            0    0.0000E+00   7.0810E+00   7.2194E+00   1.0000E+00   0.0000E+00
+        4        4        1406         2960       809652    8.0965E+02   4.0830E+00   4.2015E+00   1.0000E+00   8.2441E-04
+        5        5          97          493        85822    8.5822E+01   1.2160E+00   1.2799E+00   1.0000E+00   3.4488E-04
+        6        6          11          310        50503    5.0503E+01   9.4888E-01   9.9792E-01   1.0000E+00   2.7885E-04
+        8        8           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
+        9        9           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
+       10       10           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
 
-     total          5038         5913       960887    9.6089E+02
+           total          5038         5913       960887    9.6089E+02
 
-1tally   1        nps =        1000
+1tally        1        nps =        1000
            tally type 1*   energy crossing a surface.                   units   mev       
            tally for  photons  
  
@@ -450,7 +450,7 @@
 
  ===================================================================================================================================
 
-           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally   1
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally        1
 
  tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
  behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
@@ -466,7 +466,7 @@
 
  fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 1.957E-01)**2 = (0.000E+00)*(3.829E-02) = 0.000E+00
 
-1tally   6        nps =        1000
+1tally        6        nps =        1000
            tally type 6    track length estimate of heating.            units   mev/gram  
            tally for  photons  
 
@@ -495,7 +495,7 @@
 
  ===================================================================================================================================
 
-           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally   6
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally        6
 
  tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
  behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
@@ -511,7 +511,7 @@
 
  fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 1.423E-01)**2 = (0.000E+00)*(2.024E-02) = 0.000E+00
 
-1tally  28        nps =        1000
+1tally       28        nps =        1000
            tally type 8*   energy deposition                            units   mev       
            tally for  photons   electrons
  
@@ -539,7 +539,7 @@
 
  ===================================================================================================================================
 
-           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally  28
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally       28
 
  tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
  behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
@@ -561,7 +561,7 @@
 
  fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 5.249E-01)**2 = (0.000E+00)*(2.755E-01) = 0.000E+00
 
-1tally  11        nps =        1000
+1tally       11        nps =        1000
            tally type 1*   energy crossing a surface.                   units   mev       
            tally for  electrons
  
@@ -586,7 +586,7 @@
 
  ===================================================================================================================================
 
-           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally  11
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally       11
 
  tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
  behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
@@ -602,7 +602,7 @@
 
  fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 1.228E-01)**2 = (0.000E+00)*(1.508E-02) = 0.000E+00
 
-1tally  21        nps =        1000
+1tally       21        nps =        1000
            tally type 1    number of particles crossing a surface.                        
            tally for  electrons
  
@@ -627,7 +627,7 @@
 
  ===================================================================================================================================
 
-           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally  21
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally       21
 
  tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
  behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
@@ -643,7 +643,7 @@
 
  fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 1.192E-01)**2 = (0.000E+00)*(1.420E-02) = 0.000E+00
 
-1tally  31        nps =        1000
+1tally       31        nps =        1000
            tally type 1    number of particles crossing a surface.                        
            tally for  electrons
            this tally is modified by   ft  elc
@@ -669,7 +669,7 @@
 
  ===================================================================================================================================
 
-           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally  31
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally       31
 
  tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
  behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
@@ -685,7 +685,7 @@
 
  fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*(-1.105E-01)**2 = (0.000E+00)*(1.222E-02) = 0.000E+00
 
-1tally  41        nps =        1000
+1tally       41        nps =        1000
            tally type 1    number of particles crossing a surface.                        
            tally for  electrons
            this tally is modified by   ft  elc
@@ -741,7 +741,7 @@
 
  ===================================================================================================================================
 
-           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally  41
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally       41
 
  tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
  behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
@@ -757,7 +757,7 @@
 
  fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 1.192E-01)**2 = (0.000E+00)*(1.420E-02) = 0.000E+00
 
-1tally  51        nps =        1000
+1tally       51        nps =        1000
            tally type 1    number of particles crossing a surface.                        
            tally for  electrons
            this tally is modified by   ft  elc
@@ -813,7 +813,7 @@
 
  ===================================================================================================================================
 
-           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally  51
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally       51
 
  tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
  behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
@@ -829,7 +829,7 @@
 
  fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*(-1.105E-01)**2 = (0.000E+00)*(1.222E-02) = 0.000E+00
 
-1tally  58        nps =        1000
+1tally       58        nps =        1000
            tally type 8    pulse height distribution.                   units   number    
            tally for  photons   electrons
  
@@ -857,7 +857,7 @@
 
  ===================================================================================================================================
 
-           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally  58
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally       58
 
  tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
  behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
@@ -879,7 +879,7 @@
 
  fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 5.892E+00)**2 = (0.000E+00)*(3.471E+01) = 0.000E+00
 
-1tally   8        nps =        1000
+1tally        8        nps =        1000
            tally type 8*   energy deposition                            units   mev       
            tally for  photons   electrons
  
@@ -893,7 +893,7 @@
 
  ===================================================================================================================================
 
-           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally   8
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally        8
 
  tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
  behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
@@ -934,34 +934,34 @@
 
  tally   result of statistical checks for the tfc bin (the first check not passed is listed) and error magnitude check for all bins
 
-     1   missed  2 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
+        1   missed  2 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
          missed all bin error check:    24 tally bins had    17 bins with zeros and     7 bins with relative errors exceeding 0.10
 
-     6   missed  3 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
+        6   missed  3 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
          missed all bin error check:    12 tally bins had     5 bins with zeros and     7 bins with relative errors exceeding 0.10
 
-    28   passed the 10 statistical checks for the tally fluctuation chart bin result               
+       28   passed the 10 statistical checks for the tally fluctuation chart bin result               
          missed all bin error check:    15 tally bins had     2 bins with zeros and     9 bins with relative errors exceeding 0.10
 
-    11   missed  3 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
+       11   missed  3 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
          missed all bin error check:    24 tally bins had    16 bins with zeros and     8 bins with relative errors exceeding 0.10
 
-    21   missed  3 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
+       21   missed  3 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
          missed all bin error check:    24 tally bins had    16 bins with zeros and     8 bins with relative errors exceeding 0.10
 
-    31   missed  3 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
+       31   missed  3 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
          missed all bin error check:    24 tally bins had    16 bins with zeros and     8 bins with relative errors exceeding 0.10
 
-    41   missed  3 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
+       41   missed  3 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
          missed all bin error check:    72 tally bins had    54 bins with zeros and    18 bins with relative errors exceeding 0.10
 
-    51   missed  3 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
+       51   missed  3 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
          missed all bin error check:    72 tally bins had    54 bins with zeros and    18 bins with relative errors exceeding 0.10
 
-    58   passed the 10 statistical checks for the tally fluctuation chart bin result               
+       58   passed the 10 statistical checks for the tally fluctuation chart bin result               
          missed all bin error check:    15 tally bins had     2 bins with zeros and     9 bins with relative errors exceeding 0.10
 
-     8   passed the 10 statistical checks for the tally fluctuation chart bin result               
+        8   passed the 10 statistical checks for the tally fluctuation chart bin result               
          passed all bin error check:     1 tally bins all have relative errors less than 0.10 with no zero bins
 
 
@@ -969,26 +969,26 @@
 
  the tally bins with zeros may or may not be correct: compare the source, cutoffs, multipliers, et cetera with the tally bins.
 
- warning.     7 of the  10 tally fluctuation chart bins did not pass all 10 statistical checks.
- warning.     9 of the  10 tallies had bins with relative errors greater than recommended.
-1tally fluctuation charts                         
+ warning.       7 of the    10 tally fluctuation chart bins did not pass all 10 statistical checks.
+ warning.       9 of the    10 tallies had bins with relative errors greater than recommended.
+1tally fluctuation charts                              
 
-                       tally    1                                tally    6                                tally   28
+                            tally        1                          tally        6                          tally       28
           nps      mean     error   vov  slope    fom      mean     error   vov  slope    fom      mean     error   vov  slope    fom
          1000   2.7840E-02 0.1616 0.0317  0.0           1.1270E-05 0.2223 0.4948  0.0           2.1683E-01 0.0602 0.0632 10.0        
  
 
-                       tally   11                                tally   21                                tally   31
+                            tally       11                          tally       21                          tally       31
           nps      mean     error   vov  slope    fom      mean     error   vov  slope    fom      mean     error   vov  slope    fom
          1000   1.6006E-02 0.2575 0.1079  0.0           2.8000E-02 0.2654 0.1458  0.0          -2.6000E-02 0.2861 0.1457  0.0        
  
 
-                       tally   41                                tally   51                                tally   58
+                            tally       41                          tally       51                          tally       58
           nps      mean     error   vov  slope    fom      mean     error   vov  slope    fom      mean     error   vov  slope    fom
          1000   2.8000E-02 0.2654 0.1458  0.0          -2.6000E-02 0.2861 0.1457  0.0           9.7200E-01 0.0054 0.0327 10.0        
  
 
-                       tally    8
+                            tally        8
           nps      mean     error   vov  slope    fom
          1000   2.6314E-01 0.0583 0.0399  4.9        
  tally data written to file inp20m

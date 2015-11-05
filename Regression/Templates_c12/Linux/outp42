@@ -1,71 +1,71 @@
-      1-       inp42 - godiva -pert test from Jeff Favorite                                    
-      2-       2 1 -18.74 imp:n=1                                                              
-      3-       3 1 -18.74 imp:n=1                                                              
-      4-       6 0 imp:n=0                                                                     
-      5-       8 0 imp:n=1                                                                     
-      6-       9 0 imp:n=1   $ implicit complement                                             
-      7-                                                                                       
-      8-       2                                                                               
-      9-       3                                                                               
-     10-       11                                                                              
-     11-       12                                                                              
-     12-       13                                                                              
-     13-       14                                                                              
-     14-       15                                                                              
-     15-       16                                                                              
-     16-       17                                                                              
-     17-       18                                                                              
-     18-       19                                                                              
-     19-       20                                                                              
-     20-       21                                                                              
-     21-       22                                                                              
-     22-                                                                                       
-     23-       c 2 1    1  -18.74  -20      imp:n=1                                            
-     24-       c 3 2    1  -18.74  -10  20  imp:n=1                                            
-     25-       c   999  0               10  imp:n=0                                            
-     26-       c                                                                               
-     27-       c 14 10  so  8.7774                                                             
-     28-       c 13 20  so  0.5                                                                
-     29-       c                                                                               
-     30-       kcode 1000 1.  5 30                                                             
-     31-       ksrc 0 0 0                                                                      
-     32-       m1 92235.50d -94.73  92238.40c -5.27                                            
-     33-       pert1:n cell 2 rho=-0. method=1                                                 
-     34-       pert2:n cell 2 rho=-0. method=2                                                 
-     35-       pert3:n cell 2 rho=-0. method=3                                                 
-     36-       c                                                                               
-     37-       pert4:n cell 2 3 rho=-15.                                                       
-     38-       pert5:n cell 2 3 rho=-15. method=1                                              
-     39-       pert6:n cell 2 3 rho=-15. method=2                                              
-     40-       pert7:n cell 2 3 rho=-15. method=3                                              
-     41-       c                                                                               
-     42-       c   use new mcnp rn generator                                                   
-     43-       dbcn 1234567 11j 123  1                                                         
-     44-       rand gen=3 seed=123456789 stride=12345 hist=1                                   
-     45-       c                                                                               
-     46-       prdmp 2j -1                                                                     
+         1-       inp42 - godiva -pert test from Jeff Favorite                                    
+         2-       2 1 -18.74 imp:n=1                                                              
+         3-       3 1 -18.74 imp:n=1                                                              
+         4-       6  0 imp:n=0                                                                    
+         5-       8 0 imp:n=1                                                                     
+         6-       9 0 imp:n=1 $ implicit complement                                               
+         7-                                                                                       
+         8-       2                                                                               
+         9-       3                                                                               
+        10-       11                                                                              
+        11-       12                                                                              
+        12-       13                                                                              
+        13-       14                                                                              
+        14-       15                                                                              
+        15-       16                                                                              
+        16-       17                                                                              
+        17-       18                                                                              
+        18-       19                                                                              
+        19-       20                                                                              
+        20-       21                                                                              
+        21-       22                                                                              
+        22-                                                                                       
+        23-       c 2 1    1  -18.74  -20      imp:n=1                                            
+        24-       c 3 2    1  -18.74  -10  20  imp:n=1                                            
+        25-       c   999  0               10  imp:n=0                                            
+        26-       c                                                                               
+        27-       c 14 10  so  8.7774                                                             
+        28-       c 13 20  so  0.5                                                                
+        29-       c                                                                               
+        30-       kcode 1000 1.  5 30                                                             
+        31-       ksrc 0 0 0                                                                      
+        32-       m1 92235.50d -94.73  92238.40c -5.27                                            
+        33-       pert1:n cell 2 rho=-0. method=1                                                 
+        34-       pert2:n cell 2 rho=-0. method=2                                                 
+        35-       pert3:n cell 2 rho=-0. method=3                                                 
+        36-       c                                                                               
+        37-       pert4:n cell 2 3 rho=-15.                                                       
+        38-       pert5:n cell 2 3 rho=-15. method=1                                              
+        39-       pert6:n cell 2 3 rho=-15. method=2                                              
+        40-       pert7:n cell 2 3 rho=-15. method=3                                              
+        41-       c                                                                               
+        42-       c   use new mcnp rn generator                                                   
+        43-       dbcn 1234567 11j 123  1                                                         
+        44-       rand gen=3 seed=123456789 stride=12345 hist=1                                   
+        45-       c                                                                               
+        46-       prdmp 2j -1                                                                     
  
-  comment.  total fission nubar data are being used.                                       
+  comment.  total fission nubar data are being used.
  
-  warning.    1 materials had unnormalized fractions. print table 40.                      
+  warning.    1 materials had unnormalized fractions. print table 40.
 1cells                                                                                                  print table 60
 
-                      atom        gram                                     neutron                                     
-        cell  mat    density     density     volume       mass     pieces importance                                   
+                               atom        gram                                            neutron                                     
+              cell     mat    density     density     volume       mass            pieces importance                                   
 
-     1     2    1  4.79817E-02 1.87400E+01 5.23356E-01 9.80770E+00     0  1.0000E+00                                   
-     2     3    1  4.79817E-02 1.87400E+01 2.83197E+03 5.30711E+04     0  1.0000E+00                                   
-     3     6    0  0.00000E+00 0.00000E+00 4.13750E+04 0.00000E+00     0  0.0000E+00                                   
-     4     8    0  0.00000E+00 0.00000E+00 1.22168E+05 0.00000E+00     0  1.0000E+00                                   
-     5     9    0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00     0  1.0000E+00                                   
+        1        2        1  4.79817E-02 1.87400E+01 5.23356E-01 9.80770E+00           0  1.0000E+00                                   
+        2        3        1  4.79817E-02 1.87400E+01 2.83197E+03 5.30711E+04           0  1.0000E+00                                   
+        3        6        0  0.00000E+00 0.00000E+00 4.13750E+04 0.00000E+00           0  0.0000E+00                                   
+        4        8        0  0.00000E+00 0.00000E+00 1.22168E+05 0.00000E+00           0  1.0000E+00                                   
+        5        9        0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00           0  1.0000E+00                                   
 
- total                                     1.66376E+05 5.30809E+04
+ total                                               1.66376E+05 5.30809E+04
  
-  warning.  rand card used for random generator,     dbcn(14) ignored                      
+  warning.  rand card used for random generator,     dbcn(14) ignored
  
-  warning.  rand card used for random seed,          dbcn(1)  ignored                      
+  warning.  rand card used for random seed,          dbcn(1)  ignored
  
-  warning.  rand card used for random number stride, dbcn(13) ignored                      
+  warning.  rand card used for random number stride, dbcn(13) ignored
 
  ***************************************************
  * Random Number Generator  =                    3 *
@@ -87,20 +87,35 @@
   92238.40c   40834   ENDL library name:  nd901118  MCNP translation:  9total nu 56:49                       901119    
                      temperature = 2.5860E-08 adjusted to 2.5300E-08
  
-  warning.   92238.40c lacks delayed neutron cross sections.                               
+  warning.   92238.40c lacks delayed neutron cross sections.
   92235.50d    6819  njoy                                               total nu                (  1395)      79/09/12.
  
-  warning.   92235.50d lacks delayed neutron cross sections.                               
+  warning.   92235.50d lacks delayed neutron cross sections.
 
   total       47653
  
-  warning.  neutron energy cutoff is below some cross-section tables.                      
+  warning.  neutron energy cutoff is below some cross-section tables.
  
-  comment.     1 cross sections modified by free gas thermal treatment.                    
+  comment.     1 cross sections modified by free gas thermal treatment.
 
  source distribution written to file inp42s        cycle=     0
 
          7 warning messages so far.
+
+ comment.
+ comment. entropy of the fission source distribution will be computed
+ comment.
+ comment. the mesh for source entropy is based on the site coordinates
+ comment.   using  4 x  4 x  4 =    64  mesh cells
+ comment.
+ comment.     Xmin= -1.1555E+01     Xmax=  1.1492E+01
+ comment.     Ymin= -1.1891E+01     Ymax=  1.1415E+01
+ comment.     Zmin= -1.1972E+01     Zmax=  1.1962E+01
+ comment.
+ comment. the mesh will be automatically expanded if necessary to
+ comment.   encompass the entire fission source distribution
+ comment.
+
 1estimated keff results by cycle                                                                        print table 175
 
  cycle     1    k(collision)  1.354154    prompt removal lifetime(abs)  1.6509E+00    source points generated   1312
@@ -352,16 +367,16 @@
  range of sampled source weights = 7.6220E-01 to 1.1669E+00
 1neutron  activity in each cell                                                                         print table 126
 
-                 tracks     population   collisions   collisions     number        flux        average      average
-        cell    entering                               * weight     weighted     weighted   track weight   track mfp
-                                                    (per history)    energy       energy     (relative)      (cm)
+                       tracks     population   collisions   collisions     number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                          (per history)    energy       energy     (relative)      (cm)
 
-     1     2         149          142           53    1.4888E-03   1.0450E+00   1.7260E+00   6.8874E-01   2.6995E+00
-     2     3       25027        24962        95654    2.5359E+00   9.7194E-01   1.5710E+00   6.7744E-01   2.6950E+00
-     4     8       21593        21593            0    0.0000E+00   1.0694E+00   1.6665E+00   6.6914E-01   0.0000E+00
-     5     9           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
+        1        2         149          142           53    1.4888E-03   1.0450E+00   1.7260E+00   6.8874E-01   2.6995E+00
+        2        3       25027        24962        95654    2.5359E+00   9.7194E-01   1.5710E+00   6.7744E-01   2.6950E+00
+        4        8       21593        21593            0    0.0000E+00   1.0694E+00   1.6665E+00   6.6914E-01   0.0000E+00
+        5        9           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
 
-     total         46769        46697        95707    2.5374E+00
+           total         46769        46697        95707    2.5374E+00
 
  the initial fission neutron source distribution used the   1 source points that were input on the ksrc card.
  the criticality problem was scheduled to skip   5 cycles and run a total of   30 cycles with nominally     1000 neutrons per cycle.
@@ -372,6 +387,18 @@
  all cells with fissionable material were sampled and had fission neutron source points.
 
 
+ comment.
+ comment. Average fission-source entropy for the last half of cycles:
+ comment.      H=  4.30E+00  with population std.dev.=  4.07E-02
+ comment.
+ comment.
+ comment. Cycle    4 is the first cycle having fission-source
+ comment.   entropy within 1 std.dev. of the average
+ comment.   entropy for the last half of cycles.
+ comment.   At least this many cycles should be discarded.
+ comment.
+ comment. Source entropy convergence check passed. 
+ comment.
  the results of the w test for normality applied to the individual collision, absorption, and track-length keff cycle values are:
 
            the k( collision) cycle values appear normally distributed at the 95 percent confidence level                       
@@ -500,32 +527,6 @@
                    collision 1.03948 on cycle  28                                                  collision 0.94554 on cycle  30
                   absorption 1.04550 on cycle  28                                                 absorption 0.94900 on cycle  30
                 track length 1.02106 on cycle  12                                               track length 0.96083 on cycle  20
-1plot of the estimated col/abs/track-length keff one standard deviation interval versus cycle number (| = final keff =  0.99768)
-
-    cycle   active 0.99                            1.00                             1.01                             1.02   
-   number   cycles  |-------------------------------|--------------------------------|--------------------------------|
-       11        6  |                       |----------------k----------------)                                       |
-       12        7  |                       |      (----------------------k---------------------)                     |
-       13        8  |               (-------|-----------------k------------------------)                              |
-       14        9  |          (------------|-----k-------------------)                                               |
-       15       10  |         (-------------|----k------------------)                                                 |
-       16       11  |       (---------------|k-----------------)                                                      |
-       17       12  |              (--------|-------k----------------)                                                |
-       18       13  |                    (--|-----------k---------------)                                             |
-       19       14  |                       |(--------------k-------------)                                           |
-       20       15  +              (--------|------k---------------)                                                  +
-       21       16  |          (------------|--k--------------)                                                       |
-       22       17  |           (-----------|--k-------------)                                                        |
-       23       18  |        (-------------k|------------)                                                            |
-       24       19  |             (---------|---k------------)                                                        |
-       25       20  |              (--------|--k------------)                                                         |
-       26       21  |          (------------k------------)                                                            |
-       27       22  |          (-----------k|-----------)                                                             |
-       28       23  |            (----------|k-----------)                                                            |
-       29       24  |             (---------|-k----------)                                                            |
-       30       25  +            (----------k----------)                                                              +
-                    |-------------------------------|--------------------------------|--------------------------------|
-                   0.99                            1.00                             1.01                             1.02   
 1individual and collision/absorption/track-length keffs for different numbers of inactive cycles skipped for fission source settling
 
    skip  active     active    average keff estimators and deviations     normality average k(c/a/t)   k(c/a/t) confidence intervals
@@ -574,33 +575,6 @@
           final result     0.99768         0.00340           0.99423 to 1.00114     0.99064 to 1.00473     0.98811 to 1.00726
 
  the first and second half values of k(collision/absorption/track length) appear to be the same at the 68 percent confidence level.
-1plot of the estimated col/abs/track-length keff one standard deviation interval by active cycle number (| = final keff =  0.99768)
-
- inactive   active 0.97         0.98          0.99          1.00           1.01          1.02          1.03           1.04  
-   cycles   cycles  |------------|-------------|-------------|--------------|-------------|-------------|--------------|
-        0       30  |                                     |        (--------------------k---------------------)        |
-        1       29  |                                    (|---------k----------)                                       |
-        2       28  |                                   (-|---k-----)                                                  |
-        3       27  |                                  (--|-k----)                                                     |
-        4       26  |                                 (---|k---)                                                       |
-        5       25  *                                (----k----)                                                       *
-        6       24  |                               (----k|---)                                                        |
-        7       23  |                               (----k|---)                                                        |
-        8       22  |                             (----k--|--)                                                         |
-        9       21  +                            (-----k--|-)                                                          +
-       10       20  |                            (-----k--|--)                                                         |
-       11       19  |                             (-----k-|---)                                                        |
-       12       18  |                         (-----k-----|)                                                           |
-       13       17  |                          (-----k----|-)                                                          |
-       14       16  |                           (------k--|---)                                                        |
-       15       15  |                          (-------k--|----)                                                       |
-       16       14  |                           (--------k|-------)                                                    |
-       17       13  |                     (---------k-----|----)                                                       |
-       18       12  |                   (---------k-------|--)                                                         |
-       19       11  +         (----------k-----------)    |                                                            +
-       20       10  |                        (------------k------------)                                               |
-                    |------------|-------------|-------------|--------------|-------------|-------------|--------------|
-                   0.97         0.98          0.99          1.00           1.01          1.02          1.03           1.04  
  tally data written to file inp42m
 
          7 warning messages so far.

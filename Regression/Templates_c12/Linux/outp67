@@ -1,33 +1,33 @@
-      1-       test CHECK_SRC_CELL=OFF                                                         
-      2-       1 1 -1 imp:n=1                                                                  
-      3-       4 0 imp:n=0                                                                     
-      4-       5 0 imp:n=1   $ implicit complement                                             
-      5-                                                                                       
-      6-       1                                                                               
-      7-       8                                                                               
-      8-       9                                                                               
-      9-       10                                                                              
-     10-       11                                                                              
-     11-       12                                                                              
-     12-       13                                                                              
-     13-       14                                                                              
-     14-       15                                                                              
-     15-       16                                                                              
-     16-       17                                                                              
-     17-       18                                                                              
-     18-       19                                                                              
-     19-                                                                                       
-     20-       nps 100                                                                         
-     21-       sdef x d1 y d2 z 0 cel 1                                                        
-     22-       si1 l -4 0                                                                      
-     23-       sp1  1  1                                                                       
-     24-       si2 l -4 0                                                                      
-     25-       sp2  1  1                                                                       
-     26-       m1 1001 2 8016 1                                                                
-     27-       f4:n 1                                                                          
-     28-       dagmc check_src_cell=off                                                        
-     29-       print                                                                           
-     30-       prdmp 2j -1                                                                     
+         1-       test CHECK_SRC_CELL=OFF                                                         
+         2-       1 1 -1 imp:n=1                                                                  
+         3-       4  0 imp:n=0                                                                    
+         4-       5 0 imp:n=1 $ implicit complement                                               
+         5-                                                                                       
+         6-       1                                                                               
+         7-       8                                                                               
+         8-       9                                                                               
+         9-       10                                                                              
+        10-       11                                                                              
+        11-       12                                                                              
+        12-       13                                                                              
+        13-       14                                                                              
+        14-       15                                                                              
+        15-       16                                                                              
+        16-       17                                                                              
+        17-       18                                                                              
+        18-       19                                                                              
+        19-                                                                                       
+        20-       nps 100                                                                         
+        21-       sdef x d1 y d2 z 0 cel 1                                                        
+        22-       si1 l -4 0                                                                      
+        23-       sp1  1  1                                                                       
+        24-       si2 l -4 0                                                                      
+        25-       sp2  1  1                                                                       
+        26-       m1 1001 2 8016 1                                                                
+        27-       f4:n 1                                                                          
+        28-       dagmc check_src_cell=off                                                        
+        29-       print                                                                           
+        30-       prdmp 2j -1                                                                     
 1source                                                                                                 print table 10
 
  values of defaulted or explicitly defined source variables
@@ -53,7 +53,7 @@
 
 
 
- probability distribution   1 for source variable x  
+ probability distribution        1 for source variable x  
  unbiased discrete  distribution
 
  source        source           cumulative          probability
@@ -62,11 +62,11 @@
     1      -4.00000E+00        5.000000E-01        5.000000E-01
     2       0.00000E+00        1.000000E+00        5.000000E-01
 
-     the mean of source distribution   1 is -2.0000E+00
+     the mean of source distribution        1 is -2.0000E+00
 
 
 
- probability distribution   2 for source variable y  
+ probability distribution        2 for source variable y  
  unbiased discrete  distribution
 
  source        source           cumulative          probability
@@ -75,24 +75,24 @@
     1      -4.00000E+00        5.000000E-01        5.000000E-01
     2       0.00000E+00        1.000000E+00        5.000000E-01
 
-     the mean of source distribution   2 is -2.0000E+00
+     the mean of source distribution        2 is -2.0000E+00
 
 
  order of sampling source variables.
  cel x   y   z   pos erg tme
 
-1tally   4                                                                                              print table 30
+1tally        4                                                                                         print table 30
            tally type 4    track length estimate of particle flux.                        
            tally for  neutrons 
- cells     1                                                                                                           
+ cells     1                                                                                                                           
 1material composition                                                                                   print table 40
 
- the sum of the fractions of material    1 was 3.000000E+00
+ the sum of the fractions of material        1 was 3.000000E+00
 
  material
   number     component nuclide, atom fraction
 
-     1            1001, 6.66667E-01       8016, 3.33333E-01
+        1            1001, 6.66667E-01       8016, 3.33333E-01
 
 
 
@@ -101,62 +101,62 @@
  material
   number     component nuclide, mass fraction
 
-     1            1001, 1.11915E-01       8016, 8.88085E-01
+        1            1001, 1.11915E-01       8016, 8.88085E-01
  
-  warning.    1 materials had unnormalized fractions. print table 40.                      
+  warning.    1 materials had unnormalized fractions. print table 40.
 1cell volumes and masses                                                                                print table 50
 
-        cell     atom          gram         input       calculated                            reason volume
-                density       density       volume        volume         mass       pieces    not calculated
+              cell     atom          gram         input       calculated                            reason volume
+                      density       density       volume        volume         mass       pieces    not calculated
 
-     1     1  1.00309E-01   1.00000E+00   0.00000E+00   5.23571E+02   5.23571E+02      0                      
-     2     4  0.00000E+00   0.00000E+00   0.00000E+00   4.62500E+03   0.00000E+00      0                      
-     3     5  0.00000E+00   0.00000E+00   0.00000E+00   1.00000E+00   0.00000E+00      0                      
+        1        1  1.00309E-01   1.00000E+00   0.00000E+00   5.23571E+02   5.23571E+02      0                      
+        2        4  0.00000E+00   0.00000E+00   0.00000E+00   4.62500E+03   0.00000E+00      0                      
+        3        5  0.00000E+00   0.00000E+00   0.00000E+00   1.00000E+00   0.00000E+00      0                      
 1surface areas                                                                                          print table 50
 
-         surface    input      calculated    reason area
-                    area          area       not calculated
+           surface    input      calculated    reason area
+                      area          area       not calculated
 
-     1        1  0.00000E+00   3.14151E+02                   
-     2        8  0.00000E+00   4.00000E+02                   
-     3        9  0.00000E+00   4.00000E+02                   
-     4       10  0.00000E+00   4.00000E+02                   
-     5       11  0.00000E+00   4.00000E+02                   
-     6       12  0.00000E+00   4.00000E+02                   
-     7       13  0.00000E+00   4.00000E+02                   
-     8       14  0.00000E+00   2.25000E+02                   
-     9       15  0.00000E+00   2.25000E+02                   
-    10       16  0.00000E+00   2.25000E+02                   
-    11       17  0.00000E+00   2.25000E+02                   
-    12       18  0.00000E+00   2.25000E+02                   
-    13       19  0.00000E+00   2.25000E+02                   
+        1        1    0.00000E+00   3.14151E+02                   
+        2        8    0.00000E+00   4.00000E+02                   
+        3        9    0.00000E+00   4.00000E+02                   
+        4       10    0.00000E+00   4.00000E+02                   
+        5       11    0.00000E+00   4.00000E+02                   
+        6       12    0.00000E+00   4.00000E+02                   
+        7       13    0.00000E+00   4.00000E+02                   
+        8       14    0.00000E+00   2.25000E+02                   
+        9       15    0.00000E+00   2.25000E+02                   
+       10       16    0.00000E+00   2.25000E+02                   
+       11       17    0.00000E+00   2.25000E+02                   
+       12       18    0.00000E+00   2.25000E+02                   
+       13       19    0.00000E+00   2.25000E+02                   
 1cells                                                                                                  print table 60
 
-                      atom        gram                                     neutron                                     
-        cell  mat    density     density     volume       mass     pieces importance                                   
+                               atom        gram                                            neutron                                     
+              cell     mat    density     density     volume       mass            pieces importance                                   
 
-     1     1    1  1.00309E-01 1.00000E+00 5.23571E+02 5.23571E+02     0  1.0000E+00                                   
-     2     4    0  0.00000E+00 0.00000E+00 4.62500E+03 0.00000E+00     0  0.0000E+00                                   
-     3     5    0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00     0  1.0000E+00                                   
+        1        1        1  1.00309E-01 1.00000E+00 5.23571E+02 5.23571E+02           0  1.0000E+00                                   
+        2        4        0  0.00000E+00 0.00000E+00 4.62500E+03 0.00000E+00           0  0.0000E+00                                   
+        3        5        0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00           0  1.0000E+00                                   
 
- total                                     5.14957E+03 5.23571E+02
+ total                                               5.14957E+03 5.23571E+02
 1surfaces                                                                                               print table 70
 
-         surface     trans  type   surface coefficients
+           surface        trans  type   surface coefficients
 
-     1      1                   
-     2      8                   
-     3      9                   
-     4     10                   
-     5     11                   
-     6     12                   
-     7     13                   
-     8     14                   
-     9     15                   
-    10     16                   
-    11     17                   
-    12     18                   
-    13     19                   
+        1        1                   
+        2        8                   
+        3        9                   
+        4       10                   
+        5       11                   
+        6       12                   
+        7       13                   
+        8       14                   
+        9       15                   
+       10       16                   
+       11       17                   
+       12       18                   
+       13       19                   
 1  cell temperatures in mev for the free-gas thermal neutron treatment.                                 print table 72
 
    all non-zero importance cells with materials have a temperature for thermal neutrons of 2.5300E-08 mev.
@@ -217,9 +217,9 @@
 
   total        7140
  
-  warning.  neutron energy cutoff is below some cross-section tables.                      
+  warning.  neutron energy cutoff is below some cross-section tables.
  
-  comment.     1 cross sections modified by free gas thermal treatment.                    
+  comment.     1 cross sections modified by free gas thermal treatment.
 
          2 warning messages so far.
 1   starting mcrun.      cp0 =  0.00         print table 110
@@ -227,14 +227,12 @@
       test CHECK_SRC_CELL=OFF                                                         
 
 
-     nps    x          y          z       cell   surf     u          v          w        energy     weight      time
+     nps    x          y          z          cell       surf     u          v          w        energy     weight     time
  
-      1  0.000E+00  0.000E+00  0.000E+00     1      0  2.566E-01  6.731E-01  6.936E-01  1.400E+01  1.000E+00  0.000E+00
-      2 -4.000E+00 -4.000E+00  0.000E+00     1      0  9.530E-01  1.832E-01 -2.413E-01  1.400E+01  1.000E+00  0.000E+00
-      3  0.000E+00 -4.000E+00  0.000E+00     1      0 -6.184E-01 -4.495E-01  6.446E-01  1.400E+01  1.000E+00  0.000E+00
-      4 -4.000E+00 -4.000E+00  0.000E+00     1      0 -8.276E-01 -1.542E-01 -5.398E-01  1.400E+01  1.000E+00  0.000E+00
- warning.  the source point is not in the source cell.                 
- nps =           4     nrn =                   4                                      
+      1  0.000E+00  0.000E+00  0.000E+00        1          0  2.566E-01  6.731E-01  6.936E-01  1.400E+01  1.000E+00  0.000E+00
+      2 -4.000E+00 -4.000E+00  0.000E+00        1          0  9.530E-01  1.832E-01 -2.413E-01  1.400E+01  1.000E+00  0.000E+00
+      3  0.000E+00 -4.000E+00  0.000E+00        1          0 -6.184E-01 -4.495E-01  6.446E-01  1.400E+01  1.000E+00  0.000E+00
+      4 -4.000E+00 -4.000E+00  0.000E+00        1          0 -8.276E-01 -1.542E-01 -5.398E-01  1.400E+01  1.000E+00  0.000E+00
 1     event log for lost particle no.   1          nps =           4        ijk =      229271553349773
 
         cell     x         y         z         u         v         w       erg      wgt                          nch nrn
@@ -242,8 +240,8 @@
  source    1 -4.000+00 -4.000+00  0.000+00 -8.276-01 -1.542-01 -5.398-01 1.400+01 1.000+00   particle= neutron       4                   
 1   lost particle no.  1     no intersection found in subroutine track     history no.           4
 
- the neutron  currently being tracked thinks it is in cell    1.
- actually it is in cell    5.
+ the neutron  currently being tracked thinks it is in cell        1.
+ actually it is in cell        5.
 
  x,y,z coordinates:         -4.00000E+00   -4.00000E+00    0.00000E+00
  u,v,w direction cosines:   -8.27564E-01   -1.54168E-01   -5.39787E-01
@@ -256,15 +254,13 @@
 
 
 
-      5 -4.000E+00  0.000E+00  0.000E+00     1      0  5.861E-01  1.496E-01 -7.963E-01  1.400E+01  1.000E+00  0.000E+00
-      6 -4.000E+00  0.000E+00  0.000E+00     1      0 -8.262E-01  4.814E-01  2.925E-01  1.400E+01  1.000E+00  0.000E+00
-      7  0.000E+00 -4.000E+00  0.000E+00     1      0  3.703E-02  9.959E-01  8.298E-02  1.400E+01  1.000E+00  0.000E+00
-      8  0.000E+00 -4.000E+00  0.000E+00     1      0 -4.714E-01 -6.124E-01 -6.346E-01  1.400E+01  1.000E+00  0.000E+00
-      9  0.000E+00 -4.000E+00  0.000E+00     1      0  4.995E-01 -1.108E-01  8.592E-01  1.400E+01  1.000E+00  0.000E+00
-     10 -4.000E+00  0.000E+00  0.000E+00     1      0 -4.993E-01 -5.038E-01 -7.050E-01  1.400E+01  1.000E+00  0.000E+00
-     11 -4.000E+00 -4.000E+00  0.000E+00     1      0 -4.723E-01  5.705E-01  6.719E-01  1.400E+01  1.000E+00  0.000E+00
- warning.  the source point is not in the source cell.                 
- nps =          11     nrn =                   6                                      
+      5 -4.000E+00  0.000E+00  0.000E+00        1          0  5.861E-01  1.496E-01 -7.963E-01  1.400E+01  1.000E+00  0.000E+00
+      6 -4.000E+00  0.000E+00  0.000E+00        1          0 -8.262E-01  4.814E-01  2.925E-01  1.400E+01  1.000E+00  0.000E+00
+      7  0.000E+00 -4.000E+00  0.000E+00        1          0  3.703E-02  9.959E-01  8.298E-02  1.400E+01  1.000E+00  0.000E+00
+      8  0.000E+00 -4.000E+00  0.000E+00        1          0 -4.714E-01 -6.124E-01 -6.346E-01  1.400E+01  1.000E+00  0.000E+00
+      9  0.000E+00 -4.000E+00  0.000E+00        1          0  4.995E-01 -1.108E-01  8.592E-01  1.400E+01  1.000E+00  0.000E+00
+     10 -4.000E+00  0.000E+00  0.000E+00        1          0 -4.993E-01 -5.038E-01 -7.050E-01  1.400E+01  1.000E+00  0.000E+00
+     11 -4.000E+00 -4.000E+00  0.000E+00        1          0 -4.723E-01  5.705E-01  6.719E-01  1.400E+01  1.000E+00  0.000E+00
 1     event log for lost particle no.   2          nps =          11        ijk =      148844717761569
 
         cell     x         y         z         u         v         w       erg      wgt                          nch nrn
@@ -272,8 +268,8 @@
  source    1 -4.000+00 -4.000+00  0.000+00 -4.723-01  5.705-01  6.719-01 1.400+01 1.000+00   particle= neutron       6                   
 1   lost particle no.  2     no intersection found in subroutine track     history no.          11
 
- the neutron  currently being tracked thinks it is in cell    1.
- actually it is in cell    5.
+ the neutron  currently being tracked thinks it is in cell        1.
+ actually it is in cell        5.
 
  x,y,z coordinates:         -4.00000E+00   -4.00000E+00    0.00000E+00
  u,v,w direction cosines:   -4.72340E-01    5.70511E-01    6.71872E-01
@@ -286,11 +282,9 @@
 
 
 
-     12 -4.000E+00  0.000E+00  0.000E+00     1      0 -8.354E-03  9.954E-01  9.552E-02  1.400E+01  1.000E+00  0.000E+00
-     13 -4.000E+00  0.000E+00  0.000E+00     1      0  1.374E-01  3.418E-02  9.899E-01  1.400E+01  1.000E+00  0.000E+00
-     14 -4.000E+00 -4.000E+00  0.000E+00     1      0  5.151E-01 -8.011E-02  8.534E-01  1.400E+01  1.000E+00  0.000E+00
- warning.  the source point is not in the source cell.                 
- nps =          14     nrn =                   4                                      
+     12 -4.000E+00  0.000E+00  0.000E+00        1          0 -8.354E-03  9.954E-01  9.552E-02  1.400E+01  1.000E+00  0.000E+00
+     13 -4.000E+00  0.000E+00  0.000E+00        1          0  1.374E-01  3.418E-02  9.899E-01  1.400E+01  1.000E+00  0.000E+00
+     14 -4.000E+00 -4.000E+00  0.000E+00        1          0  5.151E-01 -8.011E-02  8.534E-01  1.400E+01  1.000E+00  0.000E+00
 1     event log for lost particle no.   3          nps =          14        ijk =      265047540679861
 
         cell     x         y         z         u         v         w       erg      wgt                          nch nrn
@@ -298,8 +292,8 @@
  source    1 -4.000+00 -4.000+00  0.000+00  5.151-01 -8.011-02  8.534-01 1.400+01 1.000+00   particle= neutron       4                   
 1   lost particle no.  3     no intersection found in subroutine track     history no.          14
 
- the neutron  currently being tracked thinks it is in cell    1.
- actually it is in cell    5.
+ the neutron  currently being tracked thinks it is in cell        1.
+ actually it is in cell        5.
 
  x,y,z coordinates:         -4.00000E+00   -4.00000E+00    0.00000E+00
  u,v,w direction cosines:    5.15143E-01   -8.01068E-02    8.53353E-01
@@ -312,22 +306,20 @@
 
 
 
-     15  0.000E+00  0.000E+00  0.000E+00     1      0 -2.959E-01  2.119E-01  9.314E-01  1.400E+01  1.000E+00  0.000E+00
-     16  0.000E+00  0.000E+00  0.000E+00     1      0  1.395E-01 -9.829E-01  1.202E-01  1.400E+01  1.000E+00  0.000E+00
-     17 -4.000E+00  0.000E+00  0.000E+00     1      0 -5.034E-01 -6.179E-01  6.040E-01  1.400E+01  1.000E+00  0.000E+00
-     18  0.000E+00 -4.000E+00  0.000E+00     1      0 -4.506E-01  5.114E-01  7.317E-01  1.400E+01  1.000E+00  0.000E+00
-     19 -4.000E+00  0.000E+00  0.000E+00     1      0 -1.838E-02 -6.229E-01  7.821E-01  1.400E+01  1.000E+00  0.000E+00
-     20  0.000E+00 -4.000E+00  0.000E+00     1      0 -5.347E-01 -8.270E-01  1.736E-01  1.400E+01  1.000E+00  0.000E+00
-     21  0.000E+00  0.000E+00  0.000E+00     1      0 -5.539E-01  6.585E-01 -5.094E-01  1.400E+01  1.000E+00  0.000E+00
-     22 -4.000E+00 -4.000E+00  0.000E+00     1      0  9.244E-01  3.642E-01 -1.131E-01  1.400E+01  1.000E+00  0.000E+00
-     23  0.000E+00 -4.000E+00  0.000E+00     1      0 -6.813E-01 -5.866E-01 -4.379E-01  1.400E+01  1.000E+00  0.000E+00
-     24  0.000E+00 -4.000E+00  0.000E+00     1      0  8.710E-01  1.299E-01  4.739E-01  1.400E+01  1.000E+00  0.000E+00
-     25  0.000E+00  0.000E+00  0.000E+00     1      0 -9.111E-01 -9.012E-03 -4.122E-01  1.400E+01  1.000E+00  0.000E+00
-     26 -4.000E+00 -4.000E+00  0.000E+00     1      0  2.244E-01  9.723E-01  6.497E-02  1.400E+01  1.000E+00  0.000E+00
-     27  0.000E+00  0.000E+00  0.000E+00     1      0 -3.163E-01 -9.343E-01 -1.645E-01  1.400E+01  1.000E+00  0.000E+00
-     28 -4.000E+00 -4.000E+00  0.000E+00     1      0  1.472E-01 -9.514E-01  2.705E-01  1.400E+01  1.000E+00  0.000E+00
- warning.  the source point is not in the source cell.                 
- nps =          28     nrn =                   4                                      
+     15  0.000E+00  0.000E+00  0.000E+00        1          0 -2.959E-01  2.119E-01  9.314E-01  1.400E+01  1.000E+00  0.000E+00
+     16  0.000E+00  0.000E+00  0.000E+00        1          0  1.395E-01 -9.829E-01  1.202E-01  1.400E+01  1.000E+00  0.000E+00
+     17 -4.000E+00  0.000E+00  0.000E+00        1          0 -5.034E-01 -6.179E-01  6.040E-01  1.400E+01  1.000E+00  0.000E+00
+     18  0.000E+00 -4.000E+00  0.000E+00        1          0 -4.506E-01  5.114E-01  7.317E-01  1.400E+01  1.000E+00  0.000E+00
+     19 -4.000E+00  0.000E+00  0.000E+00        1          0 -1.838E-02 -6.229E-01  7.821E-01  1.400E+01  1.000E+00  0.000E+00
+     20  0.000E+00 -4.000E+00  0.000E+00        1          0 -5.347E-01 -8.270E-01  1.736E-01  1.400E+01  1.000E+00  0.000E+00
+     21  0.000E+00  0.000E+00  0.000E+00        1          0 -5.539E-01  6.585E-01 -5.094E-01  1.400E+01  1.000E+00  0.000E+00
+     22 -4.000E+00 -4.000E+00  0.000E+00        1          0  9.244E-01  3.642E-01 -1.131E-01  1.400E+01  1.000E+00  0.000E+00
+     23  0.000E+00 -4.000E+00  0.000E+00        1          0 -6.813E-01 -5.866E-01 -4.379E-01  1.400E+01  1.000E+00  0.000E+00
+     24  0.000E+00 -4.000E+00  0.000E+00        1          0  8.710E-01  1.299E-01  4.739E-01  1.400E+01  1.000E+00  0.000E+00
+     25  0.000E+00  0.000E+00  0.000E+00        1          0 -9.111E-01 -9.012E-03 -4.122E-01  1.400E+01  1.000E+00  0.000E+00
+     26 -4.000E+00 -4.000E+00  0.000E+00        1          0  2.244E-01  9.723E-01  6.497E-02  1.400E+01  1.000E+00  0.000E+00
+     27  0.000E+00  0.000E+00  0.000E+00        1          0 -3.163E-01 -9.343E-01 -1.645E-01  1.400E+01  1.000E+00  0.000E+00
+     28 -4.000E+00 -4.000E+00  0.000E+00        1          0  1.472E-01 -9.514E-01  2.705E-01  1.400E+01  1.000E+00  0.000E+00
 1     event log for lost particle no.   4          nps =          28        ijk =       63568505873773
 
         cell     x         y         z         u         v         w       erg      wgt                          nch nrn
@@ -335,8 +327,8 @@
  source    1 -4.000+00 -4.000+00  0.000+00  1.472-01 -9.514-01  2.705-01 1.400+01 1.000+00   particle= neutron       4                   
 1   lost particle no.  4     no intersection found in subroutine track     history no.          28
 
- the neutron  currently being tracked thinks it is in cell    1.
- actually it is in cell    5.
+ the neutron  currently being tracked thinks it is in cell        1.
+ actually it is in cell        5.
 
  x,y,z coordinates:         -4.00000E+00   -4.00000E+00    0.00000E+00
  u,v,w direction cosines:    1.47230E-01   -9.51403E-01    2.70474E-01
@@ -349,9 +341,7 @@
 
 
 
-     29 -4.000E+00 -4.000E+00  0.000E+00     1      0 -3.449E-01 -7.183E-01 -6.043E-01  1.400E+01  1.000E+00  0.000E+00
- warning.  the source point is not in the source cell.                 
- nps =          29     nrn =                   4                                      
+     29 -4.000E+00 -4.000E+00  0.000E+00        1          0 -3.449E-01 -7.183E-01 -6.043E-01  1.400E+01  1.000E+00  0.000E+00
 1     event log for lost particle no.   5          nps =          29        ijk =       89829390243081
 
         cell     x         y         z         u         v         w       erg      wgt                          nch nrn
@@ -359,8 +349,8 @@
  source    1 -4.000+00 -4.000+00  0.000+00 -3.449-01 -7.183-01 -6.043-01 1.400+01 1.000+00   particle= neutron       4                   
 1   lost particle no.  5     no intersection found in subroutine track     history no.          29
 
- the neutron  currently being tracked thinks it is in cell    1.
- actually it is in cell    5.
+ the neutron  currently being tracked thinks it is in cell        1.
+ actually it is in cell        5.
 
  x,y,z coordinates:         -4.00000E+00   -4.00000E+00    0.00000E+00
  u,v,w direction cosines:   -3.44925E-01   -7.18261E-01   -6.04258E-01
@@ -373,9 +363,7 @@
 
 
 
-     30 -4.000E+00 -4.000E+00  0.000E+00     1      0 -5.702E-01  5.651E-01 -5.963E-01  1.400E+01  1.000E+00  0.000E+00
- warning.  the source point is not in the source cell.                 
- nps =          30     nrn =                   4                                      
+     30 -4.000E+00 -4.000E+00  0.000E+00        1          0 -5.702E-01  5.651E-01 -5.963E-01  1.400E+01  1.000E+00  0.000E+00
 1     event log for lost particle no.   6          nps =          30        ijk =      238733255192053
 
         cell     x         y         z         u         v         w       erg      wgt                          nch nrn
@@ -383,8 +371,8 @@
  source    1 -4.000+00 -4.000+00  0.000+00 -5.702-01  5.651-01 -5.963-01 1.400+01 1.000+00   particle= neutron       4                   
 1   lost particle no.  6     no intersection found in subroutine track     history no.          30
 
- the neutron  currently being tracked thinks it is in cell    1.
- actually it is in cell    5.
+ the neutron  currently being tracked thinks it is in cell        1.
+ actually it is in cell        5.
 
  x,y,z coordinates:         -4.00000E+00   -4.00000E+00    0.00000E+00
  u,v,w direction cosines:   -5.70193E-01    5.65117E-01   -5.96257E-01
@@ -397,10 +385,8 @@
 
 
 
-     31  0.000E+00 -4.000E+00  0.000E+00     1      0  5.991E-01  2.347E-02  8.003E-01  1.400E+01  1.000E+00  0.000E+00
-     32 -4.000E+00 -4.000E+00  0.000E+00     1      0  5.141E-01 -6.626E-01  5.447E-01  1.400E+01  1.000E+00  0.000E+00
- warning.  the source point is not in the source cell.                 
- nps =          32     nrn =                   4                                      
+     31  0.000E+00 -4.000E+00  0.000E+00        1          0  5.991E-01  2.347E-02  8.003E-01  1.400E+01  1.000E+00  0.000E+00
+     32 -4.000E+00 -4.000E+00  0.000E+00        1          0  5.141E-01 -6.626E-01  5.447E-01  1.400E+01  1.000E+00  0.000E+00
 1     event log for lost particle no.   7          nps =          32        ijk =       12633312475069
 
         cell     x         y         z         u         v         w       erg      wgt                          nch nrn
@@ -408,8 +394,8 @@
  source    1 -4.000+00 -4.000+00  0.000+00  5.141-01 -6.626-01  5.447-01 1.400+01 1.000+00   particle= neutron       4                   
 1   lost particle no.  7     no intersection found in subroutine track     history no.          32
 
- the neutron  currently being tracked thinks it is in cell    1.
- actually it is in cell    5.
+ the neutron  currently being tracked thinks it is in cell        1.
+ actually it is in cell        5.
 
  x,y,z coordinates:         -4.00000E+00   -4.00000E+00    0.00000E+00
  u,v,w direction cosines:    5.14077E-01   -6.62579E-01    5.44715E-01
@@ -422,15 +408,13 @@
 
 
 
-     33 -4.000E+00 -4.000E+00  0.000E+00     1      0  9.767E-01 -2.074E-01  5.564E-02  1.400E+01  1.000E+00  0.000E+00
-     34  0.000E+00 -4.000E+00  0.000E+00     1      0  4.302E-01  2.974E-01 -8.523E-01  1.400E+01  1.000E+00  0.000E+00
-     35  0.000E+00  0.000E+00  0.000E+00     1      0  8.995E-01  4.352E-01 -3.994E-02  1.400E+01  1.000E+00  0.000E+00
-     36 -4.000E+00 -4.000E+00  0.000E+00     1      0  9.302E-01 -2.691E-02  3.660E-01  1.400E+01  1.000E+00  0.000E+00
-     37 -4.000E+00  0.000E+00  0.000E+00     1      0 -1.867E-01  9.756E-01 -1.155E-01  1.400E+01  1.000E+00  0.000E+00
-     38  0.000E+00 -4.000E+00  0.000E+00     1      0  1.134E-01 -8.691E-01  4.815E-01  1.400E+01  1.000E+00  0.000E+00
-     39 -4.000E+00 -4.000E+00  0.000E+00     1      0 -1.946E-01 -9.777E-01 -7.886E-02  1.400E+01  1.000E+00  0.000E+00
- warning.  the source point is not in the source cell.                 
- nps =          39     nrn =                   6                                      
+     33 -4.000E+00 -4.000E+00  0.000E+00        1          0  9.767E-01 -2.074E-01  5.564E-02  1.400E+01  1.000E+00  0.000E+00
+     34  0.000E+00 -4.000E+00  0.000E+00        1          0  4.302E-01  2.974E-01 -8.523E-01  1.400E+01  1.000E+00  0.000E+00
+     35  0.000E+00  0.000E+00  0.000E+00        1          0  8.995E-01  4.352E-01 -3.994E-02  1.400E+01  1.000E+00  0.000E+00
+     36 -4.000E+00 -4.000E+00  0.000E+00        1          0  9.302E-01 -2.691E-02  3.660E-01  1.400E+01  1.000E+00  0.000E+00
+     37 -4.000E+00  0.000E+00  0.000E+00        1          0 -1.867E-01  9.756E-01 -1.155E-01  1.400E+01  1.000E+00  0.000E+00
+     38  0.000E+00 -4.000E+00  0.000E+00        1          0  1.134E-01 -8.691E-01  4.815E-01  1.400E+01  1.000E+00  0.000E+00
+     39 -4.000E+00 -4.000E+00  0.000E+00        1          0 -1.946E-01 -9.777E-01 -7.886E-02  1.400E+01  1.000E+00  0.000E+00
 1     event log for lost particle no.   8          nps =          39        ijk =      221711733484049
 
         cell     x         y         z         u         v         w       erg      wgt                          nch nrn
@@ -438,8 +422,8 @@
  source    1 -4.000+00 -4.000+00  0.000+00 -1.946-01 -9.777-01 -7.886-02 1.400+01 1.000+00   particle= neutron       6                   
 1   lost particle no.  8     no intersection found in subroutine track     history no.          39
 
- the neutron  currently being tracked thinks it is in cell    1.
- actually it is in cell    5.
+ the neutron  currently being tracked thinks it is in cell        1.
+ actually it is in cell        5.
 
  x,y,z coordinates:         -4.00000E+00   -4.00000E+00    0.00000E+00
  u,v,w direction cosines:   -1.94577E-01   -9.77712E-01   -7.88569E-02
@@ -452,10 +436,8 @@
 
 
 
-     40 -4.000E+00  0.000E+00  0.000E+00     1      0  1.886E-01 -9.701E-01  1.529E-01  1.400E+01  1.000E+00  0.000E+00
-     41 -4.000E+00 -4.000E+00  0.000E+00     1      0  8.902E-01 -2.416E-01  3.863E-01  1.400E+01  1.000E+00  0.000E+00
- warning.  the source point is not in the source cell.                 
- nps =          41     nrn =                   4                                      
+     40 -4.000E+00  0.000E+00  0.000E+00        1          0  1.886E-01 -9.701E-01  1.529E-01  1.400E+01  1.000E+00  0.000E+00
+     41 -4.000E+00 -4.000E+00  0.000E+00        1          0  8.902E-01 -2.416E-01  3.863E-01  1.400E+01  1.000E+00  0.000E+00
 1     event log for lost particle no.   9          nps =          41        ijk =      254775167357497
 
         cell     x         y         z         u         v         w       erg      wgt                          nch nrn
@@ -463,8 +445,8 @@
  source    1 -4.000+00 -4.000+00  0.000+00  8.902-01 -2.416-01  3.863-01 1.400+01 1.000+00   particle= neutron       4                   
 1   lost particle no.  9     no intersection found in subroutine track     history no.          41
 
- the neutron  currently being tracked thinks it is in cell    1.
- actually it is in cell    5.
+ the neutron  currently being tracked thinks it is in cell        1.
+ actually it is in cell        5.
 
  x,y,z coordinates:         -4.00000E+00   -4.00000E+00    0.00000E+00
  u,v,w direction cosines:    8.90164E-01   -2.41562E-01    3.86338E-01
@@ -477,9 +459,7 @@
 
 
 
-     42 -4.000E+00 -4.000E+00  0.000E+00     1      0  5.039E-01 -1.460E-01  8.513E-01  1.400E+01  1.000E+00  0.000E+00
- warning.  the source point is not in the source cell.                 
- nps =          42     nrn =                   4                                      
+     42 -4.000E+00 -4.000E+00  0.000E+00        1          0  5.039E-01 -1.460E-01  8.513E-01  1.400E+01  1.000E+00  0.000E+00
 1     event log for lost particle no.  10          nps =          42        ijk =      109429111578981
 
         cell     x         y         z         u         v         w       erg      wgt                          nch nrn
@@ -487,8 +467,8 @@
  source    1 -4.000+00 -4.000+00  0.000+00  5.039-01 -1.460-01  8.513-01 1.400+01 1.000+00   particle= neutron       4                   
 1   lost particle no. 10     no intersection found in subroutine track     history no.          42
 
- the neutron  currently being tracked thinks it is in cell    1.
- actually it is in cell    5.
+ the neutron  currently being tracked thinks it is in cell        1.
+ actually it is in cell        5.
 
  x,y,z coordinates:         -4.00000E+00   -4.00000E+00    0.00000E+00
  u,v,w direction cosines:    5.03943E-01   -1.45999E-01    8.51309E-01
@@ -538,7 +518,7 @@
 
  range of sampled source weights = 1.0000E+00 to 1.0000E+00
 
- source efficiency = 1.0000  in cell     1
+ source efficiency = 1.0000  in cell        1
 
      10 particles got lost.
 1source distribution frequency tables                                                                   print table 170
@@ -568,14 +548,14 @@
  total                     1.2381E+00   1.0000E+00   1.2381E+00         1.2381E+00   1.0000E+00   1.2381E+00
 1neutron  activity in each cell                                                                         print table 126
 
-                 tracks     population   collisions   collisions     number        flux        average      average
-        cell    entering                               * weight     weighted     weighted   track weight   track mfp
-                                                    (per history)    energy       energy     (relative)      (cm)
+                       tracks     population   collisions   collisions     number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                          (per history)    energy       energy     (relative)      (cm)
 
-     1     1          52           52           84    1.6134E+00   4.4633E-03   9.8272E+00   9.4917E-01   7.4431E+00
-     3     5          32           32            0    0.0000E+00   6.3669E-02   1.1551E+01   9.8163E-01   0.0000E+00
+        1        1          52           52           84    1.6134E+00   4.4633E-03   9.8272E+00   9.4917E-01   7.4431E+00
+        3        5          32           32            0    0.0000E+00   6.3669E-02   1.1551E+01   9.8163E-01   0.0000E+00
 
-     total            84           84           84    1.6134E+00
+           total            84           84           84    1.6134E+00
 1neutron  weight balance in each cell                                                                   print table 130
 
         cell index        1           3
@@ -616,22 +596,22 @@
  
 1neutron activity of each nuclide in each cell, per source particle                                     print table 140
 
-   cell  cell   nuclides     atom       total  collisions   wgt. lost   wgt. gain   wgt. gain     photons  photon wgt  avg photon
-  index  name            fraction  collisions    * weight  to capture  by fission   by (n,xn)    produced    produced      energy
+      cell     cell   nuclides     atom       total  collisions   wgt. lost   wgt. gain   wgt. gain     photons  photon wgt  avg photon
+     index     name            fraction  collisions    * weight  to capture  by fission   by (n,xn)    produced    produced      energy
 
-      1     1   1001.60c 6.67E-01          71  1.3431E+00  8.5821E-03  0.0000E+00  0.0000E+00           0  0.0000E+00  0.0000E+00
-                8016.40c 3.33E-01          13  2.7028E-01  9.7168E-03  0.0000E+00  0.0000E+00           0  0.0000E+00  0.0000E+00
+         1        1   1001.60c 6.67E-01          71  1.3431E+00  8.5821E-03  0.0000E+00  0.0000E+00           0  0.0000E+00  0.0000E+00
+                      8016.40c 3.33E-01          13  2.7028E-01  9.7168E-03  0.0000E+00  0.0000E+00           0  0.0000E+00  0.0000E+00
 
-        total                              84  1.6134E+00  1.8299E-02  0.0000E+00  0.0000E+00           0  0.0000E+00  0.0000E+00
+              total                              84  1.6134E+00  1.8299E-02  0.0000E+00  0.0000E+00           0  0.0000E+00  0.0000E+00
 
 
-  total over all cells by nuclide       total  collisions   wgt. lost   wgt. gain   wgt. gain     photons  photon wgt  avg photon
-                                   collisions    * weight  to capture  by fission   by (n,xn)    produced    produced      energy
+        total over all cells by nuclide       total  collisions   wgt. lost   wgt. gain   wgt. gain     photons  photon wgt  avg photon
+                                         collisions    * weight  to capture  by fission   by (n,xn)    produced    produced      energy
 
-                1001.60c                   71  1.3431E+00  8.5821E-03  0.0000E+00  0.0000E+00           0  0.0000E+00  0.0000E+00
-                8016.40c                   13  2.7028E-01  9.7168E-03  0.0000E+00  0.0000E+00           0  0.0000E+00  0.0000E+00
+                      1001.60c                   71  1.3431E+00  8.5821E-03  0.0000E+00  0.0000E+00           0  0.0000E+00  0.0000E+00
+                      8016.40c                   13  2.7028E-01  9.7168E-03  0.0000E+00  0.0000E+00           0  0.0000E+00  0.0000E+00
 
-1tally   4        nps =          42
+1tally        4        nps =          42
            tally type 4    track length estimate of particle flux.      units   1/cm**2   
            tally for  neutrons 
 
@@ -639,7 +619,7 @@
                    cell:       1                                                                                   
                          5.23571E+02
  
- cell  1                                                                                                               
+ cell  1                                                                                                                               
                  7.54085E-03 0.1794
 
 
@@ -648,7 +628,7 @@
 
  ===================================================================================================================================
 
-           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally   4
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally        4
 
  tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
  behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
@@ -662,7 +642,7 @@
 
  warning.  the tally in the tally fluctuation chart bin did not pass  3 of the 10 statistical checks.
 
-1analysis of the results in the tally fluctuation chart bin (tfc) for tally   4 with nps =          42  print table 160
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally        4 with nps=          42 print table 160
 
 
  normed average tally per history  = 7.54085E-03          unnormed average tally per history  = 3.94817E+00
@@ -692,7 +672,7 @@
 
  fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (0.000E+00)*( 8.599E-01)**2 = (0.000E+00)*(7.395E-01) = 0.000E+00
 
-1unnormed tally density for tally   4            nonzero tally mean(m) = 5.182E+00   nps =          42  print table 161
+1unnormed tally density for tally        4          nonzero tally mean(m) = 5.182E+00   nps =          42  print table 161
 
  abscissa              ordinate   log plot of tally probability density function in tally fluctuation chart bin(d=decade,slope= 0.0)
   tally  number num den log den:d---------------------------------------------------d-----------------------------------------------
@@ -714,30 +694,30 @@
   total      32 7.62-01         d---------------------------------------------------d-----------------------------------------------
 
 
- cumulative tally number for tally   4           nonzero tally mean(m) = 5.182E+00   nps =          42  print table 162
+ cumulative tally number for tally        4         nonzero tally mean(m) = 5.182E+00   nps =          42  print table 162
 
    abscissa     cum   ordinate    plot of the cumulative number of tallies in the tally fluctuation chart bin from 0 to 100 percent
     tally      number  cum pct:--------10--------20--------30--------40--------50--------60--------70--------80--------90-------100
  1.25893E+00        3    9.375|*********|         |         |         |         |         |         |         |         |         |
- 1.58489E+00        4   12.500|*********|***      |         |         |         |         |         |         |         |         |
- 1.99526E+00        7   21.875|*********|*********|**       |         |         |         |         |         |         |         |
- 2.51189E+00        8   25.000|*********|*********|*****    |         |         |         |         |         |         |         |
+ 1.58490E+00        4   12.500|*********|***      |         |         |         |         |         |         |         |         |
+ 1.99527E+00        7   21.875|*********|*********|**       |         |         |         |         |         |         |         |
+ 2.51188E+00        8   25.000|*********|*********|*****    |         |         |         |         |         |         |         |
  3.16228E+00       11   34.375|*********|*********|*********|****     |         |         |         |         |         |         |
- 3.98107E+00       14   43.750|*********|*********|*********|*********|****     |         |         |         |         |         |
- 5.01187E+00       23   71.875|*********|*********|*********|*********|*********|*********|*********|**       |         |         |
- 6.30957E+00       26   81.250|mmmmmmmmm|mmmmmmmmm|mmmmmmmmm|mmmmmmmmm|mmmmmmmmm|mmmmmmmmm|mmmmmmmmm|mmmmmmmmm|m        |         |
+ 3.98108E+00       14   43.750|*********|*********|*********|*********|****     |         |         |         |         |         |
+ 5.01188E+00       23   71.875|*********|*********|*********|*********|*********|*********|*********|**       |         |         |
+ 6.30959E+00       26   81.250|mmmmmmmmm|mmmmmmmmm|mmmmmmmmm|mmmmmmmmm|mmmmmmmmm|mmmmmmmmm|mmmmmmmmm|mmmmmmmmm|m        |         |
  7.94328E+00       26   81.250|*********|*********|*********|*********|*********|*********|*********|*********|*        |         |
  1.00000E+01       30   93.750|*********|*********|*********|*********|*********|*********|*********|*********|*********|****     |
  1.25893E+01       31   96.875|*********|*********|*********|*********|*********|*********|*********|*********|*********|*******  |
- 1.58489E+01       31   96.875|*********|*********|*********|*********|*********|*********|*********|*********|*********|*******  |
- 1.99526E+01       31   96.875|*********|*********|*********|*********|*********|*********|*********|*********|*********|*******  |
- 2.51189E+01       31   96.875|*********|*********|*********|*********|*********|*********|*********|*********|*********|*******  |
+ 1.58490E+01       31   96.875|*********|*********|*********|*********|*********|*********|*********|*********|*********|*******  |
+ 1.99527E+01       31   96.875|*********|*********|*********|*********|*********|*********|*********|*********|*********|*******  |
+ 2.51188E+01       31   96.875|*********|*********|*********|*********|*********|*********|*********|*********|*********|*******  |
  3.16228E+01       32  100.000|*********|*********|*********|*********|*********|*********|*********|*********|*********|*********|
     total          32  100.000:--------10--------20--------30--------40--------50--------60--------70--------80--------90-------100
 
 
 
- cumulative unnormed tally for tally   4         nonzero tally mean(m) = 5.182E+00   nps =        42    print table 162
+ cumulative unnormed tally for tally        4         nonzero tally mean(m) = 5.182E+00   nps =        42  print table 162
 
   abscissa     cum    ordinate                plot of the cumulative tally in the tally fluctuation chart bin from 0 to 100 percent
    tally    tally/nps  cum pct:--------10--------20--------30--------40--------50--------60--------70--------80--------90-------100
@@ -763,22 +743,22 @@
 
  tally   result of statistical checks for the tfc bin (the first check not passed is listed) and error magnitude check for all bins
 
-     4   missed  3 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
+        4   missed  3 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.1 for nonpoint detector tallies     
          missed all bin error check:     1 tally bins had     0 bins with zeros and     1 bins with relative errors exceeding 0.10
 
 
  the 10 statistical checks are only for the tally fluctuation chart bin and do not apply to other tally bins.
 
- warning.     1 of the   1 tally fluctuation chart bins did not pass all 10 statistical checks.
- warning.     1 of the   1 tallies had bins with relative errors greater than recommended.
-1tally fluctuation charts                         
+ warning.       1 of the     1 tally fluctuation chart bins did not pass all 10 statistical checks.
+ warning.       1 of the     1 tallies had bins with relative errors greater than recommended.
+1tally fluctuation charts                              
 
-                       tally    4
+                            tally        4
           nps      mean     error   vov  slope    fom
            42   7.5409E-03 0.1794 0.3298  0.0        
  tally data written to file inp67m
 
-        15 warning messages so far.
+         5 warning messages so far.
 
 
  run terminated because  10 particles got lost.
