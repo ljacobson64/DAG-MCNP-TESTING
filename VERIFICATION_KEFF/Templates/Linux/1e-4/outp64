@@ -1,78 +1,78 @@
-      1-       urrd-h2ob(10)-2-0-islc                                                          
-      2-       1 0 imp:n=0                                                                     
-      3-       2 1 1 imp:n=1                                                                   
-      4-       3 2 1 imp:n=1                                                                   
-      5-       4 0 imp:n=1                                                                     
-      6-       5 0 imp:n=1                                                                     
-      7-       6 0 imp:n=1   $ implicit complement                                             
-      8-                                                                                       
-      9-       1                                                                               
-     10-       2                                                                               
-     11-       3                                                                               
-     12-       4                                                                               
-     13-       5                                                                               
-     14-       6                                                                               
-     15-       31                                                                              
-     16-       *23                                                                             
-     17-       29                                                                              
-     18-       *21                                                                             
-     19-       28                                                                              
-     20-       33                                                                              
-     21-       30                                                                              
-     22-       *17                                                                             
-     23-       *24                                                                             
-     24-       *18                                                                             
-     25-       *22                                                                             
-     26-       *16                                                                             
-     27-       34                                                                              
-     28-       32                                                                              
-     29-       *15                                                                             
-     30-       10                                                                              
-     31-       35                                                                              
-     32-       12                                                                              
-     33-       *13                                                                             
-     34-       14                                                                              
-     35-       *20                                                                             
-     36-                                                                                       
-     37-       c  CELL CARDS                                                                   
-     38-       c 1  1  1.0  3  -1       $SEMI-INFINITE SLAB                                    
-     39-       c 2  2  1.0  1  -2       $REFLECTOR                                             
-     40-       c 3  0     (-3):(2) $OUTSIDE WORLD                                              
-     41-       c 3  0     (-3 1):(-1 2) $OUTSIDE WORLD                                         
-     42-       c                                                                               
-     43-       c  SURFACE CARDS                                                                
-     44-       c  1   px 0.460135      $Fissile boundary                                       
-     45-       c *2   px 90.347875     $Reflector boundary                                     
-     46-       c *3   px 0.0                                                                   
-     47-       c                                                                               
-     48-       c  DATA CARDS                                                                   
-     49-       c imp:n   1  1  0                                                               
-     50-       kcode   20000  1.0  100  2100                                                   
-     51-       ksrc    0.1    0.0  0.0                                                         
-     52-       m1      92250.30m 1.0                                                           
-     53-       m2      92250.31m 1.0                                                           
-     54-       mgopt f 2                                                                       
-     55-       phys:n  j 100                                                                   
-     56-       prdmp   2j -1 2                                                                 
+         1-       urrd-h2ob(10)-2-0-islc                                                          
+         2-       1  0 imp:n=0                                                                    
+         3-       2 1 1 imp:n=1                                                                   
+         4-       3 2 1 imp:n=1                                                                   
+         5-       4 0 imp:n=1                                                                     
+         6-       5 0 imp:n=1                                                                     
+         7-       6 0 imp:n=1 $ implicit complement                                               
+         8-                                                                                       
+         9-       1                                                                               
+        10-       2                                                                               
+        11-       3                                                                               
+        12-       4                                                                               
+        13-       5                                                                               
+        14-       6                                                                               
+        15-       10                                                                              
+        16-       12                                                                              
+        17-       *13                                                                             
+        18-       14                                                                              
+        19-       *15                                                                             
+        20-       *16                                                                             
+        21-       *17                                                                             
+        22-       *18                                                                             
+        23-       *21                                                                             
+        24-       *22                                                                             
+        25-       *23                                                                             
+        26-       *24                                                                             
+        27-       28                                                                              
+        28-       29                                                                              
+        29-       30                                                                              
+        30-       31                                                                              
+        31-       32                                                                              
+        32-       33                                                                              
+        33-       34                                                                              
+        34-       35                                                                              
+        35-       *20                                                                             
+        36-                                                                                       
+        37-       c  CELL CARDS                                                                   
+        38-       c 1  1  1.0  3  -1       $SEMI-INFINITE SLAB                                    
+        39-       c 2  2  1.0  1  -2       $REFLECTOR                                             
+        40-       c 3  0     (-3):(2) $OUTSIDE WORLD                                              
+        41-       c 3  0     (-3 1):(-1 2) $OUTSIDE WORLD                                         
+        42-       c                                                                               
+        43-       c  SURFACE CARDS                                                                
+        44-       c  1   px 0.460135      $Fissile boundary                                       
+        45-       c *2   px 90.347875     $Reflector boundary                                     
+        46-       c *3   px 0.0                                                                   
+        47-       c                                                                               
+        48-       c  DATA CARDS                                                                   
+        49-       c imp:n   1  1  0                                                               
+        50-       kcode   20000  1.0  100  2100                                                   
+        51-       ksrc    0.1    0.0  0.0                                                         
+        52-       m1      92250.30m 1.0                                                           
+        53-       m2      92250.31m 1.0                                                           
+        54-       mgopt f 2                                                                       
+        55-       phys:n  j 100                                                                   
+        56-       prdmp   2j -1 2                                                                 
  
-  comment.  total fission nubar data are being used.                                       
+  comment.  total fission nubar data are being used.
  
-  warning.   92250.30m and  92250.31m are both called for.                                 
+  warning.   92250.30m and  92250.31m are both called for.
  
-  warning.    2 cell densities are greater than 40 gram/cc.                                
+  warning.    2 cell densities are greater than 40 gram/cc.
 1cells                                                                                                  print table 60
 
-                      atom        gram                                     neutron                                     
-        cell  mat    density     density     volume       mass     pieces importance                                   
+                               atom        gram                                            neutron                                     
+              cell     mat    density     density     volume       mass            pieces importance                                   
 
-     1     1    0  0.00000E+00 0.00000E+00 3.24248E+06 0.00000E+00     0  0.0000E+00                                   
-     2     2    1  1.00000E+00 4.18739E+02 6.49030E+04 2.71774E+07     0  1.0000E+00                                   
-     3     3    2  1.00000E+00 4.18739E+02 1.26789E+07 5.30913E+09     0  1.0000E+00                                   
-     4     4    0  0.00000E+00 0.00000E+00 1.37436E+07 0.00000E+00     0  1.0000E+00                                   
-     5     5    0  0.00000E+00 0.00000E+00 2.64874E+07 0.00000E+00     0  1.0000E+00                                   
-     6     6    0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00     0  1.0000E+00                                   
+        1        1        0  0.00000E+00 0.00000E+00 3.24248E+06 0.00000E+00           0  0.0000E+00                                   
+        2        2        1  1.00000E+00 4.18739E+02 6.49030E+04 2.71774E+07           0  1.0000E+00                                   
+        3        3        2  1.00000E+00 4.18739E+02 1.26789E+07 5.30913E+09           0  1.0000E+00                                   
+        4        4        0  0.00000E+00 0.00000E+00 1.37436E+07 0.00000E+00           0  1.0000E+00                                   
+        5        5        0  0.00000E+00 0.00000E+00 2.64874E+07 0.00000E+00           0  1.0000E+00                                   
+        6        6        0  0.00000E+00 0.00000E+00 1.00000E+00 0.00000E+00           0  1.0000E+00                                   
 
- total                                     5.62173E+07 5.33630E+09
+ total                                               5.62173E+07 5.33630E+09
 
  ***************************************************
  * Random Number Generator  =                    1 *
@@ -92,10 +92,10 @@
                         tables from file kefflib1                                                        
 
  
-  warning.  nubar of  92250.30m may be either prompt or total.                             
+  warning.  nubar of  92250.30m may be either prompt or total.
   92250.30m      26  tables 43 and 44 of sfp URRd                                                                      
  
-  warning.  nubar of  92250.31m may be either prompt or total.                             
+  warning.  nubar of  92250.31m may be either prompt or total.
   92250.31m      26  tables 43 and 44 of sfp  H2O (b) (refl)                                                           
 
   total          52
@@ -103,6 +103,21 @@
  source distribution written to file test64.s        cycle=     0
 
          4 warning messages so far.
+
+ comment.
+ comment. entropy of the fission source distribution will be computed
+ comment.
+ comment. the mesh for source entropy is based on the site coordinates
+ comment.   using 10 x 10 x 10 =  1000  mesh cells
+ comment.
+ comment.     Xmin= -9.9999E-01     Xmax=  1.4601E+00
+ comment.     Ymin= -2.6278E+02     Ymax=  2.6281E+02
+ comment.     Zmin= -2.6271E+02     Zmax=  2.6203E+02
+ comment.
+ comment. the mesh will be automatically expanded if necessary to
+ comment.   encompass the entire fission source distribution
+ comment.
+
 1estimated keff results by cycle                                                                        print table 175
 
  cycle     1    k(collision)  1.088969    prompt removal lifetime(abs)  4.9198E+01    source points generated  21646
@@ -864,8 +879,6 @@
  rem life(abs)   2.8674E+01     2.7448E+01 0.0038     life(col/abs/tl)  3.4347E+01 0.0035   2.5463E+01 0.1413
  source points generated  20318                source_entropy  6.9295E+00
 
- source distribution written to file test64.s        cycle=   158
-
   estimator     cycle   159   ave of    59 cycles      combination         simple average    combined average     corr
  k(collision)      0.998637       1.000372 0.0005     k(col/abs)          1.000256 0.0003     1.000190 0.0003   0.2174
  k(absorption)     0.999419       1.000140 0.0003     k(abs/tk ln)        1.000276 0.0006     1.000156 0.0003   0.1385
@@ -1041,6 +1054,8 @@
  rem life(col)   2.6559E+01     2.7480E+01 0.0045     k(col/abs/tk ln)    1.000228 0.0004     1.000218 0.0003
  rem life(abs)   2.6976E+01     2.7451E+01 0.0033     life(col/abs/tl)  3.4360E+01 0.0029   2.5874E+01 0.1050
  source points generated  20138                source_entropy  6.9268E+00
+
+ source distribution written to file test64.s        cycle=   180
 
   estimator     cycle   181   ave of    81 cycles      combination         simple average    combined average     corr
  k(collision)      0.990527       1.000241 0.0005     k(col/abs)          1.000199 0.0003     1.000171 0.0003   0.2719
@@ -2122,8 +2137,6 @@
  rem life(abs)   2.8718E+01     2.7517E+01 0.0022     life(col/abs/tl)  3.4424E+01 0.0019   2.7752E+01 0.0608
  source points generated  19935                source_entropy  6.9189E+00
 
- source distribution written to file test64.s        cycle=   315
-
   estimator     cycle   316   ave of   216 cycles      combination         simple average    combined average     corr
  k(collision)      1.000507       1.000255 0.0003     k(col/abs)          1.000279 0.0002     1.000294 0.0002   0.2855
  k(absorption)     0.999202       1.000303 0.0002     k(abs/tk ln)        1.000356 0.0003     1.000313 0.0002   0.0756
@@ -2483,6 +2496,8 @@
  rem life(col)   2.8030E+01     2.7508E+01 0.0025     k(col/abs/tk ln)    1.000380 0.0002     1.000363 0.0001
  rem life(abs)   2.6766E+01     2.7522E+01 0.0020     life(col/abs/tl)  3.4429E+01 0.0017   2.7372E+01 0.0558
  source points generated  19997                source_entropy  6.9236E+00
+
+ source distribution written to file test64.s        cycle=   360
 
   estimator     cycle   361   ave of   261 cycles      combination         simple average    combined average     corr
  k(collision)      1.003018       1.000399 0.0002     k(col/abs)          1.000383 0.0002     1.000373 0.0001   0.3119
@@ -3380,8 +3395,6 @@
  rem life(abs)   2.8491E+01     2.7535E+01 0.0017     life(col/abs/tl)  3.4454E+01 0.0015   2.7047E+01 0.0460
  source points generated  19975                source_entropy  6.9300E+00
 
- source distribution written to file test64.s        cycle=   472
-
   estimator     cycle   473   ave of   373 cycles      combination         simple average    combined average     corr
  k(collision)      0.991548       1.000236 0.0002     k(col/abs)          1.000231 0.0001     1.000228 0.0001   0.3318
  k(absorption)     0.996496       1.000226 0.0001     k(abs/tk ln)        1.000294 0.0002     1.000238 0.0001   0.0836
@@ -3925,6 +3938,8 @@
  rem life(col)   2.9202E+01     2.7506E+01 0.0020     k(col/abs/tk ln)    1.000296 0.0002     1.000238 0.0001
  rem life(abs)   2.7447E+01     2.7532E+01 0.0016     life(col/abs/tl)  3.4446E+01 0.0013   2.7498E+01 0.0413
  source points generated  19890                source_entropy  6.9234E+00
+
+ source distribution written to file test64.s        cycle=   540
 
   estimator     cycle   541   ave of   441 cycles      combination         simple average    combined average     corr
  k(collision)      0.997736       1.000297 0.0002     k(col/abs)          1.000266 0.0001     1.000246 0.0001   0.3463
@@ -4629,8 +4644,6 @@
  rem life(col)   2.6369E+01     2.7506E+01 0.0018     k(col/abs/tk ln)    1.000297 0.0002     1.000222 0.0001
  rem life(abs)   2.6180E+01     2.7525E+01 0.0014     life(col/abs/tl)  3.4444E+01 0.0012   2.8046E+01 0.0365
  source points generated  20040                source_entropy  6.9259E+00
-
- source distribution written to file test64.s        cycle=   628
 
   estimator     cycle   629   ave of   529 cycles      combination         simple average    combined average     corr
  k(collision)      0.998976       1.000275 0.0002     k(col/abs)          1.000238 0.0001     1.000214 0.0001   0.3523
@@ -5368,6 +5381,8 @@
  rem life(abs)   2.7719E+01     2.7545E+01 0.0013     life(col/abs/tl)  3.4448E+01 0.0011   2.8653E+01 0.0342
  source points generated  19911                source_entropy  6.9214E+00
 
+ source distribution written to file test64.s        cycle=   720
+
   estimator     cycle   721   ave of   621 cycles      combination         simple average    combined average     corr
  k(collision)      0.998379       1.000260 0.0002     k(col/abs)          1.000273 0.0001     1.000281 0.0001   0.3620
  k(absorption)     1.004948       1.000285 0.0001     k(abs/tk ln)        1.000336 0.0002     1.000295 0.0001   0.0741
@@ -5887,8 +5902,6 @@
  rem life(col)   2.6954E+01     2.7528E+01 0.0016     k(col/abs/tk ln)    1.000315 0.0001     1.000272 0.0001
  rem life(abs)   2.7915E+01     2.7557E+01 0.0012     life(col/abs/tl)  3.4469E+01 0.0011   2.8768E+01 0.0329
  source points generated  19956                source_entropy  6.9317E+00
-
- source distribution written to file test64.s        cycle=   785
 
   estimator     cycle   786   ave of   686 cycles      combination         simple average    combined average     corr
  k(collision)      0.998541       1.000277 0.0002     k(col/abs)          1.000272 0.0001     1.000269 0.0001   0.3653
@@ -6810,6 +6823,8 @@
  rem life(abs)   2.9089E+01     2.7570E+01 0.0012     life(col/abs/tl)  3.4483E+01 0.0010   2.8908E+01 0.0308
  source points generated  20020                source_entropy  6.9277E+00
 
+ source distribution written to file test64.s        cycle=   900
+
   estimator     cycle   901   ave of   801 cycles      combination         simple average    combined average     corr
  k(collision)      0.992692       1.000217 0.0001     k(col/abs)          1.000233 0.0001     1.000244 0.0001   0.3615
  k(absorption)     0.998592       1.000250 0.0001     k(abs/tk ln)        1.000290 0.0001     1.000257 0.0001   0.0774
@@ -7137,8 +7152,6 @@
  rem life(col)   2.6459E+01     2.7550E+01 0.0015     k(col/abs/tk ln)    1.000283 0.0001     1.000285 0.0001
  rem life(abs)   2.7182E+01     2.7573E+01 0.0011     life(col/abs/tl)  3.4483E+01 0.0010   2.9273E+01 0.0294
  source points generated  19884                source_entropy  6.9224E+00
-
- source distribution written to file test64.s        cycle=   941
 
   estimator     cycle   942   ave of   842 cycles      combination         simple average    combined average     corr
  k(collision)      0.999406       1.000247 0.0001     k(col/abs)          1.000268 0.0001     1.000282 0.0001   0.3600
@@ -8292,6 +8305,8 @@
  rem life(abs)   2.8934E+01     2.7586E+01 0.0011     life(col/abs/tl)  3.4506E+01 0.0009   2.9268E+01 0.0275
  source points generated  20274                source_entropy  6.9317E+00
 
+ source distribution written to file test64.s        cycle=  1085
+
   estimator     cycle  1086   ave of   986 cycles      combination         simple average    combined average     corr
  k(collision)      1.008567       1.000299 0.0001     k(col/abs)          1.000293 0.0001     1.000288 0.0001   0.3437
  k(absorption)     0.999668       1.000286 0.0001     k(abs/tk ln)        1.000281 0.0001     1.000285 0.0001   0.1021
@@ -8435,8 +8450,6 @@
  rem life(col)   2.7384E+01     2.7586E+01 0.0014     k(col/abs/tk ln)    1.000303 0.0001     1.000287 0.0001
  rem life(abs)   2.8373E+01     2.7588E+01 0.0010     life(col/abs/tl)  3.4511E+01 0.0009   2.9276E+01 0.0273
  source points generated  19890                source_entropy  6.9286E+00
-
- source distribution written to file test64.s        cycle=  1103
 
   estimator     cycle  1104   ave of  1004 cycles      combination         simple average    combined average     corr
  k(collision)      0.996709       1.000319 0.0001     k(col/abs)          1.000299 0.0001     1.000285 0.0001   0.3410
@@ -9782,6 +9795,8 @@
  rem life(abs)   2.8196E+01     2.7595E+01 0.0010     life(col/abs/tl)  3.4519E+01 0.0008   2.9242E+01 0.0250
  source points generated  20113                source_entropy  6.9203E+00
 
+ source distribution written to file test64.s        cycle=  1271
+
   estimator     cycle  1272   ave of  1172 cycles      combination         simple average    combined average     corr
  k(collision)      1.000710       1.000336 0.0001     k(col/abs)          1.000288 0.0001     1.000256 0.0001   0.3265
  k(absorption)     1.002592       1.000239 0.0001     k(abs/tk ln)        1.000242 0.0001     1.000239 0.0001   0.1001
@@ -9853,8 +9868,6 @@
  rem life(col)   2.6196E+01     2.7598E+01 0.0013     k(col/abs/tk ln)    1.000273 0.0001     1.000246 0.0001
  rem life(abs)   2.6893E+01     2.7591E+01 0.0010     life(col/abs/tl)  3.4516E+01 0.0008   2.9298E+01 0.0249
  source points generated  19915                source_entropy  6.9252E+00
-
- source distribution written to file test64.s        cycle=  1280
 
   estimator     cycle  1281   ave of  1181 cycles      combination         simple average    combined average     corr
  k(collision)      1.001891       1.000343 0.0001     k(col/abs)          1.000288 0.0001     1.000252 0.0001   0.3279
@@ -11272,6 +11285,8 @@
  rem life(abs)   2.6920E+01     2.7612E+01 0.0009     life(col/abs/tl)  3.4537E+01 0.0008   2.9208E+01 0.0235
  source points generated  19964                source_entropy  6.9253E+00
 
+ source distribution written to file test64.s        cycle=  1457
+
   estimator     cycle  1458   ave of  1358 cycles      combination         simple average    combined average     corr
  k(collision)      0.995514       1.000391 0.0001     k(col/abs)          1.000320 0.0001     1.000274 0.0001   0.3391
  k(absorption)     0.995239       1.000250 0.0001     k(abs/tk ln)        1.000272 0.0001     1.000253 0.0001   0.1150
@@ -11399,8 +11414,6 @@
  rem life(col)   2.8365E+01     2.7621E+01 0.0012     k(col/abs/tk ln)    1.000300 0.0001     1.000267 0.0001
  rem life(abs)   2.8163E+01     2.7608E+01 0.0009     life(col/abs/tl)  3.4534E+01 0.0008   2.9224E+01 0.0232
  source points generated  20009                source_entropy  6.9241E+00
-
- source distribution written to file test64.s        cycle=  1473
 
   estimator     cycle  1474   ave of  1374 cycles      combination         simple average    combined average     corr
  k(collision)      1.001407       1.000384 0.0001     k(col/abs)          1.000317 0.0001     1.000274 0.0001   0.3408
@@ -12770,6 +12783,8 @@
  rem life(abs)   2.7673E+01     2.7627E+01 0.0009     life(col/abs/tl)  3.4552E+01 0.0007   2.9499E+01 0.0222
  source points generated  20069                source_entropy  6.9294E+00
 
+ source distribution written to file test64.s        cycle=  1644
+
   estimator     cycle  1645   ave of  1545 cycles      combination         simple average    combined average     corr
  k(collision)      1.002930       1.000417 0.0001     k(col/abs)          1.000344 0.0001     1.000297 0.0001   0.3375
  k(absorption)     1.000380       1.000272 0.0001     k(abs/tk ln)        1.000272 0.0001     1.000272 0.0001   0.1086
@@ -13177,8 +13192,6 @@
  rem life(col)   2.6604E+01     2.7635E+01 0.0011     k(col/abs/tk ln)    1.000302 0.0001     1.000278 0.0001
  rem life(abs)   2.7953E+01     2.7626E+01 0.0008     life(col/abs/tl)  3.4550E+01 0.0007   2.9538E+01 0.0218
  source points generated  19812                source_entropy  6.9288E+00
-
- source distribution written to file test64.s        cycle=  1695
 
   estimator     cycle  1696   ave of  1596 cycles      combination         simple average    combined average     corr
  k(collision)      0.995949       1.000379 0.0001     k(col/abs)          1.000320 0.0001     1.000281 0.0001   0.3395
@@ -14260,6 +14273,8 @@
  rem life(abs)   2.7052E+01     2.7630E+01 0.0008     life(col/abs/tl)  3.4549E+01 0.0007   2.9565E+01 0.0208
  source points generated  19892                source_entropy  6.9281E+00
 
+ source distribution written to file test64.s        cycle=  1830
+
   estimator     cycle  1831   ave of  1731 cycles      combination         simple average    combined average     corr
  k(collision)      0.997172       1.000399 0.0001     k(col/abs)          1.000340 0.0001     1.000302 0.0001   0.3325
  k(absorption)     0.999315       1.000281 0.0001     k(abs/tk ln)        1.000274 0.0001     1.000280 0.0001   0.1169
@@ -15132,8 +15147,6 @@
  rem life(abs)   2.7400E+01     2.7629E+01 0.0008     life(col/abs/tl)  3.4551E+01 0.0007   2.9610E+01 0.0202
  source points generated  19794                source_entropy  6.9324E+00
 
- source distribution written to file test64.s        cycle=  1939
-
   estimator     cycle  1940   ave of  1840 cycles      combination         simple average    combined average     corr
  k(collision)      1.006109       1.000397 0.0001     k(col/abs)          1.000329 0.0001     1.000286 0.0001   0.3302
  k(absorption)     1.001284       1.000262 0.0001     k(abs/tk ln)        1.000288 0.0001     1.000266 0.0001   0.1209
@@ -15781,6 +15794,8 @@
  rem life(col)   2.9442E+01     2.7634E+01 0.0010     k(col/abs/tk ln)    1.000324 0.0001     1.000279 0.0001
  rem life(abs)   2.7679E+01     2.7630E+01 0.0008     life(col/abs/tl)  3.4553E+01 0.0006   2.9290E+01 0.0199
  source points generated  19990                source_entropy  6.9244E+00
+
+ source distribution written to file test64.s        cycle=  2020
 
   estimator     cycle  2021   ave of  1921 cycles      combination         simple average    combined average     corr
  k(collision)      1.007619       1.000400 0.0001     k(col/abs)          1.000329 0.0001     1.000283 0.0001   0.3280
@@ -16461,17 +16476,17 @@
  range of sampled source weights = 9.2396E-01 to 1.0867E+00
 1neutron  activity in each cell                                                                         print table 126
 
-                 tracks     population   collisions   collisions     number        flux        average      average
-        cell    entering                               * weight     weighted     weighted   track weight   track mfp
-                                                    (per history)    energy       energy     (relative)      (cm)
+                       tracks     population   collisions   collisions     number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                          (per history)    energy       energy     (relative)      (cm)
 
-     2     2   101012952     40003931    170167980    4.2538E+00   2.0549E+00   5.0566E+00   9.9990E-01   9.5463E-01
-     3     3    63880576     21483504   7019109585    1.7546E+02   1.1290E+00   2.8380E+00   9.9990E-01   4.2199E+00
-     4     4           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
-     5     5           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
-     6     6           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
+        2        2   101012952     40003931    170167980    4.2538E+00   2.0549E+00   5.0566E+00   9.9990E-01   9.5463E-01
+        3        3    63880576     21483504   7019109585    1.7546E+02   1.1290E+00   2.8380E+00   9.9990E-01   4.2199E+00
+        4        4           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
+        5        5           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
+        6        6           0            0            0    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00
 
-     total     164893528     61487435   7189277565    1.7971E+02
+           total     164893528     61487435   7189277565    1.7971E+02
 
  the initial fission neutron source distribution used the   1 source points that were input on the ksrc card.
  the criticality problem was scheduled to skip 100 cycles and run a total of 2100 cycles with nominally    20000 neutrons per cycle.
@@ -16483,14 +16498,26 @@
  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
  the following cells with fissionable material had no fission source points  
-      3
+         3
  
-  warning.     1 fissionable cells had no fission source points                            
+  warning.          1 fissionable cells had no fission source points
 
  the keff results could be too small because cells with fissionable material were not sampled.
 
  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
+ comment.
+ comment. Average fission-source entropy for the last half of cycles:
+ comment.      H=  6.93E+00  with population std.dev.=  3.89E-03
+ comment.
+ comment.
+ comment. Cycle   33 is the first cycle having fission-source
+ comment.   entropy within 1 std.dev. of the average
+ comment.   entropy for the last half of cycles.
+ comment.   At least this many cycles should be discarded.
+ comment.
+ comment. Source entropy convergence check passed. 
+ comment.
  the results of the w test for normality applied to the individual collision, absorption, and track-length keff cycle values are:
 
            the k( collision) cycle values appear normally distributed at the 95 percent confidence level                       
@@ -18909,130 +18936,6 @@
                    collision 1.01385 on cycle1401                                                  collision 0.98472 on cycle1368
                   absorption 1.00777 on cycle1585                                                 absorption 0.99199 on cycle 733
                 track length 1.02731 on cycle1398                                               track length 0.97270 on cycle1222
-1plot of the estimated col/abs/track-length keff one standard deviation interval versus cycle number (| = final keff =  1.00029)
-
-    cycle   active 0.999                                           1.000                                             1.001  
-   number   cycles  |-----------------------------------------------|-------------------------------------------------|
-      122       22  |                        (--------------------------k----------|----------------)                 |
-      139       39  |                                (-------------------k---------|--------)                         |
-      156       56  |                                        (---------------k-----|---------)                        |
-      173       73  |                                            (-------------k---|--------)                         |
-      190       90  |                                        (-----------k---------|-)                                |
-      207      107  |                                                 (----------k-|--------)                         |
-      224      124  |                                                      (-------|-k----------)                     |
-      241      141  |                                                    (--------k|--------)                         |
-      258      158  |                                                       (------|-k--------)                       |
-      275      175  +                                                       (------|-k-------)                        +
-      292      192  |                                                         (----|--k-------)                       |
-      309      209  |                                                         (----|--k-------)                       |
-      326      226  |                                                          (---|---k------)                       |
-      343      243  |                                                         (----|--k------)                        |
-      360      260  |                                                          (---|---k------)                       |
-      377      277  |                                                           (--|---k-------)                      |
-      394      294  |                                                           (--|---k------)                       |
-      411      311  |                                                           (--|---k------)                       |
-      428      328  |                                                         (----|-k-----)                          |
-      445      345  +                                                          (---|-k------)                         +
-      462      362  |                                                        (-----k------)                           |
-      479      379  |                                                    (-----k---|-)                                |
-      496      396  |                                                     (-----k--|--)                               |
-      513      413  |                                                      (-----k-|---)                              |
-      530      430  |                                                      (-----k-|---)                              |
-      547      447  |                                                      (-----k-|--)                               |
-      564      464  |                                                     (-----k--|--)                               |
-      581      481  |                                                     (-----k--|-)                                |
-      598      498  |                                                     (----k---|-)                                |
-      615      515  +                                                     (----k---|)                                 +
-      632      532  |                                                      (----k--|-)                                |
-      649      549  |                                                      (----k--|-)                                |
-      666      566  |                                                       (----k-|--)                               |
-      683      583  |                                                        (----k|---)                              |
-      700      600  |                                                         (----k----)                             |
-      717      617  |                                                        (----k|---)                              |
-      734      634  |                                                         (----k---)                              |
-      751      651  |                                                        (----k|---)                              |
-      768      668  |                                                         (---k|---)                              |
-      785      685  +                                                        (----k|---)                              +
-      802      702  |                                                         (----k---)                              |
-      819      719  |                                                         (---k|---)                              |
-      836      736  |                                                         (---k|---)                              |
-      853      753  |                                                         (---k|--)                               |
-      870      770  |                                                         (----k---)                              |
-      887      787  |                                                         (---k|--)                               |
-      904      804  |                                                        (---k-|-)                                |
-      921      821  |                                                        (---k-|--)                               |
-      938      838  |                                                         (---k|--)                               |
-      955      855  +                                                          (---k---)                              +
-      972      872  |                                                          (---k---)                              |
-      989      889  |                                                          (---k---)                              |
-     1006      906  |                                                          (---k---)                              |
-     1023      923  |                                                          (---k---)                              |
-     1040      940  |                                                           (--k---)                              |
-     1057      957  |                                                           (--k---)                              |
-     1074      974  |                                                          (---k--)                               |
-     1091      991  |                                                          (---k---)                              |
-     1108     1008  |                                                          (---k--)                               |
-     1125     1025  +                                                         (---k|--)                               +
-     1142     1042  |                                                         (--k-|-)                                |
-     1159     1059  |                                                        (---k-|-)                                |
-     1176     1076  |                                                       (---k--|)                                 |
-     1193     1093  |                                                       (---k--|                                  |
-     1210     1110  |                                                        (--k--|)                                 |
-     1227     1127  |                                                       (---k--|                                  |
-     1244     1144  |                                                        (--k--|)                                 |
-     1261     1161  |                                                        (--k--|)                                 |
-     1278     1178  |                                                        (---k-|)                                 |
-     1295     1195  +                                                         (---k|-)                                +
-     1312     1212  |                                                         (---k|-)                                |
-     1329     1229  |                                                         (---k|-)                                |
-     1346     1246  |                                                          (--k|--)                               |
-     1363     1263  |                                                          (--k|--)                               |
-     1380     1280  |                                                          (--k|--)                               |
-     1397     1297  |                                                          (---k--)                               |
-     1414     1314  |                                                           (--|k--)                              |
-     1431     1331  |                                                           (--k--)                               |
-     1448     1348  |                                                          (--k|--)                               |
-     1465     1365  +                                                          (--k|-)                                +
-     1482     1382  |                                                          (--k|-)                                |
-     1499     1399  |                                                          (--k|-)                                |
-     1516     1416  |                                                          (--k|-)                                |
-     1533     1433  |                                                          (--k|-)                                |
-     1550     1450  |                                                          (--k|-)                                |
-     1567     1467  |                                                          (--k|-)                                |
-     1584     1484  |                                                           (--k--)                               |
-     1601     1501  |                                                           (--k--)                               |
-     1618     1518  |                                                           (--k--)                               |
-     1635     1535  +                                                           (--k--)                               +
-     1652     1552  |                                                           (--k--)                               |
-     1669     1569  |                                                           (--k--)                               |
-     1686     1586  |                                                           (--k--)                               |
-     1703     1603  |                                                          (--k|-)                                |
-     1720     1620  |                                                          (--k|-)                                |
-     1737     1637  |                                                          (--k|-)                                |
-     1754     1654  |                                                          (--k|-)                                |
-     1771     1671  |                                                          (--k|-)                                |
-     1788     1688  |                                                           (--k--)                               |
-     1805     1705  +                                                           (--k--)                               +
-     1822     1722  |                                                           (--k--)                               |
-     1839     1739  |                                                            (-k--)                               |
-     1856     1756  |                                                           (--k--)                               |
-     1873     1773  |                                                           (--k--)                               |
-     1890     1790  |                                                           (--k--)                               |
-     1907     1807  |                                                           (--k-)                                |
-     1924     1824  |                                                           (--k-)                                |
-     1941     1841  |                                                           (--k-)                                |
-     1958     1858  |                                                           (--k-)                                |
-     1975     1875  +                                                           (--k-)                                +
-     1992     1892  |                                                           (--k-)                                |
-     2009     1909  |                                                           (-k|-)                                |
-     2026     1926  |                                                           (-k|-)                                |
-     2043     1943  |                                                           (--k-)                                |
-     2060     1960  |                                                           (-k|-)                                |
-     2077     1977  |                                                           (--k-)                                |
-     2094     1994  |                                                           (--k-)                                |
-     2100     2000  |                                                           (--k-)                                |
-                    |-----------------------------------------------|-------------------------------------------------|
-                   0.999                                           1.000                                             1.001  
 1individual and collision/absorption/track-length keffs for different numbers of inactive cycles skipped for fission source settling
 
    skip  active     active    average keff estimators and deviations     normality average k(c/a/t)   k(c/a/t) confidence intervals
@@ -19206,129 +19109,6 @@
           final result     1.00029         0.00005           1.00023 to 1.00034     1.00018 to 1.00039     1.00015 to 1.00043
 
  the first and second half values of k(collision/absorption/track length) appear to be the same at the 68 percent confidence level.
-1plot of the estimated col/abs/track-length keff one standard deviation interval by active cycle number (| = final keff =  1.00029)
-
- inactive   active 1.000                           1.001                            1.002                            1.003  
-   cycles   cycles  |-------------------------------|--------------------------------|--------------------------------|
-        0     2100  |      (|-k-)                                                                                     |
-       18     2082  |     (-k-)                                                                                       |
-       36     2064  |      (k-)                                                                                       |
-       54     2046  |      (|k)                                                                                       |
-       72     2028  |      (k-)                                                                                       |
-       90     2010  |     (-k-)                                                                                       |
-      108     1992  |     (-k-)                                                                                       |
-      126     1974  |      (k-)                                                                                       |
-      144     1956  |     (-k-)                                                                                       |
-      162     1938  +     (-k-)                                                                                       +
-      180     1920  |     (-k-)                                                                                       |
-      198     1902  |     (-k-)                                                                                       |
-      216     1884  |     (-k-)                                                                                       |
-      234     1866  |     (-k-)                                                                                       |
-      252     1848  |     (-k-)                                                                                       |
-      270     1830  |     (-k-)                                                                                       |
-      288     1812  |     (-k-)                                                                                       |
-      306     1794  |     (-k-)                                                                                       |
-      324     1776  |     (-k-)                                                                                       |
-      342     1758  +     (-k-)                                                                                       +
-      360     1740  |     (-k-)                                                                                       |
-      378     1722  |     (-k)                                                                                        |
-      396     1704  |     (-k-)                                                                                       |
-      414     1686  |     (k|)                                                                                        |
-      432     1668  |     (-k-)                                                                                       |
-      450     1650  |     (-k-)                                                                                       |
-      468     1632  |     (-k-)                                                                                       |
-      486     1614  |      (|k-)                                                                                      |
-      504     1596  |     (-k-)                                                                                       |
-      522     1578  +     (-k-)                                                                                       +
-      540     1560  |      (|k-)                                                                                      |
-      558     1542  |     (-k--)                                                                                      |
-      576     1524  |      (|k-)                                                                                      |
-      594     1506  |      (|k-)                                                                                      |
-      612     1488  |      (|k-)                                                                                      |
-      630     1470  |      (|k-)                                                                                      |
-      648     1452  |      (|k-)                                                                                      |
-      666     1434  |      (|k-)                                                                                      |
-      684     1416  |     (-|k-)                                                                                      |
-      702     1398  +     (-k--)                                                                                      +
-      720     1380  |     (-k-)                                                                                       |
-      738     1362  |     (-k-)                                                                                       |
-      756     1344  |     (-k--)                                                                                      |
-      774     1326  |     (-k--)                                                                                      |
-      792     1308  |     (-|k-)                                                                                      |
-      810     1290  |     (-k--)                                                                                      |
-      828     1272  |      (|k-)                                                                                      |
-      846     1254  |      (|k-)                                                                                      |
-      864     1236  |     (-k--)                                                                                      |
-      882     1218  +     (-|k-)                                                                                      +
-      900     1200  |      (|k-)                                                                                      |
-      918     1182  |      (|k-)                                                                                      |
-      936     1164  |     (-|k-)                                                                                      |
-      954     1146  |     (-k-)                                                                                       |
-      972     1128  |     (-k--)                                                                                      |
-      990     1110  |     (-k-)                                                                                       |
-     1008     1092  |     (-k-)                                                                                       |
-     1026     1074  |     (-k--)                                                                                      |
-     1044     1056  |    (--k-)                                                                                       |
-     1062     1038  +     (-k--)                                                                                      +
-     1080     1020  |     (-k--)                                                                                      |
-     1098     1002  |     (-k-)                                                                                       |
-     1116      984  |     (-k--)                                                                                      |
-     1134      966  |      (|k--)                                                                                     |
-     1152      948  |      (|-k-)                                                                                     |
-     1170      930  |      (|-k--)                                                                                    |
-     1188      912  |       |-k--)                                                                                    |
-     1206      894  |      (|-k--)                                                                                    |
-     1224      876  |       |--k-)                                                                                    |
-     1242      858  +       |--k-)                                                                                    +
-     1260      840  |       |-k--)                                                                                    |
-     1278      822  |      (|-k--)                                                                                    |
-     1296      804  |     (-|k--)                                                                                     |
-     1314      786  |     (-|k--)                                                                                     |
-     1332      768  |     (-|k--)                                                                                     |
-     1350      750  |     (-|k-)                                                                                      |
-     1368      732  |     (-|k--)                                                                                     |
-     1386      714  |    (--k--)                                                                                      |
-     1404      696  |   (--k|-)                                                                                       |
-     1422      678  +   (--k|-)                                                                                       +
-     1440      660  |    (--k--)                                                                                      |
-     1458      642  |     (-|k--)                                                                                     |
-     1476      624  |     (-|k--)                                                                                     |
-     1494      606  |     (-|k--)                                                                                     |
-     1512      588  |     (-|k--)                                                                                     |
-     1530      570  |     (-|k--)                                                                                     |
-     1548      552  |     (-|k--)                                                                                     |
-     1566      534  |     (-|k--)                                                                                     |
-     1584      516  |   (---k--)                                                                                      |
-     1602      498  +   (--k|--)                                                                                      +
-     1620      480  |   (---k--)                                                                                      |
-     1638      462  |   (---k--)                                                                                      |
-     1656      444  |  (---k|-)                                                                                       |
-     1674      426  |  (---k|-)                                                                                       |
-     1692      408  |    (--|k--)                                                                                     |
-     1710      390  |     (-|-k--)                                                                                    |
-     1728      372  |    (--|k---)                                                                                    |
-     1746      354  |     (-|-k---)                                                                                   |
-     1764      336  |    (--|k---)                                                                                    |
-     1782      318  +   (---k----)                                                                                    +
-     1800      300  |   (---|k---)                                                                                    |
-     1818      282  | (----k|--)                                                                                      |
-     1836      264  |(---k--|-)                                                                                       |
-     1854      246  |(----k-|--)                                                                                      |
-     1872      228  | (---k-|--)                                                                                      |
-     1890      210  | (----k|----)                                                                                    |
-     1908      192  |    (--|-k----)                                                                                  |
-     1926      174  |   (---|k-----)                                                                                  |
-     1944      156  |   (---|-k----)                                                                                  |
-     1962      138  +     (-|---k-----)                                                                               +
-     1980      120  |    (--|--k-----)                                                                                |
-     1998      102  |       |------k------)                                                                           |
-     2016       84  |      (|------k------)                                                                           |
-     2034       66  |      (|-------k-------)                                                                         |
-     2052       48  |-------|--k---------)                                                                            |
-     2070       30  |   (---|----------k-------------)                                                                |
-     2088       12  |       |                          (-----------------------k-----------------------)              |
-                    |-------------------------------|--------------------------------|--------------------------------|
-                   1.000                           1.001                            1.002                            1.003  
  tally data written to file test64.m
 
          6 warning messages so far.
