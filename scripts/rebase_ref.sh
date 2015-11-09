@@ -134,8 +134,13 @@ if false; then
 fi
 
 # VERIFICATION_KEFF test suite
-if false; then
+if true; then
   cd ../VERIFICATION_KEFF
+
+  for i in $(seq -f "%02g" 1 75); do
+    echo VERIFICATION_KEFF/$i
+    if [ -a Templates/Linux/1e-4/outp$i ]; then cp results/$i/test$i.o Templates/Linux/1e-4/outp$i; fi
+  done
 fi
 
 # Done
